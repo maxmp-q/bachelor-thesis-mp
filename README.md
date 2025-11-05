@@ -1,2 +1,3 @@
-# bachelor-thesis-mp
-This is the repo for my bachelor thesis
+# Bachelor Thesis Maximilian Pickel
+
+This is the official repo for my bachelor thesis.
