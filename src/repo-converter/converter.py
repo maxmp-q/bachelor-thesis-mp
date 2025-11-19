@@ -15,8 +15,10 @@ with open('dataset.csv', mode='r') as file:
             # only scientific
             if result[1] == '1':
                 woc_ids.append(result[0])
+                print(result[0])
+                print(result[13])
         i += 1
-        if i >= 1000:
+        if i >= 30:
             break
 
 for woc_id in woc_ids:
