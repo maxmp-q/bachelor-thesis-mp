@@ -22,12 +22,18 @@ export class Teamscale {
         cy.visit("https://teamscale.cs.uni-koeln.de/project/project?name=%3Anew");
     }
 
+    /**
+     * Project Name field.
+     */
     static enterProjectName(name: string){
         cy.get('input#project-name-input')
             .type(name);
     }
 
-    static setTemplate(template: string){
+    /**
+     * Select Template. Default is "Template", maybe use normal dashboard instead.
+     */
+    static setTemplate(template: string = "Template"){
         cy.get('i.dropdown.icon')
             .eq(1)
             .click();
@@ -46,18 +52,26 @@ export class Teamscale {
         cy.get('div.item')
             .contains('(default)')
             .click();
-
     }
 
+    /**
+     * Add Source Code button.
+     */
     static get addSRCCode(){
         return cy.get('button#add-connector-button-SOURCE_CODE_REPOSITORY');
     }
 
+    /**
+     * Use git as a connector for source code.
+     */
     static get gitConnector(){
         return cy.get('div.link.item')
             .eq(9);
     }
 
+    /**
+     * Create a github connector account and adds it to the projects.
+     */
     static addGitRepo(name: string, url: string){
         this.addSRCCode.click();
         this.gitConnector.click();
@@ -81,6 +95,9 @@ export class Teamscale {
             .click();
     }
 
+    /**
+     * Create Project Button.
+     */
     static get createProject(){
         return cy.get('button#create-button');
     }

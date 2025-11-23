@@ -3,16 +3,18 @@ import {Teamscale} from "../support/teamscale";
 const data_points: DataPoint[] = require("../fixtures/data-points.json");
 
 context("Use Cypress to create all projects in teamscale", () => {
-
-    describe("First steps", () => {
-
-        it('Create Projects', () => {
+    describe("Create Projects in a loop", () => {
+        before(() => {
             Teamscale.open();
             Teamscale.login();
+        })
 
-            data_points.forEach(data_point => {
-                Teamscale.open();
+        beforeEach(()=> {
+            Teamscale.open();
+        })
 
+        data_points.forEach(data_point => {
+            it('Create Project: ' + data_point.name, () => {
                 Teamscale.enterProjectName(data_point.name);
 
                 Teamscale.setTemplate('Template');
@@ -25,6 +27,5 @@ context("Use Cypress to create all projects in teamscale", () => {
                     .click();
             })
         })
-
     })
 })
