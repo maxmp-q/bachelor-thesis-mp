@@ -1,7 +1,7 @@
 export class DataHelper{
-    private data_points: DataPoint[] = require("../fixtures/data-points.json");
+    private static data_points: DataPoint[] = require("../fixtures/data.json");
 
-    static getData(){
-
+    static get getData(): DataPoint[] {
+        return this.data_points
     }
 }

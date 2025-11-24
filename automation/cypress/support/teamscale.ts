@@ -33,7 +33,14 @@ export class Teamscale {
     /**
      * Select Template. Default is "Template", maybe use normal dashboard instead.
      */
-    static setTemplate(template: string = "Template"){
+    static setTemplate(
+        template:
+            'Template' |
+            'Overview Dashboard' |
+            '(None)' |
+            'Code and Test Quality Trend Overview'
+            = 'Template'
+    ){
         cy.get('i.dropdown.icon')
             .eq(1)
             .click();
@@ -43,14 +50,13 @@ export class Teamscale {
             .click();
     }
 
-    //TODO: profile will be a keyof
     static setAnalysisProfile(profile: string){
         cy.get('input.search')
             .eq(1)
             .type(profile);
 
         cy.get('div.item')
-            .contains('(default)')
+            .contains(profile)
             .click();
     }
 
@@ -66,11 +72,12 @@ export class Teamscale {
      */
     static get gitConnector(){
         return cy.get('div.link.item')
-            .eq(9);
+            .eq(9)
+            .contains("Git");
     }
 
     /**
-     * Create a github connector account and adds it to the projects.
+     * Create a git connector account and adds it to the projects.
      */
     static addGitRepo(name: string, url: string){
         this.addSRCCode.click();

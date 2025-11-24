@@ -1,6 +1,7 @@
 import {Teamscale} from "../support/teamscale";
+import {DataHelper} from "../support/data-helper";
 
-const data_points: DataPoint[] = require("../fixtures/data-points.json");
+const data_points: DataPoint[] = DataHelper.getData;
 
 context("Use Cypress to create all projects in teamscale", () => {
     describe("Create Projects in a loop", () => {
@@ -17,7 +18,7 @@ context("Use Cypress to create all projects in teamscale", () => {
             it('Create Project: ' + data_point.name, () => {
                 Teamscale.enterProjectName(data_point.name);
 
-                Teamscale.setTemplate('Template');
+                Teamscale.setTemplate();
 
                 Teamscale.setAnalysisProfile(data_point.lang);
 

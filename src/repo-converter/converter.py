@@ -1,46 +1,69 @@
 import csv
 import requests
 import json
+import random
 
 data = []
 
-possible_analysis_profiles = [
-    'Go', 'PHP', 'JavaScript', 'Lua', 'Clojure',
-    'Rust', 'Python', 'OCaml', 'Java', 'R', 'fml',
-    'Julia', 'Perl', 'Lisp', 'Sql', 'Cobol', 'Scala',
-    'C/C++', 'TypeScript', 'Ada', 'other', 'Basic',
-    'Kotlin', 'Fortran', 'Swift', 'Erlang', 'Ruby', 'Dart'
-]
+# Use Teamscale API to get all current projects git accounts and
+# filter for them, that only new projects are created/send to data.json.
+all_projects =  []
+all_git = []
 
-not_possible = [
-    "Basic", "Clojure", "Erlang", "fml", "Julia",
-    "Lisp", "Lua", "OCaml", "other", "Perl",
-    "R", "Ruby", "Rust", "Scala"
-]
+TEAMSCALE_URL = "https://teamscale.cs.uni-koeln.de/api/v2025.2/projects"
+git_accounts_url = "https://teamscale.cs.uni-koeln.de/api/external-accounts"
+USERNAME = ""
+ACCESS_KEY = ""
+CERTIFICATE = R"C:\Users\maxmp\teamscale.cs.uni-koeln.de.crt"
 
-possible = [
-    "Ada", "C/C++", "Cobol", "Dart", "Fortran",
-    "Go", "Java", "JavaScript", "Kotlin", "Python",
-    "Sql", "Swift", "TypeScript"
-]
+all_current_projects = requests.get(TEAMSCALE_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
+all_git_accounts = requests.get(TEAMSCALE_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
 
-transformed_profiles = [
-    "Ada", "C", "COBOL", "Dart", "Fortran",
-    "Go", "Java", "JavaScript/TypeScript", "Kotlin"
-    "Python", "Extended SQL (ESQL)", "Swift", "JavaScript/TypeScript"
-]
+for project in all_current_projects.json():
+    all_projects.append(project["name"])
+
+for project in all_git_accounts.json():
+    all_git.append(project["name"])
+
+# A map to get all language profiles
+profile_map = {
+    "Ada" : "Ada (default)",
+    "C/C++" : "C (default)",
+    "Cobol" : "COBOL (default)",
+    "Dart" : "Dart (default)",
+    "Fortran" : "Fortran (default)",
+    "Go" : "Go (default)",
+    "Java" : "Java (default)",
+    "JavaScript" : "JavaScript/TypeScript (default)",
+    "Kotlin" : "Kotlin (default)",
+    "Python" : "Python (default)",
+    "Sql" : "Extended SQL (ESQL)(default)",
+    "Swift" : "Swift (default)",
+    "TypeScript" : "JavaScript/TypeScript (default)"
+}
 
 analysis_profile_standard = "Line-based Text"
 
+# Get the converted lang profile and if the profile doesn't exist use the standard profile.
+def get_lang(_lang):
+    value = profile_map.get(_lang)
+    return value if value is not None else analysis_profile_standard
+
 with open('dataset.csv', mode='r') as file:
-    csvFile = csv.reader(file)
-    i = 0
-    for lines in csvFile:
-        if i > 0:
-            result = lines[0].split(';')
-            # only scientific
-            if result[1] == '1':
-                name = result[0]
+    csvFile = list(csv.reader(file))
+
+    header, rows = csvFile[0], csvFile[1:]
+
+    # Choose random rows
+    random_rows = random.sample(rows, 500)
+
+    for lines in random_rows:
+        result = lines[0].split(';')
+
+        # only scientific
+        if result[1] == '1':
+            name = result[0]
+            if name not in all_projects and name not in all_git:
                 user, repo = name.split("_", 1)
                 url = f"https://github.com/{user}/{repo}"
 
@@ -49,28 +72,14 @@ with open('dataset.csv', mode='r') as file:
                 entry = {
                     "name" : name,
                     "url" : url,
-                    "lang" : result[13]
+                    "lang" : get_lang(result[13])
                 }
 
                 if response.status_code == 200:
                     data.append(entry)
-        i += 1
-        if i >= 100:
+
+        if data.__len__() >= 25:
             break
 
 with open("data.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
-
-
-# TODO: Make possible a map!
-def get_lang(_lang):
-    if _lang in not_possible:
-        return analysis_profile_standard
-
-    if _lang in possible:
-
-        return
-
-
-
-
