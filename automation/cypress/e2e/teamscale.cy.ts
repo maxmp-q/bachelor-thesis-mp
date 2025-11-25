@@ -5,20 +5,16 @@ const data_points: DataPoint[] = DataHelper.getData;
 
 context("Use Cypress to create all projects in teamscale", () => {
     describe("Create Projects in a loop", () => {
-        before(() => {
-            Teamscale.open();
-            Teamscale.login();
-        })
-
         beforeEach(()=> {
             Teamscale.open();
+            Teamscale.login();
         })
 
         data_points.forEach(data_point => {
             it('Create Project: ' + data_point.name, () => {
                 Teamscale.enterProjectName(data_point.name);
 
-                Teamscale.setTemplate();
+                Teamscale.setTemplate('Overview Dashboard');
 
                 Teamscale.setAnalysisProfile(data_point.lang);
 

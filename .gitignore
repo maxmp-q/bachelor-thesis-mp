@@ -1,1 +1,3 @@
 /automation/node_modules/
+/src/repo-converter/dataset.csv
+/src/repo-converter/test_dataset.csv
