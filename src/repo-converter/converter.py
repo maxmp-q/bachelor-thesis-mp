@@ -25,12 +25,10 @@ for project in all_current_projects.json():
 for project in all_current_git_accounts.json():
     all_git_accounts.append(project["credentialsName"])
 
-print(all_git_accounts)
-
 # A map to get all language profiles
 profile_map = {
     "Ada" : "Ada (default)",
-    "C/C++" : "C (default)",
+    "C/C++" : "C++ (default)",
     "Cobol" : "COBOL (default)",
     "Dart" : "Dart (default)",
     "Fortran" : "Fortran (default)",
@@ -76,7 +74,8 @@ with open('dataset.csv', mode='r') as file:
                 entry = {
                     "name" : name,
                     "url" : url,
-                    "lang" : get_lang(result[13])
+                    "lang_profile" : get_lang(result[13]),
+                    "lang" : result[13]
                 }
 
                 if response.status_code == 200:

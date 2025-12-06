@@ -2,7 +2,7 @@
 
 This is the official repo for my bachelor thesis.
 
-*Is Code Quality in research software really not as good as in business software?*
+*Is the Quality of Code in Business Software really better than in Research Software?*
 
 ## Src
 ### converter.py
@@ -50,6 +50,7 @@ The metrics are:
 - Nesting Depth
 - Method Length
 - Type of findings
+- Test Coverage
 
 
 ### data-points.ts

@@ -16,7 +16,7 @@ context("Use Cypress to create all projects in teamscale", () => {
 
                 Teamscale.setTemplate('Overview Dashboard');
 
-                Teamscale.setAnalysisProfile(data_point.lang);
+                Teamscale.setAnalysisProfile(data_point.lang_profile);
 
                 Teamscale.addGitRepo(data_point.name, data_point.url)
 

@@ -39,7 +39,7 @@ export class Teamscale {
             'Overview Dashboard' |
             '(None)' |
             'Code and Test Quality Trend Overview'
-            = 'Template'
+            = 'Overview Dashboard'
     ){
         cy.get('i.dropdown.icon')
             .eq(1)
