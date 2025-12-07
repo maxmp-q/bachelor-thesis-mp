@@ -1,0 +1,152 @@
+[
+  {
+    "name": "askforalfred_alfred",
+    "url": "https://github.com/askforalfred/alfred",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  },
+  {
+    "name": "fredericsauv_z-quantum-qaoa",
+    "url": "https://github.com/fredericsauv/z-quantum-qaoa",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "ryocat_gis-oer",
+    "url": "https://github.com/ryocat/gis-oer",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  },
+  {
+    "name": "nf-core_nascent",
+    "url": "https://github.com/nf-core/nascent",
+    "lang_profile": "Line-based Text",
+    "lang": "R"
+  },
+  {
+    "name": "NREL_dao-tk",
+    "url": "https://github.com/NREL/dao-tk",
+    "lang_profile": "C++ (default)",
+    "lang": "C/C++"
+  },
+  {
+    "name": "earthspecies_esp_library",
+    "url": "https://github.com/earthspecies/esp_library",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "jianshu93_enveomics",
+    "url": "https://github.com/jianshu93/enveomics",
+    "lang_profile": "Line-based Text",
+    "lang": "R"
+  },
+  {
+    "name": "Biobix_proteoformer",
+    "url": "https://github.com/Biobix/proteoformer",
+    "lang_profile": "Line-based Text",
+    "lang": "Perl"
+  },
+  {
+    "name": "aiidateam_aiida-wannier90",
+    "url": "https://github.com/aiidateam/aiida-wannier90",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "CESNET_Nemea",
+    "url": "https://github.com/CESNET/Nemea",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  },
+  {
+    "name": "intake_intake-esm",
+    "url": "https://github.com/intake/intake-esm",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "cmollica_bayesmallows",
+    "url": "https://github.com/cmollica/bayesmallows",
+    "lang_profile": "Line-based Text",
+    "lang": "R"
+  },
+  {
+    "name": "jgomezdans_gp_emulator",
+    "url": "https://github.com/jgomezdans/gp_emulator",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "icecube_pisa",
+    "url": "https://github.com/icecube/pisa",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  },
+  {
+    "name": "aureus123_graph-theory",
+    "url": "https://github.com/aureus123/graph-theory",
+    "lang_profile": "Line-based Text",
+    "lang": "fml"
+  },
+  {
+    "name": "tkakar_MEV-MQP",
+    "url": "https://github.com/tkakar/MEV-MQP",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  },
+  {
+    "name": "algoulas_synaptic-flow",
+    "url": "https://github.com/algoulas/synaptic-flow",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "achernodub_targer",
+    "url": "https://github.com/achernodub/targer",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "blockchaind_fabric-opssc",
+    "url": "https://github.com/blockchaind/fabric-opssc",
+    "lang_profile": "Go (default)",
+    "lang": "Go"
+  },
+  {
+    "name": "ericguerrero_stonefish",
+    "url": "https://github.com/ericguerrero/stonefish",
+    "lang_profile": "C++ (default)",
+    "lang": "C/C++"
+  },
+  {
+    "name": "sicara_tuto-fsl",
+    "url": "https://github.com/sicara/tuto-fsl",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "PalEON-Project_stepps-baconizing",
+    "url": "https://github.com/PalEON-Project/stepps-baconizing",
+    "lang_profile": "Line-based Text",
+    "lang": "R"
+  },
+  {
+    "name": "openwfm_JPSSdata",
+    "url": "https://github.com/openwfm/JPSSdata",
+    "lang_profile": "Python (default)",
+    "lang": "Python"
+  },
+  {
+    "name": "RitaRamo_jbotevolver",
+    "url": "https://github.com/RitaRamo/jbotevolver",
+    "lang_profile": "Java (default)",
+    "lang": "Java"
+  },
+  {
+    "name": "189569400_iris-web",
+    "url": "https://github.com/189569400/iris-web",
+    "lang_profile": "JavaScript/TypeScript (default)",
+    "lang": "JavaScript"
+  }
+]

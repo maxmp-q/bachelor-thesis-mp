@@ -12,9 +12,10 @@ context("Use Cypress to create all projects in teamscale", () => {
 
         data_points.forEach(data_point => {
             it('Create Project: ' + data_point.name, () => {
-                Teamscale.enterProjectName(data_point.name);
 
-                Teamscale.setTemplate('Overview Dashboard');
+                cy.intercept('POST', 'https://teamscale.cs.uni-koeln.de/api/projects').as('createProject')
+
+                Teamscale.enterProjectName(data_point.name);
 
                 Teamscale.setAnalysisProfile(data_point.lang_profile);
 
@@ -22,6 +23,8 @@ context("Use Cypress to create all projects in teamscale", () => {
 
                 Teamscale.createProject
                     .click();
+
+                cy.wait('@createProject')
             })
         })
     })

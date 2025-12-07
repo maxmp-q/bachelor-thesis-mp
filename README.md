@@ -51,11 +51,62 @@ The metrics are:
 - Method Length
 - Type of findings
 - Test Coverage
+- Lines of Code
 
+Here is an example of the analyzed_data.json:
+```json
+[
+  
+  {
+    "name": "jgomezdans_gp_emulator",
+    "lang": "Python",
+    "clone_coverage": 0.05303030303030303,
+    "findings_count": 42.0,
+    "LOC": 1981.0,
+    "method_length": {
+      "red": 101,
+      "yellow": 103,
+      "green": 465
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 43,
+      "green": 626
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 8,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 4,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 21,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 5,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 4,
+        "countRed": 1
+      }
+    ]
+  }
+]
+```
 
 ### data-points.ts
 
-Here you can find the interface for the data-points.
+Here you can find the interface for the data-points and the analyzed data.
 
 ## Automation
 

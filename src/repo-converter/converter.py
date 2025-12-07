@@ -11,10 +11,10 @@ all_projects =  []
 all_git_accounts = []
 
 TEAMSCALE_URL = "https://teamscale.cs.uni-koeln.de/api/v2025.2/projects"
-git_accounts_url = "https://teamscale.cs.uni-koeln.de/api/external-accounts"
+GIT_ACCOUNTS_URL = "https://teamscale.cs.uni-koeln.de/api/external-accounts"
 USERNAME = ""
 ACCESS_KEY = ""
-CERTIFICATE = R"C:\Users\maxmp\teamscale.cs.uni-koeln.de.crt"
+CERTIFICATE = R""
 
 all_current_projects = requests.get(TEAMSCALE_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
 all_current_git_accounts = requests.get(GIT_ACCOUNTS_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)

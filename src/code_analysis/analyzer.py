@@ -3,71 +3,90 @@ import json
 
 data = []
 
-project = {
-    "name": "00mjk_filter_functions",
-    "lang": "Python"
-}
-
-FINDINGS_URL = f"https://teamscale.cs.uni-koeln.de/api/projects/{project["name"]}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
-ALL_FINDINGS_URL = f"https://teamscale.cs.uni-koeln.de/api/v2025.2/projects/{project["name"]}/findings/list?case-insensitive-path=false&start=0&max=1000"
-ALL_METRICS_URL = f"https://teamscale.cs.uni-koeln.de/api/projects/{project["name"]}/metrics?t=master%3AHEAD&uniform-path="
+# Constants for API
 USERNAME = ""
 ACCESS_KEY = ""
-CERTIFICATE = R"C:\Users\maxmp\teamscale.cs.uni-koeln.de.crt"
+CERTIFICATE = R""
+BASE_URL = "https://teamscale.cs.uni-koeln.de/"
 
-findings_json = requests.get(FINDINGS_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE).json()
-metrics_json = requests.get(ALL_METRICS_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE).json()
-
-metrics_values = metrics_json['metricValues']
-loc = metrics_values[1]
-findings_count = metrics_values[11]
-clone_coverage = metrics_values[17]
-
-# [red, 0, yellow, green, 0, 0]
-method_length = metrics_values[5]['mapping']
-m_red = method_length[0]
-m_yellow = method_length[2]
-m_green = method_length[3]
-used_method_length = {
-    "red" : m_red,
-    "yellow" : m_yellow,
-    "green" : m_green
-}
-
-# [red, 0, yellow, green, 0, 0]
-nesting_depth = metrics_values[7]['mapping']
-n_red = nesting_depth[0]
-n_yellow = nesting_depth[2]
-n_green = nesting_depth[3]
-used_nesting = {
-    "red" : n_red,
-    "yellow" : n_yellow,
-    "green" : n_green
-}
-
-findings_categories = findings_json['categoryInfos']
+# Helper Functions
+def api_get(url):
+    """Wrapper for GET-Requests with RequestException."""
+    try:
+        response = requests.get(url, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"API-Request not good: {e}")
 
 
-# print(loc)
-# print(method_length)
-# print(nesting_depth)
-# print(findings_count)
-# print(findings_categories)
-# print(method_length_yellow)
+def get_all_findings(_findings_categories):
+    """Converts all findings to my used format and return it for the data entry"""
+    _findings = []
+    for finding in _findings_categories:
+        _findings_entry = {
+            "categoryName" : finding["categoryName"],
+            "count" : finding["count"],
+            "countRed" : finding["countRed"]
+        }
 
-entry = {
-    "name" : project["name"],
-    "lang" : project["lang"],
-    "clone_coverage" : clone_coverage,
-    "findings_count" : findings_count,
-    "LOC" : loc,
-    "method_length" : used_method_length,
-    "nesting_depth" : used_nesting,
-    "findings_details" : 0 # TODO: muss das array noch machen
-}
+        _findings.append(_findings_entry)
+    return _findings
 
-data.append(entry)
+def extract_mapping(_mapping, red = 0, yellow = 2, green = 3):
+    """Extract the mapping from nesting_depth and method_length"""
+    return {
+        "red" : _mapping[red],
+        "yellow" : _mapping[yellow],
+        "green" : _mapping[green]
+    }
 
+print("data.json wird eingelesen!")
+# Gets the data from data.json with the projects in Teamscale.
+with open('../data/data.json', 'r') as file:
+    _data = json.load(file)
+
+    for data_point in _data:
+        # URLS
+        FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"]}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
+        ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"]}/findings/list?case-insensitive-path=false&start=0&max=1000"
+        ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"]}/metrics?t=master%3AHEAD&uniform-path="
+
+        # Do API requests
+        findings_json = api_get(FINDINGS_URL)
+        metrics_json = api_get(ALL_METRICS_URL)
+
+        if not findings_json or not metrics_json:
+            continue
+
+        # Get the metrics
+        metrics_values = metrics_json['metricValues']
+        loc = metrics_values[1]
+        findings_count = metrics_values[11]
+        clone_coverage = metrics_values[17]
+        # [red, 0, yellow, green, 0, 0]
+        method_length = metrics_values[5]['mapping']
+        # [red, 0, yellow, green, 0, 0]
+        nesting_depth = metrics_values[7]['mapping']
+        findings_categories = findings_json['categoryInfos']
+
+        # Create entry
+        entry = {
+            "name" : data_point["name"],
+            "lang" : data_point["lang"],
+            "clone_coverage" : clone_coverage,
+            "findings_count" : findings_count,
+            "LOC" : loc,
+            "method_length" : extract_mapping(method_length),
+            "nesting_depth" : extract_mapping(nesting_depth),
+            "findings_details" : get_all_findings(findings_categories)
+        }
+
+        data.append(entry)
+        print(f"Wir sind bei {data.__len__()} Einträgen!")
+
+print("Dump die Daten ins json!")
+# Dump the data to analyzed_data.json
 with open("analyzed_data.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
 
