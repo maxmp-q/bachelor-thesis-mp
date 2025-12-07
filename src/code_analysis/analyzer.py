@@ -11,8 +11,8 @@ project = {
 FINDINGS_URL = f"https://teamscale.cs.uni-koeln.de/api/projects/{project["name"]}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
 ALL_FINDINGS_URL = f"https://teamscale.cs.uni-koeln.de/api/v2025.2/projects/{project["name"]}/findings/list?case-insensitive-path=false&start=0&max=1000"
 ALL_METRICS_URL = f"https://teamscale.cs.uni-koeln.de/api/projects/{project["name"]}/metrics?t=master%3AHEAD&uniform-path="
-USERNAME = "mpickel"
-ACCESS_KEY = "E271A7H2RnEYZwnGHhb8uZ9zf8NNI8tC"
+USERNAME = ""
+ACCESS_KEY = ""
 CERTIFICATE = R"C:\Users\maxmp\teamscale.cs.uni-koeln.de.crt"
 
 findings_json = requests.get(FINDINGS_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE).json()
@@ -68,6 +68,6 @@ entry = {
 
 data.append(entry)
 
-with open("data_point.json", mode="w", encoding="utf-8") as f:
+with open("analyzed_data.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
 
