@@ -126,94 +126,6 @@
     ]
   },
   {
-    "name": "algoulas_synaptic-flow",
-    "lang": "Python",
-    "clone_coverage": 0.07022282241728561,
-    "findings_count": 203.0,
-    "LOC": 2755.0,
-    "method_length": {
-      "red": 75,
-      "yellow": 430,
-      "green": 891
-    },
-    "nesting_depth": {
-      "red": 0,
-      "yellow": 89,
-      "green": 1307
-    },
-    "findings_details": [
-      {
-        "categoryName": "Comprehensibility",
-        "count": 10,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Correctness",
-        "count": 14,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Documentation",
-        "count": 158,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Redundancy",
-        "count": 6,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Structure",
-        "count": 15,
-        "countRed": 1
-      }
-    ]
-  },
-  {
-    "name": "achernodub_targer",
-    "lang": "Python",
-    "clone_coverage": 0.10583524027459955,
-    "findings_count": 229.0,
-    "LOC": 2688.0,
-    "method_length": {
-      "red": 0,
-      "yellow": 189,
-      "green": 1233
-    },
-    "nesting_depth": {
-      "red": 0,
-      "yellow": 68,
-      "green": 1354
-    },
-    "findings_details": [
-      {
-        "categoryName": "Comprehensibility",
-        "count": 2,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Correctness",
-        "count": 8,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Documentation",
-        "count": 193,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Redundancy",
-        "count": 13,
-        "countRed": 0
-      },
-      {
-        "categoryName": "Structure",
-        "count": 13,
-        "countRed": 0
-      }
-    ]
-  },
-  {
     "name": "blockchaind_fabric-opssc",
     "lang": "Go",
     "clone_coverage": 0.6244409660107334,
@@ -288,6 +200,94 @@
         "categoryName": "Structure",
         "count": 531,
         "countRed": 106
+      }
+    ]
+  },
+  {
+    "name": "sicara_tuto-fsl",
+    "lang": "Python",
+    "clone_coverage": 0.0,
+    "findings_count": 186.0,
+    "LOC": 6129.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 173,
+      "green": 1661
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 1834
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 2,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 2,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 174,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 8,
+        "countRed": 0
+      }
+    ]
+  },
+  {
+    "name": "189569400_iris-web",
+    "lang": "JavaScript",
+    "clone_coverage": 0.47915316820321463,
+    "findings_count": 49176.0,
+    "LOC": 294212.0,
+    "method_length": {
+      "red": 186943,
+      "yellow": 19737,
+      "green": 9748
+    },
+    "nesting_depth": {
+      "red": 1907,
+      "yellow": 14658,
+      "green": 199863
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 5520,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 38052,
+        "countRed": 51
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 111,
+        "countRed": 3
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 54,
+        "countRed": 54
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 1847,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 3592,
+        "countRed": 1267
       }
     ]
   }

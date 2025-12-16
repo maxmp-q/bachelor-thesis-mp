@@ -79,7 +79,11 @@ with open('../data/data.json', 'r') as file:
             "LOC" : loc,
             "method_length" : extract_mapping(method_length),
             "nesting_depth" : extract_mapping(nesting_depth),
-            "findings_details" : get_all_findings(findings_categories)
+            "findings_details" : get_all_findings(findings_categories),
+            "authors" : data_point["authors"],
+            "forks" : data_point["forks"],
+            "files" : data_point["files"],
+            "field" : data_point["field"],
         }
 
         data.append(entry)

@@ -1,13 +1,18 @@
-interface DataPoint {
+interface SimpleData {
     name: string;
-    url: string;
-    lang_profile: string;
     lang: string;
+    authors: number;
+    forks: number;
+    files: number;
+    field: string;
 }
 
-interface AnalyzedData {
-    name: string;
-    lang: string;
+interface DataPoint extends SimpleData {
+    url: string;
+    lang_profile: string;
+}
+
+interface AnalyzedData extends SimpleData{
     clone_coverage: number;
     findings_count: number;
     LOC: number;

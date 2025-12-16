@@ -29,6 +29,8 @@ for project in all_current_git_accounts.json():
 profile_map = {
     "Ada" : "Ada (default)",
     "C/C++" : "C++ (default)",
+    "C" : "C (default)",
+    "C++" : "C++ (default)",
     "Cobol" : "COBOL (default)",
     "Dart" : "Dart (default)",
     "Fortran" : "Fortran (default)",
@@ -45,9 +47,27 @@ profile_map = {
 analysis_profile_standard = "Line-based Text"
 
 # Get the converted lang profile and if the profile doesn't exist use the standard profile.
-def get_lang(_lang):
+def get_lang_profile(_lang):
     value = profile_map.get(_lang)
     return value if value is not None else analysis_profile_standard
+
+def get_lang(_name, _lang):
+    _author, _repo = _name.split('_', 1)
+    _URL = f"https://api.github.com/repos/{_author}/{_repo}/languages"
+    _GIT_TOKEN = ""
+    headers = {"Authorization": f"token {_GIT_TOKEN}"}
+    _data = requests.get(_URL, headers=headers).json()
+
+    if _data and isinstance(_data, dict):
+        _main_lang = max(_data, key=_data.get)
+
+        print("API:", _main_lang)
+        print("Erwartet:", _lang)
+
+        return _main_lang
+    else:
+        return _lang
+
 
 print("Starte die CSV zu lesen!")
 
@@ -68,14 +88,20 @@ with open('dataset.csv', mode='r') as file:
             if name not in all_projects and name not in all_git_accounts:
                 user, repo = name.split("_", 1)
                 url = f"https://github.com/{user}/{repo}"
-
                 response = requests.get(url)
+
+                _language = get_lang(name,result[13])
 
                 entry = {
                     "name" : name,
                     "url" : url,
-                    "lang_profile" : get_lang(result[13]),
-                    "lang" : result[13]
+                    "lang_profile" : get_lang_profile(_language),
+                    "lang" : _language,
+                    "lang_from_csv" : result[13],
+                    "authors" : result[5],
+                    "forks" : result[8],
+                    "files" : result[10],
+                    "field" : result[28],
                 }
 
                 if response.status_code == 200:
