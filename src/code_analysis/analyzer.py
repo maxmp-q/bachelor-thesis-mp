@@ -1,7 +1,9 @@
 import requests
 import json
 
-data = []
+print("Aktuelle Daten werden aus der analyzed_data.json ausgelesen!")
+with open('../data/analyzed_data.json', 'r') as data_file:
+    data = json.load(data_file)
 
 # Constants for API
 USERNAME = ""
@@ -86,7 +88,7 @@ with open('../data/data.json', 'r') as file:
             "field" : data_point["field"],
         }
 
-        data.append(entry)
+        data[data_point["name"]] = entry
         print(f"Wir sind bei {data.__len__()} Einträgen!")
 
 print("Dump die Daten ins json!")

@@ -1,5 +1,5 @@
-[
-  {
+{
+  "jianshu93_enveomics" :{
     "name": "jianshu93_enveomics",
     "lang": "R",
     "clone_coverage": 0.07150556952928494,
@@ -33,7 +33,7 @@
       }
     ]
   },
-  {
+  "cmollica_bayesmallows" :{
     "name": "cmollica_bayesmallows",
     "lang": "R",
     "clone_coverage": 0.0,
@@ -57,7 +57,7 @@
       }
     ]
   },
-  {
+  "jgomezdans_gp_emulator" : {
     "name": "jgomezdans_gp_emulator",
     "lang": "Python",
     "clone_coverage": 0.05303030303030303,
@@ -101,7 +101,7 @@
       }
     ]
   },
-  {
+  "aureus123_graph-theory" : {
     "name": "aureus123_graph-theory",
     "lang": "fml",
     "clone_coverage": 0.0,
@@ -125,7 +125,7 @@
       }
     ]
   },
-  {
+  "blockchaind_fabric-opssc" : {
     "name": "blockchaind_fabric-opssc",
     "lang": "Go",
     "clone_coverage": 0.6244409660107334,
@@ -159,7 +159,7 @@
       }
     ]
   },
-  {
+  "ericguerrero_stonefish" : {
     "name": "ericguerrero_stonefish",
     "lang": "C/C++",
     "clone_coverage": 0.09259600841111153,
@@ -203,7 +203,7 @@
       }
     ]
   },
-  {
+  "sicara_tuto-fsl" : {
     "name": "sicara_tuto-fsl",
     "lang": "Python",
     "clone_coverage": 0.0,
@@ -242,7 +242,7 @@
       }
     ]
   },
-  {
+  "189569400_iris-web" : {
     "name": "189569400_iris-web",
     "lang": "JavaScript",
     "clone_coverage": 0.47915316820321463,
@@ -291,4 +291,4 @@
       }
     ]
   }
-]
+}
