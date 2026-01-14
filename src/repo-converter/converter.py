@@ -3,7 +3,7 @@ import requests
 import json
 import random
 
-data = []
+data = {}
 
 # Use Teamscale API to get all current projects git accounts and
 # filter for them, that only new projects are created/send to data.json.
@@ -105,7 +105,7 @@ with open('dataset.csv', mode='r') as file:
                 }
 
                 if response.status_code == 200:
-                    data.append(entry)
+                    data[entry["name"]] = entry
                     print(f"Wir sind bei {data.__len__()} Datenpunkten!")
 
         if data.__len__() >= 25:
