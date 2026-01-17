@@ -1,7 +1,7 @@
 import {Teamscale} from "../support/teamscale";
 import {DataHelper} from "../support/data-helper";
 
-const data_points: DataPoint[] = DataHelper.getData;
+const data_points: Record<string, DataPoint>  = DataHelper.getData;
 
 context("Use Cypress to create all projects in teamscale", () => {
     describe("Create Projects in a loop", () => {
@@ -10,21 +10,22 @@ context("Use Cypress to create all projects in teamscale", () => {
             Teamscale.login();
         })
 
-        data_points.forEach(data_point => {
+        Object.values(data_points).forEach(data_point => {
             it('Create Project: ' + data_point.name, () => {
 
-                cy.intercept('POST', 'https://teamscale.cs.uni-koeln.de/api/projects').as('createProject')
+                cy.intercept('POST', 'https://teamscale.cs.uni-koeln.de/api/projects')
+                    .as('createProject');
 
                 Teamscale.enterProjectName(data_point.name);
 
                 Teamscale.setAnalysisProfile(data_point.lang_profile);
 
-                Teamscale.addGitRepo(data_point.name, data_point.url)
+                Teamscale.addGitRepo(data_point);
 
                 Teamscale.createProject
                     .click();
 
-                cy.wait('@createProject')
+                cy.wait('@createProject');
             })
         })
     })

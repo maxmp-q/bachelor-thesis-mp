@@ -1,4 +1,5 @@
 import {git_hub, teamscale} from "./credentials";
+import {languages} from "./data-helper";
 
 export class Teamscale {
     /**
@@ -79,18 +80,25 @@ export class Teamscale {
     /**
      * Create a git connector account and adds it to the projects.
      */
-    static addGitRepo(name: string, url: string){
-        this.addSRCCode.click();
-        this.gitConnector.click();
+    static addGitRepo(data_point: DataPoint){
+        this.addSRCCode
+            .click();
+        this.gitConnector
+            .click();
+
+        if(data_point.lang_profile === "Line-based Text"){
+            cy.get('textarea[class="include-files-pattern"]')
+                .type(languages[data_point.lang] ?? ", **.fallback"); // .fallback is used that cypress is not typing en empty string
+        }
 
         cy.get('button[title="Add new account"]')
             .click();
 
         cy.get('input[name="credentialsName"]')
-            .type(name);
+            .type(data_point.name);
 
         cy.get('input[name="uri"]')
-            .type(url);
+            .type(data_point.url);
 
         cy.get('input[name="username"]')
             .type(git_hub.username);
