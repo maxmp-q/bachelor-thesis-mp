@@ -4,9 +4,6 @@ import requests
 import random
 
 
-with open('../data/all_langs_git.json', 'r') as git_file:
-    git = json.load(git_file)
-
 def get_lang(_name, _lang):
     _author, _repo = _name.split('_', 1)
     _URL = f"https://api.github.com/repos/{_author}/{_repo}/languages"
@@ -30,8 +27,12 @@ def get_lang(_name, _lang):
         return _lang
 
 
-with open('dataset.csv', mode='r') as file:
-    csvFile = list(csv.reader(file))
+if __name__ == "__main__":
+    with open('../data/all_langs_git.json', 'r') as git_file:
+        git = json.load(git_file)
+
+    with open('dataset.csv', mode='r') as file:
+        csvFile = list(csv.reader(file))
 
     header, rows = csvFile[0], csvFile[1:]
     random_rows = random.sample(rows, 500)
@@ -44,8 +45,8 @@ with open('dataset.csv', mode='r') as file:
         git.append(get_lang(name, lang_for_csv))
 
 
-with open("all_langs_git.json", mode="w", encoding="utf-8") as f:
-    json.dump(list(set(git)), f, indent=2)
+    with open("all_langs_git.json", mode="w", encoding="utf-8") as f:
+        json.dump(list(set(git)), f, indent=2)
 
-print(set(git))
-print("Habe fertig!")
+    print(set(git))
+    print("Habe fertig!")

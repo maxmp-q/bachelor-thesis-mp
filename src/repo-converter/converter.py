@@ -2,7 +2,7 @@ import csv
 import requests
 import json
 import random
-import lang_getter as lang
+import lang_getter
 import constants
 
 data = {}
@@ -63,15 +63,15 @@ with open('dataset.csv', mode='r') as file:
     for lines in random_rows:
         result = lines[0].split(';')
 
-        # only scientific
-        if result[1] == '1':
+        # for only scientific use 1 | for only non sci use 0
+        if result[1] == '0':
             name = result[0]
             if name not in all_projects and name not in all_git_accounts:
                 user, repo = name.split("_", 1)
                 url = f"https://github.com/{user}/{repo}"
                 response = requests.get(url)
 
-                _language = lang.get_lang(name,result[13])
+                _language = lang_getter.get_lang(name,result[13])
 
                 entry = {
                     "name" : name,
