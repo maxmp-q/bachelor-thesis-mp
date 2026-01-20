@@ -2,6 +2,8 @@ import csv
 import requests
 import json
 import random
+import lang_getter as lang
+import constants
 
 data = {}
 
@@ -12,12 +14,9 @@ all_git_accounts = []
 
 TEAMSCALE_URL = "https://teamscale.cs.uni-koeln.de/api/v2025.2/projects"
 GIT_ACCOUNTS_URL = "https://teamscale.cs.uni-koeln.de/api/external-accounts"
-USERNAME = ""
-ACCESS_KEY = ""
-CERTIFICATE = R""
 
-all_current_projects = requests.get(TEAMSCALE_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
-all_current_git_accounts = requests.get(GIT_ACCOUNTS_URL, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
+all_current_projects = requests.get(TEAMSCALE_URL, auth=(constants.USERNAME, constants.ACCESS_KEY), verify=constants.CERTIFICATE)
+all_current_git_accounts = requests.get(GIT_ACCOUNTS_URL, auth=(constants.USERNAME, constants.ACCESS_KEY), verify=constants.CERTIFICATE)
 
 for project in all_current_projects.json():
     all_projects.append(project["name"])
@@ -51,24 +50,6 @@ def get_lang_profile(_lang):
     value = profile_map.get(_lang)
     return value if value is not None else analysis_profile_standard
 
-def get_lang(_name, _lang):
-    _author, _repo = _name.split('_', 1)
-    _URL = f"https://api.github.com/repos/{_author}/{_repo}/languages"
-    _GIT_TOKEN = ""
-    headers = {"Authorization": f"token {_GIT_TOKEN}"}
-    _data = requests.get(_URL, headers=headers).json()
-
-    if _data and isinstance(_data, dict):
-        _main_lang = max(_data, key=_data.get)
-
-        print("API:", _main_lang)
-        print("Erwartet:", _lang)
-
-        return _main_lang
-    else:
-        return _lang
-
-
 print("Starte die CSV zu lesen!")
 
 with open('dataset.csv', mode='r') as file:
@@ -90,7 +71,7 @@ with open('dataset.csv', mode='r') as file:
                 url = f"https://github.com/{user}/{repo}"
                 response = requests.get(url)
 
-                _language = get_lang(name,result[13])
+                _language = lang.get_lang(name,result[13])
 
                 entry = {
                     "name" : name,

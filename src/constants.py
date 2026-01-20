@@ -1,0 +1,3 @@
+USERNAME = ""
+ACCESS_KEY = ""
+CERTIFICATE = R""

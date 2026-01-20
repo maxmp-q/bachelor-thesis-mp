@@ -10,7 +10,7 @@ with open('../data/all_langs_git.json', 'r') as git_file:
 def get_lang(_name, _lang):
     _author, _repo = _name.split('_', 1)
     _URL = f"https://api.github.com/repos/{_author}/{_repo}/languages"
-    _GIT_TOKEN = "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"
+    _GIT_TOKEN = ""
     headers = {"Authorization": f"token {_GIT_TOKEN}"}
     try:
         _data = requests.get(_URL, headers=headers).json()

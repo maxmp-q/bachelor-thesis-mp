@@ -1,21 +1,20 @@
 import requests
 import json
+import constants
 
 print("Aktuelle Daten werden aus der analyzed_data.json ausgelesen!")
 with open('../data/analyzed_data.json', 'r') as data_file:
     data = json.load(data_file)
+    print(f"Wir starten bei {data.__len__()}  Einträgen!")
 
 # Constants for API
-USERNAME = ""
-ACCESS_KEY = ""
-CERTIFICATE = R""
 BASE_URL = "https://teamscale.cs.uni-koeln.de/"
 
 # Helper Functions
 def api_get(url):
     """Wrapper for GET-Requests with RequestException."""
     try:
-        response = requests.get(url, auth=(USERNAME, ACCESS_KEY), verify=CERTIFICATE)
+        response = requests.get(url, auth=(constants.USERNAME, constants.ACCESS_KEY), verify=constants.CERTIFICATE)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
@@ -48,7 +47,8 @@ print("data.json wird eingelesen!")
 with open('../data/data.json', 'r') as file:
     _data = json.load(file)
 
-    for data_point in _data:
+    for data_point in _data.values():
+        print(data_point["name"])
         # URLS
         FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"]}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
         ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"]}/findings/list?case-insensitive-path=false&start=0&max=1000"
