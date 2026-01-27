@@ -1085,18 +1085,18 @@
   "spryker_merchant": {
     "name": "spryker_merchant",
     "lang": "PHP",
-    "clone_coverage": 0.017733990147783252,
+    "clone_coverage": 0.017543859649122806,
     "findings_count": 6.0,
-    "LOC": 7269.0,
+    "LOC": 7334.0,
     "method_length": {
       "red": 0,
       "yellow": 0,
-      "green": 1367
+      "green": 1393
     },
     "nesting_depth": {
       "red": 0,
       "yellow": 0,
-      "green": 1367
+      "green": 1393
     },
     "findings_details": [
       {
@@ -1358,18 +1358,18 @@
   "rticommunity_rtiperftest": {
     "name": "rticommunity_rtiperftest",
     "lang": "C++",
-    "clone_coverage": 0.23517332019057008,
+    "clone_coverage": 0.2351926394479586,
     "findings_count": 2264.0,
-    "LOC": 32751.0,
+    "LOC": 32746.0,
     "method_length": {
-      "red": 8507,
+      "red": 8502,
       "yellow": 3327,
       "green": 3084
     },
     "nesting_depth": {
       "red": 155,
       "yellow": 3051,
-      "green": 11712
+      "green": 11707
     },
     "findings_details": [
       {
@@ -1550,23 +1550,23 @@
   "mailslurp_mailslurp-client": {
     "name": "mailslurp_mailslurp-client",
     "lang": "TypeScript",
-    "clone_coverage": 0.5521822596257135,
-    "findings_count": 56552.0,
-    "LOC": 2217857.0,
+    "clone_coverage": 0.547640832634964,
+    "findings_count": 57526.0,
+    "LOC": 2632285.0,
     "method_length": {
       "red": 79,
-      "yellow": 6999,
-      "green": 17693
+      "yellow": 7602,
+      "green": 19291
     },
     "nesting_depth": {
       "red": 0,
       "yellow": 2,
-      "green": 24769
+      "green": 26970
     },
     "findings_details": [
       {
         "categoryName": "Comprehensibility",
-        "count": 3357,
+        "count": 3672,
         "countRed": 0
       },
       {
@@ -1576,12 +1576,12 @@
       },
       {
         "categoryName": "Documentation",
-        "count": 2477,
+        "count": 2709,
         "countRed": 0
       },
       {
         "categoryName": "Efficiency",
-        "count": 327,
+        "count": 355,
         "countRed": 0
       },
       {
@@ -1591,13 +1591,13 @@
       },
       {
         "categoryName": "Redundancy",
-        "count": 48883,
+        "count": 49170,
         "countRed": 0
       },
       {
         "categoryName": "Structure",
-        "count": 1245,
-        "countRed": 1025
+        "count": 1357,
+        "countRed": 1123
       }
     ],
     "authors": "6",

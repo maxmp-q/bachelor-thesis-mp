@@ -88,7 +88,7 @@ export class Teamscale {
 
         if(data_point.lang_profile === "Line-based Text"){
             cy.get('textarea[class="include-files-pattern"]')
-                .type(languages[data_point.lang] ?? ", **.fallback"); // .fallback is used that cypress is not typing en empty string
+                .type(languages[data_point.lang]);
         }
 
         cy.get('button[title="Add new account"]')

@@ -4,6 +4,10 @@ This is the official repo for my bachelor thesis.
 
 *Is the Quality of Code in Business Software really better than in Research Software?*
 
+## Visuals
+
+Boxplot, Scatterplot, Heatmaps, statistische Analysen: Korrelation und Signifikanz Tests
+
 ## Src
 ### converter.py
 
