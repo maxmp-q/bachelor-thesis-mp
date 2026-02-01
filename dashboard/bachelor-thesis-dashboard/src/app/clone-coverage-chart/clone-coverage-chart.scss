@@ -2,7 +2,16 @@
   max-width: 100%;
 }
 
+.pie-chart {
+  display: flex;
+  max-width: 49%;
+}
+
 .bar-chart-wrapper {
   width: 80%;
   margin: auto;
+}
+
+.pie-chart-wrapper {
+  display: flex;
 }

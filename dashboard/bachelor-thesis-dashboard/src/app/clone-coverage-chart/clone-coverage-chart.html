@@ -1,7 +1,10 @@
 <div class="bar-chart-wrapper">
   <canvas class="bar-chart" id="BusinessVsResearchByLang"></canvas>
 
-  <canvas class="bar-chart" id="AverageCloneCoverage"></canvas>
+  <section class="pie-chart-wrapper">
+    <canvas class="pie-chart" id="AverageCloneCoverageSci"></canvas>
+    <canvas class="pie-chart" id="AverageCloneCoverageNonSci"></canvas>
+  </section>
 
   <button (click)="maxLOC.set(maxLOC() - 25000)" >Decrease LOC</button>
   <button (click)="maxLOC.set(maxLOC() + 25000)">Increase LOC</button>

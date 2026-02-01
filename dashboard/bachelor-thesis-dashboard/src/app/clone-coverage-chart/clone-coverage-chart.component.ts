@@ -91,7 +91,8 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   });
 
   BusinessVsResearchByLang = signal<Chart | null>(null);
-  AverageCloneCoverage = signal<Chart | null>(null);
+  AverageCloneCoverageSci = signal<Chart | null>(null);
+  AverageCloneCoverageNonSci = signal<Chart | null>(null);
   CloneCoverageScatter= signal<Chart | null>(null);
 
   constructor() {
@@ -198,8 +199,8 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   }
 
   /**
-   * Creates a bar chart where average clone coverage is
-   * displayed by Sci and NonSci
+   * Creates two pie charts where average clone coverage is
+   * displayed by Sci and NonSci.
    * @private
    */
   private createAverageClone(): void {
@@ -219,36 +220,41 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     const computedNonSciAverage = averageNonSci.length === 0 ? 0 : averageNonSci.reduce((acc, n) => acc + n, 0) / averageNonSci.length;
 
 
-    const config: ChartConfiguration = {
-      type: 'bar' as ChartType,
-      data: {
-        labels: ['Research Software (count: ' + averageSci.length + ')', 'Business Software (count: ' + averageNonSci.length + ')'],
-        datasets: [
-          {
-            label: '',
-            data: [computedSciAverage, computedNonSciAverage],
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'top' },
-          title: {
-            display: true,
-            text: 'Business vs Research in Clone Coverage'
+    const config = (isSci: boolean) => {
+      const t: ChartConfiguration = {
+        type: 'pie' as ChartType,
+        data: {
+          labels: [isSci ? 'Research Software (count: ' + averageSci.length + ')' : 'Business Software (count: ' + averageNonSci.length + ')'],
+          datasets: [
+            {
+              label: '',
+              data: [isSci ? computedSciAverage : computedNonSciAverage, isSci ? 1 - computedSciAverage : 1 - computedNonSciAverage],
+              backgroundColor: ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.6)'],
+              borderColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 1)'],
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {position: 'top'},
+            title: {
+              display: true,
+              text: isSci ? 'Research in Clone Coverage' : 'Business in Clone Coverage'
+            }
           }
         }
-      }
+      };
+      return t;
     };
 
-    const canvas = document.getElementById('AverageCloneCoverage') as HTMLCanvasElement;
-    if (canvas) {
-      this.AverageCloneCoverage.set(new Chart(canvas, config));
-    }
+
+    const canvas1 = document.getElementById('AverageCloneCoverageSci') as HTMLCanvasElement;
+    const canvas2 = document.getElementById('AverageCloneCoverageNonSci') as HTMLCanvasElement;
+
+    if (canvas1) this.AverageCloneCoverageSci.set(new Chart(canvas1, config(true)));
+    if (canvas2) this.AverageCloneCoverageNonSci.set(new Chart(canvas2, config(false)));
   }
 
   /**
@@ -264,10 +270,12 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     const chart1 = this.BusinessVsResearchByLang();
-    const chart2 = this.AverageCloneCoverage();
-    const chart3 = this.CloneCoverageScatter();
+    const chart2 = this.AverageCloneCoverageSci();
+    const chart3 = this.AverageCloneCoverageNonSci();
+    const chart4 = this.CloneCoverageScatter();
     if (chart1) chart1.destroy();
     if (chart2) chart2.destroy();
     if (chart3) chart3.destroy();
+    if (chart4) chart4.destroy();
   }
 }
