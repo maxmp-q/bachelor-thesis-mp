@@ -1,0 +1,9 @@
+<div class="bar-chart-wrapper">
+  <canvas class="bar-chart" id="BusinessVsResearchByLang"></canvas>
+
+  <canvas class="bar-chart" id="AverageCloneCoverage"></canvas>
+
+  <button (click)="maxLOC.set(maxLOC() - 25000)" >Decrease LOC</button>
+  <button (click)="maxLOC.set(maxLOC() + 25000)">Increase LOC</button>
+  <canvas class="bar-chart" id="CloneCoverageScatter"></canvas>
+</div>

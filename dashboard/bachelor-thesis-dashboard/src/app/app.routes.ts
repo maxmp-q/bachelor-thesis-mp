@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import {BarChart} from './bar-chart/bar-chart';
+import {CloneCoverageChart} from './clone-coverage-chart/clone-coverage-chart.component';
+import {Home} from './home/home';
 
 export const routes: Routes = [
   {
-    path: 'bar-chart',
-    component: BarChart
+    path: '',
+    component: Home
+  },
+  {
+    path: 'clone-coverage-chart',
+    component: CloneCoverageChart
   }
 ];
