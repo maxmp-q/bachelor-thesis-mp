@@ -40,7 +40,7 @@ def get_lang(_name, _lang):
 
 print("Starte die CSV zu lesen!")
 
-with open('dataset.csv', mode='r') as file:
+with open('dataset/dataset.csv', mode='r') as file:
     csvFile = list(csv.reader(file))
 
     header, rows = csvFile[0], csvFile[1:]
@@ -85,7 +85,7 @@ with open('dataset.csv', mode='r') as file:
 
 print("Mach alles ins Json!")
 
-with open("language.json", mode="w", encoding="utf-8") as f:
+with open("lang/language.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
 
 print("Habe fertig!")

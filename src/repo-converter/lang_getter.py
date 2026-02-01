@@ -28,10 +28,10 @@ def get_lang(_name, _lang):
 
 
 if __name__ == "__main__":
-    with open('../data/all_langs_git.json', 'r') as git_file:
+    with open('../data/lang/all_langs_git.json', 'r') as git_file:
         git = json.load(git_file)
 
-    with open('dataset.csv', mode='r') as file:
+    with open('dataset/dataset.csv', mode='r') as file:
         csvFile = list(csv.reader(file))
 
     header, rows = csvFile[0], csvFile[1:]
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         git.append(get_lang(name, lang_for_csv))
 
 
-    with open("all_langs_git.json", mode="w", encoding="utf-8") as f:
+    with open("lang/all_langs_git.json", mode="w", encoding="utf-8") as f:
         json.dump(list(set(git)), f, indent=2)
 
     print(set(git))

@@ -4,12 +4,12 @@ import requests
 # TODO: Change .csv files to real files!!
 
 # Read the input file
-with open('test_dataset.csv', mode='r', newline='') as infile:
+with open('dataset/test_dataset.csv', mode='r', newline='') as infile:
     csvFile = list(csv.reader(infile))
     header, rows = csvFile[0], csvFile[1:]
 
 # Write to a new output file
-with open('valid_repos.csv', mode='w', newline='') as outfile:
+with open('dataset/valid_repos.csv', mode='w', newline='') as outfile:
     writer = csv.writer(outfile)
 
     _header = header[0].split(';')

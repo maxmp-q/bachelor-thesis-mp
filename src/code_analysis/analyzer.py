@@ -50,9 +50,9 @@ with open('../data/data.json', 'r') as file:
     for data_point in _data.values():
         print(data_point["name"])
         # URLS
-        FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"]}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
-        ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"]}/findings/list?case-insensitive-path=false&start=0&max=1000"
-        ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"]}/metrics?t=master%3AHEAD&uniform-path="
+        FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
+        ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"].lower()}/findings/list?case-insensitive-path=false&start=0&max=1000"
+        ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/metrics?t=master%3AHEAD&uniform-path="
 
         # Do API requests
         findings_json = api_get(FINDINGS_URL)
@@ -82,9 +82,9 @@ with open('../data/data.json', 'r') as file:
             "method_length" : extract_mapping(method_length),
             "nesting_depth" : extract_mapping(nesting_depth),
             "findings_details" : get_all_findings(findings_categories),
-            "authors" : data_point["authors"],
-            "forks" : data_point["forks"],
-            "files" : data_point["files"],
+            "authors" : int(data_point["authors"]),
+            "forks" : int(data_point["forks"]),
+            "files" : int(data_point["files"]),
             "field" : data_point["field"],
         }
 
