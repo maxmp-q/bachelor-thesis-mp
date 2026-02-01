@@ -6,9 +6,15 @@ import {DataHelper} from '../../../shared/data-helper';
 // Register Chart.js components globally
 Chart.register(...registerables);
 
-interface langMap {
+interface ValueMap {
   value: number;
   count: number;
+}
+
+/** This interface contains the values of different languages. */
+interface SciFields {
+  isSci?: ValueMap;
+  nonSci?: ValueMap;
 }
 
 @Component({
@@ -26,7 +32,7 @@ export class BarChart implements AfterViewInit, OnDestroy {
   private createChart(): void {
     const data_points: Record<string, AnalyzedData> = DataHelper.getData;
 
-    const clone_coverages: Record<string, {isSci?: langMap, nonSci?: langMap}> = {};
+    const clone_coverages: Record<string, SciFields> = {};
 
     Object.values(data_points).forEach(data_point => {
       const label = data_point.lang;
@@ -40,7 +46,7 @@ export class BarChart implements AfterViewInit, OnDestroy {
           } else {
             const count = previous.isSci ? previous.isSci.count + 1 : 1;
             const value = previous.isSci ? previous.isSci.value + data_point.clone_coverage : data_point.clone_coverage;
-            return {...previous,isSci: {value: value, count: count}};
+            return {...previous, isSci: {value: value, count: count}};
           }
         } else {
           if(data_point.field === 'nonSci'){
@@ -61,10 +67,15 @@ export class BarChart implements AfterViewInit, OnDestroy {
       nonSciData.push(entry.nonSci ? entry.nonSci.value / entry.nonSci.count : 0);
     });
 
+    const labels: string[] = Object.keys(clone_coverages).map(k => {
+      const entry = clone_coverages[k];
+      return k + " (isSci: " + ( entry.isSci?.count ?? "0") + ", nonSci: " + (entry.nonSci?.count ?? "0") + ")";
+    })
+
     const config: ChartConfiguration = {
       type: 'bar' as ChartType,
       data: {
-        labels: Object.keys(clone_coverages),
+        labels: labels,
         datasets: [
           {
             label: 'Research Average',
@@ -103,7 +114,6 @@ export class BarChart implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Destroy chart instance to prevent memory leaks
     if (this.chart) {
       this.chart.destroy();
     }
