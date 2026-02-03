@@ -5,6 +5,7 @@ interface SimpleData {
     forks: number;
     files: number;
     field: string;
+    default_branch: string;
 }
 
 interface DataPoint extends SimpleData {

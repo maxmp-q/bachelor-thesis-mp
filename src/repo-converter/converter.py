@@ -50,6 +50,22 @@ def get_lang_profile(_lang):
     value = profile_map.get(_lang)
     return value if value is not None else analysis_profile_standard
 
+def get_branch(_name):
+    _author, _repo = _name.split('_', 1)
+    _URL = f"https://api.github.com/repos/{_author}/{_repo}"
+    headers = {"Authorization": f"token {constants.GITHUB_ACCESS_KEY}"}
+    try:
+        _data = requests.get(_URL, headers=headers).json()
+
+        if _data and isinstance(_data, dict):
+            return dict(_data)['default_branch']
+        else:
+            return 'master'
+
+    except Exception as e:
+        print(e)
+        return 'master'
+
 print("Starte die CSV zu lesen!")
 
 with open('dataset/dataset.csv', mode='r') as file:
@@ -72,6 +88,7 @@ with open('dataset/dataset.csv', mode='r') as file:
                 response = requests.get(url)
 
                 _language = lang_getter.get_lang(name,result[13])
+                _default_branch = get_branch(name)
 
                 entry = {
                     "name" : name,
@@ -83,6 +100,7 @@ with open('dataset/dataset.csv', mode='r') as file:
                     "forks" : result[8],
                     "files" : result[10],
                     "field" : result[28],
+                    "default_branch" : _default_branch
                 }
 
                 if response.status_code == 200:

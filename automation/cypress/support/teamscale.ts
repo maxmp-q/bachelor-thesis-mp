@@ -108,6 +108,12 @@ export class Teamscale {
 
         cy.get('button[data-testid="external-credentials-save"]')
             .click();
+
+        cy.get('input[name="Default branch name"]')
+            .clear();
+
+        cy.get('input[name="Default branch name"]')
+            .type(data_point.default_branch);
     }
 
     /**

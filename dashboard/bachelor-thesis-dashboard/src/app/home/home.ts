@@ -14,4 +14,8 @@ export class Home {
     this.router.navigate(['/clone-coverage-chart']);
   }
 
+  goToMethodLength() {
+    this.router.navigate(['/method-length-chart']);
+  }
+
 }
