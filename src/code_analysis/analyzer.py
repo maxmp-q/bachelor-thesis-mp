@@ -58,7 +58,7 @@ with open('../data/data.json', 'r') as file:
         findings_json = api_get(FINDINGS_URL)
         metrics_json = api_get(ALL_METRICS_URL)
 
-        if not findings_json or not metrics_json:
+        if not findings_json or not metrics_json or not metrics_json['metricValues']:
             continue
 
         # Get the metrics
