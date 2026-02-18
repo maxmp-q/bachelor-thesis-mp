@@ -1,278 +1,31 @@
-import {Component, AfterViewInit, OnDestroy, signal, computed, effect} from '@angular/core';
+import {Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
 import { Chart, ChartConfiguration, ChartType, registerables } from 'chart.js';
 import {BoxPlotController, BoxAndWiskers} from '@sgratzl/chartjs-chart-boxplot';
 import {AnalyzedData} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
+import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
 // Register Chart.js components globally
 Chart.register(...registerables, BoxPlotController, BoxAndWiskers);
 
-interface ValueMap {
-  value: number;
-  count: number;
-}
-
-/** This interface contains the values of different languages. */
-interface SciFields {
-  isSci?: ValueMap;
-  nonSci?: ValueMap;
-}
 
 @Component({
   selector: 'app-clone-coverage-chart',
   templateUrl: './clone-coverage-chart.html',
+  imports: [
+    ScatterPlot
+  ],
   styleUrls: ['./clone-coverage-chart.scss']
 })
 export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
 
-  maxLOC = signal<number>(100000);
-  cloneLOCScatterConfig = computed<ChartConfiguration<'scatter'>>(() => {
-    const dataPoints = this.dataPoints();
-    const maxLOC = this.maxLOC();
-
-    const sciCloneCoverage: ValueMap[] = [];
-    const nonSciCloneCoverage: ValueMap[] = [];
-
-    Object.values(dataPoints).forEach(entry => {
-      const LOC = entry.LOC;
-      if(entry.LOC < maxLOC){
-        entry.field === "nonSci" ?
-          nonSciCloneCoverage.push({count: LOC, value: entry.clone_coverage}) :
-          sciCloneCoverage.push({count: entry.LOC, value: entry.clone_coverage});
-      }
-    });
-
-    const researchPoints = sciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-    const businessPoints = nonSciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-
-    const config: ChartConfiguration<'scatter'> = {
-      type: 'scatter',
-      data: {
-        datasets: [
-          {
-            label: 'Research',
-            data: researchPoints,
-            backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            pointRadius: 5
-          },
-          {
-            label: 'Business',
-            data: businessPoints,
-            backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            pointRadius: 5
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            type: 'linear',
-            title: {
-              display: true,
-              text: 'LOC'
-            }
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Clone Coverage'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'top'
-          }
-        }
-      }
-    };
-    return config;
-  });
-
-  maxAuthors = signal<number>(80);
-  cloneAuthorScatterConfig = computed<ChartConfiguration<'scatter'>>(() => {
-    const dataPoints = this.dataPoints();
-
-    const sciCloneCoverage: ValueMap[] = [];
-    const nonSciCloneCoverage: ValueMap[] = [];
-
-    Object.values(dataPoints).forEach(entry => {
-      const numAuthors = Number(entry.authors);
-      if(numAuthors < this.maxAuthors()){
-        entry.field === "nonSci" ?
-          nonSciCloneCoverage.push({count: numAuthors, value: entry.clone_coverage}) :
-          sciCloneCoverage.push({count: numAuthors, value: entry.clone_coverage});
-      }
-    });
-
-    const researchPoints = sciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-    const businessPoints = nonSciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-
-
-    const config: ChartConfiguration<'scatter'> = {
-      type: 'scatter',
-      data: {
-        datasets: [
-          {
-            label: 'Research',
-            data: researchPoints,
-            backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            pointRadius: 5
-          },
-          {
-            label: 'Business',
-            data: businessPoints,
-            backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            pointRadius: 5
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            type: 'linear',
-            title: {
-              display: true,
-              text: 'Authors'
-            }
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Clone Coverage'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'top'
-          }
-        }
-      }
-    };
-    return config;
-  });
-
-  maxForks = signal<number>(80);
-  cloneForksScatterConfig = computed<ChartConfiguration<'scatter'>>(() => {
-    const dataPoints = this.dataPoints();
-
-    const sciCloneCoverage: ValueMap[] = [];
-    const nonSciCloneCoverage: ValueMap[] = [];
-
-    Object.values(dataPoints).forEach(entry => {
-      const numForks = Number(entry.forks);
-      if(numForks < this.maxForks()){
-        entry.field === "nonSci" ?
-          nonSciCloneCoverage.push({count: numForks, value: entry.clone_coverage}) :
-          sciCloneCoverage.push({count: numForks, value: entry.clone_coverage});
-      }
-    });
-
-    const researchPoints = sciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-    const businessPoints = nonSciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-
-
-    const config: ChartConfiguration<'scatter'> = {
-      type: 'scatter',
-      data: {
-        datasets: [
-          {
-            label: 'Research',
-            data: researchPoints,
-            backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            pointRadius: 5
-          },
-          {
-            label: 'Business',
-            data: businessPoints,
-            backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            pointRadius: 5
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            type: 'linear',
-            title: {
-              display: true,
-              text: 'Forks'
-            }
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Clone Coverage'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'top'
-          }
-        }
-      }
-    };
-    return config;
-  });
-
-  //Reactive Plots
-  CloneCoverageLOCScatter= signal<Chart | null>(null);
-  CloneCoverageAuthorScatter= signal<Chart | null>(null);
-  CloneCoverageForksScatter= signal<Chart | null>(null);
-
-
   allNonReactivePlots = signal<Chart[]>([]);
-
-
-  constructor() {
-    effect(() => {
-      const config = this.cloneLOCScatterConfig();
-      const chart = this.CloneCoverageLOCScatter();
-
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
-    });
-    effect(() => {
-      const config = this.cloneAuthorScatterConfig();
-      const chart = this.CloneCoverageAuthorScatter();
-
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
-    });
-    effect(() => {
-      const config = this.cloneForksScatterConfig();
-      const chart = this.CloneCoverageForksScatter();
-
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
-    });
-  }
 
   ngAfterViewInit(): void {
     this.createCloneByLang();
     this.createCloneByField();
     this.createAverageClone();
-    this.createCloneLOCScatter();
-    this.createCloneAuthorScatter();
-    this.createCloneForksScatter();
     this.createCloneBoxplot();
   }
 
@@ -481,39 +234,6 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   }
 
   /**
-   * Creates a scatter plot where the dots are sorted by LOC and Clone Coverage!
-   * @private
-   */
-  private createCloneLOCScatter(): void {
-    const canvas = document.getElementById('CloneCoverageLOCScatter') as HTMLCanvasElement;
-    if (canvas) {
-      this.CloneCoverageLOCScatter.set(new Chart(canvas, this.cloneLOCScatterConfig()));
-    }
-  }
-
-  /**
-   * Creates a scatter plot where the dots are sorted by Author and Clone Coverage!
-   * @private
-   */
-  private createCloneAuthorScatter(): void {
-    const canvas = document.getElementById('CloneCoverageAuthorScatter') as HTMLCanvasElement;
-    if (canvas) {
-      this.CloneCoverageAuthorScatter.set(new Chart(canvas, this.cloneAuthorScatterConfig()));
-    }
-  }
-
-  /**
-   * Creates a scatter plot where the dots are sorted by Forks and Clone Coverage!
-   * @private
-   */
-  private createCloneForksScatter(): void {
-    const canvas = document.getElementById('CloneCoverageForksScatter') as HTMLCanvasElement;
-    if (canvas) {
-      this.CloneCoverageForksScatter.set(new Chart(canvas, this.cloneForksScatterConfig()));
-    }
-  }
-
-  /**
    * Creates a boxplot where the dots are sorted by Author and Clone Coverage!
    * @private
    */
@@ -559,11 +279,6 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     const nonReactivCharts = this.allNonReactivePlots();
-    const chart1 = this.CloneCoverageLOCScatter();
-    const chart2 = this.CloneCoverageAuthorScatter();
-
     nonReactivCharts.forEach(chart => chart.destroy());
-    if (chart1) chart1.destroy();
-    if (chart2) chart2.destroy();
   }
 }

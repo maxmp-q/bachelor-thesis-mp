@@ -1,0 +1,134 @@
+import {AfterViewInit, Component, computed, effect, input, OnDestroy, OnInit, signal} from '@angular/core';
+import {AnalyzedData} from '../../../../shared/interface/data-point';
+import {DataHelper} from '../../../../shared/data-helper';
+import {Chart, ChartConfiguration} from 'chart.js';
+
+@Component({
+  selector: 'app-scatter-plot',
+  imports: [],
+  templateUrl: './scatter-plot.html',
+  styleUrl: './scatter-plot.scss',
+})
+export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
+  dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
+
+  // Important Imports
+  /** Must be a keyof AnalyzedData like LOC, Forks or Authors */
+  key1 = input<keyof AnalyzedData>('LOC');
+  /** Must be a keyof AnalyzedData like Clone Coverage, Method Length, Nesting Depth */
+  key2 = input<keyof AnalyzedData>('clone_coverage');
+  /** Initial Max Value for key1 */
+  max = input<number>(0);
+  /** Increase/Decrease Value for key1 */
+  changeValue = input<number>(0);
+
+  ScatterPlot= signal<Chart | null>(null);
+
+  localMax = signal<number>(0);
+  scatterPlotConfig = computed<ChartConfiguration<'scatter'>>(() => {
+    const dataPoints = this.dataPoints();
+    const max = this.localMax();
+    const key1 = this.key1();
+    const key2 = this.key2();
+
+    const sciCloneCoverage: ValueMap[] = [];
+    const nonSciCloneCoverage: ValueMap[] = [];
+
+    Object.values(dataPoints).forEach(entry => {
+      const value1 = Number(DataHelper.getValue(entry, key1));
+      const value2 = Number(DataHelper.getValue(entry, key2));
+
+      if(value1 < max){
+        entry.field === "nonSci" ?
+          nonSciCloneCoverage.push({count: value1, value: value2}) :
+          sciCloneCoverage.push({count: value1, value: value2});
+      }
+    });
+
+
+    const researchPoints = sciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
+    const businessPoints = nonSciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
+
+    const config: ChartConfiguration<'scatter'> = {
+      type: 'scatter',
+      data: {
+        datasets: [
+          {
+            label: 'Research',
+            data: researchPoints,
+            backgroundColor: 'rgba(54, 162, 235, 0.8)',
+            pointRadius: 5
+          },
+          {
+            label: 'Business',
+            data: businessPoints,
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
+            pointRadius: 5
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            type: 'linear',
+            title: {
+              display: true,
+              text: this.key1()
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: this.key2()
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        }
+      }
+    };
+    return config;
+  });
+
+  ngOnInit(): void {
+    this.localMax.set(this.max());
+  }
+
+  ngAfterViewInit(): void {
+    this.createScatterPlot();
+  }
+
+  constructor() {
+    effect(() => {
+      const config = this.scatterPlotConfig();
+      const chart = this.ScatterPlot();
+
+      if (!chart) return;
+      if (config.options) chart.options = config.options;
+
+      chart.data.datasets = config.data!.datasets!;
+
+      chart.update();
+    });
+  }
+
+  /**
+   * Creates a scatter plot where the dots are sorted by key1 and key2!
+   * @private
+   */
+  private createScatterPlot(): void {
+    const canvas = document.getElementById(`ScatterPlot${this.key1() + this.key2()}`) as HTMLCanvasElement;
+    if (canvas) {
+      this.ScatterPlot.set(new Chart(canvas, this.scatterPlotConfig()));
+    }
+  }
+
+  ngOnDestroy(): void {
+    const ScatterPlot = this.ScatterPlot();
+    if (ScatterPlot) ScatterPlot.destroy();
+  }
+}

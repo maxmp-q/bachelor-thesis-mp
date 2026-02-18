@@ -7,4 +7,8 @@ export class DataHelper{
     static get getData(): Record<string, AnalyzedData>  {
         return this.data_points;
     }
+
+    static getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+      return obj[key];
+    }
 }

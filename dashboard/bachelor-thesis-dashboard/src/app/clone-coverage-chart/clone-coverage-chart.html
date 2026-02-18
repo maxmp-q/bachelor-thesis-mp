@@ -1,4 +1,4 @@
-<div class="chart-wrapper">
+<section class="chart-wrapper">
   <canvas class="chart" id="BusinessVsResearchByLang"></canvas>
   <canvas class="chart" id="BusinessVsResearchByField"></canvas>
 
@@ -7,17 +7,40 @@
     <canvas class="pie-chart" id="AverageCloneCoverageNonSci"></canvas>
   </section>
 
-  <button (click)="maxLOC.set(maxLOC() - 25000)" >Decrease LOC</button>
-  <button (click)="maxLOC.set(maxLOC() + 25000)">Increase LOC</button>
-  <canvas class="chart" id="CloneCoverageLOCScatter"></canvas>
+  <app-scatter-plot
+    key1="LOC"
+    key2="clone_coverage"
+    [max]="100000"
+    [changeValue]="25000"
+  />
 
-  <button (click)="maxAuthors.set(maxAuthors() - 10)" >Decrease Authors</button>
-  <button (click)="maxAuthors.set(maxAuthors() + 10)">Increase Authors</button>
-  <canvas class="chart" id="CloneCoverageAuthorScatter"></canvas>
+  <app-scatter-plot
+    key1="authors"
+    key2="clone_coverage"
+    [max]="80"
+    [changeValue]="10"
+  />
 
-  <button (click)="maxForks.set(maxForks() - 10)" >Decrease Forks</button>
-  <button (click)="maxForks.set(maxForks() + 10)">Increase Forks</button>
-  <canvas class="chart" id="CloneCoverageForksScatter"></canvas>
+  <app-scatter-plot
+    key1="forks"
+    key2="clone_coverage"
+    [max]="80"
+    [changeValue]="10"
+  />
+
+  <app-scatter-plot
+    key1="files"
+    key2="clone_coverage"
+    [max]="10000"
+    [changeValue]="500"
+  />
+
+  <app-scatter-plot
+    key1="findings_count"
+    key2="clone_coverage"
+    [max]="5000"
+    [changeValue]="250"
+  />
 
   <canvas class="chart" id="CloneCoverageBoxPlot"></canvas>
-</div>
+</section>

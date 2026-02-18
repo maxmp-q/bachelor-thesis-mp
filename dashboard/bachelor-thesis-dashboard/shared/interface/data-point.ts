@@ -27,7 +27,7 @@ export interface FindingsInfo{
     countRed: number;
 }
 
-interface Separation{
+export interface Separation{
     red: number;
     yellow: number;
     green: number;
