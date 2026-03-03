@@ -21,6 +21,8 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
   max = input<number>(0);
   /** Increase/Decrease Value for key1 */
   changeValue = input<number>(0);
+  /** Here another metric can be passed */
+  borderRadius = input<number | number[]>(5);
 
   ScatterPlot= signal<Chart | null>(null);
 
@@ -31,8 +33,8 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
     const key1 = this.key1();
     const key2 = this.key2();
 
-    const sciCloneCoverage: ValueMap[] = [];
-    const nonSciCloneCoverage: ValueMap[] = [];
+    const sciCloneCoverage: ValueMap<number>[] = [];
+    const nonSciCloneCoverage: ValueMap<number>[] = [];
 
     Object.values(dataPoints).forEach(entry => {
       const value1 = Number(DataHelper.getValue(entry, key1));
@@ -57,13 +59,13 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
             label: 'Research',
             data: researchPoints,
             backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            pointRadius: 5
+            pointRadius: this.borderRadius()
           },
           {
             label: 'Business',
             data: businessPoints,
             backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            pointRadius: 5
+            pointRadius: this.borderRadius()
           }
         ]
       },

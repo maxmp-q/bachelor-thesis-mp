@@ -80,7 +80,7 @@ with open('dataset/dataset.csv', mode='r') as file:
         result = lines[0].split(';')
 
         # for only scientific use 1 | for only non sci use 0
-        if result[1] == '0':
+        if result[1] == '1':
             name = result[0]
             if name not in all_projects and name not in all_git_accounts:
                 user, repo = name.split("_", 1)

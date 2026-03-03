@@ -37,7 +37,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
    */
   private createCloneByLang(): void {
     const dataPoints = this.dataPoints();
-    const cloneCoverages: Record<string, SciFields> = {};
+    const cloneCoverages: Record<string, SciFields<number>> = {};
 
     Object.values(dataPoints).forEach(({ lang, field, clone_coverage }) => {
       cloneCoverages[lang] ??= {};
@@ -120,7 +120,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
    */
   private createCloneByField(): void {
     const dataPoints = this.dataPoints();
-    const cloneCoverages: Record<string, ValueMap> = {};
+    const cloneCoverages: Record<string, ValueMap<number>> = {};
 
     Object.values(dataPoints).forEach(({field, clone_coverage }) => {
       cloneCoverages[field] ??= {count: 0, value: 0};
