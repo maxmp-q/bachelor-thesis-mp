@@ -18,4 +18,8 @@ export class Home {
     this.router.navigate(['/method-length-chart']);
   }
 
+  goToCommonCharts() {
+    this.router.navigate(['/common-chart']);
+  }
+
 }

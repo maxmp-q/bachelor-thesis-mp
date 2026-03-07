@@ -74,13 +74,19 @@ with open('dataset/dataset.csv', mode='r') as file:
     header, rows = csvFile[0], csvFile[1:]
 
     # Choose random rows
-    random_rows = random.sample(rows, 500)
+    random_rows = random.sample(rows, 5000)
 
     for lines in random_rows:
         result = lines[0].split(';')
+        print(result[28])
+
+        try:
+            field_test = result[28] == "Astronomy"
+        except:
+            field_test = False
 
         # for only scientific use 1 | for only non sci use 0
-        if result[1] == '1':
+        if result[1] == '1' and field_test:
             name = result[0]
             if name not in all_projects and name not in all_git_accounts:
                 user, repo = name.split("_", 1)
