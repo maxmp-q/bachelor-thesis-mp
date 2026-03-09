@@ -2,10 +2,13 @@ import {AfterViewInit, Component, OnDestroy, signal} from '@angular/core';
 import {AnalyzedData, Separation} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
+import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
 @Component({
   selector: 'app-common-charts',
-  imports: [],
+  imports: [
+    ScatterPlot
+  ],
   templateUrl: './common-charts.html',
   styleUrl: './common-charts.scss',
 })

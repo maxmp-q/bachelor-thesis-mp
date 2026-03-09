@@ -1,14 +1,14 @@
 import {AfterViewInit, Component, OnDestroy, signal} from '@angular/core';
-import {ScatterPlot} from "../charts/scatter-plot/scatter-plot";
 import {AnalyzedData, Separation} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
+import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
 @Component({
   selector: 'app-method-length-charts',
-    imports: [
-        ScatterPlot
-    ],
+  imports: [
+    ScatterPlot
+  ],
   templateUrl: './method-length-charts.html',
   styleUrl: './method-length-charts.scss',
 })

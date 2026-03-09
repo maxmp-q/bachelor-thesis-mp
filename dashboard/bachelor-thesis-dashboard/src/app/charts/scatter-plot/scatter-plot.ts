@@ -1,55 +1,128 @@
 import {AfterViewInit, Component, computed, effect, input, OnDestroy, OnInit, signal} from '@angular/core';
-import {AnalyzedData} from '../../../../shared/interface/data-point';
+import {AnalyzedData, Separation} from '../../../../shared/interface/data-point';
 import {DataHelper} from '../../../../shared/data-helper';
 import {Chart, ChartConfiguration} from 'chart.js';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-scatter-plot',
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './scatter-plot.html',
   styleUrl: './scatter-plot.scss',
 })
 export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
   dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
 
-  // Important Imports
+  // Important Inputs for first Key
   /** Must be a keyof AnalyzedData like LOC, Forks or Authors */
   key1 = input<keyof AnalyzedData>('LOC');
+  /** Is a sub key of AnalyzedData from Separations*/
+  sub_key1 = input<keyof Separation | undefined>();
+  /** Initial Max Value for key1 */
+  max_key1 = input<number>(0);
+  /** Increase/Decrease Value for key1 */
+  changeValue_key1 = input<number>(0);
+
+
+  // Important Inputs for second Key
   /** Must be a keyof AnalyzedData like Clone Coverage, Method Length, Nesting Depth */
   key2 = input<keyof AnalyzedData>('clone_coverage');
-  /** Initial Max Value for key1 */
-  max = input<number>(0);
-  /** Increase/Decrease Value for key1 */
-  changeValue = input<number>(0);
+  /** Initial Max Value for key2 */
+  max_key2 = input<number>(0);
+  /** Increase/Decrease Value for key2 */
+  changeValue_key2 = input<number>(0);
+
+  //Other Inputs
   /** Here another metric can be passed */
-  borderRadius = input<number | number[]>(5);
+  borderRadius = input<keyof AnalyzedData | undefined>();
 
+  //Other Important Signals
   ScatterPlot= signal<Chart | null>(null);
+  radiusByKey = signal<boolean>(false);
 
-  localMax = signal<number>(0);
+
+  // Everything needed for the select!
+  selectOption = input<keyof AnalyzedData | undefined>();
+  selected = signal<string | undefined>(undefined);
+  selectOptions = computed(() => {
+    const dataPoints = this.dataPoints();
+    const selectOption = this.selectOption();
+
+    const possibleOptions: Set<string> = new Set<string>();
+    if(selectOption){
+      Object.values(dataPoints).forEach(entry => {
+        possibleOptions.add(DataHelper.getValue(entry, selectOption) as string);
+      });
+    }
+    return [...possibleOptions];
+  })
+
+  localMax_key1 = signal<number>(0);
+  localMax_key2 = signal<number>(0);
   scatterPlotConfig = computed<ChartConfiguration<'scatter'>>(() => {
     const dataPoints = this.dataPoints();
-    const max = this.localMax();
     const key1 = this.key1();
-    const key2 = this.key2();
+    const max1 = this.localMax_key1();
 
-    const sciCloneCoverage: ValueMap<number>[] = [];
-    const nonSciCloneCoverage: ValueMap<number>[] = [];
+    const key2 = this.key2();
+    const max2 = this.localMax_key2();
+
+    const borderRadius = this.borderRadius();
+    const radiusByKey = this.radiusByKey();
+
+    const selected = this.selected();
+    const selectOption = this.selectOption();
+
+    const sciValues: ValueMap<number>[] = [];
+    const nonSciValues: ValueMap<number>[] = [];
+    const sciRadius: number[] = [];
+    const nonSciRadius: number[] = [];
 
     Object.values(dataPoints).forEach(entry => {
-      const value1 = Number(DataHelper.getValue(entry, key1));
+      type Entry = typeof entry;
+      type Key1 = typeof key1;
+      type SubKey = keyof Entry[Key1];
+
+      const subKey = this.sub_key1() as SubKey| undefined;
+
+      const value1 = Number(DataHelper.getValue(entry, key1, subKey));
       const value2 = Number(DataHelper.getValue(entry, key2));
 
-      if(value1 < max){
-        entry.field === "nonSci" ?
-          nonSciCloneCoverage.push({count: value1, value: value2}) :
-          sciCloneCoverage.push({count: value1, value: value2});
+      if(selected && selectOption) {
+        const selectable = selected === DataHelper.getValue(entry, selectOption)
+
+        if (value1 < max1 && value2 < max2 && selectable) {
+          entry.field === "nonSci" ?
+            nonSciValues.push({count: value1, value: value2}) :
+            sciValues.push({count: value1, value: value2});
+
+          if (borderRadius && radiusByKey) {
+            const radius = Number(DataHelper.getValue(entry, borderRadius));
+            entry.field === "nonSci" ?
+              nonSciRadius.push(10 * Math.log(1 + radius)) :
+              sciRadius.push(10 * Math.log(1 + radius));
+          }
+        }
+      } else {
+        if(value1 < max1 && value2 < max2){
+          entry.field === "nonSci" ?
+            nonSciValues.push({count: value1, value: value2}) :
+            sciValues.push({count: value1, value: value2});
+
+          if(borderRadius && radiusByKey){
+            const radius = Number(DataHelper.getValue(entry, borderRadius));
+            entry.field === "nonSci" ?
+              nonSciRadius.push(10 * Math.log(1 + radius)) :
+              sciRadius.push(10 * Math.log(1 + radius));
+          }
+        }
       }
     });
 
-
-    const researchPoints = sciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
-    const businessPoints = nonSciCloneCoverage.map((entry) => ({ x: entry.count, y: entry.value }));
+    const researchPoints = sciValues.map((entry) => ({ x: entry.count, y: entry.value }));
+    const businessPoints = nonSciValues.map((entry) => ({ x: entry.count, y: entry.value }));
 
     const config: ChartConfiguration<'scatter'> = {
       type: 'scatter',
@@ -59,13 +132,13 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
             label: 'Research',
             data: researchPoints,
             backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            pointRadius: this.borderRadius()
+            pointRadius: this.borderRadius() && this.radiusByKey() ? sciRadius : 5
           },
           {
             label: 'Business',
             data: businessPoints,
             backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            pointRadius: this.borderRadius()
+            pointRadius: this.borderRadius() && this.radiusByKey() ? nonSciRadius : 5
           }
         ]
       },
@@ -97,7 +170,8 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
   });
 
   ngOnInit(): void {
-    this.localMax.set(this.max());
+    this.localMax_key1.set(this.max_key1());
+    this.localMax_key2.set(this.max_key2());
   }
 
   ngAfterViewInit(): void {

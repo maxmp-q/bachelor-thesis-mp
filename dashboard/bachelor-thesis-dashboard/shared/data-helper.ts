@@ -8,7 +8,16 @@ export class DataHelper{
         return this.data_points;
     }
 
-    static getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
-      return obj[key];
+    static getValue<
+      T,
+      K extends keyof T,
+      Q extends keyof T[K]
+    >(
+      obj: T,
+      keyOfT: K,
+      keyOfK?: Q | undefined
+    ): T[K] | T[K][Q] {
+      const returnable = obj[keyOfT];
+      return keyOfK ? returnable[keyOfK] : returnable;
     }
 }

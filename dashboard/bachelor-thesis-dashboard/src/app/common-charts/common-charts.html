@@ -1,4 +1,29 @@
 <section class="chart-wrapper">
-  <canvas class="chart" id="BusinessVsResearchInMethodLength"></canvas>
-  <canvas class="chart" id="MethodLengthByLang"></canvas>
+<!--  <canvas class="chart" id="BusinessVsResearchInMethodLength"></canvas>-->
+<!--  <canvas class="chart" id="MethodLengthByLang"></canvas>-->
+  <app-scatter-plot
+    key1="LOC"
+    [max_key1]="100000"
+    [changeValue_key1]="25000"
+
+    key2="files"
+    [max_key2]="30000"
+    [changeValue_key2]="2500"
+
+    borderRadius="clone_coverage"
+  />
+
+  <app-scatter-plot
+    key1="method_length"
+    sub_key1="red"
+    [max_key1]="8000"
+    [changeValue_key1]="500"
+
+    key2="files"
+    [max_key2]="30000"
+    [changeValue_key2]="2500"
+
+    borderRadius="clone_coverage"
+  />
+
 </section>

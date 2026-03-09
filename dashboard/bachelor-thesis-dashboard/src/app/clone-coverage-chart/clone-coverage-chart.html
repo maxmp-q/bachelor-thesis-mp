@@ -10,36 +10,43 @@
   <app-scatter-plot
     key1="LOC"
     key2="clone_coverage"
-    [max]="100000"
-    [changeValue]="25000"
+    [max_key1]="100000"
+    [changeValue_key1]="25000"
+    [max_key2]="1"
+    selectOption="lang"
   />
 
   <app-scatter-plot
     key1="authors"
     key2="clone_coverage"
-    [max]="80"
-    [changeValue]="10"
+    [max_key1]="80"
+    [changeValue_key1]="10"
+    [max_key2]="1"
+    selectOption="lang"
   />
 
   <app-scatter-plot
     key1="forks"
     key2="clone_coverage"
-    [max]="80"
-    [changeValue]="10"
+    [max_key1]="80"
+    [changeValue_key1]="10"
+    [max_key2]="1"
   />
 
   <app-scatter-plot
     key1="files"
     key2="clone_coverage"
-    [max]="10000"
-    [changeValue]="500"
+    [max_key1]="10000"
+    [changeValue_key1]="500"
+    [max_key2]="1"
   />
 
   <app-scatter-plot
     key1="findings_count"
     key2="clone_coverage"
-    [max]="5000"
-    [changeValue]="250"
+    [max_key1]="5000"
+    [changeValue_key1]="250"
+    [max_key2]="1"
   />
 
   <canvas class="chart" id="CloneCoverageBoxPlot"></canvas>

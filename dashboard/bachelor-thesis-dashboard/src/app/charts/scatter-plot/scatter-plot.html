@@ -1,3 +1,31 @@
-<button class="increase-button" (click)="localMax.set(localMax() - changeValue())" >Decrease {{key1()}}</button>
-<button class="increase-button" (click)="localMax.set(localMax() + changeValue())">Increase {{ key1() }}</button>
+@if (changeValue_key2() !== 0){
+  <button class="increase-button" (click)="localMax_key2.set(localMax_key2() - changeValue_key2())" >Decrease {{key2()}}</button>
+  <button class="increase-button" (click)="localMax_key2.set(localMax_key2() + changeValue_key2())">Increase {{ key2() }}</button>
+}
+
+<button class="increase-button" (click)="localMax_key1.set(localMax_key1() - changeValue_key1())" >Decrease {{sub_key1() ? key1() + " " + sub_key1() : key1()}}</button>
+<button class="increase-button" (click)="localMax_key1.set(localMax_key1() + changeValue_key1())">Increase {{ sub_key1() ? key1() + " " + sub_key1() : key1()}}</button>
+
 <canvas class="chart" [id]="'ScatterPlot' + key1() + key2()"></canvas>
+
+@if (borderRadius()){
+  <label>
+    <input
+      type="checkbox"
+      [(ngModel)]="radiusByKey"
+    />
+    Calculate the size of the points is {{borderRadius()}}
+  </label>
+}
+
+@if (selectOption()) {
+  <span> Filter here for a {{selectOption()}} </span>
+  <select [(ngModel)]="selected">
+    <option [ngValue]="undefined"> All {{selectOption()}}</option>
+    @for(item of selectOptions(); track item){
+      <option [ngValue]="item">
+        {{ item }}
+      </option>
+    }
+  </select>
+}
