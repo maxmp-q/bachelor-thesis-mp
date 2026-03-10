@@ -81,7 +81,7 @@ with open('dataset/dataset.csv', mode='r') as file:
         print(result[28])
 
         try:
-            field_test = result[28] == "Astronomy"
+            field_test = result[28] == "Engineering"
         except:
             field_test = False
 

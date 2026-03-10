@@ -16,7 +16,7 @@ with open('../data/analyzed_data.json', 'r') as data_file:
 
     for k in last_50_values:
         print(f"wir löschen gerade: {k['name']}")
-        DELETE_API = f"{BASE_URL}api/v2025.2/projects/{k['name']}"
+        DELETE_API = f"{BASE_URL}api/v2025.2/projects/{k['name'].lower()}"
         print(DELETE_API)
         responses = requests.delete(DELETE_API, auth=(constants.USERNAME, constants.ACCESS_KEY), verify=constants.CERTIFICATE)
         print(responses.status_code)

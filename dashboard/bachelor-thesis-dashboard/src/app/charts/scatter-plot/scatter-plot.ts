@@ -85,39 +85,29 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
       type Key1 = typeof key1;
       type SubKey = keyof Entry[Key1];
 
-      const subKey = this.sub_key1() as SubKey| undefined;
+      const subKey = this.sub_key1() as SubKey | undefined;
 
+      //Get the values depending on the key and sub_key
       const value1 = Number(DataHelper.getValue(entry, key1, subKey));
       const value2 = Number(DataHelper.getValue(entry, key2));
 
-      if(selected && selectOption) {
-        const selectable = selected === DataHelper.getValue(entry, selectOption)
+      //Check if values should be passed
+      const passesValueFilter = value1 < max1 && value2 < max2;
+      const passesSelectFilter =
+        !selected || !selectOption || selected === DataHelper.getValue(entry, selectOption);
 
-        if (value1 < max1 && value2 < max2 && selectable) {
-          entry.field === "nonSci" ?
-            nonSciValues.push({count: value1, value: value2}) :
-            sciValues.push({count: value1, value: value2});
+      if (!passesValueFilter || !passesSelectFilter) return;
 
-          if (borderRadius && radiusByKey) {
-            const radius = Number(DataHelper.getValue(entry, borderRadius));
-            entry.field === "nonSci" ?
-              nonSciRadius.push(10 * Math.log(1 + radius)) :
-              sciRadius.push(10 * Math.log(1 + radius));
-          }
-        }
-      } else {
-        if(value1 < max1 && value2 < max2){
-          entry.field === "nonSci" ?
-            nonSciValues.push({count: value1, value: value2}) :
-            sciValues.push({count: value1, value: value2});
+      // Sci or NonSci
+      const targetValues = entry.field === "nonSci" ? nonSciValues : sciValues;
+      const targetRadius = entry.field === "nonSci" ? nonSciRadius : sciRadius;
 
-          if(borderRadius && radiusByKey){
-            const radius = Number(DataHelper.getValue(entry, borderRadius));
-            entry.field === "nonSci" ?
-              nonSciRadius.push(10 * Math.log(1 + radius)) :
-              sciRadius.push(10 * Math.log(1 + radius));
-          }
-        }
+      targetValues.push({ count: value1, value: value2 });
+
+      // Add borderradius if wanted
+      if (borderRadius && radiusByKey) {
+        const radius = Number(DataHelper.getValue(entry, borderRadius));
+        targetRadius.push(10 * Math.log(1 + radius));
       }
     });
 

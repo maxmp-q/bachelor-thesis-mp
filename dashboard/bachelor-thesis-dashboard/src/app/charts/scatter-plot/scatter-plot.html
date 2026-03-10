@@ -1,10 +1,14 @@
 @if (changeValue_key2() !== 0){
-  <button class="increase-button" (click)="localMax_key2.set(localMax_key2() - changeValue_key2())" >Decrease {{key2()}}</button>
-  <button class="increase-button" (click)="localMax_key2.set(localMax_key2() + changeValue_key2())">Increase {{ key2() }}</button>
-}
+  <section class="increase-button-wrapper">
+    <span>{{key2()}} </span>
+    <input [(ngModel)]="localMax_key2" type="number" [step]="changeValue_key2()" />
+  </section>
+ }
 
-<button class="increase-button" (click)="localMax_key1.set(localMax_key1() - changeValue_key1())" >Decrease {{sub_key1() ? key1() + " " + sub_key1() : key1()}}</button>
-<button class="increase-button" (click)="localMax_key1.set(localMax_key1() + changeValue_key1())">Increase {{ sub_key1() ? key1() + " " + sub_key1() : key1()}}</button>
+<section class="increase-button-wrapper">
+  <span>{{sub_key1() ? key1() + " " + sub_key1() : key1()}} </span>
+  <input [(ngModel)]="localMax_key1" type="number" [step]="changeValue_key1()" />
+</section>
 
 <canvas class="chart" [id]="'ScatterPlot' + key1() + key2()"></canvas>
 
