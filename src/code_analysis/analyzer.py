@@ -52,7 +52,7 @@ with open('../data/data.json', 'r') as file:
         # URLS
         FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
         ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"].lower()}/findings/list?case-insensitive-path=false&start=0&max=1000"
-        ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/metrics?t=master%3AHEAD&uniform-path="
+        ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/metrics?t={data_point["default_branch"]}%3AHEAD&uniform-path="
 
         # Do API requests
         findings_json = api_get(FINDINGS_URL)

@@ -14742,5 +14742,386 @@
     "forks": 8,
     "files": 222,
     "field": "Astronomy"
+  },
+  "nanograv_enterprise_extensions": {
+    "name": "nanograv_enterprise_extensions",
+    "lang": "Python",
+    "clone_coverage": 0.22344387302713248,
+    "findings_count": 757.0,
+    "LOC": 14618.0,
+    "method_length": {
+      "red": 2964,
+      "yellow": 2041,
+      "green": 2096
+    },
+    "nesting_depth": {
+      "red": 131,
+      "yellow": 1984,
+      "green": 4986
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 27,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 219,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 144,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 14,
+        "countRed": 8
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 164,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 189,
+        "countRed": 27
+      }
+    ],
+    "authors": 58,
+    "forks": 26,
+    "files": 166,
+    "field": "Astronomy"
+  },
+  "bkloppenborg_simtoi": {
+    "name": "bkloppenborg_simtoi",
+    "lang": "C++",
+    "clone_coverage": 0.11388196176226101,
+    "findings_count": 2067.0,
+    "LOC": 28251.0,
+    "method_length": {
+      "red": 85,
+      "yellow": 1523,
+      "green": 5137
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 6745
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 391,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 373,
+        "countRed": 10
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 1113,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 3,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 72,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 115,
+        "countRed": 2
+      }
+    ],
+    "authors": 8,
+    "forks": 4,
+    "files": 853,
+    "field": "Astronomy"
+  },
+  "sai-msu_snad": {
+    "name": "sai-msu_snad",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.10256410256410256,
+    "findings_count": 66.0,
+    "LOC": 6136.0,
+    "method_length": {
+      "red": 86,
+      "yellow": 306,
+      "green": 1137
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 142,
+      "green": 1387
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 32,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 33,
+        "countRed": 2
+      }
+    ],
+    "authors": 6,
+    "forks": 0,
+    "files": 2203,
+    "field": "Astronomy"
+  },
+  "nmdickson_GCfit": {
+    "name": "nmdickson_GCfit",
+    "lang": "Python",
+    "clone_coverage": 0.14095118505729085,
+    "findings_count": 679.0,
+    "LOC": 19904.0,
+    "method_length": {
+      "red": 1209,
+      "yellow": 1983,
+      "green": 3450
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 662,
+      "green": 5980
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 165,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 64,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 276,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 6,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 56,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 112,
+        "countRed": 13
+      }
+    ],
+    "authors": 4,
+    "forks": 0,
+    "files": 298,
+    "field": "Astronomy"
+  },
+  "Morisset_pySSN": {
+    "name": "Morisset_pySSN",
+    "lang": "Python",
+    "clone_coverage": 0.6062738964198818,
+    "findings_count": 1325.0,
+    "LOC": 15365.0,
+    "method_length": {
+      "red": 3780,
+      "yellow": 2989,
+      "green": 5060
+    },
+    "nesting_depth": {
+      "red": 716,
+      "yellow": 2206,
+      "green": 8907
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 199,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 58,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 574,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 53,
+        "countRed": 51
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 164,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 16,
+        "countRed": 13
+      },
+      {
+        "categoryName": "Structure",
+        "count": 261,
+        "countRed": 46
+      }
+    ],
+    "authors": 4,
+    "forks": 3,
+    "files": 812,
+    "field": "Astronomy"
+  },
+  "DTsuna_CHIPS": {
+    "name": "DTsuna_CHIPS",
+    "lang": "Fortran",
+    "clone_coverage": 0.5930967428293632,
+    "findings_count": 143.0,
+    "LOC": 6633.0,
+    "method_length": {
+      "red": 3980,
+      "yellow": 556,
+      "green": 95
+    },
+    "nesting_depth": {
+      "red": 360,
+      "yellow": 353,
+      "green": 3918
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 60,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 36,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 47,
+        "countRed": 22
+      }
+    ],
+    "authors": 4,
+    "forks": 0,
+    "files": 10214,
+    "field": "Astronomy"
+  },
+  "hannorein_rebound": {
+    "name": "hannorein_rebound",
+    "lang": "C",
+    "clone_coverage": 0.14817156195292744,
+    "findings_count": 3542.0,
+    "LOC": 41378.0,
+    "method_length": {
+      "red": 6862,
+      "yellow": 5922,
+      "green": 5377
+    },
+    "nesting_depth": {
+      "red": 3170,
+      "yellow": 2453,
+      "green": 12538
+    },
+    "findings_details": [],
+    "authors": 83,
+    "forks": 108,
+    "files": 3117,
+    "field": "Astronomy"
+  },
+  "yqiuu_starduster": {
+    "name": "yqiuu_starduster",
+    "lang": "Python",
+    "clone_coverage": 0.0,
+    "findings_count": 266.0,
+    "LOC": 3960.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 285,
+      "green": 1443
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 1728
+    },
+    "findings_details": [],
+    "authors": 3,
+    "forks": 0,
+    "files": 71,
+    "field": "Astronomy"
+  },
+  "ageller_Firefly": {
+    "name": "ageller_Firefly",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.10527272727272727,
+    "findings_count": 360.0,
+    "LOC": 26476.0,
+    "method_length": {
+      "red": 200,
+      "yellow": 937,
+      "green": 1427
+    },
+    "nesting_depth": {
+      "red": 132,
+      "yellow": 454,
+      "green": 1978
+    },
+    "findings_details": [],
+    "authors": 14,
+    "forks": 6,
+    "files": 5334,
+    "field": "Astronomy"
+  },
+  "PerezHz_NEOs.jl": {
+    "name": "PerezHz_NEOs.jl",
+    "lang": "Julia",
+    "clone_coverage": 0.14608743319172263,
+    "findings_count": 162.0,
+    "LOC": 24557.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [],
+    "authors": 4,
+    "forks": 0,
+    "files": 76,
+    "field": "Astronomy"
   }
 }
