@@ -20,6 +20,8 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
   ngAfterViewInit(): void {
     this.createMethodLengthSciNonSci();
     this.createMethodByLang();
+    this.createMethodLengthValue(true);
+    this.createMethodLengthValue(false);
   }
 
   private getAverage = (arr: number[]) => arr.reduce((a, b) => a + b, 0) / arr.length;
@@ -217,6 +219,83 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
     };
 
     const canvas = document.getElementById('MethodLengthByLang') as HTMLCanvasElement;
+    if (canvas) {
+      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    }
+  }
+
+  /**
+   * Creates a bar chart where the average
+   * method length is displayed by business and scientific.
+   * @private
+   */
+  private createMethodLengthValue(sci: boolean): void {
+    const dataPoints = this.dataPoints();
+    const values0_999: Separation = {red: 0, yellow: 0, green: 0};
+    const values1000_2999: Separation = {red: 0, yellow: 0, green: 0};
+    const values3000_5999: Separation = {red: 0, yellow: 0, green: 0};
+    const values6000_8999: Separation = {red: 0, yellow: 0, green: 0};
+    const values9000plus: Separation = {red: 0, yellow: 0, green: 0};
+
+    Object.values(dataPoints).forEach(({ field, method_length }) => {
+      const validateField = sci ? field !== 'nonSci' : field === 'nonSci';
+
+      if(validateField){
+        const keysToCheck: (keyof Separation)[] = ['red', 'yellow', 'green'];
+
+        keysToCheck.forEach((key) => {
+          switch(method_length[key] >= 0){
+            case method_length[key] < 1000: values0_999[key]++; break;
+            case method_length[key] < 3000: values1000_2999[key]++; break;
+            case method_length[key] < 6000: values3000_5999[key]++; break;
+            case method_length[key] < 9000: values6000_8999[key]++; break;
+            case method_length[key] >= 9000: values9000plus[key]++; break;
+          }
+        })
+      }
+    });
+
+    const config: ChartConfiguration = {
+      type: 'bar' as ChartType,
+      data: {
+        labels: ['0-999', '1000-2999', '3000-5999', '6000-8999','9000+'],
+        datasets: [
+          {
+            label: 'Green',
+            data: [values0_999.green, values1000_2999.green, values3000_5999.green, values6000_8999.green, values9000plus.green],
+            backgroundColor: 'rgba(75, 192, 75, 0.4)',
+            borderColor: 'rgba(75, 192, 75, 0.9)',
+            borderWidth: 1
+          },
+          {
+            label: 'Yellow',
+            data: [values0_999.yellow, values1000_2999.yellow, values3000_5999.yellow, values6000_8999.yellow, values9000plus.yellow],
+            backgroundColor: 'rgba(255, 205, 86, 0.6)',
+            borderColor: 'rgba(255, 205, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Red',
+            data: [values0_999.red, values1000_2999.red, values3000_5999.red, values6000_8999.red, values9000plus.red],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255, 99, 132, 0.8)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: `method_length Findings in ${sci ? 'Scientific' : ' Business'}`
+          }
+        }
+      }
+    };
+
+    const canvas = document.getElementById(`MethodLengthByValue${sci ? 'Sci' : 'NonSci'}`) as HTMLCanvasElement;
     if (canvas) {
       this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
     }

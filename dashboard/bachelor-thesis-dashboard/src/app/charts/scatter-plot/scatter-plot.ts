@@ -107,7 +107,7 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
       // Add borderradius if wanted
       if (borderRadius && radiusByKey) {
         const radius = Number(DataHelper.getValue(entry, borderRadius));
-        targetRadius.push(10 * Math.log(1 + radius));
+        targetRadius.push(15 * Math.log(1 + radius));
       }
     });
 
