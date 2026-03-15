@@ -3,6 +3,7 @@ import {CloneCoverageChart} from './clone-coverage-chart/clone-coverage-chart.co
 import {Home} from './home/home';
 import {MethodLengthCharts} from './method-length-charts/method-length-charts';
 import {CommonCharts} from './common-charts/common-charts';
+import {FindingsCharts} from './findings-charts/findings-charts';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'method-length-chart',
     component: MethodLengthCharts
+  },
+  {
+    path: 'findings-chart',
+    component: FindingsCharts
   }
 ];

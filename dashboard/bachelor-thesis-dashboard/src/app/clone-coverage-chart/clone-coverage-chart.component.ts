@@ -1,13 +1,8 @@
 import {Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
-import { Chart, ChartConfiguration, ChartType, registerables } from 'chart.js';
-import {BoxPlotController, BoxAndWiskers} from '@sgratzl/chartjs-chart-boxplot';
+import { Chart, ChartConfiguration, ChartType } from 'chart.js';
 import {AnalyzedData} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
-
-// Register Chart.js components globally
-Chart.register(...registerables, BoxPlotController, BoxAndWiskers);
-
 
 @Component({
   selector: 'app-clone-coverage-chart',
@@ -226,11 +221,46 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
       return t;
     };
 
+    const barConfig: ChartConfiguration = {
+        type: 'bar' as ChartType,
+        data: {
+          labels: ['Average Clone Coverage in Business and Research'],
+          datasets: [
+            {
+              label: 'Research Software (count: ' + averageSci.length + ')',
+              data: [computedSciAverage],
+              backgroundColor: 'rgba(54, 162, 235, 0.6)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Business Software (count: ' + averageNonSci.length + ')',
+              data: [computedNonSciAverage],
+              backgroundColor: 'rgba(255, 99, 132, 0.4)',
+              borderColor: 'rgba(255, 99, 132, 0.8)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {position: 'top'},
+            title: {
+              display: true,
+              text: 'Research and Business in Clone Coverage'
+            }
+          }
+        }
+    };
 
-    const canvas1 = document.getElementById('AverageCloneCoverageSci') as HTMLCanvasElement;
-    const canvas2 = document.getElementById('AverageCloneCoverageNonSci') as HTMLCanvasElement;
-    this.allNonReactivePlots.update(value => [...value, new Chart(canvas1, config(true))]);
-    this.allNonReactivePlots.update(value => [...value, new Chart(canvas2, config(false))]);
+
+    // const canvas1 = document.getElementById('AverageCloneCoverageSci') as HTMLCanvasElement;
+    // const canvas2 = document.getElementById('AverageCloneCoverageNonSci') as HTMLCanvasElement;
+    const canvas3 = document.getElementById('AverageCloneCoverage') as HTMLCanvasElement;
+    // this.allNonReactivePlots.update(value => [...value, new Chart(canvas1, config(true))]);
+    // this.allNonReactivePlots.update(value => [...value, new Chart(canvas2, config(false))]);
+    this.allNonReactivePlots.update(value => [...value, new Chart(canvas3, barConfig)]);
   }
 
   /**
@@ -264,7 +294,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
               nonSciCloneCoverage,   // Boxplot 2
               [...sciCloneCoverage, ...nonSciCloneCoverage] //Boxplot 3
             ],
-            backgroundColor: ['rgba(255, 99, 132, 0.4)','rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.8)'],
+            backgroundColor: ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 75, 0.4)'],
           }
         ]
       }

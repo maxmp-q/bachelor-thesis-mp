@@ -22,4 +22,7 @@ export class Home {
     this.router.navigate(['/common-chart']);
   }
 
+  goToFindingsCharts() {
+    this.router.navigate(['/findings-chart']);
+  }
 }
