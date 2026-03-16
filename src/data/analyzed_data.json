@@ -40244,5 +40244,1857 @@
     "forks": 14,
     "files": 9612,
     "field": "Biology"
+  },
+  "stuart-lab_signac": {
+    "name": "stuart-lab_signac",
+    "lang": "R",
+    "clone_coverage": 0.048950609526203344,
+    "findings_count": 101.0,
+    "LOC": 16789.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 13,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 72,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 16,
+        "countRed": 5
+      }
+    ],
+    "authors": 17,
+    "forks": 21,
+    "files": 330,
+    "field": "Biology"
+  },
+  "Newmu_dcgan_code": {
+    "name": "Newmu_dcgan_code",
+    "lang": "Python",
+    "clone_coverage": 0.11245674740484429,
+    "findings_count": 235.0,
+    "LOC": 1657.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 636
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 636
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 69,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 151,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 1,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 13,
+        "countRed": 0
+      }
+    ],
+    "authors": 30,
+    "forks": 689,
+    "files": 317,
+    "field": "Computer Science"
+  },
+  "Rothamsted_knetmaps.js": {
+    "name": "Rothamsted_knetmaps.js",
+    "lang": "JavaScript",
+    "clone_coverage": 0.4489010668687693,
+    "findings_count": 3378.0,
+    "LOC": 40425.0,
+    "method_length": {
+      "red": 24592,
+      "yellow": 757,
+      "green": 1057
+    },
+    "nesting_depth": {
+      "red": 274,
+      "yellow": 1570,
+      "green": 24562
+    },
+    "findings_details": [],
+    "authors": 4,
+    "forks": 3,
+    "files": 258,
+    "field": "Biology"
+  },
+  "warmspringwinds_tf-image-segmentation": {
+    "name": "warmspringwinds_tf-image-segmentation",
+    "lang": "Python",
+    "clone_coverage": 0.3953488372093023,
+    "findings_count": 66.0,
+    "LOC": 2361.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 129,
+      "green": 528
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 129,
+      "green": 528
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 16,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 3,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 31,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 12,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 4,
+        "countRed": 0
+      }
+    ],
+    "authors": 20,
+    "forks": 226,
+    "files": 120,
+    "field": "Computer Science"
+  },
+  "choderalab_ensembler": {
+    "name": "choderalab_ensembler",
+    "lang": "Python",
+    "clone_coverage": 0.06965475469412477,
+    "findings_count": 635.0,
+    "LOC": 10655.0,
+    "method_length": {
+      "red": 1316,
+      "yellow": 1327,
+      "green": 2992
+    },
+    "nesting_depth": {
+      "red": 269,
+      "yellow": 832,
+      "green": 4534
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 75,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 38,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 323,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 18,
+        "countRed": 4
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 40,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 29,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 112,
+        "countRed": 18
+      }
+    ],
+    "authors": 12,
+    "forks": 19,
+    "files": 572,
+    "field": "Biology"
+  },
+  "PASTAQ-MS_PASTAQ": {
+    "name": "PASTAQ-MS_PASTAQ",
+    "lang": "C++",
+    "clone_coverage": 0.2150585118127622,
+    "findings_count": 878.0,
+    "LOC": 9794.0,
+    "method_length": {
+      "red": 2940,
+      "yellow": 785,
+      "green": 1848
+    },
+    "nesting_depth": {
+      "red": 727,
+      "yellow": 982,
+      "green": 3864
+    },
+    "findings_details": [],
+    "authors": 5,
+    "forks": 0,
+    "files": 273,
+    "field": "Chemistry"
+  },
+  "rhilker_ReadXplorer": {
+    "name": "rhilker_ReadXplorer",
+    "lang": "Java",
+    "clone_coverage": 0.08451759102780765,
+    "findings_count": 7112.0,
+    "LOC": 157219.0,
+    "method_length": {
+      "red": 12320,
+      "yellow": 13043,
+      "green": 26925
+    },
+    "nesting_depth": {
+      "red": 3936,
+      "yellow": 7187,
+      "green": 41165
+    },
+    "findings_details": [],
+    "authors": 29,
+    "forks": 1,
+    "files": 11288,
+    "field": "Biology"
+  },
+  "fetchai_colearn": {
+    "name": "fetchai_colearn",
+    "lang": "Python",
+    "clone_coverage": 0.20089757127771912,
+    "findings_count": 495.0,
+    "LOC": 10470.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 752,
+      "green": 2226
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 88,
+      "green": 2890
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 49,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 98,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 223,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 74,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 21,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Structure",
+        "count": 29,
+        "countRed": 1
+      }
+    ],
+    "authors": 22,
+    "forks": 5,
+    "files": 722,
+    "field": "Computer Science"
+  },
+  "ptiede_ROSE.jl": {
+    "name": "ptiede_ROSE.jl",
+    "lang": "Julia",
+    "clone_coverage": 0.023358927219638802,
+    "findings_count": 33.0,
+    "LOC": 11374.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [],
+    "authors": 3,
+    "forks": 0,
+    "files": 1255,
+    "field": "Astronomy"
+  },
+  "traviskemper_streamm": {
+    "name": "traviskemper_streamm",
+    "lang": "Python",
+    "clone_coverage": 0.6250295811311825,
+    "findings_count": 5670.0,
+    "LOC": 41260.0,
+    "method_length": {
+      "red": 15347,
+      "yellow": 3110,
+      "green": 5346
+    },
+    "nesting_depth": {
+      "red": 6973,
+      "yellow": 8289,
+      "green": 8541
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 3877,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 106,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 201,
+        "countRed": 13
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 532,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 954,
+        "countRed": 312
+      }
+    ],
+    "authors": 13,
+    "forks": 3,
+    "files": 1261,
+    "field": "Chemistry"
+  },
+  "jackwasey_icd": {
+    "name": "jackwasey_icd",
+    "lang": "R",
+    "clone_coverage": 0.018193087355986584,
+    "findings_count": 191.0,
+    "LOC": 29257.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [],
+    "authors": 26,
+    "forks": 48,
+    "files": 2548,
+    "field": "Medicine"
+  },
+  "vhive-serverless_vSwarm-u": {
+    "name": "vhive-serverless_vSwarm-u",
+    "lang": "Python",
+    "clone_coverage": 0.40567066521264994,
+    "findings_count": 337.0,
+    "LOC": 4913.0,
+    "method_length": {
+      "red": 441,
+      "yellow": 423,
+      "green": 1035
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 22,
+      "green": 1877
+    },
+    "findings_details": [],
+    "authors": 6,
+    "forks": 0,
+    "files": 217,
+    "field": "Computer Science"
+  },
+  "biocompute-objects_BCO_Specification": {
+    "name": "biocompute-objects_BCO_Specification",
+    "lang": "HTML",
+    "clone_coverage": 0.09720037747719408,
+    "findings_count": 24.0,
+    "LOC": 3252.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 18
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 18
+    },
+    "findings_details": [],
+    "authors": 20,
+    "forks": 19,
+    "files": 729,
+    "field": "Biology"
+  },
+  "gwf-uwaterloo_Cuizinart": {
+    "name": "gwf-uwaterloo_Cuizinart",
+    "lang": "JavaScript",
+    "clone_coverage": 0.0,
+    "findings_count": 173.0,
+    "LOC": 1946.0,
+    "method_length": {
+      "red": 551,
+      "yellow": 307,
+      "green": 413
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 1271
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 65,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 10,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 84,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 14,
+        "countRed": 5
+      }
+    ],
+    "authors": 12,
+    "forks": 5,
+    "files": 3183,
+    "field": "Earth Science"
+  },
+  "p13i_ospray-module-pkd": {
+    "name": "p13i_ospray-module-pkd",
+    "lang": "C++",
+    "clone_coverage": 0.015647226173541962,
+    "findings_count": 373.0,
+    "LOC": 2952.0,
+    "method_length": {
+      "red": 414,
+      "yellow": 401,
+      "green": 579
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 302,
+      "green": 1092
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 45,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 170,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 133,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 3,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 2,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 20,
+        "countRed": 4
+      }
+    ],
+    "authors": 10,
+    "forks": 6,
+    "files": 96,
+    "field": "Computer Science"
+  },
+  "charlottegiseleweil_ipbes": {
+    "name": "charlottegiseleweil_ipbes",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.08641015350657169,
+    "findings_count": 505.0,
+    "LOC": 79760.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 14
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 14
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 2,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 499,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 4,
+        "countRed": 3
+      }
+    ],
+    "authors": 16,
+    "forks": 0,
+    "files": 1350,
+    "field": "Earth Science"
+  },
+  "scottbmortensen_sasap-training": {
+    "name": "scottbmortensen_sasap-training",
+    "lang": "R",
+    "clone_coverage": 0.1375422773393461,
+    "findings_count": 11.0,
+    "LOC": 1238.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 3,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 8,
+        "countRed": 0
+      }
+    ],
+    "authors": 6,
+    "forks": 6,
+    "files": 2711,
+    "field": "Biology"
+  },
+  "apple_llvm-project-v5-split": {
+    "name": "apple_llvm-project-v5-split",
+    "lang": "C++",
+    "clone_coverage": 0.061691592562651575,
+    "findings_count": 21057.0,
+    "LOC": 159696.0,
+    "method_length": {
+      "red": 7247,
+      "yellow": 17298,
+      "green": 35548
+    },
+    "nesting_depth": {
+      "red": 234,
+      "yellow": 3270,
+      "green": 56589
+    },
+    "findings_details": [],
+    "authors": 11286,
+    "forks": 13648,
+    "files": 43941017,
+    "field": "Computer Science"
+  },
+  "hbc_bcbioRNASeq": {
+    "name": "hbc_bcbioRNASeq",
+    "lang": "R",
+    "clone_coverage": 0.08750823994726434,
+    "findings_count": 119.0,
+    "LOC": 6551.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 66,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 49,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 4,
+        "countRed": 1
+      }
+    ],
+    "authors": 8,
+    "forks": 22,
+    "files": 1846,
+    "field": "Biology"
+  },
+  "mkocabas_VIBE": {
+    "name": "mkocabas_VIBE",
+    "lang": "Python",
+    "clone_coverage": 0.0600100857286939,
+    "findings_count": 536.0,
+    "LOC": 9282.0,
+    "method_length": {
+      "red": 793,
+      "yellow": 1332,
+      "green": 2648
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 473,
+      "green": 4300
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 154,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 40,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 255,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 16,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 19,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 52,
+        "countRed": 7
+      }
+    ],
+    "authors": 64,
+    "forks": 336,
+    "files": 3061,
+    "field": "Computer Science"
+  },
+  "evilnose_wx-test": {
+    "name": "evilnose_wx-test",
+    "lang": "Python",
+    "clone_coverage": 0.16863549550824078,
+    "findings_count": 2234.0,
+    "LOC": 24170.0,
+    "method_length": {
+      "red": 3745,
+      "yellow": 1745,
+      "green": 7076
+    },
+    "nesting_depth": {
+      "red": 1769,
+      "yellow": 1962,
+      "green": 8835
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 281,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 89,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 1036,
+        "countRed": 10
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 116,
+        "countRed": 87
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 200,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 10,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 502,
+        "countRed": 289
+      }
+    ],
+    "authors": 8,
+    "forks": 2,
+    "files": 410,
+    "field": "Chemistry"
+  },
+  "anskarl_LoMRF": {
+    "name": "anskarl_LoMRF",
+    "lang": "Scala",
+    "clone_coverage": 0.1831625885473993,
+    "findings_count": 532.0,
+    "LOC": 42913.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [],
+    "authors": 11,
+    "forks": 20,
+    "files": 962,
+    "field": "Computer Science"
+  },
+  "LooseLab_readfish": {
+    "name": "LooseLab_readfish",
+    "lang": "Python",
+    "clone_coverage": 0.0,
+    "findings_count": 137.0,
+    "LOC": 7133.0,
+    "method_length": {
+      "red": 274,
+      "yellow": 550,
+      "green": 1137
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 145,
+      "green": 1816
+    },
+    "findings_details": [],
+    "authors": 15,
+    "forks": 15,
+    "files": 181,
+    "field": "Biology"
+  },
+  "allenai_document-qa": {
+    "name": "allenai_document-qa",
+    "lang": "Python",
+    "clone_coverage": 0.09589849513130717,
+    "findings_count": 1631.0,
+    "LOC": 16566.0,
+    "method_length": {
+      "red": 1088,
+      "yellow": 2687,
+      "green": 5658
+    },
+    "nesting_depth": {
+      "red": 345,
+      "yellow": 2150,
+      "green": 6938
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 65,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 97,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 1169,
+        "countRed": 10
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 15,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 66,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 218,
+        "countRed": 26
+      }
+    ],
+    "authors": 18,
+    "forks": 117,
+    "files": 429,
+    "field": "Computer Science"
+  },
+  "aiqm_torchani": {
+    "name": "aiqm_torchani",
+    "lang": "Python",
+    "clone_coverage": 0.046794984990287836,
+    "findings_count": 1631.0,
+    "LOC": 27765.0,
+    "method_length": {
+      "red": 1148,
+      "yellow": 2832,
+      "green": 8845
+    },
+    "nesting_depth": {
+      "red": 173,
+      "yellow": 1054,
+      "green": 11598
+    },
+    "findings_details": [],
+    "authors": 22,
+    "forks": 57,
+    "files": 7200,
+    "field": "Chemistry"
+  },
+  "google-research_planet": {
+    "name": "google-research_planet",
+    "lang": "Python",
+    "clone_coverage": 0.02547592385218365,
+    "findings_count": 459.0,
+    "LOC": 7278.0,
+    "method_length": {
+      "red": 81,
+      "yellow": 712,
+      "green": 2683
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 188,
+      "green": 3288
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 98,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 20,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 307,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 6,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 26,
+        "countRed": 1
+      }
+    ],
+    "authors": 25,
+    "forks": 168,
+    "files": 690,
+    "field": "Computer Science"
+  },
+  "Thierry-Dumont_BenchmarksPythonJuliaAndCo": {
+    "name": "Thierry-Dumont_BenchmarksPythonJuliaAndCo",
+    "lang": "C++",
+    "clone_coverage": 0.31231454005934717,
+    "findings_count": 885.0,
+    "LOC": 5785.0,
+    "method_length": {
+      "red": 166,
+      "yellow": 691,
+      "green": 1543
+    },
+    "nesting_depth": {
+      "red": 40,
+      "yellow": 71,
+      "green": 2289
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 322,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 272,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 191,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 62,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 38,
+        "countRed": 7
+      }
+    ],
+    "authors": 5,
+    "forks": 4,
+    "files": 925,
+    "field": "Computer Science"
+  },
+  "BIO6032_2019_replication_LipstichEtAl_1996": {
+    "name": "BIO6032_2019_replication_LipstichEtAl_1996",
+    "lang": "Julia",
+    "clone_coverage": 0.6832834828846793,
+    "findings_count": 354.0,
+    "LOC": 3516.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 353,
+        "countRed": 0
+      }
+    ],
+    "authors": 8,
+    "forks": 0,
+    "files": 466,
+    "field": "Biology"
+  },
+  "YuLab-SMU_MicrobiotaProcess": {
+    "name": "YuLab-SMU_MicrobiotaProcess",
+    "lang": "R",
+    "clone_coverage": 0.09380158233251751,
+    "findings_count": 207.0,
+    "LOC": 19218.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 57,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 131,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 19,
+        "countRed": 3
+      }
+    ],
+    "authors": 10,
+    "forks": 15,
+    "files": 358,
+    "field": "Biology"
+  },
+  "ArnaudDroitLab_RJMCMCNucleosomes": {
+    "name": "ArnaudDroitLab_RJMCMCNucleosomes",
+    "lang": "R",
+    "clone_coverage": 0.17573570238756248,
+    "findings_count": 73.0,
+    "LOC": 4028.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 4,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 65,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 4,
+        "countRed": 2
+      }
+    ],
+    "authors": 11,
+    "forks": 3,
+    "files": 300,
+    "field": "Biology"
+  },
+  "anxie_video_prediction-1": {
+    "name": "anxie_video_prediction-1",
+    "lang": "Python",
+    "clone_coverage": 0.08909022272555682,
+    "findings_count": 587.0,
+    "LOC": 9002.0,
+    "method_length": {
+      "red": 2363,
+      "yellow": 1017,
+      "green": 2527
+    },
+    "nesting_depth": {
+      "red": 487,
+      "yellow": 1633,
+      "green": 3787
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 66,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 67,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 237,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 4,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 38,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 2,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 173,
+        "countRed": 32
+      }
+    ],
+    "authors": 16,
+    "forks": 51,
+    "files": 1271,
+    "field": "Earth Science"
+  },
+  "SimNPH_SimNPH": {
+    "name": "SimNPH_SimNPH",
+    "lang": "R",
+    "clone_coverage": 0.24435590969455512,
+    "findings_count": 312.0,
+    "LOC": 11757.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [],
+    "authors": 5,
+    "forks": 0,
+    "files": 419,
+    "field": "Medicine"
+  },
+  "werner-duvaud_muzero-general": {
+    "name": "werner-duvaud_muzero-general",
+    "lang": "Python",
+    "clone_coverage": 0.2652482269503546,
+    "findings_count": 431.0,
+    "LOC": 6503.0,
+    "method_length": {
+      "red": 533,
+      "yellow": 1724,
+      "green": 1345
+    },
+    "nesting_depth": {
+      "red": 31,
+      "yellow": 216,
+      "green": 3355
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 34,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 9,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 193,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 4,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 125,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 66,
+        "countRed": 6
+      }
+    ],
+    "authors": 97,
+    "forks": 244,
+    "files": 2217,
+    "field": "Computer Science"
+  },
+  "siqad_siqad": {
+    "name": "siqad_siqad",
+    "lang": "C++",
+    "clone_coverage": 0.023532643530812195,
+    "findings_count": 2297.0,
+    "LOC": 25840.0,
+    "method_length": {
+      "red": 1721,
+      "yellow": 2266,
+      "green": 5504
+    },
+    "nesting_depth": {
+      "red": 142,
+      "yellow": 944,
+      "green": 8405
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 574,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 457,
+        "countRed": 18
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 1108,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 18,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 140,
+        "countRed": 27
+      }
+    ],
+    "authors": 7,
+    "forks": 2,
+    "files": 3482,
+    "field": "Quantum Computing"
+  },
+  "MolSSI_covid": {
+    "name": "MolSSI_covid",
+    "lang": "HTML",
+    "clone_coverage": 0.23708740831295844,
+    "findings_count": 647.0,
+    "LOC": 14743.0,
+    "method_length": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 0
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 295,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 351,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 1,
+        "countRed": 0
+      }
+    ],
+    "authors": 163,
+    "forks": 340,
+    "files": 2767,
+    "field": "Medicine"
+  },
+  "symoro_symoro": {
+    "name": "symoro_symoro",
+    "lang": "Python",
+    "clone_coverage": 0.08635794743429287,
+    "findings_count": 779.0,
+    "LOC": 15358.0,
+    "method_length": {
+      "red": 1110,
+      "yellow": 2534,
+      "green": 4707
+    },
+    "nesting_depth": {
+      "red": 176,
+      "yellow": 528,
+      "green": 7647
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 108,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 91,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 395,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 2,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 49,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 134,
+        "countRed": 17
+      }
+    ],
+    "authors": 11,
+    "forks": 41,
+    "files": 176,
+    "field": "Engineering"
+  },
+  "OpenPIV_openpiv-python": {
+    "name": "OpenPIV_openpiv-python",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.15036662191469585,
+    "findings_count": 250.0,
+    "LOC": 19101.0,
+    "method_length": {
+      "red": 601,
+      "yellow": 1267,
+      "green": 3739
+    },
+    "nesting_depth": {
+      "red": 60,
+      "yellow": 477,
+      "green": 5070
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 11,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 4,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 180,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 55,
+        "countRed": 8
+      }
+    ],
+    "authors": 49,
+    "forks": 98,
+    "files": 7269,
+    "field": "Physics"
+  },
+  "NHDaly_jupyter-binder": {
+    "name": "NHDaly_jupyter-binder",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.275345538750995,
+    "findings_count": 588.0,
+    "LOC": 16076.0,
+    "method_length": {
+      "red": 119,
+      "yellow": 172,
+      "green": 779
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 38,
+      "green": 1032
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 7,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 1,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 562,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 18,
+        "countRed": 7
+      }
+    ],
+    "authors": 44,
+    "forks": 329,
+    "files": 299,
+    "field": "Computer Science"
+  },
+  "d-suvorov_EFSM-tools": {
+    "name": "d-suvorov_EFSM-tools",
+    "lang": "C",
+    "clone_coverage": 0.2796471198754541,
+    "findings_count": 9386.0,
+    "LOC": 118491.0,
+    "method_length": {
+      "red": 26459,
+      "yellow": 17030,
+      "green": 10621
+    },
+    "nesting_depth": {
+      "red": 1590,
+      "yellow": 15123,
+      "green": 37397
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 1159,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 5504,
+        "countRed": 121
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 319,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 1029,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 1375,
+        "countRed": 251
+      }
+    ],
+    "authors": 4,
+    "forks": 2,
+    "files": 10655,
+    "field": "Computer Science"
+  },
+  "DanielKotik_Optical-beams-MEEP": {
+    "name": "DanielKotik_Optical-beams-MEEP",
+    "lang": "Python",
+    "clone_coverage": 0.07989347536617843,
+    "findings_count": 42.0,
+    "LOC": 2282.0,
+    "method_length": {
+      "red": 317,
+      "yellow": 0,
+      "green": 219
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 0,
+      "green": 536
+    },
+    "findings_details": [],
+    "authors": 6,
+    "forks": 3,
+    "files": 226,
+    "field": "Physics"
+  },
+  "NHERI-SimCenter_smelt": {
+    "name": "NHERI-SimCenter_smelt",
+    "lang": "C++",
+    "clone_coverage": 0.12896745680996385,
+    "findings_count": 321.0,
+    "LOC": 8344.0,
+    "method_length": {
+      "red": 1874,
+      "yellow": 927,
+      "green": 852
+    },
+    "nesting_depth": {
+      "red": 76,
+      "yellow": 185,
+      "green": 3392
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 180,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 14,
+        "countRed": 3
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 53,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 24,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 50,
+        "countRed": 19
+      }
+    ],
+    "authors": 3,
+    "forks": 4,
+    "files": 14597,
+    "field": "Earth Science"
+  },
+  "hackingmaterials_automatminer": {
+    "name": "hackingmaterials_automatminer",
+    "lang": "Python",
+    "clone_coverage": 0.01910828025477707,
+    "findings_count": 365.0,
+    "LOC": 8697.0,
+    "method_length": {
+      "red": 1257,
+      "yellow": 743,
+      "green": 1496
+    },
+    "nesting_depth": {
+      "red": 374,
+      "yellow": 411,
+      "green": 2711
+    },
+    "findings_details": [],
+    "authors": 13,
+    "forks": 31,
+    "files": 964,
+    "field": "Engineering"
+  },
+  "WGLab_mutformer": {
+    "name": "WGLab_mutformer",
+    "lang": "Jupyter Notebook",
+    "clone_coverage": 0.44056933577492924,
+    "findings_count": 387.0,
+    "LOC": 16291.0,
+    "method_length": {
+      "red": 786,
+      "yellow": 1701,
+      "green": 1030
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 764,
+      "green": 2753
+    },
+    "findings_details": [],
+    "authors": 5,
+    "forks": 0,
+    "files": 68,
+    "field": "Biology"
+  },
+  "meoke_pangtree": {
+    "name": "meoke_pangtree",
+    "lang": "Python",
+    "clone_coverage": 0.06758720930232558,
+    "findings_count": 490.0,
+    "LOC": 7522.0,
+    "method_length": {
+      "red": 104,
+      "yellow": 1873,
+      "green": 2118
+    },
+    "nesting_depth": {
+      "red": 36,
+      "yellow": 254,
+      "green": 3805
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 56,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 36,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 319,
+        "countRed": 2
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 13,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 1,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Structure",
+        "count": 65,
+        "countRed": 2
+      }
+    ],
+    "authors": 4,
+    "forks": 2,
+    "files": 4552,
+    "field": "Biology"
+  },
+  "cpmech_gosl": {
+    "name": "cpmech_gosl",
+    "lang": "Go",
+    "clone_coverage": 0.06013670738801629,
+    "findings_count": 3711.0,
+    "LOC": 61529.0,
+    "method_length": {
+      "red": 6802,
+      "yellow": 11218,
+      "green": 17110
+    },
+    "nesting_depth": {
+      "red": 610,
+      "yellow": 3566,
+      "green": 30954
+    },
+    "findings_details": [],
+    "authors": 22,
+    "forks": 138,
+    "files": 1634,
+    "field": "Computer Science"
+  },
+  "cheind_pytorch-blender": {
+    "name": "cheind_pytorch-blender",
+    "lang": "Python",
+    "clone_coverage": 0.024844720496894408,
+    "findings_count": 228.0,
+    "LOC": 4662.0,
+    "method_length": {
+      "red": 105,
+      "yellow": 293,
+      "green": 1504
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 196,
+      "green": 1706
+    },
+    "findings_details": [],
+    "authors": 9,
+    "forks": 18,
+    "files": 285,
+    "field": "Computer Science"
+  },
+  "tud-hri_joan": {
+    "name": "tud-hri_joan",
+    "lang": "Python",
+    "clone_coverage": 0.08681022880215343,
+    "findings_count": 691.0,
+    "LOC": 11166.0,
+    "method_length": {
+      "red": 686,
+      "yellow": 968,
+      "green": 3689
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 534,
+      "green": 4809
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 32,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 35,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 500,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Error Handling",
+        "count": 23,
+        "countRed": 20
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 42,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 59,
+        "countRed": 4
+      }
+    ],
+    "authors": 17,
+    "forks": 0,
+    "files": 1131,
+    "field": "Engineering"
+  },
+  "neo-x_promp": {
+    "name": "neo-x_promp",
+    "lang": "Python",
+    "clone_coverage": 0.19676484789956541,
+    "findings_count": 709.0,
+    "LOC": 9397.0,
+    "method_length": {
+      "red": 85,
+      "yellow": 925,
+      "green": 2760
+    },
+    "nesting_depth": {
+      "red": 0,
+      "yellow": 393,
+      "green": 3377
+    },
+    "findings_details": [
+      {
+        "categoryName": "Comprehensibility",
+        "count": 138,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Correctness",
+        "count": 36,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Documentation",
+        "count": 422,
+        "countRed": 1
+      },
+      {
+        "categoryName": "Redundancy",
+        "count": 64,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Security",
+        "count": 1,
+        "countRed": 0
+      },
+      {
+        "categoryName": "Structure",
+        "count": 48,
+        "countRed": 1
+      }
+    ],
+    "authors": 20,
+    "forks": 34,
+    "files": 2237,
+    "field": "Computer Science"
   }
 }
