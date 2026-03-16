@@ -21,6 +21,10 @@ export interface AnalyzedData extends SimpleData{
     findings_details: FindingsInfo[];
 }
 
+export interface ScoredData extends AnalyzedData {
+  scoring: number;
+}
+
 export interface FindingsInfo{
     categoryName: string;
     count: number;

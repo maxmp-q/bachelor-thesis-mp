@@ -42,7 +42,17 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
 
     const data = (forPlot: boolean) => {
       if(forPlot) {
-        return Object.values(findings).map(entry =>  wordCloudCount ? Math.log2(entry.count) * 5 : Math.log2(entry.value) * 5);
+        return Object.values(findings).map(entry =>  {
+          const entry_count = () => {
+            const count = entry.count;
+
+            if(count > 100000) return count;
+            if(count < 50000 && count > 30000) return count / 2;
+            return count / 10;
+          };
+
+          return wordCloudCount ? Math.log2(entry_count()) * 5 : Math.log2(entry.value) * 5
+        });
       } else {
         return Object.values(findings).map(entry =>  wordCloudCount ? entry.count : entry.value)
       }

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, computed, effect, input, OnDestroy, OnInit, signal} from '@angular/core';
-import {AnalyzedData, Separation} from '../../../../shared/interface/data-point';
+import { ScoredData, Separation} from '../../../../shared/interface/data-point';
 import {DataHelper} from '../../../../shared/data-helper';
 import {Chart, ChartConfiguration} from 'chart.js';
 import {FormsModule} from '@angular/forms';
@@ -13,11 +13,11 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './scatter-plot.scss',
 })
 export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
-  dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
+  dataPoints = signal<Record<string, ScoredData>>(DataHelper.getScoredData());
 
   // Important Inputs for first Key
   /** Must be a keyof AnalyzedData like LOC, Forks or Authors */
-  key1 = input<keyof AnalyzedData>('LOC');
+  key1 = input<keyof ScoredData>('LOC');
   /** Is a sub key of AnalyzedData from Separations*/
   sub_key1 = input<keyof Separation | undefined>();
   /** Initial Max Value for key1 */
@@ -28,7 +28,7 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
 
   // Important Inputs for second Key
   /** Must be a keyof AnalyzedData like Clone Coverage, Method Length, Nesting Depth */
-  key2 = input<keyof AnalyzedData>('clone_coverage');
+  key2 = input<keyof ScoredData>('clone_coverage');
   /** Initial Max Value for key2 */
   max_key2 = input<number>(0);
   /** Increase/Decrease Value for key2 */
@@ -36,7 +36,7 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
 
   //Other Inputs
   /** Here another metric can be passed */
-  borderRadius = input<keyof AnalyzedData | undefined>();
+  borderRadius = input<keyof ScoredData | undefined>();
 
   //Other Important Signals
   ScatterPlot= signal<Chart | null>(null);
@@ -44,7 +44,7 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
 
 
   // Everything needed for the select!
-  selectOption = input<keyof AnalyzedData | undefined>();
+  selectOption = input<keyof ScoredData | undefined>();
   selected = signal<string | undefined>(undefined);
   selectOptions = computed(() => {
     const dataPoints = this.dataPoints();

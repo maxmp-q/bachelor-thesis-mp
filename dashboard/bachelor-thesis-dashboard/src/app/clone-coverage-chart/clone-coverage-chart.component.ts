@@ -1,6 +1,6 @@
 import {Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
 import { Chart, ChartConfiguration, ChartType } from 'chart.js';
-import {AnalyzedData} from '../../../shared/interface/data-point';
+import { ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
@@ -13,7 +13,7 @@ import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
   styleUrls: ['./clone-coverage-chart.scss']
 })
 export class CloneCoverageChart implements AfterViewInit, OnDestroy {
-  dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
+  dataPoints = signal<Record<string, ScoredData>>(DataHelper.getScoredData());
 
   allNonReactivePlots = signal<Chart[]>([]);
 
@@ -21,6 +21,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     this.createCloneByLang();
     this.createCloneByField();
     this.createAverageClone();
+    this.createCloneLine();
     this.createCloneBoxplot();
   }
 
@@ -250,6 +251,12 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
               display: true,
               text: 'Research and Business in Clone Coverage'
             }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 1
+            }
           }
         }
     };
@@ -261,6 +268,102 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     // this.allNonReactivePlots.update(value => [...value, new Chart(canvas1, config(true))]);
     // this.allNonReactivePlots.update(value => [...value, new Chart(canvas2, config(false))]);
     this.allNonReactivePlots.update(value => [...value, new Chart(canvas3, barConfig)]);
+  }
+
+
+  /**
+   * Creates two pie charts where average clone coverage is
+   * displayed by Sci and NonSci.
+   * @private
+   */
+  private createCloneLine(): void {
+    const dataPoints = this.dataPoints();
+    const sciData: ValueMap<number>[] = [];
+    const nonSciData: ValueMap<number>[] = [];
+
+    Object.values(dataPoints).forEach(entry => {
+      const data = entry.field === "nonSci" ? nonSciData : sciData;
+      data.push({value: entry.clone_coverage, count: entry.LOC});
+    });
+
+    const bucketSize = 5000;
+    const buckets: Record<number, SciFields<number>> = {};
+
+    const bucketMapper = (entry: ValueMap<number>, sci: boolean) => {
+      const bucket = Math.floor(entry.count / bucketSize) * bucketSize;
+      if(bucket > 99999) return;
+
+      if (!buckets[bucket]) buckets[bucket] = { isSci: {value: 0, count: 0}, nonSci: {value: 0, count: 0}};
+
+      const bucketMap =  buckets[bucket][sci ? "isSci" : "nonSci"];
+      if(bucketMap){
+        bucketMap.value += entry.value;
+        bucketMap.count += 1;
+      }
+    }
+
+    sciData.forEach(entry => bucketMapper(entry, true));
+
+    nonSciData.forEach(entry => bucketMapper(entry, false));
+
+    const labels: Set<string> = new Set<string>();
+    const sciAverages: number[] = [];
+    const nonSciAverages: number[] = [];
+
+
+    Object.entries(buckets)
+      .sort((a, b) => Number(a[0]) - Number(b[0]))
+      .forEach(([bucketStart, entry]) => {
+        const sciAvg = entry.isSci ? entry.isSci.value / entry.isSci.count : 0;
+        const nonSciAvg = entry.nonSci ? entry.nonSci.value / entry.nonSci.count : 0;
+
+
+        labels.add(`${bucketStart}-${Number(bucketStart) + bucketSize} Sci:${(entry.isSci?.count ?? 0)}, nonSci:${(entry.nonSci?.count ?? 0)}`);
+        sciAverages.push(sciAvg);
+        nonSciAverages.push(nonSciAvg);
+      });
+
+    const labelsAsArray = Array.from(labels);
+
+    const config: ChartConfiguration<'line'> = {
+      type: 'line',
+      data: {
+        labels: labelsAsArray,
+        datasets: [
+          {
+            label: 'Research Clone',
+            data: sciAverages,
+            borderColor: 'rgba(54, 162, 235, 0.8)',
+            tension: 0.3
+          },
+          {
+            label: 'Business Clone',
+            data: nonSciAverages,
+            borderColor: 'rgba(255, 99, 132, 0.8)',
+            tension: 0.3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {position: 'top'},
+          title: {
+            display: true,
+            text: 'Research and Business in Clone Coverage'
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            // max: 100000
+          }
+        }
+      }
+    };
+
+    const canvas = document.getElementById('CloneCoverageLine') as HTMLCanvasElement;
+    this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
   }
 
   /**
