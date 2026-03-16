@@ -241,7 +241,7 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
       data.push({value: entry.scoring, count: entry.LOC});
     });
 
-    const bucketSize = 5000;
+    const bucketSize = 10000;
     const buckets: Record<number, SciFields<number>> = {};
 
     const bucketMapper = (entry: ValueMap<number>, sci: boolean) => {

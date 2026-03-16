@@ -81,12 +81,12 @@ with open('dataset/dataset.csv', mode='r') as file:
         print(result[28])
 
         try:
-            field_test = result[28] == "nonSci" # Statistics, Quantum Computing
+            field_test = result[28] != "nonSci" # Statistics, Quantum Computing
         except:
             field_test = False
 
         # for only scientific use 1 | for only non sci use 0
-        if result[1] == '0' and field_test:
+        if result[1] == '1' and field_test:
             name = result[0]
             if name not in all_projects and name not in all_git_accounts:
                 user, repo = name.split("_", 1)
