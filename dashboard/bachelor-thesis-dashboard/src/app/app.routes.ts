@@ -4,6 +4,7 @@ import {Home} from './home/home';
 import {MethodLengthCharts} from './method-length-charts/method-length-charts';
 import {CommonCharts} from './common-charts/common-charts';
 import {FindingsCharts} from './findings-charts/findings-charts';
+import {NestingDepthCharts} from './nesting-depth-charts/nesting-depth-charts';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,10 @@ export const routes: Routes = [
   {
     path: 'findings-chart',
     component: FindingsCharts
+  }
+  ,
+  {
+    path: 'nesting-depth-chart',
+    component: NestingDepthCharts
   }
 ];

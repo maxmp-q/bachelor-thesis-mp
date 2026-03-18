@@ -3,11 +3,13 @@ import { ScoredData, Separation} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
+import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 
 @Component({
   selector: 'app-common-charts',
   imports: [
-    ScatterPlot
+    ScatterPlot,
+    FieldBarPlot
   ],
   templateUrl: './common-charts.html',
   styleUrl: './common-charts.scss',

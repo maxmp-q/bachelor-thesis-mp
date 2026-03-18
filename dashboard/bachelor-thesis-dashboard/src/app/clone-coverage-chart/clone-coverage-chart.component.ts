@@ -3,12 +3,14 @@ import { Chart, ChartConfiguration, ChartType } from 'chart.js';
 import { ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
+import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 
 @Component({
   selector: 'app-clone-coverage-chart',
   templateUrl: './clone-coverage-chart.html',
   imports: [
-    ScatterPlot
+    ScatterPlot,
+    FieldBarPlot
   ],
   styleUrls: ['./clone-coverage-chart.scss']
 })
@@ -19,7 +21,6 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.createCloneByLang();
-    this.createCloneByField();
     this.createAverageClone();
     this.createCloneLine();
     this.createCloneBoxplot();
@@ -109,69 +110,6 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   }
 
   /**
-   * Creates a bar chart where the average
-   * clone coverage is displayed by different
-   * fields.
-   * @private
-   */
-  private createCloneByField(): void {
-    const dataPoints = this.dataPoints();
-    const cloneCoverages: Record<string, ValueMap<number>> = {};
-
-    Object.values(dataPoints).forEach(({field, clone_coverage }) => {
-      cloneCoverages[field] ??= {count: 0, value: 0};
-
-      const current = cloneCoverages[field];
-
-      cloneCoverages[field] = {
-        value: (current?.value ?? 0) + clone_coverage,
-        count: (current?.count ?? 0) + 1
-      };
-    });
-
-    const labels: string[] = [];
-    const data: number[] = [];
-
-    Object.entries(cloneCoverages).forEach(([field, entry]) => {
-      const avg = entry ? entry.value / entry.count : 0;
-
-      labels.push(`${field} (count: ${entry?.count ?? 0})`);
-      data.push(avg);
-    });
-
-    const config: ChartConfiguration = {
-      type: 'bar' as ChartType,
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Field Average',
-            data: data,
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'top' },
-          title: {
-            display: true,
-            text: 'Different Fields in Clone Coverage'
-          }
-        }
-      }
-    };
-
-    const canvas = document.getElementById('BusinessVsResearchByField') as HTMLCanvasElement;
-    if (canvas) {
-      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
-    }
-  }
-
-  /**
    * Creates two pie charts where average clone coverage is
    * displayed by Sci and NonSci.
    * @private
@@ -191,36 +129,6 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
     const computedSciAverage = averageSci.length === 0 ? 0 : averageSci.reduce((acc, n) => acc + n, 0) /averageSci.length;
     const computedNonSciAverage = averageNonSci.length === 0 ? 0 : averageNonSci.reduce((acc, n) => acc + n, 0) / averageNonSci.length;
-
-
-    const config = (isSci: boolean) => {
-      const t: ChartConfiguration = {
-        type: 'pie' as ChartType,
-        data: {
-          labels: [isSci ? 'Research Software (count: ' + averageSci.length + ')' : 'Business Software (count: ' + averageNonSci.length + ')'],
-          datasets: [
-            {
-              label: '',
-              data: [isSci ? computedSciAverage : computedNonSciAverage, isSci ? 1 - computedSciAverage : 1 - computedNonSciAverage],
-              backgroundColor: ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.6)'],
-              borderColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 1)'],
-              borderWidth: 1
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {position: 'top'},
-            title: {
-              display: true,
-              text: isSci ? 'Research in Clone Coverage' : 'Business in Clone Coverage'
-            }
-          }
-        }
-      };
-      return t;
-    };
 
     const barConfig: ChartConfiguration = {
         type: 'bar' as ChartType,
@@ -262,12 +170,8 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     };
 
 
-    // const canvas1 = document.getElementById('AverageCloneCoverageSci') as HTMLCanvasElement;
-    // const canvas2 = document.getElementById('AverageCloneCoverageNonSci') as HTMLCanvasElement;
-    const canvas3 = document.getElementById('AverageCloneCoverage') as HTMLCanvasElement;
-    // this.allNonReactivePlots.update(value => [...value, new Chart(canvas1, config(true))]);
-    // this.allNonReactivePlots.update(value => [...value, new Chart(canvas2, config(false))]);
-    this.allNonReactivePlots.update(value => [...value, new Chart(canvas3, barConfig)]);
+    const canvas = document.getElementById('AverageCloneCoverage') as HTMLCanvasElement;
+    this.allNonReactivePlots.update(value => [...value, new Chart(canvas, barConfig)]);
   }
 
 
@@ -400,6 +304,16 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
             backgroundColor: ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 75, 0.4)'],
           }
         ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {position: 'top'},
+          title: {
+            display: true,
+            text: 'Research, Business and Average in Clone Coverage'
+          }
+        }
       }
     };
 

@@ -25,4 +25,8 @@ export class Home {
   goToFindingsCharts() {
     this.router.navigate(['/findings-chart']);
   }
+
+  goToNestingCharts() {
+    this.router.navigate(['/nesting-depth-chart']);
+  }
 }

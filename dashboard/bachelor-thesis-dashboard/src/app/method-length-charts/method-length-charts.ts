@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, signal} from '@angular/core';
 import {AnalyzedData, Separation} from '../../../shared/interface/data-point';
-import {DataHelper} from '../../../shared/data-helper';
+import {combineSeparations, DataHelper, getAverage} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
@@ -23,9 +23,6 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
     this.createMethodLengthValue(true);
     this.createMethodLengthValue(false);
   }
-
-  private getAverage = (arr: number[]) => arr.reduce((a, b) => a + b, 0) / arr.length;
-  private combineSeparations = (a: Separation, b: Separation)=> {return{red: a.red + b.red, yellow: a.yellow + b.yellow, green: a.green + b.green}}
 
   /**
    * Creates a bar chart where the average
@@ -57,21 +54,21 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
         datasets: [
           {
             label: 'Green',
-            data: [this.getAverage(sciAverageGreen), this.getAverage(nonSciAverageGreen)],
+            data: [getAverage(sciAverageGreen), getAverage(nonSciAverageGreen)],
             backgroundColor: 'rgba(75, 192, 75, 0.4)',
             borderColor: 'rgba(75, 192, 75, 0.9)',
             borderWidth: 1
           },
           {
             label: 'Yellow',
-            data: [this.getAverage(sciAverageYellow), this.getAverage(nonSciAverageYellow)],
+            data: [getAverage(sciAverageYellow), getAverage(nonSciAverageYellow)],
             backgroundColor: 'rgba(255, 205, 86, 0.6)',
             borderColor: 'rgba(255, 205, 86, 1)',
             borderWidth: 1
           },
           {
             label: 'Red',
-            data: [this.getAverage(sciAverageRed), this.getAverage(nonSciAverageRed)],
+            data: [getAverage(sciAverageRed), getAverage(nonSciAverageRed)],
             backgroundColor: 'rgba(255, 99, 132, 0.4)',
             borderColor: 'rgba(255, 99, 132, 0.8)',
             borderWidth: 1
@@ -114,7 +111,7 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
       const current = methodLength[lang][bucket];
 
       methodLength[lang][bucket] = {
-        value: current?.value ? this.combineSeparations(current.value, method_length)  : method_length,
+        value: current?.value ? combineSeparations(current.value, method_length)  : method_length,
         count: (current?.count ?? 0) + 1
       };
     });

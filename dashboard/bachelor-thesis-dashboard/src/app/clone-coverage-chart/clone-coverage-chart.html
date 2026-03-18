@@ -1,15 +1,13 @@
 <section class="chart-wrapper">
   <canvas class="chart" id="BusinessVsResearchByLang"></canvas>
-  <canvas class="chart" id="BusinessVsResearchByField"></canvas>
+
+  <app-field-bar-plot
+    key="clone_coverage"
+  />
 
   <canvas class="chart" id="AverageCloneCoverage"></canvas>
 
   <canvas class="chart" id="CloneCoverageLine"></canvas>
-
-<!--  <section class="pie-chart-wrapper">-->
-<!--    <canvas class="pie-chart" id="AverageCloneCoverageSci"></canvas>-->
-<!--    <canvas class="pie-chart" id="AverageCloneCoverageNonSci"></canvas>-->
-<!--  </section>-->
 
   <app-scatter-plot
     key1="LOC"

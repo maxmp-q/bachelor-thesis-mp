@@ -1,6 +1,22 @@
 import {AnalyzedData, ScoredData, Separation} from './interface/data-point';
 import analyzedData from '../../../src/data/analyzed_data.json';
 
+
+export const getAverage = (arr: number[]): number => arr.reduce((a, b) => a + b, 0) / arr.length;
+export const combineSeparations = (a: Separation, b: Separation): Separation=> {return{red: a.red + b.red, yellow: a.yellow + b.yellow, green: a.green + b.green}}
+
+export const getMedian = (array: number[]): number => {
+  if (array.length === 0) return 0;
+
+  const sorted = [...array].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+
+  return sorted.length % 2 === 0
+    ? (sorted[mid - 1] + sorted[mid]) / 2
+    : sorted[mid];
+}
+
+
 export class DataHelper{
     private static data_points: Record<string, AnalyzedData> = analyzedData;
 
@@ -109,30 +125,30 @@ export class DataHelper{
 
       Object.values(data).map((project, i) => {
 
-        const m = metrics[i]
+        const m = metrics[i];
 
-        const cloneScore = 1 - m.clone_coverage
+        const cloneScore = 1 - m.clone_coverage;
 
         const findingsScore =
-          1 - this.normalize(m.findings_density, mins.findings_density, maxs.findings_density)
+          1 - this.normalize(m.findings_density, mins.findings_density, maxs.findings_density);
 
         const methodScore =
-          1 - this.normalize(m.method_complexity, mins.method_complexity, maxs.method_complexity)
+          1 - this.normalize(m.method_complexity, mins.method_complexity, maxs.method_complexity);
 
         const nestingScore =
-          1 - this.normalize(m.nesting_depth, mins.nesting_depth, maxs.nesting_depth)
+          1 - this.normalize(m.nesting_depth, mins.nesting_depth, maxs.nesting_depth);
 
         const sizeScore =
-          this.normalize(m.avg_file_size, mins.avg_file_size, maxs.avg_file_size)
+          this.normalize(m.avg_file_size, mins.avg_file_size, maxs.avg_file_size);
 
         const qualityScore =
           0.30 * findingsScore +
           0.25 * cloneScore +
           0.20 * methodScore +
           0.15 * nestingScore +
-          0.10 * sizeScore
+          0.10 * sizeScore;
 
-        scoredData[project.name] = {...project, scoring: qualityScore * 100}
+        scoredData[project.name] = {...project, scoring: qualityScore * 100};
       });
       return scoredData;
     }

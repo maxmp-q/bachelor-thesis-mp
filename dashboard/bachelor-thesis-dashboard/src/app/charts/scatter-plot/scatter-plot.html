@@ -1,35 +1,38 @@
-@if (changeValue_key2() !== 0){
-  <section class="increase-button-wrapper">
-    <span>{{key2()}} </span>
-    <input [(ngModel)]="localMax_key2" type="number" [step]="changeValue_key2()" />
-  </section>
- }
+<section class="chart">
+  @if (changeValue_key2() !== 0){
+    <section class="increase-button-wrapper">
+      <span>{{key2()}} </span>
+      <input [(ngModel)]="localMax_key2" type="number" [step]="changeValue_key2()" />
+    </section>
+  }
 
-<section class="increase-button-wrapper">
-  <span>{{sub_key1() ? key1() + " " + sub_key1() : key1()}} </span>
-  <input [(ngModel)]="localMax_key1" type="number" [step]="changeValue_key1()" />
+  <section class="increase-button-wrapper">
+    <span>{{sub_key1() ? key1() + " " + sub_key1() : key1()}} </span>
+    <input [(ngModel)]="localMax_key1" type="number" [step]="changeValue_key1()" />
+  </section>
+
+  <canvas [id]="'ScatterPlot' + key1() + key2()"></canvas>
+
+  @if (borderRadius()){
+    <label>
+      <input
+        type="checkbox"
+        [(ngModel)]="radiusByKey"
+      />
+      Calculate the size of the points in {{borderRadius()}}
+    </label>
+  }
+
+  @if (selectOption()) {
+    <span> Filter here for a {{selectOption()}} </span>
+    <select [(ngModel)]="selected">
+      <option [ngValue]="undefined"> All {{selectOption()}}</option>
+      @for(item of selectOptions(); track item){
+        <option [ngValue]="item">
+          {{ item }}
+        </option>
+      }
+    </select>
+  }
 </section>
 
-<canvas class="chart" [id]="'ScatterPlot' + key1() + key2()"></canvas>
-
-@if (borderRadius()){
-  <label>
-    <input
-      type="checkbox"
-      [(ngModel)]="radiusByKey"
-    />
-    Calculate the size of the points is {{borderRadius()}}
-  </label>
-}
-
-@if (selectOption()) {
-  <span> Filter here for a {{selectOption()}} </span>
-  <select [(ngModel)]="selected">
-    <option [ngValue]="undefined"> All {{selectOption()}}</option>
-    @for(item of selectOptions(); track item){
-      <option [ngValue]="item">
-        {{ item }}
-      </option>
-    }
-  </select>
-}

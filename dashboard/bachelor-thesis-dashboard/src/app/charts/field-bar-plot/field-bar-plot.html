@@ -1,0 +1,12 @@
+<section class="chart">
+  <canvas [id]="'FieldBy' + key() + 'BarChart'"></canvas>
+  <label>
+    Show Average or Median (current: {{showAverage() ? 'Average' : 'Median'}})
+    <input
+      type="checkbox"
+      [(ngModel)]="showAverage"
+    />
+  </label>
+</section>
+
+
