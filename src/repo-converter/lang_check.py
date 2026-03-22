@@ -17,7 +17,7 @@ def safe_get(_url, headers=None):
         _response.raise_for_status()
         return _response
     except requests.exceptions.RequestException as e:
-        print(f"Request-Fehler bei {_url}: {e}")
+        print(f"Request-Error: {_url}: {e}")
     return None
 
 
@@ -38,7 +38,7 @@ def get_lang(_name, _lang):
     return _lang, _data
 
 
-print("Starte die CSV zu lesen!")
+print("Start reading the csv:")
 
 with open('dataset/dataset.csv', mode='r') as file:
     csvFile = list(csv.reader(file))
@@ -56,7 +56,7 @@ with open('dataset/dataset.csv', mode='r') as file:
 
         url = f"https://github.com/{user}/{repo}"
 
-        # GitHub Repo checken
+        # GitHub Repo check
         response = safe_get(url)
         if not response:
             continue
@@ -75,15 +75,15 @@ with open('dataset/dataset.csv', mode='r') as file:
             "_data": _used_data
         }
 
-        # Nur speichern, wenn Sprache abweicht
+        # Only save if lang differ
         if _language != result[13]:
             if (_language in ["C", "C++"]) and result[13] == "C/C++":
                 continue
 
             data.append(entry)
-            print(f"Wir sind bei {len(data)} Datenpunkten!")
+            print(f"We have{len(data)} entries!")
 
-print("Mach alles ins Json!")
+print("Dump into json!")
 
 with open("lang/language.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)

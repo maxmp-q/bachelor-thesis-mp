@@ -2,10 +2,10 @@ import requests
 import json
 import constants
 
-print("Aktuelle Daten werden aus der analyzed_data.json ausgelesen!")
+print("Read current analyzed_data.json!")
 with open('../data/analyzed_data.json', 'r') as data_file:
     data = json.load(data_file)
-    print(f"Wir starten bei {data.__len__()}  Einträgen!")
+    print(f"We start at {data.__len__()}  entries!")
 
 # Constants for API
 BASE_URL = "https://teamscale.cs.uni-koeln.de/"
@@ -42,7 +42,7 @@ def extract_mapping(_mapping, red = 0, yellow = 2, green = 3):
         "green" : _mapping[green]
     }
 
-print("data.json wird eingelesen!")
+print("Read data.json!")
 # Gets the data from data.json with the projects in Teamscale.
 with open('../data/data.json', 'r') as file:
     _data = json.load(file)
@@ -50,7 +50,7 @@ with open('../data/data.json', 'r') as file:
     for data_point in _data.values():
         print(data_point["name"])
         # URLS
-        FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/findings/summary?uniform-path=&baseline=1&t=master%3AHEAD&blacklisted=EXCLUDED"
+        FINDINGS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/findings/summary?uniform-path=&baseline=1&t={data_point["default_branch"]}%3AHEAD&blacklisted=EXCLUDED"
         ALL_FINDINGS_URL = f"{BASE_URL}api/v2025.2/projects/{data_point["name"].lower()}/findings/list?case-insensitive-path=false&start=0&max=1000"
         ALL_METRICS_URL = f"{BASE_URL}api/projects/{data_point["name"].lower()}/metrics?t={data_point["default_branch"]}%3AHEAD&uniform-path="
 
@@ -89,9 +89,9 @@ with open('../data/data.json', 'r') as file:
         }
 
         data[data_point["name"]] = entry
-        print(f"Wir sind bei {data.__len__()} Einträgen!")
+        print(f"We have {data.__len__()} entries!")
 
-print("Dump die Daten ins json!")
+print("Dump data into json!")
 # Dump the data to analyzed_data.json
 with open("analyzed_data.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)

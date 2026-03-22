@@ -4,7 +4,7 @@ import requests
 # TODO: Change .csv files to real files!!
 
 # Read the input file
-with open('dataset/test_dataset.csv', mode='r', newline='') as infile:
+with open('dataset/dataset.csv', mode='r', newline='') as infile:
     csvFile = list(csv.reader(infile))
     header, rows = csvFile[0], csvFile[1:]
 

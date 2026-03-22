@@ -16,7 +16,7 @@ def get_lang(_name, _lang):
             _main_lang = max(_data, key=_data.get)
 
             print("API:", _main_lang)
-            print("Erwartet:", _lang)
+            print("from csv::", _lang)
 
             return _main_lang
         else:

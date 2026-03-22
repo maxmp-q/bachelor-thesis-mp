@@ -66,7 +66,7 @@ def get_branch(_name):
         print(e)
         return 'master'
 
-print("Starte die CSV zu lesen!")
+print("Start reading the csv!")
 
 with open('dataset/dataset.csv', mode='r') as file:
     csvFile = list(csv.reader(file))
@@ -111,12 +111,12 @@ with open('dataset/dataset.csv', mode='r') as file:
 
                 if response.status_code == 200:
                     data[entry["name"]] = entry
-                    print(f"Wir sind bei {data.__len__()} Datenpunkten!")
+                    print(f"We have {data.__len__()} entries!")
 
         if data.__len__() >= 25:
             break
 
-print("Mach alles ins Json!")
+print("Dump into json!")
 
 with open("data.json", mode="w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
