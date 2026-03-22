@@ -100,7 +100,7 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
    */
   private createMethodByLang(): void {
     const dataPoints = this.dataPoints();
-    const methodLength: Record<string, SciFields<Separation>> = {};
+    const methodLength: Record<string, SciFields<ValueMap<Separation>>> = {};
 
 
     Object.values(dataPoints).forEach(({ lang ,field, method_length }) => {

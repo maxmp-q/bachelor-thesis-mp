@@ -106,7 +106,7 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
    */
   private createMethodByLang(): void {
     const dataPoints = this.dataPoints();
-    const methodLength: Record<string, SciFields<Separation>> = {};
+    const methodLength: Record<string, SciFields<ValueMap<Separation>>> = {};
 
 
     Object.values(dataPoints).forEach(({ lang ,field, method_length }) => {
@@ -244,7 +244,7 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
     });
 
     const bucketSize = 10000;
-    const buckets: Record<number, SciFields<number>> = {};
+    const buckets: Record<number, SciFields<ValueMap<number>>> = {};
 
     const bucketMapper = (entry: ValueMap<number>, sci: boolean) => {
       const bucket = Math.floor(entry.count / bucketSize) * bucketSize;
@@ -388,7 +388,7 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
   }
 
   /**
-   * Creates a boxplot where the dots are sorted by Author and Clone Coverage!
+   * Creates a boxplot where Scoring is display in Research and Business!
    * @private
    */
   private createScoringBoxplot(): void {

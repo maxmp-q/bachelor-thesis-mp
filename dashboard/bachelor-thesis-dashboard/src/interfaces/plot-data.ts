@@ -5,6 +5,6 @@ interface ValueMap<T> {
 
 /** This interface contains the values of different languages. */
 interface SciFields<T> {
-  isSci?: ValueMap<T>;
-  nonSci?: ValueMap<T>;
+  isSci?: T;
+  nonSci?: T;
 }

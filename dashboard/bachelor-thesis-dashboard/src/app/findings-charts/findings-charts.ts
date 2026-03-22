@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, computed, effect, OnDestroy, signal} from '@angular/core';
-import {AnalyzedData} from '../../../shared/interface/data-point';
-import {DataHelper} from '../../../shared/data-helper';
-import {Chart, ChartConfiguration} from 'chart.js';
+import {ScoredData} from '../../../shared/interface/data-point';
+import {DataHelper, getAverage, getMedian} from '../../../shared/data-helper';
+import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -13,10 +13,10 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './findings-charts.scss',
 })
 export class FindingsCharts implements AfterViewInit, OnDestroy  {
-  dataPoints = signal<Record<string, AnalyzedData>>(DataHelper.getData);
+  dataPoints = signal<Record<string, ScoredData>>(DataHelper.getScoredData());
   allNonReactivePlots = signal<Chart[]>([]);
 
-  findings = computed(() => {
+  findingsAvg = computed(() => {
     const dataPoints = this.dataPoints();
     const findings: Record<string, ValueMap<number>> = {};
 
@@ -37,12 +37,12 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
   wordCloudCount = signal<boolean>(true);
   TagCloudChart= signal<Chart | undefined>(undefined);
   TagCloudConfig = computed(() => {
-    const findings = this.findings();
+    const findingsAvg = this.findingsAvg();
     const wordCloudCount = this.wordCloudCount();
 
     const data = (forPlot: boolean) => {
       if(forPlot) {
-        return Object.values(findings).map(entry =>  {
+        return Object.values(findingsAvg).map(entry =>  {
           const entry_count = () => {
             const count = entry.count;
 
@@ -54,14 +54,14 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
           return wordCloudCount ? Math.log2(entry_count()) * 5 : Math.log2(entry.value) * 5
         });
       } else {
-        return Object.values(findings).map(entry =>  wordCloudCount ? entry.count : entry.value)
+        return Object.values(findingsAvg).map(entry =>  wordCloudCount ? entry.count : entry.value)
       }
     }
 
     const config: ChartConfiguration<'wordCloud'> = {
       type: 'wordCloud',
       data: {
-        labels: Object.keys(findings),
+        labels: Object.keys(findingsAvg),
         datasets: [
           {
             label: 'Tag Cloud',
@@ -103,7 +103,98 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
       }
     };
     return config;
-  })
+  });
+
+  // All for Tag Cloud Chart
+  barCount = signal<boolean>(true);
+  barMedian = signal<boolean>(false);
+  BarChart= signal<Chart | undefined>(undefined);
+  BarConfig = computed(() => {
+    const dataPoints = this.dataPoints();
+    const barCount = this.barCount();
+    const barMedian = this.barMedian();
+
+    const data: SciFields<Record<string, number[]>> = {
+      isSci: {},
+      nonSci: {}
+    };
+
+    Object.values(dataPoints).forEach(dataPoint => {
+      const scope = dataPoint.field === "nonSci" ? 'nonSci' : 'isSci';
+
+      dataPoint.findings_details.forEach(finding => {
+        data[scope] ??= {};
+
+        const record = data[scope];
+        record[finding.categoryName] ??= [];
+        record[finding.categoryName].push(barCount ? finding.count : finding.countRed);
+      })
+    });
+
+    const labels = Object.keys(data.nonSci!).map(key => key);
+
+    const isSciData = Object.values(data.isSci!)
+      .map(arr =>
+        barMedian ?
+          Math.floor(getMedian(arr)) :
+          Math.floor(getAverage(arr))
+      );
+
+    const nonSciData = Object.values(data.nonSci!)
+      .map(arr =>
+        barMedian ?
+          Math.floor(getMedian(arr)) :
+          Math.floor(getAverage(arr))
+      );
+
+    const config: ChartConfiguration = {
+      type: 'bar' as ChartType,
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Research Average',
+            data: isSciData,
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: barCount ? 'rgba(54, 162, 235, 1)' :  'rgba(300, 0, 0, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Business Average',
+            data: nonSciData,
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: barCount ? 'rgba(255, 99, 132, 0.8)':  'rgba(300, 0, 0, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Category'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: `Findings ${barCount ? 'count' : 'count red'}`
+            }
+          }
+        },
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'Business vs Research in Findings Categories'
+          }
+        }
+      }
+    };
+    return config;
+  });
 
   constructor() {
     effect(() => {
@@ -117,10 +208,23 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
 
       chart.update();
     });
+
+    effect(() => {
+      const config = this.BarConfig();
+      const chart = this.BarChart();
+
+      if (!chart) return;
+      if (config.options) chart.options = config.options;
+
+      chart.data.datasets = config.data!.datasets!;
+
+      chart.update();
+    });
   }
 
   ngAfterViewInit(): void {
     this.createFindingsWordCloud();
+    this.createFindingsBar();
   }
 
   private createFindingsWordCloud(): void{
@@ -130,11 +234,21 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     }
   }
 
+  private createFindingsBar(): void{
+    const canvas = document.getElementById('FindingsBarSciNonSci') as HTMLCanvasElement;
+    if (canvas) {
+      this.BarChart.set(new Chart(canvas, this.BarConfig()));
+    }
+  }
+
   ngOnDestroy(): void {
     const nonReactiveCharts = this.allNonReactivePlots();
     const TagCloudChart = this.TagCloudChart();
+    const BarChart = this.BarChart();
 
     if(TagCloudChart) TagCloudChart.destroy();
+    if(BarChart) BarChart.destroy();
+
     nonReactiveCharts.forEach(chart => chart.destroy());
   }
 }

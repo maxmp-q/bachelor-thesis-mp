@@ -5,7 +5,10 @@ import {BoxAndWiskers, BoxPlotController} from '@sgratzl/chartjs-chart-boxplot';
 import {WordCloudController, WordElement} from 'chartjs-chart-wordcloud';
 
 // Register Chart.js components globally
-Chart.register(...registerables, BoxPlotController, BoxAndWiskers, WordCloudController, WordElement);
+Chart.register(...registerables,
+  BoxPlotController, BoxAndWiskers,
+  WordCloudController, WordElement
+);
 
 
 @Component({

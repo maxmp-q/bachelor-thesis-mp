@@ -1,10 +1,26 @@
 <section class="chart-wrapper">
   <canvas class="chart tag-cloud" id="TagCloudFindings"></canvas>
   <label>
-    Soll der Count angezeigt werden?
+    Should count or count red be displayed? (current: {{wordCloudCount() ? 'count' : 'count red'}})
     <input
       type="checkbox"
       [(ngModel)]="wordCloudCount"
+    />
+  </label>
+
+  <canvas class="chart" id="FindingsBarSciNonSci"></canvas>
+  <label>
+    Should count or count red be displayed? (current: {{barCount() ? 'count' : 'count red'}})
+    <input
+      type="checkbox"
+      [(ngModel)]="barCount"
+    />
+  </label>
+  <label>
+    Should count/count red be displayed by average or median? (current: {{barMedian() ? 'median' : 'average'}})
+    <input
+      type="checkbox"
+      [(ngModel)]="barMedian"
     />
   </label>
 </section>

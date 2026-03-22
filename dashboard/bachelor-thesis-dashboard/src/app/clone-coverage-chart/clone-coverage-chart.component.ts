@@ -34,7 +34,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
    */
   private createCloneByLang(): void {
     const dataPoints = this.dataPoints();
-    const cloneCoverages: Record<string, SciFields<number>> = {};
+    const cloneCoverages: Record<string, SciFields<ValueMap<number>>> = {};
 
     Object.values(dataPoints).forEach(({ lang, field, clone_coverage }) => {
       cloneCoverages[lang] ??= {};
@@ -191,7 +191,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     });
 
     const bucketSize = 5000;
-    const buckets: Record<number, SciFields<number>> = {};
+    const buckets: Record<number, SciFields<ValueMap<number>>> = {};
 
     const bucketMapper = (entry: ValueMap<number>, sci: boolean) => {
       const bucket = Math.floor(entry.count / bucketSize) * bucketSize;
