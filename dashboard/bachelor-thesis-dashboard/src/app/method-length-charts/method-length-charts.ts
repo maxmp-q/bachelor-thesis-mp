@@ -3,12 +3,14 @@ import {AnalyzedData, Separation} from '../../../shared/interface/data-point';
 import {combineSeparations, DataHelper, getAverage} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
+import {FieldBarPlot} from "../charts/field-bar-plot/field-bar-plot";
 
 @Component({
   selector: 'app-method-length-charts',
-  imports: [
-    ScatterPlot
-  ],
+    imports: [
+        ScatterPlot,
+        FieldBarPlot
+    ],
   templateUrl: './method-length-charts.html',
   styleUrl: './method-length-charts.scss',
 })

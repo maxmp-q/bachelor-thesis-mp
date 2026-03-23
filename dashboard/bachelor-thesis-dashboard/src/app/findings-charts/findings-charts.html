@@ -23,4 +23,15 @@
       [(ngModel)]="barMedian"
     />
   </label>
+
+  <canvas class="chart" id="FindingsPerLOC"></canvas>
+  <label>
+    Should count/count red be displayed by 1000 LOC or Average? (current: {{LOCBarPer1000() ? 'By 1000 LOC' : 'Average'}})
+    <input
+      type="checkbox"
+      [(ngModel)]="LOCBarPer1000"
+    />
+  </label>
+
+  <canvas class="chart" id="FindingsInLine"></canvas>
 </section>
