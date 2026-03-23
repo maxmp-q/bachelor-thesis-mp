@@ -29,8 +29,13 @@ jobs:
       - name: Install GitHub Pages
         run: npm install -g angular-cli-ghpages
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
       - name: Deploy to GitHub Pages
         working-directory: dashboard/bachelor-thesis-dashboard
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx angular-cli-ghpages --dir=dist/bachelor-thesis-dashboard
+        run: npx angular-cli-ghpages --dir=dist/bachelor-thesis-dashboard/browser
