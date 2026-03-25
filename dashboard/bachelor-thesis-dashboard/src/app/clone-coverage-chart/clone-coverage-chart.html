@@ -1,5 +1,9 @@
 <section class="chart-wrapper">
   <canvas class="chart" id="BusinessVsResearchByLang"></canvas>
+  <section class="increase-button-wrapper">
+    <span>Min Count of Lang </span>
+    <input [(ngModel)]="CloneByLangMin" type="number"/>
+  </section>
 
   <app-field-bar-plot
     key="clone_coverage"

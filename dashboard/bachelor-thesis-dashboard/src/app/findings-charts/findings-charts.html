@@ -32,6 +32,15 @@
       [(ngModel)]="LOCBarPer1000"
     />
   </label>
+  <span> Filter here for a Finding Category </span>
+  <select [(ngModel)]="selectedLOCBarCategory">
+    <option [ngValue]="undefined"> All Findings</option>
+    @for(item of categorySelectOptions; track item){
+      <option [ngValue]="item">
+        {{ item }}
+      </option>
+    }
+  </select>
 
   <canvas class="chart" id="FindingsInLine"></canvas>
 </section>

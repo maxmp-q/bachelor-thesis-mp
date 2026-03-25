@@ -4,6 +4,19 @@ import {DataHelper, getAverage, getMedian} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
 
+export const findings = [
+  "Comprehensibility",
+  "Correctness",
+  "Documentation",
+  "Efficiency",
+  "Error Handling",
+  "Redundancy",
+  "Structure",
+  "Usability",
+  "Security"
+] as const;
+export type Findings = (typeof findings)[number];
+
 @Component({
   selector: 'app-findings-charts',
   imports: [
@@ -197,10 +210,13 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
   });
 
   LOCBarPer1000 = signal<boolean>(false);
+  selectedLOCBarCategory = signal<Findings | undefined>(undefined);
+  categorySelectOptions =  findings;
   LOCBarChart = signal<Chart | null>(null);
   LOCBarConfig = computed(()=> {
     const dataPoints = this.dataPoints();
     const LOCBarPer1000 = this.LOCBarPer1000();
+    const category = this.selectedLOCBarCategory();
 
     const data: SciFields<number[]> = {isSci: [], nonSci: []}
     const dataRed: SciFields<number[]> = {isSci: [], nonSci: []}
@@ -211,6 +227,7 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
 
       const findingsCount = (val: 'count' | 'countRed') => {
         return point.findings_details
+          .filter(find => category ? find.categoryName === category : true)
           .map(find => find[val])
           .reduce((a, b) => a + b, 0);
       };

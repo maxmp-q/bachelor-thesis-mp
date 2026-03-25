@@ -1,16 +1,19 @@
-import {Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
+import {Component, AfterViewInit, OnDestroy, signal, computed, effect} from '@angular/core';
 import { Chart, ChartConfiguration, ChartType } from 'chart.js';
 import { ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-clone-coverage-chart',
   templateUrl: './clone-coverage-chart.html',
   imports: [
     ScatterPlot,
-    FieldBarPlot
+    FieldBarPlot,
+    ReactiveFormsModule,
+    FormsModule
   ],
   styleUrls: ['./clone-coverage-chart.scss']
 })
@@ -19,21 +22,12 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
   allNonReactivePlots = signal<Chart[]>([]);
 
-  ngAfterViewInit(): void {
-    this.createCloneByLang();
-    this.createAverageClone();
-    this.createCloneLine();
-    this.createCloneBoxplot();
-  }
-
-  /**
-   * Creates a bar chart where the average
-   * clone coverage is displayed by different
-   * languages.
-   * @private
-   */
-  private createCloneByLang(): void {
+  CloneByLangMin = signal<number>(0);
+  CloneByLangChart = signal<Chart | null>(null);
+  CloneByLangConfig = computed(()=> {
     const dataPoints = this.dataPoints();
+    const CloneByLangMin = this.CloneByLangMin();
+
     const cloneCoverages: Record<string, SciFields<ValueMap<number>>> = {};
 
     Object.values(dataPoints).forEach(({ lang, field, clone_coverage }) => {
@@ -62,12 +56,15 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
         ? entry.nonSci.value / entry.nonSci.count
         : 0;
 
-      labels.push(
-        `${lang} (isSci: ${entry.isSci?.count ?? 0}, nonSci: ${entry.nonSci?.count ?? 0})`
-      );
+      const totalCount = (entry.isSci?.count ?? 0) + (entry.nonSci?.count ?? 0);
+      if(totalCount >= CloneByLangMin){
+        labels.push(
+          `${lang} (isSci: ${entry.isSci?.count ?? 0}, nonSci: ${entry.nonSci?.count ?? 0})`
+        );
 
-      isSciData.push(isSciAvg);
-      nonSciData.push(nonSciAvg);
+        isSciData.push(isSciAvg);
+        nonSciData.push(nonSciAvg);
+      }
     });
 
     const config: ChartConfiguration = {
@@ -102,10 +99,43 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
         }
       }
     };
+    return config;
+  })
 
+
+  constructor() {
+    effect(() => {
+      const config = this.CloneByLangConfig();
+      const chart = this.CloneByLangChart();
+
+      if (!chart) return;
+      if (config.options) chart.options = config.options;
+
+      chart.data.labels = config.data!.labels!;
+      chart.data.datasets = config.data!.datasets!;
+
+      chart.update();
+    });
+  }
+
+
+  ngAfterViewInit(): void {
+    this.createCloneByLang();
+    this.createAverageClone();
+    this.createCloneLine();
+    this.createCloneBoxplot();
+  }
+
+  /**
+   * Creates a bar chart where the average
+   * clone coverage is displayed by different
+   * languages.
+   * @private
+   */
+  private createCloneByLang(): void {
     const canvas = document.getElementById('BusinessVsResearchByLang') as HTMLCanvasElement;
     if (canvas) {
-      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+      this.CloneByLangChart.set(new Chart(canvas, this.CloneByLangConfig()));
     }
   }
 
@@ -326,6 +356,9 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     const nonReactivCharts = this.allNonReactivePlots();
+    const CloneByLang = this.CloneByLangChart();
+
+    if(CloneByLang) CloneByLang.destroy();
     nonReactivCharts.forEach(chart => chart.destroy());
   }
 }
