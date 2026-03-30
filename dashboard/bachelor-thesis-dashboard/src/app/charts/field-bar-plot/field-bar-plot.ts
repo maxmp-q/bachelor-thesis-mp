@@ -54,6 +54,18 @@ export class FieldBarPlot implements AfterViewInit, OnDestroy{
       data.push(showAvg ? getAverage(entry) : getMedian(entry));
     });
 
+    const backgroundColors = labels.map(label =>
+      label.startsWith('nonSci')
+        ? 'rgba(255, 99, 132, 0.6)'
+        : 'rgba(54, 162, 235, 0.6)'
+    );
+
+    const borderColors = labels.map(label =>
+      label.startsWith('nonSci')
+        ? 'rgba(255, 99, 132, 1)'
+        : 'rgba(54, 162, 235, 1)'
+    );
+
     const config: ChartConfiguration = {
       type: 'bar' as ChartType,
       data: {
@@ -62,8 +74,8 @@ export class FieldBarPlot implements AfterViewInit, OnDestroy{
           {
             label: 'Field Average',
             data: data,
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
             borderWidth: 1
           }
         ]
@@ -75,6 +87,14 @@ export class FieldBarPlot implements AfterViewInit, OnDestroy{
           title: {
             display: true,
             text: `Different Fields in ${key} ${this.sub_key() ?? ''}`
+          }
+        },
+        scales: {
+          y: {
+            title: {
+              display: true,
+              text: `${key} ${this.sub_key() ?? ''} ${showAvg ? 'average' : 'median'}`
+            }
           }
         }
       }
