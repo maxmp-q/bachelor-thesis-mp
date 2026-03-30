@@ -2,13 +2,13 @@ import csv
 import json
 import requests
 import random
+from constants import GITHUB_ACCESS_KEY
 
 
 def get_lang(_name, _lang):
     _author, _repo = _name.split('_', 1)
     _URL = f"https://api.github.com/repos/{_author}/{_repo}/languages"
-    _GIT_TOKEN = ""
-    headers = {"Authorization": f"token {_GIT_TOKEN}"}
+    headers = {"Authorization": f"token {GITHUB_ACCESS_KEY}"}
     try:
         _data = requests.get(_URL, headers=headers).json()
 

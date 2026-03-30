@@ -3,6 +3,7 @@ import {ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper, getAverage, getMedian} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
+import {updateChart} from '../../utilities/utility';
 
 export const findings = [
   "Comprehensibility",
@@ -48,7 +49,7 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
 
   // All for Tag Cloud Chart
   wordCloudCount = signal<boolean>(true);
-  TagCloudChart= signal<Chart | undefined>(undefined);
+  TagCloudChart= signal<Chart | null>(null);
   TagCloudConfig = computed(() => {
     const findingsAvg = this.findingsAvg();
     const wordCloudCount = this.wordCloudCount();
@@ -121,7 +122,7 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
   // All for Tag Cloud Chart
   barCount = signal<boolean>(true);
   barMedian = signal<boolean>(false);
-  BarChart= signal<Chart | undefined>(undefined);
+  BarChart= signal<Chart | null>(null);
   BarConfig = computed(() => {
     const dataPoints = this.dataPoints();
     const barCount = this.barCount();
@@ -296,36 +297,21 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
       const config = this.TagCloudConfig();
       const chart = this.TagCloudChart();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
 
     effect(() => {
       const config = this.BarConfig();
       const chart = this.BarChart();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
 
     effect(() => {
       const config = this.LOCBarConfig();
       const chart = this.LOCBarChart();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
   }
 

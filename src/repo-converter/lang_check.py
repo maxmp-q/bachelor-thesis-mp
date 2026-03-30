@@ -2,12 +2,12 @@ import csv
 import requests
 import json
 import random
+from constants import GITHUB_ACCESS_KEY
 
 data = []
 
 # GitHub API Token
-GIT_TOKEN = ""
-HEADERS = {"Authorization": f"token {GIT_TOKEN}"}
+HEADERS = {"Authorization": f"token {GITHUB_ACCESS_KEY}"}
 
 
 def safe_get(_url, headers=None):

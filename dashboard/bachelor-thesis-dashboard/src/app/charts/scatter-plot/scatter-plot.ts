@@ -3,6 +3,7 @@ import { ScoredData, Separation} from '../../../../shared/interface/data-point';
 import {DataHelper} from '../../../../shared/data-helper';
 import {Chart, ChartConfiguration} from 'chart.js';
 import {FormsModule} from '@angular/forms';
+import {updateChart} from '../../../utilities/utility';
 
 @Component({
   selector: 'app-scatter-plot',
@@ -173,12 +174,7 @@ export class ScatterPlot implements AfterViewInit, OnDestroy, OnInit {
       const config = this.scatterPlotConfig();
       const chart = this.ScatterPlot();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
   }
 

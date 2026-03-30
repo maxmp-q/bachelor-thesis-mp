@@ -1,10 +1,11 @@
 import {Component, AfterViewInit, OnDestroy, signal, computed, effect} from '@angular/core';
 import { Chart, ChartConfiguration, ChartType } from 'chart.js';
 import { ScoredData} from '../../../shared/interface/data-point';
-import {DataHelper} from '../../../shared/data-helper';
+import {DataHelper, getAverage} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {updateChart} from '../../utilities/utility';
 
 @Component({
   selector: 'app-clone-coverage-chart',
@@ -108,13 +109,7 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
       const config = this.CloneByLangConfig();
       const chart = this.CloneByLangChart();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.labels = config.data!.labels!;
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
   }
 
@@ -150,15 +145,12 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     const averageNonSci: number[] = [];
 
     Object.values(dataPoints).forEach(entry => {
-      if(entry.field === "nonSci"){
-        averageNonSci.push(entry.clone_coverage);
-      } else {
-        averageSci.push(entry.clone_coverage);
-      }
+      const scope = entry.field === "nonSci" ? averageNonSci : averageSci;
+      scope.push(entry.clone_coverage);
     });
 
-    const computedSciAverage = averageSci.length === 0 ? 0 : averageSci.reduce((acc, n) => acc + n, 0) /averageSci.length;
-    const computedNonSciAverage = averageNonSci.length === 0 ? 0 : averageNonSci.reduce((acc, n) => acc + n, 0) / averageNonSci.length;
+    const computedSciAverage = getAverage(averageSci);
+    const computedNonSciAverage = getAverage(averageNonSci);
 
     const barConfig: ChartConfiguration = {
         type: 'bar' as ChartType,
@@ -193,6 +185,10 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
           scales: {
             y: {
               beginAtZero: true,
+              title: {
+                display: true,
+                text: "Clone Coverage"
+              },
               max: 1
             }
           }
@@ -342,6 +338,15 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
           title: {
             display: true,
             text: 'Research, Business and Average in Clone Coverage'
+          }
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            title: {
+              display: true,
+              text: "Clone Coverage"
+            }
           }
         }
       }

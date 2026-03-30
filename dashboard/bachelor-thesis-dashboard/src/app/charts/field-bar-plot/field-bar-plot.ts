@@ -3,6 +3,7 @@ import { ScoredData, Separation} from '../../../../shared/interface/data-point';
 import {DataHelper, getAverage, getMedian} from '../../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {updateChart} from '../../../utilities/utility';
 
 @Component({
   selector: 'app-field-bar-plot',
@@ -87,12 +88,7 @@ export class FieldBarPlot implements AfterViewInit, OnDestroy{
       const config = this.chartConfig();
       const chart = this.chart();
 
-      if (!chart) return;
-      if (config.options) chart.options = config.options;
-
-      chart.data.datasets = config.data!.datasets!;
-
-      chart.update();
+      updateChart(chart, config);
     });
   }
 
