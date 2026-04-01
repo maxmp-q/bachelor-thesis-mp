@@ -3,7 +3,8 @@ import {ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper, getAverage, getMedian} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
-import {updateChart} from '../../utilities/utility';
+import {generateBucketLineConfig, updateChart} from '../../utilities/utility';
+import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 
 export const findings = [
   "Comprehensibility",
@@ -21,7 +22,8 @@ export type Findings = (typeof findings)[number];
 @Component({
   selector: 'app-findings-charts',
   imports: [
-    FormsModule
+    FormsModule,
+    FieldBarPlot
   ],
   templateUrl: './findings-charts.html',
   styleUrl: './findings-charts.scss',
@@ -119,7 +121,6 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     return config;
   });
 
-  // All for Tag Cloud Chart
   barCount = signal<boolean>(true);
   barMedian = signal<boolean>(false);
   BarChart= signal<Chart | null>(null);
@@ -243,6 +244,57 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     const isSciDataRed: number = getAverage(dataRed.isSci!);
     const nonSciDataRed: number = getAverage(dataRed.nonSci!);
 
+    data.isSci!.sort((a, b) => a < b ? a : b);
+    data.nonSci!.sort((a, b) => a < b ? a : b);
+
+    dataRed.isSci!.sort((a, b) => a < b ? a : b);
+    dataRed.nonSci!.sort((a, b) => a < b ? a : b);
+
+    const config2: ChartConfiguration<'boxplot'> = {
+      type: 'boxplot',
+      data: {
+        labels: ['Count', 'Count Red'],
+        datasets: [
+          {
+            label: 'Research',
+            data: [
+              data.isSci!,     // Boxplot 1
+              dataRed.isSci!     // Boxplot 2
+            ],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+          },
+          {
+            label: 'Business',
+            data: [
+              data.nonSci!,     // Boxplot 1
+              dataRed.nonSci!     // Boxplot 2
+            ],
+            backgroundColor: 'rgba(54, 162, 235, 0.6)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {position: 'top'},
+          title: {
+            display: true,
+            text: 'Research and Business in Findings '
+          }
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            max: LOCBarPer1000 ? 300 : 3500,
+            title: {
+              display: true,
+              text: LOCBarPer1000 ? 'Findings Count per 1000 LOC' : "Findings Count"
+            }
+          }
+        }
+      }
+    };
+
     const config: ChartConfiguration = {
       type: 'bar' as ChartType,
       data: {
@@ -284,12 +336,12 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
           legend: { position: 'top' },
           title: {
             display: true,
-            text: 'Business vs Research in Findings per 1000 LOC'
+            text: `Business vs Research in Findings ${LOCBarPer1000 ? 'per 1000 LOC' : 'count average'}`
           }
         }
       }
     };
-    return config;
+    return config2;
   })
 
   constructor() {
@@ -320,6 +372,7 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     this.createFindingsBar();
     this.createFindingsPerLOC();
     this.createFindingsInLine();
+    this.createFindingsBucketLine();
   }
 
   private createFindingsWordCloud(): void{
@@ -470,6 +523,20 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
 
     const canvas = document.getElementById('FindingsInLine') as HTMLCanvasElement;
     if(canvas) this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+  }
+
+  private createFindingsBucketLine(): void {
+    const options: {key: keyof ScoredData, bucket: {max: number, size: number}}[] = [
+      {key: 'authors', bucket: {max:31 , size: 2}},
+      {key: 'LOC', bucket: {max:99999, size:5000}},
+      {key: 'files', bucket: {max:1499, size: 100}}
+    ];
+
+    options.forEach(option => {
+      const config = generateBucketLineConfig('findings_count', option.key, option.bucket )
+      const canvas = document.getElementById('FindingsLine' + option.key) as HTMLCanvasElement;
+      if(canvas) this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    })
   }
 
   ngOnDestroy(): void {

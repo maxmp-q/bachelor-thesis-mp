@@ -5,7 +5,7 @@ import {DataHelper, getAverage} from '../../../shared/data-helper';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {generateBucketLineConfig, updateChart} from '../../utilities/utility';
+import {generateBucketLineConfig, generateLangBarConfig, updateChart} from '../../utilities/utility';
 
 @Component({
   selector: 'app-clone-coverage-chart',
@@ -26,82 +26,8 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   CloneByLangMin = signal<number>(0);
   CloneByLangChart = signal<Chart | null>(null);
   CloneByLangConfig = computed(()=> {
-    const dataPoints = this.dataPoints();
-    const CloneByLangMin = this.CloneByLangMin();
-
-    const cloneCoverages: Record<string, SciFields<ValueMap<number>>> = {};
-
-    Object.values(dataPoints).forEach(({ lang, field, clone_coverage }) => {
-      cloneCoverages[lang] ??= {};
-
-      const bucket = field === 'nonSci' ? 'nonSci' : 'isSci';
-
-      const current = cloneCoverages[lang][bucket];
-
-      cloneCoverages[lang][bucket] = {
-        value: (current?.value ?? 0) + clone_coverage,
-        count: (current?.count ?? 0) + 1
-      };
-    });
-
-    const labels: string[] = [];
-    const isSciData: number[] = [];
-    const nonSciData: number[] = [];
-
-    Object.entries(cloneCoverages).forEach(([lang, entry]) => {
-      const isSciAvg = entry.isSci
-        ? entry.isSci.value / entry.isSci.count
-        : 0;
-
-      const nonSciAvg = entry.nonSci
-        ? entry.nonSci.value / entry.nonSci.count
-        : 0;
-
-      const totalCount = (entry.isSci?.count ?? 0) + (entry.nonSci?.count ?? 0);
-      if(totalCount >= CloneByLangMin){
-        labels.push(
-          `${lang} (isSci: ${entry.isSci?.count ?? 0}, nonSci: ${entry.nonSci?.count ?? 0})`
-        );
-
-        isSciData.push(isSciAvg);
-        nonSciData.push(nonSciAvg);
-      }
-    });
-
-    const config: ChartConfiguration = {
-      type: 'bar' as ChartType,
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Research Average',
-            data: isSciData,
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Business Average',
-            data: nonSciData,
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: 'rgba(255, 99, 132, 0.8)',
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'top' },
-          title: {
-            display: true,
-            text: 'Business vs Research in Clone Coverage'
-          }
-        }
-      }
-    };
-    return config;
-  })
+    return generateLangBarConfig(this.CloneByLangMin(), 'clone_coverage');
+  });
 
 
   constructor() {

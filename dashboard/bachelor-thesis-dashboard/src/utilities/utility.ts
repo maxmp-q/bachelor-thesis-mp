@@ -1,5 +1,5 @@
-import {Chart, ChartConfiguration} from 'chart.js';
-import {ScoredData} from '../../shared/interface/data-point';
+import {Chart, ChartConfiguration, ChartType} from 'chart.js';
+import {ScoredData, Separation} from '../../shared/interface/data-point';
 import {DataHelper} from '../../shared/data-helper';
 
 export const updateChart = (chart: Chart | null, config: ChartConfiguration) => {
@@ -19,6 +19,7 @@ export const updateChart = (chart: Chart | null, config: ChartConfiguration) => 
  * @param bucketOptions
  * @param key1
  * @param key2
+ * @param subkey1
  */
 export const generateBucketLineConfig = (
   key1: keyof ScoredData,
@@ -26,7 +27,8 @@ export const generateBucketLineConfig = (
   bucketOptions: {
     max: number,
     size: number
-  }
+  },
+  subkey1?: keyof Separation
 ) => {
   const dataPoints = DataHelper.getScoredData();
   const sciData: ValueMap<number>[] = [];
@@ -34,7 +36,14 @@ export const generateBucketLineConfig = (
 
   Object.values(dataPoints).forEach(entry => {
     const data = entry.field === "nonSci" ? nonSciData : sciData;
-    data.push({value: Number(entry[key1]), count: Number(entry[key2])});
+
+    type Entry = typeof entry;
+    type Key = typeof key1;
+    type SubKey = keyof Entry[Key];
+
+    const realSubKey = subkey1 as SubKey | undefined;
+
+    data.push({value: Number(DataHelper.getValue(entry, key1, realSubKey)), count: Number(entry[key2])});
   });
 
   const bucketSize = bucketOptions.size;
@@ -99,7 +108,7 @@ export const generateBucketLineConfig = (
         legend: {position: 'top'},
         title: {
           display: true,
-          text: `Research and Business in ${key1} vs ${key2}`
+          text: `Research and Business in ${key1} ${subkey1 ?? ''} vs ${key2}`
         }
       },
       scales: {
@@ -112,12 +121,99 @@ export const generateBucketLineConfig = (
         y: {
           title:{
             display: true,
-            text: key1
+            text: `${key1} ${subkey1 ?? ''}`
           }
         }
       }
     }
   };
 
+  return config;
+}
+
+
+export const generateLangBarConfig = (
+  min: number,
+  key: keyof ScoredData,
+  subkey?: keyof Separation
+) => {
+  const dataPoints = DataHelper.getScoredData();
+
+  const cloneCoverages: Record<string, SciFields<ValueMap<number>>> = {};
+
+  Object.values(dataPoints).forEach(entry => {
+    cloneCoverages[entry.lang] ??= {};
+
+    const bucket = entry.field === 'nonSci' ? 'nonSci' : 'isSci';
+    const current = cloneCoverages[entry.lang][bucket];
+
+    type Entry = typeof entry;
+    type Key = typeof key;
+    type SubKey = keyof Entry[Key];
+
+    const realSubKey = subkey as SubKey | undefined;
+
+    cloneCoverages[entry.lang][bucket] = {
+      value: (current?.value ?? 0) + Number(DataHelper.getValue(entry, key, realSubKey)),
+      count: (current?.count ?? 0) + 1
+    };
+  });
+
+  const labels: string[] = [];
+  const isSciData: number[] = [];
+  const nonSciData: number[] = [];
+
+  Object.entries(cloneCoverages).forEach(([lang, entry]) => {
+    const isSciAvg = entry.isSci
+      ? entry.isSci.value / entry.isSci.count
+      : 0;
+
+    const nonSciAvg = entry.nonSci
+      ? entry.nonSci.value / entry.nonSci.count
+      : 0;
+
+    const totalCount = (entry.isSci?.count ?? 0) + (entry.nonSci?.count ?? 0);
+    if(totalCount >= min){
+      labels.push(
+        `${lang} (isSci: ${entry.isSci?.count ?? 0}, nonSci: ${entry.nonSci?.count ?? 0})`
+      );
+
+      isSciData.push(isSciAvg);
+      nonSciData.push(nonSciAvg);
+    }
+  });
+
+  const config: ChartConfiguration = {
+    type: 'bar' as ChartType,
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Research Average',
+          data: isSciData,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'Business Average',
+          data: nonSciData,
+          backgroundColor: 'rgba(255, 99, 132, 0.4)',
+          borderColor: 'rgba(255, 99, 132, 0.8)',
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        title: {
+          display: true,
+          text: 'Business vs Research in Clone Coverage'
+        }
+      }
+    }
+  };
   return config;
 }

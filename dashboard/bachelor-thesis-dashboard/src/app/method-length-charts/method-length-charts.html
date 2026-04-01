@@ -1,13 +1,28 @@
 <section class="chart-wrapper">
   <canvas class="chart" id="BusinessVsResearchInMethodLength"></canvas>
+
   <canvas class="chart" id="MethodLengthByLang"></canvas>
+  <section class="increase-button-wrapper">
+    <span>Min Count of Lang </span>
+    <input [(ngModel)]="MethodByLangMin" type="number"/>
+  </section>
+
+
   <canvas class="chart" id="MethodLengthByValueSci"></canvas>
   <canvas class="chart" id="MethodLengthByValueNonSci"></canvas>
 
   <app-field-bar-plot
     key="method_length"
-    sub_key="red"
+    [sub_key]="MethodByFieldValue()"
   />
+  <span> Select red, yellow, green here</span>
+  <select [(ngModel)]="MethodByFieldValue">
+    @for(item of MethodByFieldOptions(); track item){
+      <option [ngValue]="item">
+        {{ item }}
+      </option>
+    }
+  </select>
 
   <app-scatter-plot
     key1="method_length"
@@ -21,4 +36,9 @@
 
     selectOption="lang"
   />
+
+  <canvas class="chart" id="MethodLOCred"></canvas>
+  <canvas class="chart" id="MethodLOCyellow"></canvas>
+  <canvas class="chart" id="MethodLOCgreen"></canvas>
+
 </section>

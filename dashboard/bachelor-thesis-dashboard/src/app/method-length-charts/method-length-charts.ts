@@ -1,16 +1,20 @@
-import {AfterViewInit, Component, OnDestroy, signal} from '@angular/core';
+import {AfterViewInit, Component, computed, effect, OnDestroy, signal} from '@angular/core';
 import {AnalyzedData, Separation} from '../../../shared/interface/data-point';
 import {combineSeparations, DataHelper, getAverage} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 import {FieldBarPlot} from "../charts/field-bar-plot/field-bar-plot";
+import {generateBucketLineConfig, updateChart} from '../../utilities/utility';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-method-length-charts',
-    imports: [
-        ScatterPlot,
-        FieldBarPlot
-    ],
+  imports: [
+    ScatterPlot,
+    FieldBarPlot,
+    ReactiveFormsModule,
+    FormsModule
+  ],
   templateUrl: './method-length-charts.html',
   styleUrl: './method-length-charts.scss',
 })
@@ -19,101 +23,22 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
 
   allNonReactivePlots = signal<Chart[]>([]);
 
-  ngAfterViewInit(): void {
-    this.createMethodLengthSciNonSci();
-    this.createMethodByLang();
-    this.createMethodLengthValue(true);
-    this.createMethodLengthValue(false);
-  }
-
-  /**
-   * Creates a bar chart where the average
-   * method length is displayed by business and scientific.
-   * @private
-   */
-  private createMethodLengthSciNonSci(): void {
+  MethodByLangMin = signal<number>(10);
+  MethodByLangChart = signal<Chart | null>(null);
+  MethodByLangConfig = computed(()=> {
     const dataPoints = this.dataPoints();
-    const business: Separation[] = [];
-    const research: Separation[] = [];
-
-
-    Object.values(dataPoints).forEach(({ field, method_length }) => {
-      field === 'nonSci' ? business.push(method_length) : research.push(method_length);
-    });
-
-    const sciAverageRed: number[] = business.map(s => s.red);
-    const sciAverageYellow: number[] = business.map(s => s.yellow);
-    const sciAverageGreen: number[] = business.map(s => s.green);
-
-    const nonSciAverageRed: number[] = research.map(s => s.red);
-    const nonSciAverageYellow: number[] = research.map(s => s.yellow);
-    const nonSciAverageGreen: number[] = research.map(s => s.green);
-
-    const config: ChartConfiguration = {
-      type: 'bar' as ChartType,
-      data: {
-        labels: ['Business', 'Research'],
-        datasets: [
-          {
-            label: 'Green',
-            data: [getAverage(sciAverageGreen), getAverage(nonSciAverageGreen)],
-            backgroundColor: 'rgba(75, 192, 75, 0.4)',
-            borderColor: 'rgba(75, 192, 75, 0.9)',
-            borderWidth: 1
-          },
-          {
-            label: 'Yellow',
-            data: [getAverage(sciAverageYellow), getAverage(nonSciAverageYellow)],
-            backgroundColor: 'rgba(255, 205, 86, 0.6)',
-            borderColor: 'rgba(255, 205, 86, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Red',
-            data: [getAverage(sciAverageRed), getAverage(nonSciAverageRed)],
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: 'rgba(255, 99, 132, 0.8)',
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'top' },
-          title: {
-            display: true,
-            text: 'Business vs Research in Method Length Average'
-          }
-        }
-      }
-    };
-
-    const canvas = document.getElementById('BusinessVsResearchInMethodLength') as HTMLCanvasElement;
-    if (canvas) {
-      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
-    }
-  }
-
-  /**
-   * Creates a bar chart where the average
-   * method length is displayed by business and scientific.
-   * @private
-   */
-  private createMethodByLang(): void {
-    const dataPoints = this.dataPoints();
+    const min = this.MethodByLangMin();
     const methodLength: Record<string, SciFields<ValueMap<Separation>>> = {};
 
+    Object.values(dataPoints).forEach(entry => {
+      methodLength[entry.lang] ??= {};
 
-    Object.values(dataPoints).forEach(({ lang ,field, method_length }) => {
-      methodLength[lang] ??= {};
+      const bucket = entry.field === 'nonSci' ? 'nonSci' : 'isSci';
 
-      const bucket = field === 'nonSci' ? 'nonSci' : 'isSci';
+      const current = methodLength[entry.lang][bucket];
 
-      const current = methodLength[lang][bucket];
-
-      methodLength[lang][bucket] = {
-        value: current?.value ? combineSeparations(current.value, method_length)  : method_length,
+      methodLength[entry.lang][bucket] = {
+        value: current?.value ? combineSeparations(current.value, entry.method_length)  : entry.method_length,
         count: (current?.count ?? 0) + 1
       };
     });
@@ -123,6 +48,9 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
     const nonSciDataAverage: Separation[] = [];
 
     Object.entries(methodLength).forEach(([lang, entry]) => {
+      const total = (entry.isSci?.count ?? 0) + (entry.nonSci?.count ?? 0);
+      if(total < min) return;
+
       const isSciAvgRed = entry.isSci
         ? entry.isSci.value.red / entry.isSci.count
         : 0;
@@ -216,10 +144,111 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
         }
       }
     };
+    return config;
+  });
 
-    const canvas = document.getElementById('MethodLengthByLang') as HTMLCanvasElement;
+  MethodByFieldOptions = signal<(keyof Separation)[]>(['red', 'yellow', 'green']);
+  MethodByFieldValue = signal<keyof Separation>('red');
+
+
+  constructor() {
+    effect(() => {
+      const chart = this.MethodByLangChart();
+      const config = this.MethodByLangConfig();
+
+      updateChart(chart, config);
+    });
+  }
+
+
+  ngAfterViewInit(): void {
+    this.createMethodLengthSciNonSci();
+    this.createMethodByLang();
+    this.createMethodLengthValue(true);
+    this.createMethodLengthValue(false);
+    this.createMethodLOC('red');
+    this.createMethodLOC('yellow');
+    this.createMethodLOC('green');
+  }
+
+  /**
+   * Creates a bar chart where the average
+   * method length is displayed by business and scientific.
+   * @private
+   */
+  private createMethodLengthSciNonSci(): void {
+    const dataPoints = this.dataPoints();
+    const business: Separation[] = [];
+    const research: Separation[] = [];
+
+
+    Object.values(dataPoints).forEach(({ field, method_length }) => {
+      field === 'nonSci' ? business.push(method_length) : research.push(method_length);
+    });
+
+    const sciAverageRed: number[] = business.map(s => s.red);
+    const sciAverageYellow: number[] = business.map(s => s.yellow);
+    const sciAverageGreen: number[] = business.map(s => s.green);
+
+    const nonSciAverageRed: number[] = research.map(s => s.red);
+    const nonSciAverageYellow: number[] = research.map(s => s.yellow);
+    const nonSciAverageGreen: number[] = research.map(s => s.green);
+
+    const config: ChartConfiguration = {
+      type: 'bar' as ChartType,
+      data: {
+        labels: ['Business', 'Research'],
+        datasets: [
+          {
+            label: 'Green',
+            data: [getAverage(sciAverageGreen), getAverage(nonSciAverageGreen)],
+            backgroundColor: 'rgba(75, 192, 75, 0.4)',
+            borderColor: 'rgba(75, 192, 75, 0.9)',
+            borderWidth: 1
+          },
+          {
+            label: 'Yellow',
+            data: [getAverage(sciAverageYellow), getAverage(nonSciAverageYellow)],
+            backgroundColor: 'rgba(255, 205, 86, 0.6)',
+            borderColor: 'rgba(255, 205, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Red',
+            data: [getAverage(sciAverageRed), getAverage(nonSciAverageRed)],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255, 99, 132, 0.8)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'Business vs Research in Method Length Average'
+          }
+        }
+      }
+    };
+
+    const canvas = document.getElementById('BusinessVsResearchInMethodLength') as HTMLCanvasElement;
     if (canvas) {
       this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    }
+  }
+
+  /**
+   * Creates a bar chart where the average
+   * method length is displayed by business and scientific.
+   * @private
+   */
+  private createMethodByLang(): void {
+    const canvas = document.getElementById('MethodLengthByLang') as HTMLCanvasElement;
+    if (canvas) {
+      this.MethodByLangChart.set(new Chart(canvas, this.MethodByLangConfig()));
     }
   }
 
@@ -300,8 +329,23 @@ export class MethodLengthCharts implements AfterViewInit, OnDestroy  {
     }
   }
 
+  private createMethodLOC(scope: keyof Separation){
+    const config = generateBucketLineConfig(
+      'method_length',
+      'LOC',
+      {max: 99999, size: 5000},
+      scope
+    );
+    const canvas = document.getElementById('MethodLOC' + scope) as HTMLCanvasElement;
+    if (canvas) {
+      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    }
+  }
   ngOnDestroy(): void {
     const nonReactivCharts = this.allNonReactivePlots();
     nonReactivCharts.forEach(chart => chart.destroy());
+
+    const LangChart = this.MethodByLangChart()
+    if(LangChart) LangChart.destroy();
   }
 }
