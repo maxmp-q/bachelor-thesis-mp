@@ -113,13 +113,13 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
     });
   }
 
-
   ngAfterViewInit(): void {
     this.createCloneByLang();
     this.createAverageClone();
     this.createCloneLine();
     this.createCloneBoxplot();
     this.createCloneFileLine();
+    this.createCloneAuthorLine();
   }
 
   /**
@@ -221,6 +221,17 @@ export class CloneCoverageChart implements AfterViewInit, OnDestroy {
   private createCloneFileLine(): void {
     const config = generateBucketLineConfig('clone_coverage', 'files', {max:1499, size: 100});
     const canvas = document.getElementById('CloneCoverageLOCLine') as HTMLCanvasElement;
+    this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+  }
+
+  /**
+   * Creates two pie charts where average clone coverage is
+   * displayed by Sci and NonSci.
+   * @private
+   */
+  private createCloneAuthorLine(): void {
+    const config = generateBucketLineConfig('clone_coverage', 'authors', {max:31, size: 2});
+    const canvas = document.getElementById('CloneCoverageAuthorLine') as HTMLCanvasElement;
     this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
   }
 
