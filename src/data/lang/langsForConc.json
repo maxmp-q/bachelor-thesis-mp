@@ -1,0 +1,6188 @@
+{
+  "cvisb_cvisb_data": {
+    "name": "cvisb_cvisb_data",
+    "main": 707528,
+    "sum": 1671370,
+    "percentage": 0.4233221847945099
+  },
+  "librerespire_ventilator": {
+    "name": "librerespire_ventilator",
+    "main": 17145,
+    "sum": 42379,
+    "percentage": 0.4045635810189009
+  },
+  "jbjuin_astropaint": {
+    "name": "jbjuin_astropaint",
+    "main": 6802687,
+    "sum": 6955443,
+    "percentage": 0.978037919367609
+  },
+  "nanome-ai_plugin-chemical-interactions": {
+    "name": "nanome-ai_plugin-chemical-interactions",
+    "main": 136451,
+    "sum": 138001,
+    "percentage": 0.9887681973319034
+  },
+  "ml-d_p-wl": {
+    "name": "ml-d_p-wl",
+    "main": 141720,
+    "sum": 144864,
+    "percentage": 0.9782968853545394
+  },
+  "prdm0_ropenblas": {
+    "name": "prdm0_ropenblas",
+    "main": 41542,
+    "sum": 45557,
+    "percentage": 0.9118686480672564
+  },
+  "opendatasoft_semantic-bot": {
+    "name": "opendatasoft_semantic-bot",
+    "main": 106381,
+    "sum": 182691,
+    "percentage": 0.5823001680433081
+  },
+  "rpng_open_vins": {
+    "name": "rpng_open_vins",
+    "main": 1492326,
+    "sum": 1584647,
+    "percentage": 0.9417403371224001
+  },
+  "t-neumann_slamdunk": {
+    "name": "t-neumann_slamdunk",
+    "main": 257904,
+    "sum": 354418,
+    "percentage": 0.7276831312179404
+  },
+  "chris-pedersen_lace": {
+    "name": "chris-pedersen_lace",
+    "main": 41001314,
+    "sum": 41432467,
+    "percentage": 0.98959383712295
+  },
+  "emildekeyser_raytracer": {
+    "name": "emildekeyser_raytracer",
+    "main": 19811938,
+    "sum": 21563833,
+    "percentage": 0.9187577180735911
+  },
+  "electronicvisions_grenade": {
+    "name": "electronicvisions_grenade",
+    "main": 2583350,
+    "sum": 2697009,
+    "percentage": 0.9578573894265833
+  },
+  "fufjvnvnf_simulator": {
+    "name": "fufjvnvnf_simulator",
+    "main": 208441,
+    "sum": 214417,
+    "percentage": 0.9721290755863574
+  },
+  "arvvoid_plugin.video.hbogoeu": {
+    "name": "arvvoid_plugin.video.hbogoeu",
+    "main": 166859,
+    "sum": 173296,
+    "percentage": 0.9628554611762533
+  },
+  "ke0m_resfoc": {
+    "name": "ke0m_resfoc",
+    "main": 376622,
+    "sum": 485478,
+    "percentage": 0.7757756273198786
+  },
+  "healthgovau_health.gov.au": {
+    "name": "healthgovau_health.gov.au",
+    "main": 401861,
+    "sum": 888310,
+    "percentage": 0.4523882428431516
+  },
+  "spryker_merchant": {
+    "name": "spryker_merchant",
+    "main": 230315,
+    "sum": 230315,
+    "percentage": 1.0
+  },
+  "soniagraves_website": {
+    "name": "soniagraves_website",
+    "main": 552276,
+    "sum": 961419,
+    "percentage": 0.5744384082278382
+  },
+  "almondtools_testrecorder": {
+    "name": "almondtools_testrecorder",
+    "main": 2122273,
+    "sum": 2122273,
+    "percentage": 1.0
+  },
+  "sarrimunem_boi": {
+    "name": "sarrimunem_boi",
+    "main": 17606,
+    "sum": 45607,
+    "percentage": 0.3860372311268007
+  },
+  "doc-sys_docsys": {
+    "name": "doc-sys_docsys",
+    "main": 58597,
+    "sum": 70959,
+    "percentage": 0.8257867219098353
+  },
+  "trnl_clirr": {
+    "name": "trnl_clirr",
+    "main": 0,
+    "sum": 0,
+    "percentage": 0
+  },
+  "rticommunity_rtiperftest": {
+    "name": "rticommunity_rtiperftest",
+    "main": 1113421,
+    "sum": 1974863,
+    "percentage": 0.5637965772815633
+  },
+  "dnidever_crowdsource": {
+    "name": "dnidever_crowdsource",
+    "main": 162586,
+    "sum": 162666,
+    "percentage": 0.9995081947057161
+  },
+  "r3c0d3_ophog": {
+    "name": "r3c0d3_ophog",
+    "main": 1209250,
+    "sum": 1254516,
+    "percentage": 0.9639175586441305
+  },
+  "mailslurp_mailslurp-client": {
+    "name": "mailslurp_mailslurp-client",
+    "main": 3199921,
+    "sum": 3202240,
+    "percentage": 0.9992758194264015
+  },
+  "mitre-cyber-academy_ctf-scoreboard": {
+    "name": "mitre-cyber-academy_ctf-scoreboard",
+    "main": 321639,
+    "sum": 393281,
+    "percentage": 0.8178350848375588
+  },
+  "netifi-proteus_proteus-java": {
+    "name": "netifi-proteus_proteus-java",
+    "main": 407113,
+    "sum": 409026,
+    "percentage": 0.9953230356994421
+  },
+  "rickygilleland_blab-desktop-app": {
+    "name": "rickygilleland_blab-desktop-app",
+    "main": 262371,
+    "sum": 271981,
+    "percentage": 0.9646666495086054
+  },
+  "nficano_humps": {
+    "name": "nficano_humps",
+    "main": 33654,
+    "sum": 35159,
+    "percentage": 0.9571944594556159
+  },
+  "mdsol_mauth-java-client": {
+    "name": "mdsol_mauth-java-client",
+    "main": 269502,
+    "sum": 374592,
+    "percentage": 0.7194547667862634
+  },
+  "ns-system_jf": {
+    "name": "ns-system_jf",
+    "main": 2140985,
+    "sum": 2580149,
+    "percentage": 0.8297912252354418
+  },
+  "d3fc_d3fc": {
+    "name": "d3fc_d3fc",
+    "main": 39990,
+    "sum": 50809,
+    "percentage": 0.7870652837095791
+  },
+  "csarven_linked-data-notifications": {
+    "name": "csarven_linked-data-notifications",
+    "main": 89149,
+    "sum": 89149,
+    "percentage": 1.0
+  },
+  "epinna_weevely3": {
+    "name": "epinna_weevely3",
+    "main": 393112,
+    "sum": 516543,
+    "percentage": 0.7610440950704975
+  },
+  "ISISComputingGroup_ibex_gui": {
+    "name": "ISISComputingGroup_ibex_gui",
+    "main": 5536305,
+    "sum": 5753726,
+    "percentage": 0.9622121387080302
+  },
+  "CommandShiftHQ_javascript-basics": {
+    "name": "CommandShiftHQ_javascript-basics",
+    "main": 25342,
+    "sum": 25342,
+    "percentage": 1.0
+  },
+  "CompCult_inovarg-api": {
+    "name": "CompCult_inovarg-api",
+    "main": 98390,
+    "sum": 98528,
+    "percentage": 0.9985993829165314
+  },
+  "wlloyduw_SAAF": {
+    "name": "wlloyduw_SAAF",
+    "main": 33228338,
+    "sum": 33619036,
+    "percentage": 0.9883786673716641
+  },
+  "DrHyde_perl-modules-Devel-CheckOS": {
+    "name": "DrHyde_perl-modules-Devel-CheckOS",
+    "main": 129328,
+    "sum": 129459,
+    "percentage": 0.9989880966174619
+  },
+  "Carglglz_upydev": {
+    "name": "Carglglz_upydev",
+    "main": 2265047,
+    "sum": 2265574,
+    "percentage": 0.9997673878672689
+  },
+  "omise_omise-php": {
+    "name": "omise_omise-php",
+    "main": 154010,
+    "sum": 154349,
+    "percentage": 0.9978036786762466
+  },
+  "sile_hls_m3u8": {
+    "name": "sile_hls_m3u8",
+    "main": 446093,
+    "sum": 446093,
+    "percentage": 1.0
+  },
+  "genny-project_genny-main": {
+    "name": "genny-project_genny-main",
+    "main": 109904,
+    "sum": 120389,
+    "percentage": 0.9129073254200966
+  },
+  "SeanRoy_lambda-maven-plugin": {
+    "name": "SeanRoy_lambda-maven-plugin",
+    "main": 105080,
+    "sum": 105080,
+    "percentage": 1.0
+  },
+  "Jahia_assets": {
+    "name": "Jahia_assets",
+    "main": 727935,
+    "sum": 1001094,
+    "percentage": 0.7271395093767419
+  },
+  "syncfusion_ej2-angular-samples": {
+    "name": "syncfusion_ej2-angular-samples",
+    "main": 14509432,
+    "sum": 29446444,
+    "percentage": 0.49273970058999317
+  },
+  "stepsim_quabla": {
+    "name": "stepsim_quabla",
+    "main": 197335,
+    "sum": 348740,
+    "percentage": 0.5658513505763606
+  },
+  "appcelerator_kitchensink-v2": {
+    "name": "appcelerator_kitchensink-v2",
+    "main": 74461,
+    "sum": 80623,
+    "percentage": 0.9235701970901604
+  },
+  "japaric_serde-json-core": {
+    "name": "japaric_serde-json-core",
+    "main": 98957,
+    "sum": 98957,
+    "percentage": 1.0
+  },
+  "jgaff_connect_server": {
+    "name": "jgaff_connect_server",
+    "main": 1650075,
+    "sum": 1862923,
+    "percentage": 0.8857451435190826
+  },
+  "chopralab_candock": {
+    "name": "chopralab_candock",
+    "main": 1407062,
+    "sum": 1430938,
+    "percentage": 0.9833144412965481
+  },
+  "SciBorgs_InfiniteRecharge-2020": {
+    "name": "SciBorgs_InfiniteRecharge-2020",
+    "main": 202277,
+    "sum": 202277,
+    "percentage": 1.0
+  },
+  "angelocg97_latamlink.io": {
+    "name": "angelocg97_latamlink.io",
+    "main": 26181,
+    "sum": 46091,
+    "percentage": 0.5680284654270898
+  },
+  "rinvex_laravel-auth": {
+    "name": "rinvex_laravel-auth",
+    "main": 28313,
+    "sum": 28313,
+    "percentage": 1.0
+  },
+  "DataKitchen_DKUtils": {
+    "name": "DataKitchen_DKUtils",
+    "main": 416673,
+    "sum": 446192,
+    "percentage": 0.9338423817549396
+  },
+  "wikimedia_language-data": {
+    "name": "wikimedia_language-data",
+    "main": 22932,
+    "sum": 39223,
+    "percentage": 0.5846569614766846
+  },
+  "subugoe_typo3-pazpar2": {
+    "name": "subugoe_typo3-pazpar2",
+    "main": 139182,
+    "sum": 171095,
+    "percentage": 0.8134778923989596
+  },
+  "Linutronix_elbe": {
+    "name": "Linutronix_elbe",
+    "main": 644773,
+    "sum": 688688,
+    "percentage": 0.9362338243152196
+  },
+  "yandex_rep": {
+    "name": "yandex_rep",
+    "main": 3385930,
+    "sum": 3816600,
+    "percentage": 0.8871587276633653
+  },
+  "smaret_astrochem": {
+    "name": "smaret_astrochem",
+    "main": 146696,
+    "sum": 237227,
+    "percentage": 0.6183781778633967
+  },
+  "lpwgroup_crank": {
+    "name": "lpwgroup_crank",
+    "main": 301768,
+    "sum": 323784,
+    "percentage": 0.9320040520841054
+  },
+  "GISLab-ELTE_aegis-origin": {
+    "name": "GISLab-ELTE_aegis-origin",
+    "main": 8949618,
+    "sum": 8949618,
+    "percentage": 1.0
+  },
+  "germal_ardebug": {
+    "name": "germal_ardebug",
+    "main": 140647,
+    "sum": 155625,
+    "percentage": 0.9037558232931727
+  },
+  "Evan-Feng_blse": {
+    "name": "Evan-Feng_blse",
+    "main": 283970,
+    "sum": 381932,
+    "percentage": 0.7435093157944346
+  },
+  "garrettwrong_aspire": {
+    "name": "garrettwrong_aspire",
+    "main": 2308198,
+    "sum": 2406572,
+    "percentage": 0.9591227688180533
+  },
+  "transbioZI_BioMM": {
+    "name": "transbioZI_BioMM",
+    "main": 965765,
+    "sum": 1054957,
+    "percentage": 0.9154543739697447
+  },
+  "baidu_DuReader": {
+    "name": "baidu_DuReader",
+    "main": 1233585,
+    "sum": 1301426,
+    "percentage": 0.9478717960145256
+  },
+  "CoVPN_correlates_processing": {
+    "name": "CoVPN_correlates_processing",
+    "main": 7243492,
+    "sum": 8003177,
+    "percentage": 0.9050770712680727
+  },
+  "ekrell_sap": {
+    "name": "ekrell_sap",
+    "main": 5756028,
+    "sum": 9398410,
+    "percentage": 0.612446999013663
+  },
+  "johnyquest7_self_supervised": {
+    "name": "johnyquest7_self_supervised",
+    "main": 8958259,
+    "sum": 8985369,
+    "percentage": 0.9969828729348789
+  },
+  "cemac_UNRESPForecastingSystem": {
+    "name": "cemac_UNRESPForecastingSystem",
+    "main": 4646253,
+    "sum": 8950631,
+    "percentage": 0.5190978155618302
+  },
+  "mehrdadbakhtiari_adVNTR": {
+    "name": "mehrdadbakhtiari_adVNTR",
+    "main": 394050,
+    "sum": 557131,
+    "percentage": 0.7072842832296174
+  },
+  "alexji_the_payne": {
+    "name": "alexji_the_payne",
+    "main": 236935,
+    "sum": 283442,
+    "percentage": 0.8359205763436611
+  },
+  "kieler_KLighD": {
+    "name": "kieler_KLighD",
+    "main": 11584739,
+    "sum": 14401527,
+    "percentage": 0.8044104628627228
+  },
+  "lpmor22_zika-seq": {
+    "name": "lpmor22_zika-seq",
+    "main": 27026,
+    "sum": 36050,
+    "percentage": 0.7496809986130375
+  },
+  "European-XFEL_karabo_data": {
+    "name": "European-XFEL_karabo_data",
+    "main": 330273,
+    "sum": 331184,
+    "percentage": 0.9972492632494323
+  },
+  "esowc_wildfire-forecasting": {
+    "name": "esowc_wildfire-forecasting",
+    "main": 2835827,
+    "sum": 2955363,
+    "percentage": 0.9595528535750092
+  },
+  "ccnmtl_worth2": {
+    "name": "ccnmtl_worth2",
+    "main": 740541,
+    "sum": 1179208,
+    "percentage": 0.6279986228044586
+  },
+  "prtx_dft": {
+    "name": "prtx_dft",
+    "main": 541331,
+    "sum": 587908,
+    "percentage": 0.9207750192206944
+  },
+  "intelsdi-x_snap": {
+    "name": "intelsdi-x_snap",
+    "main": 1779642,
+    "sum": 1801962,
+    "percentage": 0.9876135012836009
+  },
+  "brembslab_DTSevaluations": {
+    "name": "brembslab_DTSevaluations",
+    "main": 1703478579,
+    "sum": 1703621230,
+    "percentage": 0.9999162660117824
+  },
+  "harmslab_pytc": {
+    "name": "harmslab_pytc",
+    "main": 124286,
+    "sum": 143959,
+    "percentage": 0.8633430351697359
+  },
+  "dosumis_dead_simple_owl_design_patterns": {
+    "name": "dosumis_dead_simple_owl_design_patterns",
+    "main": 93766,
+    "sum": 93766,
+    "percentage": 1.0
+  },
+  "SmartCity-UAntwerpen_SmartRaceCar": {
+    "name": "SmartCity-UAntwerpen_SmartRaceCar",
+    "main": 264593,
+    "sum": 416029,
+    "percentage": 0.6359965290881164
+  },
+  "tractor_tractor": {
+    "name": "tractor_tractor",
+    "main": 1108837,
+    "sum": 2657368,
+    "percentage": 0.4172688916250967
+  },
+  "scality_quadiron": {
+    "name": "scality_quadiron",
+    "main": 664225,
+    "sum": 796772,
+    "percentage": 0.8336450076056889
+  },
+  "future-proof-iot_CertFC": {
+    "name": "future-proof-iot_CertFC",
+    "main": 1949682,
+    "sum": 2375989,
+    "percentage": 0.8205770312909698
+  },
+  "probcomp_cgpm": {
+    "name": "probcomp_cgpm",
+    "main": 797705,
+    "sum": 800464,
+    "percentage": 0.996553249115513
+  },
+  "biocore_redbiom": {
+    "name": "biocore_redbiom",
+    "main": 199242,
+    "sum": 215492,
+    "percentage": 0.9245911681176099
+  },
+  "deepmind_lab": {
+    "name": "deepmind_lab",
+    "main": 12886842,
+    "sum": 15857792,
+    "percentage": 0.8126504623090024
+  },
+  "robcog-iai_USemLog": {
+    "name": "robcog-iai_USemLog",
+    "main": 1830000,
+    "sum": 1862086,
+    "percentage": 0.9827687872633165
+  },
+  "villaa_grav_project": {
+    "name": "villaa_grav_project",
+    "main": 36343147,
+    "sum": 38193701,
+    "percentage": 0.9515481885350676
+  },
+  "danielatkrypton_transformer": {
+    "name": "danielatkrypton_transformer",
+    "main": 36713,
+    "sum": 38146,
+    "percentage": 0.9624338069522361
+  },
+  "GabrielNandi_Gabriel-Garcia-Nandi": {
+    "name": "GabrielNandi_Gabriel-Garcia-Nandi",
+    "main": 1842566,
+    "sum": 2020676,
+    "percentage": 0.9118562302912491
+  },
+  "steffenvan_attentive-MT": {
+    "name": "steffenvan_attentive-MT",
+    "main": 188661,
+    "sum": 209939,
+    "percentage": 0.8986467497701713
+  },
+  "EcoForecast_NEFI_microbe": {
+    "name": "EcoForecast_NEFI_microbe",
+    "main": 9839085,
+    "sum": 13417290,
+    "percentage": 0.7333138808209407
+  },
+  "felipecode_coiltraine": {
+    "name": "felipecode_coiltraine",
+    "main": 663361,
+    "sum": 663361,
+    "percentage": 1.0
+  },
+  "NREL_rdtools": {
+    "name": "NREL_rdtools",
+    "main": 622444,
+    "sum": 622444,
+    "percentage": 1.0
+  },
+  "Exawind_nalu-wind": {
+    "name": "Exawind_nalu-wind",
+    "main": 4981182,
+    "sum": 7014975,
+    "percentage": 0.7100783680626089
+  },
+  "ClearVolume_clearvolume": {
+    "name": "ClearVolume_clearvolume",
+    "main": 623984,
+    "sum": 730220,
+    "percentage": 0.8545150776478322
+  },
+  "harryjubb_arpeggio": {
+    "name": "harryjubb_arpeggio",
+    "main": 184083,
+    "sum": 185908,
+    "percentage": 0.9901833164791187
+  },
+  "coder-people_em_aligner": {
+    "name": "coder-people_em_aligner",
+    "main": 1880662,
+    "sum": 1916218,
+    "percentage": 0.9814446999245389
+  },
+  "jeffufpost_malariaatlas": {
+    "name": "jeffufpost_malariaatlas",
+    "main": 187076,
+    "sum": 187076,
+    "percentage": 1.0
+  },
+  "LimaRAF_plantR": {
+    "name": "LimaRAF_plantR",
+    "main": 999976,
+    "sum": 1206386,
+    "percentage": 0.8289021921673494
+  },
+  "kunyuan_ParquetMC": {
+    "name": "kunyuan_ParquetMC",
+    "main": 5168771,
+    "sum": 6270819,
+    "percentage": 0.8242577245492175
+  },
+  "DuraMAT_pvpro": {
+    "name": "DuraMAT_pvpro",
+    "main": 172397,
+    "sum": 172397,
+    "percentage": 1.0
+  },
+  "ilya-klyuchnikov_mrsc": {
+    "name": "ilya-klyuchnikov_mrsc",
+    "main": 186324,
+    "sum": 186324,
+    "percentage": 1.0
+  },
+  "jdtuck_fdasrvf_R": {
+    "name": "jdtuck_fdasrvf_R",
+    "main": 506241,
+    "sum": 648374,
+    "percentage": 0.7807854725821826
+  },
+  "domjrivera_movehmm": {
+    "name": "domjrivera_movehmm",
+    "main": 169940,
+    "sum": 191794,
+    "percentage": 0.8860548296609905
+  },
+  "StructJuMP_StructJuMP.jl": {
+    "name": "StructJuMP_StructJuMP.jl",
+    "main": 30198,
+    "sum": 30198,
+    "percentage": 1.0
+  },
+  "meom-group_CDFTOOLS": {
+    "name": "meom-group_CDFTOOLS",
+    "main": 3223140,
+    "sum": 3700571,
+    "percentage": 0.870984504823715
+  },
+  "zplab_rpc-scope": {
+    "name": "zplab_rpc-scope",
+    "main": 756958,
+    "sum": 756958,
+    "percentage": 1.0
+  },
+  "nanoporetech_pomoxis": {
+    "name": "nanoporetech_pomoxis",
+    "main": 157027,
+    "sum": 185582,
+    "percentage": 0.8461327068357922
+  },
+  "shiangtai_automekin": {
+    "name": "shiangtai_automekin",
+    "main": 424730,
+    "sum": 1005883,
+    "percentage": 0.42224592721022225
+  },
+  "joba-1_Corona_Model": {
+    "name": "joba-1_Corona_Model",
+    "main": 1830674,
+    "sum": 2143162,
+    "percentage": 0.8541930101410906
+  },
+  "kunaltyagi_depthai_ros": {
+    "name": "kunaltyagi_depthai_ros",
+    "main": 32642,
+    "sum": 38357,
+    "percentage": 0.8510050316760956
+  },
+  "LydiaBer_pheno_study": {
+    "name": "LydiaBer_pheno_study",
+    "main": 11576306,
+    "sum": 16851949,
+    "percentage": 0.6869416706637316
+  },
+  "nasa-jpl_LiveView": {
+    "name": "nasa-jpl_LiveView",
+    "main": 1732497,
+    "sum": 2305935,
+    "percentage": 0.7513208308126639
+  },
+  "JuliaPOMDP_POMDPs.jl": {
+    "name": "JuliaPOMDP_POMDPs.jl",
+    "main": 237153,
+    "sum": 237153,
+    "percentage": 1.0
+  },
+  "dshean_demcoreg": {
+    "name": "dshean_demcoreg",
+    "main": 782764,
+    "sum": 1027644,
+    "percentage": 0.7617073616933491
+  },
+  "jdh13_habby": {
+    "name": "jdh13_habby",
+    "main": 3082586,
+    "sum": 3233862,
+    "percentage": 0.9532212568130612
+  },
+  "NVIDIA_Megatron-LM": {
+    "name": "NVIDIA_Megatron-LM",
+    "main": 10904005,
+    "sum": 10999094,
+    "percentage": 0.9913548334071879
+  },
+  "gift-surg_GIFT-Grab": {
+    "name": "gift-surg_GIFT-Grab",
+    "main": 247954,
+    "sum": 427756,
+    "percentage": 0.5796622373502651
+  },
+  "hedack_atmoswing": {
+    "name": "hedack_atmoswing",
+    "main": 5162246,
+    "sum": 5558401,
+    "percentage": 0.928728603783714
+  },
+  "as14g18_asvlite": {
+    "name": "as14g18_asvlite",
+    "main": 100418,
+    "sum": 168365,
+    "percentage": 0.5964303744840079
+  },
+  "resource-disaggregation_jiffy": {
+    "name": "resource-disaggregation_jiffy",
+    "main": 1792012,
+    "sum": 2160230,
+    "percentage": 0.8295468538072335
+  },
+  "fjug_MoMA": {
+    "name": "fjug_MoMA",
+    "main": 707407,
+    "sum": 708048,
+    "percentage": 0.9990946941450297
+  },
+  "spluque_tagtools": {
+    "name": "spluque_tagtools",
+    "main": 451375,
+    "sum": 1217774,
+    "percentage": 0.3706558031293163
+  },
+  "HBPSP8Repo_mip-docker-images": {
+    "name": "HBPSP8Repo_mip-docker-images",
+    "main": 39771,
+    "sum": 49443,
+    "percentage": 0.8043808021357928
+  },
+  "appaulo14_queryable-rna-seq-database": {
+    "name": "appaulo14_queryable-rna-seq-database",
+    "main": 454602,
+    "sum": 579180,
+    "percentage": 0.7849062467626644
+  },
+  "alexdobin_STAR": {
+    "name": "alexdobin_STAR",
+    "main": 2350683,
+    "sum": 3744730,
+    "percentage": 0.6277309712582749
+  },
+  "volkamerlab_opencadd": {
+    "name": "volkamerlab_opencadd",
+    "main": 470267,
+    "sum": 491390,
+    "percentage": 0.9570137772441442
+  },
+  "ad-freiburg_QLever": {
+    "name": "ad-freiburg_QLever",
+    "main": 10627603,
+    "sum": 10845992,
+    "percentage": 0.9798645435106351
+  },
+  "rigetti_forest-benchmarking": {
+    "name": "rigetti_forest-benchmarking",
+    "main": 590337,
+    "sum": 591448,
+    "percentage": 0.998121559291772
+  },
+  "ynoir_obit_microscopy_core_technology": {
+    "name": "ynoir_obit_microscopy_core_technology",
+    "main": 104288,
+    "sum": 177888,
+    "percentage": 0.5862565209570066
+  },
+  "quinnjr_pluma": {
+    "name": "quinnjr_pluma",
+    "main": 161383,
+    "sum": 220067,
+    "percentage": 0.7333357568376904
+  },
+  "dkkyjy_hazma": {
+    "name": "dkkyjy_hazma",
+    "main": 4293190,
+    "sum": 4899415,
+    "percentage": 0.8762658399012944
+  },
+  "mmbell_vortrac": {
+    "name": "mmbell_vortrac",
+    "main": 1305741,
+    "sum": 1365084,
+    "percentage": 0.9565279499283561
+  },
+  "eam-experiments_MNIST": {
+    "name": "eam-experiments_MNIST",
+    "main": 54677,
+    "sum": 58016,
+    "percentage": 0.9424469111969112
+  },
+  "suquark_hoplite": {
+    "name": "suquark_hoplite",
+    "main": 188880,
+    "sum": 400111,
+    "percentage": 0.4720690008522635
+  },
+  "BEAST2-Dev_bdsky": {
+    "name": "BEAST2-Dev_bdsky",
+    "main": 202664,
+    "sum": 204177,
+    "percentage": 0.9925897628038418
+  },
+  "getzlab_rnaseqc": {
+    "name": "getzlab_rnaseqc",
+    "main": 302047,
+    "sum": 379663,
+    "percentage": 0.7955660678022352
+  },
+  "zezhishao_BasicTS": {
+    "name": "zezhishao_BasicTS",
+    "main": 777970,
+    "sum": 1440705,
+    "percentage": 0.5399925730805404
+  },
+  "delsuc_spike": {
+    "name": "delsuc_spike",
+    "main": 9214392,
+    "sum": 11800823,
+    "percentage": 0.7808262186459368
+  },
+  "hdng_clonevol": {
+    "name": "hdng_clonevol",
+    "main": 334585,
+    "sum": 501593,
+    "percentage": 0.6670447952822308
+  },
+  "payoto_rsvs2d": {
+    "name": "payoto_rsvs2d",
+    "main": 3029809,
+    "sum": 4549996,
+    "percentage": 0.6658926733122402
+  },
+  "nicoloval_menet": {
+    "name": "nicoloval_menet",
+    "main": 769195,
+    "sum": 806824,
+    "percentage": 0.9533615757587777
+  },
+  "bioinform_somaticseq": {
+    "name": "bioinform_somaticseq",
+    "main": 716703,
+    "sum": 964033,
+    "percentage": 0.7434423925322059
+  },
+  "pdclab_peregrine": {
+    "name": "pdclab_peregrine",
+    "main": 2399546,
+    "sum": 3248998,
+    "percentage": 0.7385495466602319
+  },
+  "MIPT-Oulu_solt": {
+    "name": "MIPT-Oulu_solt",
+    "main": 10071194,
+    "sum": 10309823,
+    "percentage": 0.9768542098152413
+  },
+  "soft-matter_trackpy": {
+    "name": "soft-matter_trackpy",
+    "main": 822251,
+    "sum": 823417,
+    "percentage": 0.9985839495662586
+  },
+  "arita37_tsfel": {
+    "name": "arita37_tsfel",
+    "main": 294693,
+    "sum": 451821,
+    "percentage": 0.652233959908902
+  },
+  "chizhanyuefeng_FD-CNN": {
+    "name": "chizhanyuefeng_FD-CNN",
+    "main": 58884,
+    "sum": 58884,
+    "percentage": 1.0
+  },
+  "ethz-asl_versavis": {
+    "name": "ethz-asl_versavis",
+    "main": 164128,
+    "sum": 205823,
+    "percentage": 0.797423028524509
+  },
+  "ilios_iliios.github.io": {
+    "name": "ilios_iliios.github.io",
+    "main": 41193,
+    "sum": 66860,
+    "percentage": 0.616108285970685
+  },
+  "regedarek_kw-app": {
+    "name": "regedarek_kw-app",
+    "main": 1095269,
+    "sum": 1812092,
+    "percentage": 0.6044224023945804
+  },
+  "tjone270_Quake-Live": {
+    "name": "tjone270_Quake-Live",
+    "main": 127418,
+    "sum": 142888,
+    "percentage": 0.8917333855887128
+  },
+  "mozilla-services_updatebot": {
+    "name": "mozilla-services_updatebot",
+    "main": 536656,
+    "sum": 541200,
+    "percentage": 0.9916038433111604
+  },
+  "kodeine_amazon-advertising-api-sdk": {
+    "name": "kodeine_amazon-advertising-api-sdk",
+    "main": 503166,
+    "sum": 505367,
+    "percentage": 0.9956447492614279
+  },
+  "occopus_infra-processor": {
+    "name": "occopus_infra-processor",
+    "main": 110856,
+    "sum": 111986,
+    "percentage": 0.9899094529673352
+  },
+  "cuggisrs_python-geospatial-analysis-cookbook": {
+    "name": "cuggisrs_python-geospatial-analysis-cookbook",
+    "main": 3639664,
+    "sum": 4390413,
+    "percentage": 0.8290026473591436
+  },
+  "JoeyBling_ibooks": {
+    "name": "JoeyBling_ibooks",
+    "main": 1081,
+    "sum": 1081,
+    "percentage": 1.0
+  },
+  "unlight_prisma-nestjs-graphql": {
+    "name": "unlight_prisma-nestjs-graphql",
+    "main": 859351,
+    "sum": 869473,
+    "percentage": 0.9883584654152573
+  },
+  "fkie-cad_cwe_checker": {
+    "name": "fkie-cad_cwe_checker",
+    "main": 2024176,
+    "sum": 2100961,
+    "percentage": 0.9634524391457052
+  },
+  "smalltown_forti-sdk-go": {
+    "name": "smalltown_forti-sdk-go",
+    "main": 1255598,
+    "sum": 1255598,
+    "percentage": 1.0
+  },
+  "kxcode_kxcode.github.io": {
+    "name": "kxcode_kxcode.github.io",
+    "main": 1187565,
+    "sum": 1442108,
+    "percentage": 0.8234924152698688
+  },
+  "TheSawIsTheLaw_CProg_YDV_BMSTU": {
+    "name": "TheSawIsTheLaw_CProg_YDV_BMSTU",
+    "main": 233164,
+    "sum": 243995,
+    "percentage": 0.9556097461013545
+  },
+  "lchsiteam_lchs-go-pwa": {
+    "name": "lchsiteam_lchs-go-pwa",
+    "main": 126031,
+    "sum": 208334,
+    "percentage": 0.6049468641700346
+  },
+  "snowfork_asset-transfer-ui": {
+    "name": "snowfork_asset-transfer-ui",
+    "main": 263568,
+    "sum": 264377,
+    "percentage": 0.9969399758677948
+  },
+  "christopherthielen_typedoc-plugin-external-module-name": {
+    "name": "christopherthielen_typedoc-plugin-external-module-name",
+    "main": 16803,
+    "sum": 33864,
+    "percentage": 0.49619064493267184
+  },
+  "Gelada_CAMel": {
+    "name": "Gelada_CAMel",
+    "main": 976123,
+    "sum": 976123,
+    "percentage": 1.0
+  },
+  "zxing-js_ngx-scanner": {
+    "name": "zxing-js_ngx-scanner",
+    "main": 43006,
+    "sum": 52297,
+    "percentage": 0.8223416257146682
+  },
+  "arai-youn_brillerkim.github.io": {
+    "name": "arai-youn_brillerkim.github.io",
+    "main": 4308,
+    "sum": 4308,
+    "percentage": 1.0
+  },
+  "jolibrain_joliGAN": {
+    "name": "jolibrain_joliGAN",
+    "main": 2068312,
+    "sum": 2138887,
+    "percentage": 0.967003866964454
+  },
+  "Jhut89_Mailchimp-API-3.0-PHP": {
+    "name": "Jhut89_Mailchimp-API-3.0-PHP",
+    "main": 200124,
+    "sum": 200124,
+    "percentage": 1.0
+  },
+  "pulb_mailnag": {
+    "name": "pulb_mailnag",
+    "main": 282049,
+    "sum": 283984,
+    "percentage": 0.9931862358442729
+  },
+  "Anewman2_PixelMaestro": {
+    "name": "Anewman2_PixelMaestro",
+    "main": 203222,
+    "sum": 206617,
+    "percentage": 0.9835686318163559
+  },
+  "lee-seunghoon_til": {
+    "name": "lee-seunghoon_til",
+    "main": 9355555,
+    "sum": 12170632,
+    "percentage": 0.7686991932711464
+  },
+  "shelfio_aws-lambda-libreoffice": {
+    "name": "shelfio_aws-lambda-libreoffice",
+    "main": 13737,
+    "sum": 27095,
+    "percentage": 0.5069939103155564
+  },
+  "mmaico_salesman-crm": {
+    "name": "mmaico_salesman-crm",
+    "main": 1686336,
+    "sum": 1927638,
+    "percentage": 0.874819857255356
+  },
+  "vaadin_vaadin-form-layout": {
+    "name": "vaadin_vaadin-form-layout",
+    "main": 73334,
+    "sum": 77206,
+    "percentage": 0.9498484573737792
+  },
+  "sarrus1_calladmin": {
+    "name": "sarrus1_calladmin",
+    "main": 520472,
+    "sum": 707977,
+    "percentage": 0.7351538256186289
+  },
+  "ninech_uberzeit": {
+    "name": "ninech_uberzeit",
+    "main": 448242,
+    "sum": 836315,
+    "percentage": 0.5359726897161955
+  },
+  "pooltogether_v4-core": {
+    "name": "pooltogether_v4-core",
+    "main": 340342,
+    "sum": 603760,
+    "percentage": 0.5637041208427189
+  },
+  "systelab_cpp-rapidjson-adapter": {
+    "name": "systelab_cpp-rapidjson-adapter",
+    "main": 85123,
+    "sum": 85123,
+    "percentage": 1.0
+  },
+  "dimova_telnyx-node": {
+    "name": "dimova_telnyx-node",
+    "main": 244438,
+    "sum": 244438,
+    "percentage": 1.0
+  },
+  "marfox_pst-frontend": {
+    "name": "marfox_pst-frontend",
+    "main": 146200,
+    "sum": 161773,
+    "percentage": 0.903735481198964
+  },
+  "sarahbethfederman_michael-kehoe": {
+    "name": "sarahbethfederman_michael-kehoe",
+    "main": 615868,
+    "sum": 853167,
+    "percentage": 0.7218610190033136
+  },
+  "quaife_erosion": {
+    "name": "quaife_erosion",
+    "main": 1232019,
+    "sum": 1377524,
+    "percentage": 0.894372076275985
+  },
+  "NGnius_IdeaBot": {
+    "name": "NGnius_IdeaBot",
+    "main": 129949,
+    "sum": 130347,
+    "percentage": 0.9969466117363652
+  },
+  "whvixd_qilixiang.github.io": {
+    "name": "whvixd_qilixiang.github.io",
+    "main": 65742,
+    "sum": 141527,
+    "percentage": 0.4645191376910413
+  },
+  "projekthilfe-uganda_projekthilfe-uganda.github.io": {
+    "name": "projekthilfe-uganda_projekthilfe-uganda.github.io",
+    "main": 607306,
+    "sum": 1040867,
+    "percentage": 0.5834616718562506
+  },
+  "bmw-tech_atlas": {
+    "name": "bmw-tech_atlas",
+    "main": 238501,
+    "sum": 241552,
+    "percentage": 0.9873691793071471
+  },
+  "keeptalkinggame_ktanemodkit": {
+    "name": "keeptalkinggame_ktanemodkit",
+    "main": 1188313,
+    "sum": 1249895,
+    "percentage": 0.9507302613419527
+  },
+  "wxad_adui": {
+    "name": "wxad_adui",
+    "main": 1010609,
+    "sum": 1700561,
+    "percentage": 0.5942797700288317
+  },
+  "cycloidio_inframap": {
+    "name": "cycloidio_inframap",
+    "main": 186631,
+    "sum": 192137,
+    "percentage": 0.971343364370215
+  },
+  "2pinetwork_app": {
+    "name": "2pinetwork_app",
+    "main": 302873,
+    "sum": 307827,
+    "percentage": 0.9839065449099657
+  },
+  "oahong_pkgbuilder": {
+    "name": "oahong_pkgbuilder",
+    "main": 19344,
+    "sum": 19344,
+    "percentage": 1.0
+  },
+  "OhadR_oAuth2-sample": {
+    "name": "OhadR_oAuth2-sample",
+    "main": 38677,
+    "sum": 46001,
+    "percentage": 0.8407860698680464
+  },
+  "think-cell_tcjs": {
+    "name": "think-cell_tcjs",
+    "main": 2067765,
+    "sum": 2100816,
+    "percentage": 0.9842675417552037
+  },
+  "jpuritz_BIO_594_2019": {
+    "name": "jpuritz_BIO_594_2019",
+    "main": 62336702,
+    "sum": 62400143,
+    "percentage": 0.9989833196375848
+  },
+  "melpon_wandbox": {
+    "name": "melpon_wandbox",
+    "main": 297341,
+    "sum": 521879,
+    "percentage": 0.569750842628272
+  },
+  "felixsebastian_resin": {
+    "name": "felixsebastian_resin",
+    "main": 286810,
+    "sum": 289766,
+    "percentage": 0.9897986651297944
+  },
+  "OmerGeva_Siesta-Fiesta": {
+    "name": "OmerGeva_Siesta-Fiesta",
+    "main": 99307,
+    "sum": 167415,
+    "percentage": 0.5931786279604575
+  },
+  "johncreed_one-class-ffm": {
+    "name": "johncreed_one-class-ffm",
+    "main": 50256,
+    "sum": 83128,
+    "percentage": 0.6045616398806659
+  },
+  "eddyerburgh_vue-hackernews": {
+    "name": "eddyerburgh_vue-hackernews",
+    "main": 41668,
+    "sum": 55511,
+    "percentage": 0.750626002053647
+  },
+  "charygao_z": {
+    "name": "charygao_z",
+    "main": 201,
+    "sum": 201,
+    "percentage": 1.0
+  },
+  "crodjer_configs": {
+    "name": "crodjer_configs",
+    "main": 145471,
+    "sum": 303018,
+    "percentage": 0.4800737909959144
+  },
+  "lofar-astron_DP3": {
+    "name": "lofar-astron_DP3",
+    "main": 3567655,
+    "sum": 3992251,
+    "percentage": 0.8936449637059394
+  },
+  "pkimber_checkout": {
+    "name": "pkimber_checkout",
+    "main": 157568,
+    "sum": 188291,
+    "percentage": 0.8368323499264436
+  },
+  "Huanch_huanch.github.io": {
+    "name": "Huanch_huanch.github.io",
+    "main": 305739,
+    "sum": 692298,
+    "percentage": 0.44162918280855934
+  },
+  "apitte_core": {
+    "name": "apitte_core",
+    "main": 393061,
+    "sum": 396302,
+    "percentage": 0.9918218934045249
+  },
+  "alauda_ng-monaco-editor": {
+    "name": "alauda_ng-monaco-editor",
+    "main": 25143,
+    "sum": 26643,
+    "percentage": 0.9437000337799797
+  },
+  "chtd_psycopg2cffi": {
+    "name": "chtd_psycopg2cffi",
+    "main": 601835,
+    "sum": 601835,
+    "percentage": 1.0
+  },
+  "celtra_stateless-components": {
+    "name": "celtra_stateless-components",
+    "main": 333375,
+    "sum": 463202,
+    "percentage": 0.7197183949982945
+  },
+  "LowLevelSubmarine_Tronic": {
+    "name": "LowLevelSubmarine_Tronic",
+    "main": 365724,
+    "sum": 379027,
+    "percentage": 0.964902236516132
+  },
+  "FrancescoVassalli_FTB": {
+    "name": "FrancescoVassalli_FTB",
+    "main": 264930,
+    "sum": 334203,
+    "percentage": 0.7927217888528828
+  },
+  "web-n_web1_html_internet": {
+    "name": "web-n_web1_html_internet",
+    "main": 4261,
+    "sum": 4261,
+    "percentage": 1.0
+  },
+  "bartekplus_FluentTyper": {
+    "name": "bartekplus_FluentTyper",
+    "main": 2888985,
+    "sum": 3095609,
+    "percentage": 0.9332525522441626
+  },
+  "humildefilosofo_d12fallenwarrior": {
+    "name": "humildefilosofo_d12fallenwarrior",
+    "main": 669365,
+    "sum": 722377,
+    "percentage": 0.9266144963087142
+  },
+  "frikken_nettside": {
+    "name": "frikken_nettside",
+    "main": 5274,
+    "sum": 5274,
+    "percentage": 1.0
+  },
+  "willemneal_as-lunatic": {
+    "name": "willemneal_as-lunatic",
+    "main": 3529,
+    "sum": 3529,
+    "percentage": 1.0
+  },
+  "heynemann_pyvows": {
+    "name": "heynemann_pyvows",
+    "main": 193563,
+    "sum": 193964,
+    "percentage": 0.9979326060506073
+  },
+  "SNCFdevelopers_wcs": {
+    "name": "SNCFdevelopers_wcs",
+    "main": 1244475,
+    "sum": 1584190,
+    "percentage": 0.7855591816638156
+  },
+  "nexus-link_Nexus.Link.Sdks": {
+    "name": "nexus-link_Nexus.Link.Sdks",
+    "main": 2071224,
+    "sum": 2079406,
+    "percentage": 0.9960652224721868
+  },
+  "ubclaunchpad_new": {
+    "name": "ubclaunchpad_new",
+    "main": 55476,
+    "sum": 92211,
+    "percentage": 0.6016201971565215
+  },
+  "cculianu_electrum-cash-protocol": {
+    "name": "cculianu_electrum-cash-protocol",
+    "main": 5158,
+    "sum": 6587,
+    "percentage": 0.7830575375740094
+  },
+  "argp_bap": {
+    "name": "argp_bap",
+    "main": 5983258,
+    "sum": 14663936,
+    "percentage": 0.40802537599727656
+  },
+  "vmware-tanzu_velero-plugin-for-csi": {
+    "name": "vmware-tanzu_velero-plugin-for-csi",
+    "main": 201510,
+    "sum": 212419,
+    "percentage": 0.9486439536952909
+  },
+  "laravel_installer": {
+    "name": "laravel_installer",
+    "main": 64446,
+    "sum": 64446,
+    "percentage": 1.0
+  },
+  "FreddieFangFang_freddie-demo": {
+    "name": "FreddieFangFang_freddie-demo",
+    "main": 46821,
+    "sum": 46821,
+    "percentage": 1.0
+  },
+  "ucam-cl-dtg_isaac-editor": {
+    "name": "ucam-cl-dtg_isaac-editor",
+    "main": 841689,
+    "sum": 865447,
+    "percentage": 0.9725482900743777
+  },
+  "stuysu_old-junior.stuysu.org": {
+    "name": "stuysu_old-junior.stuysu.org",
+    "main": 110233,
+    "sum": 208052,
+    "percentage": 0.5298338876819256
+  },
+  "DIVD-NL_SecurityMeldpunt": {
+    "name": "DIVD-NL_SecurityMeldpunt",
+    "main": 81735,
+    "sum": 116708,
+    "percentage": 0.7003375946807416
+  },
+  "rhasspy_gruut": {
+    "name": "rhasspy_gruut",
+    "main": 448650,
+    "sum": 475313,
+    "percentage": 0.9439043325135227
+  },
+  "digitalocean_go-qemu": {
+    "name": "digitalocean_go-qemu",
+    "main": 566064,
+    "sum": 567354,
+    "percentage": 0.9977262872915322
+  },
+  "PharaohCola13_PW-Model": {
+    "name": "PharaohCola13_PW-Model",
+    "main": 519140,
+    "sum": 816325,
+    "percentage": 0.6359476924019233
+  },
+  "sul-dlss_item-release": {
+    "name": "sul-dlss_item-release",
+    "main": 45131,
+    "sum": 45131,
+    "percentage": 1.0
+  },
+  "improbable-eng_grpc-web": {
+    "name": "improbable-eng_grpc-web",
+    "main": 160868,
+    "sum": 348978,
+    "percentage": 0.46096888629082633
+  },
+  "tswfi_hemppa": {
+    "name": "tswfi_hemppa",
+    "main": 215978,
+    "sum": 216605,
+    "percentage": 0.9971053299785324
+  },
+  "Warzone_api": {
+    "name": "Warzone_api",
+    "main": 93884,
+    "sum": 94010,
+    "percentage": 0.9986597170513775
+  },
+  "opensciencegrid_technology": {
+    "name": "opensciencegrid_technology",
+    "main": 994,
+    "sum": 1581,
+    "percentage": 0.6287160025300442
+  },
+  "ardieb_pokerhandevaluator": {
+    "name": "ardieb_pokerhandevaluator",
+    "main": 97065928,
+    "sum": 98142521,
+    "percentage": 0.9890303103177878
+  },
+  "SaskiaFreytag_schex": {
+    "name": "SaskiaFreytag_schex",
+    "main": 80407,
+    "sum": 80407,
+    "percentage": 1.0
+  },
+  "ajayyy_SponsorBlockServer": {
+    "name": "ajayyy_SponsorBlockServer",
+    "main": 1030627,
+    "sum": 1033921,
+    "percentage": 0.9968140699337764
+  },
+  "Hyedryn_elikopy": {
+    "name": "Hyedryn_elikopy",
+    "main": 555186,
+    "sum": 555186,
+    "percentage": 1.0
+  },
+  "urfu-2015_verstka-tasks-1": {
+    "name": "urfu-2015_verstka-tasks-1",
+    "main": 69,
+    "sum": 69,
+    "percentage": 1.0
+  },
+  "raspberrypilearning_lego-robot-face": {
+    "name": "raspberrypilearning_lego-robot-face",
+    "main": 38267,
+    "sum": 38267,
+    "percentage": 1.0
+  },
+  "matthiaskrgr_cargo-cache": {
+    "name": "matthiaskrgr_cargo-cache",
+    "main": 362834,
+    "sum": 363076,
+    "percentage": 0.9993334728817107
+  },
+  "miguelusque_abadia-gym": {
+    "name": "miguelusque_abadia-gym",
+    "main": 181114,
+    "sum": 214788,
+    "percentage": 0.8432221539378364
+  },
+  "apietila_SIGCOMM2016": {
+    "name": "apietila_SIGCOMM2016",
+    "main": 495483,
+    "sum": 624430,
+    "percentage": 0.793496468779527
+  },
+  "NFM-Studios_project-olly": {
+    "name": "NFM-Studios_project-olly",
+    "main": 431210,
+    "sum": 854334,
+    "percentage": 0.5047323412154965
+  },
+  "pluf_shop": {
+    "name": "pluf_shop",
+    "main": 411156,
+    "sum": 411156,
+    "percentage": 1.0
+  },
+  "mahmoudeid789_customreader": {
+    "name": "mahmoudeid789_customreader",
+    "main": 2693533,
+    "sum": 5372502,
+    "percentage": 0.5013554206215279
+  },
+  "uz0_uni-chat": {
+    "name": "uz0_uni-chat",
+    "main": 248529,
+    "sum": 335509,
+    "percentage": 0.7407521109716878
+  },
+  "yayahjb_neartree": {
+    "name": "yayahjb_neartree",
+    "main": 1491399,
+    "sum": 2078565,
+    "percentage": 0.7175137655064913
+  },
+  "djorgen-ibm_isam-ansible-collection": {
+    "name": "djorgen-ibm_isam-ansible-collection",
+    "main": 36916,
+    "sum": 36916,
+    "percentage": 1.0
+  },
+  "dwp_move-to-uc": {
+    "name": "dwp_move-to-uc",
+    "main": 40405,
+    "sum": 89898,
+    "percentage": 0.44945382544661727
+  },
+  "couler-proj_couler": {
+    "name": "couler-proj_couler",
+    "main": 313322,
+    "sum": 349278,
+    "percentage": 0.8970562131024571
+  },
+  "alphagov_pay-direct-debit-connector": {
+    "name": "alphagov_pay-direct-debit-connector",
+    "main": 1194680,
+    "sum": 1196353,
+    "percentage": 0.9986015833119489
+  },
+  "gtagency_gtagency.github.com": {
+    "name": "gtagency_gtagency.github.com",
+    "main": 65859,
+    "sum": 73879,
+    "percentage": 0.8914441180849768
+  },
+  "python-otr_pure-python-otr": {
+    "name": "python-otr_pure-python-otr",
+    "main": 87741,
+    "sum": 87901,
+    "percentage": 0.9981797704235447
+  },
+  "JonnyyJ_trivial": {
+    "name": "JonnyyJ_trivial",
+    "main": 151412,
+    "sum": 272800,
+    "percentage": 0.5550293255131965
+  },
+  "digitalocean_go-openvswitch": {
+    "name": "digitalocean_go-openvswitch",
+    "main": 469358,
+    "sum": 470825,
+    "percentage": 0.9968841926405777
+  },
+  "hanbellgp_KPI": {
+    "name": "hanbellgp_KPI",
+    "main": 6258980,
+    "sum": 15708934,
+    "percentage": 0.3984344195475008
+  },
+  "cljs_api-docs": {
+    "name": "cljs_api-docs",
+    "main": 400169,
+    "sum": 563741,
+    "percentage": 0.7098454786861342
+  },
+  "rio-covid-19_rio-covid-19.github.io": {
+    "name": "rio-covid-19_rio-covid-19.github.io",
+    "main": 214722,
+    "sum": 271418,
+    "percentage": 0.7911118643568223
+  },
+  "the-road-to-react-with-firebase_react-firestore-authentication": {
+    "name": "the-road-to-react-with-firebase_react-firestore-authentication",
+    "main": 44429,
+    "sum": 46399,
+    "percentage": 0.957542188409233
+  },
+  "q-gears_q-gears": {
+    "name": "q-gears_q-gears",
+    "main": 2717688,
+    "sum": 3018576,
+    "percentage": 0.9003212110611096
+  },
+  "csterbenz1_kbal": {
+    "name": "csterbenz1_kbal",
+    "main": 112257,
+    "sum": 119409,
+    "percentage": 0.940105017209758
+  },
+  "nec4_cgnet": {
+    "name": "nec4_cgnet",
+    "main": 450773,
+    "sum": 450773,
+    "percentage": 1.0
+  },
+  "quintel_merit": {
+    "name": "quintel_merit",
+    "main": 383887,
+    "sum": 383887,
+    "percentage": 1.0
+  },
+  "elliohow_fMRI_ROI_Analysis_Tool": {
+    "name": "elliohow_fMRI_ROI_Analysis_Tool",
+    "main": 347704,
+    "sum": 375385,
+    "percentage": 0.9262597067011202
+  },
+  "thieu1995_opfunu": {
+    "name": "thieu1995_opfunu",
+    "main": 846589,
+    "sum": 846589,
+    "percentage": 1.0
+  },
+  "zilinyan_z-spacing": {
+    "name": "zilinyan_z-spacing",
+    "main": 215281,
+    "sum": 215457,
+    "percentage": 0.9991831316689641
+  },
+  "bomeara_missecomparison": {
+    "name": "bomeara_missecomparison",
+    "main": 1865925,
+    "sum": 2353420,
+    "percentage": 0.7928567786455456
+  },
+  "xapple_libcbm_runner": {
+    "name": "xapple_libcbm_runner",
+    "main": 93650,
+    "sum": 93650,
+    "percentage": 1.0
+  },
+  "cescalara_popsynth": {
+    "name": "cescalara_popsynth",
+    "main": 408327,
+    "sum": 415752,
+    "percentage": 0.9821407954742251
+  },
+  "vnijs_radiant": {
+    "name": "vnijs_radiant",
+    "main": 20687,
+    "sum": 20687,
+    "percentage": 1.0
+  },
+  "mweastwood_LibHealpix.jl": {
+    "name": "mweastwood_LibHealpix.jl",
+    "main": 89893,
+    "sum": 89893,
+    "percentage": 1.0
+  },
+  "sdos_bluebox-webui": {
+    "name": "sdos_bluebox-webui",
+    "main": 106647,
+    "sum": 182129,
+    "percentage": 0.585557489471748
+  },
+  "pierrexyz_pybird": {
+    "name": "pierrexyz_pybird",
+    "main": 1169102,
+    "sum": 1284580,
+    "percentage": 0.9101044699434835
+  },
+  "nf-core_proteomicslfq": {
+    "name": "nf-core_proteomicslfq",
+    "main": 79250,
+    "sum": 145280,
+    "percentage": 0.5454983480176211
+  },
+  "tikhonjelvis_rl-book": {
+    "name": "tikhonjelvis_rl-book",
+    "main": 440662,
+    "sum": 563254,
+    "percentage": 0.7823504138452634
+  },
+  "chathika_NL4Py": {
+    "name": "chathika_NL4Py",
+    "main": 690624,
+    "sum": 972097,
+    "percentage": 0.7104476199391625
+  },
+  "adalca_patchRegistration": {
+    "name": "adalca_patchRegistration",
+    "main": 71134,
+    "sum": 89940,
+    "percentage": 0.7909050478096509
+  },
+  "mikevoets_jama16-retina-replication": {
+    "name": "mikevoets_jama16-retina-replication",
+    "main": 46426,
+    "sum": 60559,
+    "percentage": 0.7666242837563368
+  },
+  "COVIDAnalytics_DELPHI": {
+    "name": "COVIDAnalytics_DELPHI",
+    "main": 1800100,
+    "sum": 2020348,
+    "percentage": 0.8909851174154155
+  },
+  "OpenLMIS_open-lmis": {
+    "name": "OpenLMIS_open-lmis",
+    "main": 9279604,
+    "sum": 18192319,
+    "percentage": 0.5100836237535192
+  },
+  "sachsURAP_NASAmouseHG": {
+    "name": "sachsURAP_NASAmouseHG",
+    "main": 344964,
+    "sum": 344964,
+    "percentage": 1.0
+  },
+  "iked2014_cdss": {
+    "name": "iked2014_cdss",
+    "main": 5965728,
+    "sum": 10264896,
+    "percentage": 0.581177636870359
+  },
+  "vigente_gerardus": {
+    "name": "vigente_gerardus",
+    "main": 5866029,
+    "sum": 10753693,
+    "percentage": 0.5454897215310126
+  },
+  "PheMA_phema-author": {
+    "name": "PheMA_phema-author",
+    "main": 498142,
+    "sum": 588690,
+    "percentage": 0.8461872972192496
+  },
+  "hammerlab_prohlatype": {
+    "name": "hammerlab_prohlatype",
+    "main": 622052,
+    "sum": 643327,
+    "percentage": 0.9669297262511911
+  },
+  "mezera_mrQ": {
+    "name": "mezera_mrQ",
+    "main": 588146,
+    "sum": 629129,
+    "percentage": 0.9348575570352027
+  },
+  "nipreps_nondefaced-detector": {
+    "name": "nipreps_nondefaced-detector",
+    "main": 51844,
+    "sum": 55443,
+    "percentage": 0.9350864852190538
+  },
+  "covh_covviz": {
+    "name": "covh_covviz",
+    "main": 136105,
+    "sum": 296904,
+    "percentage": 0.4584141675423706
+  },
+  "Rigaro_VRProEP": {
+    "name": "Rigaro_VRProEP",
+    "main": 6363293,
+    "sum": 7038211,
+    "percentage": 0.9041065975430405
+  },
+  "AshleyLab_myheartcounts": {
+    "name": "AshleyLab_myheartcounts",
+    "main": 44035377,
+    "sum": 74851094,
+    "percentage": 0.5883063913534784
+  },
+  "rpatil524_data-curation-tool": {
+    "name": "rpatil524_data-curation-tool",
+    "main": 289491,
+    "sum": 507790,
+    "percentage": 0.570099844423876
+  },
+  "deepdumbo_virtual-scanner": {
+    "name": "deepdumbo_virtual-scanner",
+    "main": 367540,
+    "sum": 741700,
+    "percentage": 0.4955372792234057
+  },
+  "ymnliu_MedTaggerWeb": {
+    "name": "ymnliu_MedTaggerWeb",
+    "main": 1478274,
+    "sum": 2529022,
+    "percentage": 0.5845239780436865
+  },
+  "sara-nl_SURF-deeplab": {
+    "name": "sara-nl_SURF-deeplab",
+    "main": 1074883,
+    "sum": 2039335,
+    "percentage": 0.5270752475684476
+  },
+  "mountaindust_Heroin_model": {
+    "name": "mountaindust_Heroin_model",
+    "main": 1727284,
+    "sum": 2317666,
+    "percentage": 0.7452687315601126
+  },
+  "openvax_mhctools": {
+    "name": "openvax_mhctools",
+    "main": 205384,
+    "sum": 206034,
+    "percentage": 0.9968451808924741
+  },
+  "rbodkin_covid19-synthetic-control-analysis": {
+    "name": "rbodkin_covid19-synthetic-control-analysis",
+    "main": 71495812,
+    "sum": 71636970,
+    "percentage": 0.9980295369834877
+  },
+  "Optinomic_apps": {
+    "name": "Optinomic_apps",
+    "main": 11094809,
+    "sum": 16424642,
+    "percentage": 0.6754977673181553
+  },
+  "tlittenberg_ldasoft": {
+    "name": "tlittenberg_ldasoft",
+    "main": 24861928,
+    "sum": 26122191,
+    "percentage": 0.9517550805749794
+  },
+  "thomasorb_orcs": {
+    "name": "thomasorb_orcs",
+    "main": 123477,
+    "sum": 123477,
+    "percentage": 1.0
+  },
+  "LudwigBoess_GadgetIO.jl": {
+    "name": "LudwigBoess_GadgetIO.jl",
+    "main": 204849,
+    "sum": 204849,
+    "percentage": 1.0
+  },
+  "jacobic_healsparse": {
+    "name": "jacobic_healsparse",
+    "main": 242720,
+    "sum": 265494,
+    "percentage": 0.91422028369756
+  },
+  "djmunoz_pdspy": {
+    "name": "djmunoz_pdspy",
+    "main": 648113,
+    "sum": 677573,
+    "percentage": 0.9565212899569493
+  },
+  "bmcguir2_molsim": {
+    "name": "bmcguir2_molsim",
+    "main": 473565,
+    "sum": 493002,
+    "percentage": 0.9605741964535641
+  },
+  "nborsato_tayph": {
+    "name": "nborsato_tayph",
+    "main": 628576,
+    "sum": 628576,
+    "percentage": 1.0
+  },
+  "specdb_igmspec": {
+    "name": "specdb_igmspec",
+    "main": 212894,
+    "sum": 384048,
+    "percentage": 0.554342165562638
+  },
+  "nanograv_enterprise_extensions": {
+    "name": "nanograv_enterprise_extensions",
+    "main": 498462,
+    "sum": 501335,
+    "percentage": 0.9942693009664196
+  },
+  "bkloppenborg_simtoi": {
+    "name": "bkloppenborg_simtoi",
+    "main": 725171,
+    "sum": 1222246,
+    "percentage": 0.5933101846927705
+  },
+  "sai-msu_snad": {
+    "name": "sai-msu_snad",
+    "main": 360441,
+    "sum": 509406,
+    "percentage": 0.7075711711287264
+  },
+  "nmdickson_GCfit": {
+    "name": "nmdickson_GCfit",
+    "main": 707435,
+    "sum": 707435,
+    "percentage": 1.0
+  },
+  "Morisset_pySSN": {
+    "name": "Morisset_pySSN",
+    "main": 685520,
+    "sum": 966648,
+    "percentage": 0.7091723150516009
+  },
+  "DTsuna_CHIPS": {
+    "name": "DTsuna_CHIPS",
+    "main": 208264,
+    "sum": 419997,
+    "percentage": 0.4958702085967281
+  },
+  "hannorein_rebound": {
+    "name": "hannorein_rebound",
+    "main": 1534779,
+    "sum": 2160361,
+    "percentage": 0.7104270999152457
+  },
+  "yqiuu_starduster": {
+    "name": "yqiuu_starduster",
+    "main": 125901,
+    "sum": 125901,
+    "percentage": 1.0
+  },
+  "ageller_Firefly": {
+    "name": "ageller_Firefly",
+    "main": 1309617,
+    "sum": 2313289,
+    "percentage": 0.5661277082111228
+  },
+  "PerezHz_NEOs.jl": {
+    "name": "PerezHz_NEOs.jl",
+    "main": 948104,
+    "sum": 1125370,
+    "percentage": 0.8424820281329696
+  },
+  "alex-w_vast": {
+    "name": "alex-w_vast",
+    "main": 29177482,
+    "sum": 42390435,
+    "percentage": 0.6883034344894078
+  },
+  "BU-hammerTeam_PyHammer": {
+    "name": "BU-hammerTeam_PyHammer",
+    "main": 192918,
+    "sum": 192918,
+    "percentage": 1.0
+  },
+  "oscaribv_pyaneti": {
+    "name": "oscaribv_pyaneti",
+    "main": 1320959,
+    "sum": 1679427,
+    "percentage": 0.7865533899359722
+  },
+  "DanielVanNoord_ASCOM.Alpaca.Simulators": {
+    "name": "DanielVanNoord_ASCOM.Alpaca.Simulators",
+    "main": 1858444,
+    "sum": 2127866,
+    "percentage": 0.873383944289725
+  },
+  "cpjhenry_ccalendar": {
+    "name": "cpjhenry_ccalendar",
+    "main": 211250,
+    "sum": 233646,
+    "percentage": 0.9041455877695317
+  },
+  "spacetelescope_drizzlepac": {
+    "name": "spacetelescope_drizzlepac",
+    "main": 3092686,
+    "sum": 3286470,
+    "percentage": 0.9410358226303602
+  },
+  "ITA-Solar_rh": {
+    "name": "ITA-Solar_rh",
+    "main": 1431628,
+    "sum": 2021980,
+    "percentage": 0.7080327204027735
+  },
+  "agurvich_abg_python": {
+    "name": "agurvich_abg_python",
+    "main": 374011,
+    "sum": 376988,
+    "percentage": 0.9921031969187348
+  },
+  "BenWibking_quokka": {
+    "name": "BenWibking_quokka",
+    "main": 2722111,
+    "sum": 4149299,
+    "percentage": 0.656041177075935
+  },
+  "hjy1210_astronomy-bundle-js": {
+    "name": "hjy1210_astronomy-bundle-js",
+    "main": 3786849,
+    "sum": 4107381,
+    "percentage": 0.9219619509366187
+  },
+  "TRASAL_AMBER": {
+    "name": "TRASAL_AMBER",
+    "main": 335526,
+    "sum": 336909,
+    "percentage": 0.9958950339705974
+  },
+  "magao-x_MagAOX": {
+    "name": "magao-x_MagAOX",
+    "main": 6621008,
+    "sum": 7828589,
+    "percentage": 0.8457472987788732
+  },
+  "tillense_fosite": {
+    "name": "tillense_fosite",
+    "main": 2317745,
+    "sum": 2450182,
+    "percentage": 0.9459480969168821
+  },
+  "lisadang27_SPCA": {
+    "name": "lisadang27_SPCA",
+    "main": 3289551,
+    "sum": 3611215,
+    "percentage": 0.9109263779642032
+  },
+  "isazi_AstroData": {
+    "name": "isazi_AstroData",
+    "main": 69643,
+    "sum": 71646,
+    "percentage": 0.9720431008011613
+  },
+  "samuelyeewl_specmatch-emp": {
+    "name": "samuelyeewl_specmatch-emp",
+    "main": 290724,
+    "sum": 466824,
+    "percentage": 0.6227700375302041
+  },
+  "ALaDyn_ramses": {
+    "name": "ALaDyn_ramses",
+    "main": 7671387,
+    "sum": 9520522,
+    "percentage": 0.8057737800511359
+  },
+  "mahmoud-lsw_fact-tools": {
+    "name": "mahmoud-lsw_fact-tools",
+    "main": 1253207,
+    "sum": 1255043,
+    "percentage": 0.99853710191603
+  },
+  "JuliaAstro_DustExtinction.jl": {
+    "name": "JuliaAstro_DustExtinction.jl",
+    "main": 80268,
+    "sum": 80268,
+    "percentage": 1.0
+  },
+  "hke_Commander": {
+    "name": "hke_Commander",
+    "main": 3132252,
+    "sum": 5123302,
+    "percentage": 0.611373680489653
+  },
+  "mpe-grb_pyspi": {
+    "name": "mpe-grb_pyspi",
+    "main": 240907,
+    "sum": 243402,
+    "percentage": 0.9897494679583569
+  },
+  "jjd330_NITRATES": {
+    "name": "jjd330_NITRATES",
+    "main": 2398799,
+    "sum": 3134701,
+    "percentage": 0.7652401297603822
+  },
+  "mick-wright_gwlensing": {
+    "name": "mick-wright_gwlensing",
+    "main": 150406,
+    "sum": 285464,
+    "percentage": 0.526882549113023
+  },
+  "drphilmarshall_OM10": {
+    "name": "drphilmarshall_OM10",
+    "main": 63604,
+    "sum": 90941,
+    "percentage": 0.699398511122596
+  },
+  "fjammes_pysedm": {
+    "name": "fjammes_pysedm",
+    "main": 2666676,
+    "sum": 3053396,
+    "percentage": 0.8733475775824688
+  },
+  "t-young31_autode": {
+    "name": "t-young31_autode",
+    "main": 654228,
+    "sum": 656208,
+    "percentage": 0.9969826640333552
+  },
+  "messamat_CloudCal": {
+    "name": "messamat_CloudCal",
+    "main": 449399,
+    "sum": 453487,
+    "percentage": 0.9909854086225184
+  },
+  "yongjiguan_msd-server": {
+    "name": "yongjiguan_msd-server",
+    "main": 127525,
+    "sum": 130641,
+    "percentage": 0.9761483760840778
+  },
+  "gharib85_fromage": {
+    "name": "gharib85_fromage",
+    "main": 277412,
+    "sum": 278300,
+    "percentage": 0.9968091987064319
+  },
+  "deepmodeling_DMFF": {
+    "name": "deepmodeling_DMFF",
+    "main": 627988,
+    "sum": 762694,
+    "percentage": 0.8233813298649262
+  },
+  "snurr-group_mofdb": {
+    "name": "snurr-group_mofdb",
+    "main": 450293,
+    "sum": 518192,
+    "percentage": 0.8689694167412851
+  },
+  "chemgymrl_chemgymrl": {
+    "name": "chemgymrl_chemgymrl",
+    "main": 457228,
+    "sum": 751051,
+    "percentage": 0.6087842237078441
+  },
+  "tisabe_jraph_MPEU": {
+    "name": "tisabe_jraph_MPEU",
+    "main": 553972,
+    "sum": 568638,
+    "percentage": 0.9742085474414303
+  },
+  "Photon-HDF5_phconvert": {
+    "name": "Photon-HDF5_phconvert",
+    "main": 299321,
+    "sum": 550097,
+    "percentage": 0.5441240363063241
+  },
+  "chalabaj_Snafu": {
+    "name": "chalabaj_Snafu",
+    "main": 74172,
+    "sum": 122477,
+    "percentage": 0.6055994186663618
+  },
+  "akandra_md_tian2": {
+    "name": "akandra_md_tian2",
+    "main": 1297340,
+    "sum": 2247726,
+    "percentage": 0.5771788910214145
+  },
+  "psi4_psi4": {
+    "name": "psi4_psi4",
+    "main": 27249048,
+    "sum": 40658525,
+    "percentage": 0.6701927332582773
+  },
+  "SciML_Catalyst.jl": {
+    "name": "SciML_Catalyst.jl",
+    "main": 1389069,
+    "sum": 1389069,
+    "percentage": 1.0
+  },
+  "esa-tu-darmstadt_AutoDock-Aurora": {
+    "name": "esa-tu-darmstadt_AutoDock-Aurora",
+    "main": 272907,
+    "sum": 513357,
+    "percentage": 0.5316125035793804
+  },
+  "usnistgov_teqp": {
+    "name": "usnistgov_teqp",
+    "main": 1914908,
+    "sum": 2446733,
+    "percentage": 0.7826387268247087
+  },
+  "fbroda_crimsy": {
+    "name": "fbroda_crimsy",
+    "main": 1117763,
+    "sum": 2486869,
+    "percentage": 0.4494659750875499
+  },
+  "mvdh7_pytzer": {
+    "name": "mvdh7_pytzer",
+    "main": 686687,
+    "sum": 686687,
+    "percentage": 1.0
+  },
+  "luigiquiros_inventa": {
+    "name": "luigiquiros_inventa",
+    "main": 11487797,
+    "sum": 15800690,
+    "percentage": 0.7270440088375887
+  },
+  "SimonEnsemble_PoreMatMod.jl": {
+    "name": "SimonEnsemble_PoreMatMod.jl",
+    "main": 78466,
+    "sum": 78466,
+    "percentage": 1.0
+  },
+  "hitranonline_hapiest": {
+    "name": "hitranonline_hapiest",
+    "main": 1482504,
+    "sum": 1486811,
+    "percentage": 0.9971031960350037
+  },
+  "pyflosic_fodMC": {
+    "name": "pyflosic_fodMC",
+    "main": 808286,
+    "sum": 840017,
+    "percentage": 0.962225764478576
+  },
+  "AlanRace_SpectralAnalysis": {
+    "name": "AlanRace_SpectralAnalysis",
+    "main": 846760,
+    "sum": 863409,
+    "percentage": 0.9807171340581347
+  },
+  "egallicc_async_re-openmm": {
+    "name": "egallicc_async_re-openmm",
+    "main": 312357,
+    "sum": 338508,
+    "percentage": 0.9227462866461058
+  },
+  "zzduang_activesetmethods": {
+    "name": "zzduang_activesetmethods",
+    "main": 83857,
+    "sum": 83857,
+    "percentage": 1.0
+  },
+  "videlec_e-antic": {
+    "name": "videlec_e-antic",
+    "main": 221291,
+    "sum": 458008,
+    "percentage": 0.4831596828003004
+  },
+  "br4sco_dae-param-est": {
+    "name": "br4sco_dae-param-est",
+    "main": 3671298,
+    "sum": 3713198,
+    "percentage": 0.9887159262716397
+  },
+  "usnistgov_ChebTools": {
+    "name": "usnistgov_ChebTools",
+    "main": 163555,
+    "sum": 325160,
+    "percentage": 0.5029985238036659
+  },
+  "alexanderdreyer_polybori-debian": {
+    "name": "alexanderdreyer_polybori-debian",
+    "main": 8122995,
+    "sum": 13411561,
+    "percentage": 0.6056711071887904
+  },
+  "codeplaysoftware_sycl-blas": {
+    "name": "codeplaysoftware_sycl-blas",
+    "main": 2767131,
+    "sum": 2926754,
+    "percentage": 0.9454607390986738
+  },
+  "fides-dev_fides-benchmark": {
+    "name": "fides-dev_fides-benchmark",
+    "main": 70726,
+    "sum": 101154,
+    "percentage": 0.6991913320283923
+  },
+  "JuliaOpt_SCS.jl": {
+    "name": "JuliaOpt_SCS.jl",
+    "main": 134589,
+    "sum": 134589,
+    "percentage": 1.0
+  },
+  "theochem_procrustes": {
+    "name": "theochem_procrustes",
+    "main": 290079,
+    "sum": 290079,
+    "percentage": 1.0
+  },
+  "kul-forbes_ForBES": {
+    "name": "kul-forbes_ForBES",
+    "main": 294433,
+    "sum": 306402,
+    "percentage": 0.9609369390539226
+  },
+  "EMS-TU-Ilmenau_fastmat": {
+    "name": "EMS-TU-Ilmenau_fastmat",
+    "main": 487902,
+    "sum": 737746,
+    "percentage": 0.6613414372968475
+  },
+  "JuliaNLSolvers_Optim.jl": {
+    "name": "JuliaNLSolvers_Optim.jl",
+    "main": 486107,
+    "sum": 493774,
+    "percentage": 0.9844726534811472
+  },
+  "JuliaSmoothOptimizers_Krylov.jl": {
+    "name": "JuliaSmoothOptimizers_Krylov.jl",
+    "main": 1191988,
+    "sum": 1191988,
+    "percentage": 1.0
+  },
+  "pygae_galgebra": {
+    "name": "pygae_galgebra",
+    "main": 423046,
+    "sum": 423046,
+    "percentage": 1.0
+  },
+  "rgrinberg_monae": {
+    "name": "rgrinberg_monae",
+    "main": 199211,
+    "sum": 199211,
+    "percentage": 1.0
+  },
+  "fruzsinaagocs_riccati": {
+    "name": "fruzsinaagocs_riccati",
+    "main": 99019,
+    "sum": 103022,
+    "percentage": 0.9611442216225661
+  },
+  "milcent_benford_py": {
+    "name": "milcent_benford_py",
+    "main": 1075556,
+    "sum": 1248516,
+    "percentage": 0.8614675342566696
+  },
+  "twitter_summingbird": {
+    "name": "twitter_summingbird",
+    "main": 829828,
+    "sum": 853889,
+    "percentage": 0.9718218644343702
+  },
+  "sumiya11_msolve-clone": {
+    "name": "sumiya11_msolve-clone",
+    "main": 1259257,
+    "sum": 1311726,
+    "percentage": 0.9600000304941734
+  },
+  "theochem_horton": {
+    "name": "theochem_horton",
+    "main": 1908985,
+    "sum": 3220871,
+    "percentage": 0.5926921630825948
+  },
+  "JuliaIntervals_IntervalArithmetic.jl": {
+    "name": "JuliaIntervals_IntervalArithmetic.jl",
+    "main": 1254252,
+    "sum": 1254252,
+    "percentage": 1.0
+  },
+  "pymanopt_pymanopt": {
+    "name": "pymanopt_pymanopt",
+    "main": 368693,
+    "sum": 368693,
+    "percentage": 1.0
+  },
+  "UBOdin_mimir": {
+    "name": "UBOdin_mimir",
+    "main": 1523154,
+    "sum": 1724317,
+    "percentage": 0.8833375765592986
+  },
+  "Clustering4Ever_Clustering4Ever": {
+    "name": "Clustering4Ever_Clustering4Ever",
+    "main": 682511,
+    "sum": 682511,
+    "percentage": 1.0
+  },
+  "uwdata_draco": {
+    "name": "uwdata_draco",
+    "main": 37865,
+    "sum": 70233,
+    "percentage": 0.5391340253157347
+  },
+  "jairofilho79_DataGenerator": {
+    "name": "jairofilho79_DataGenerator",
+    "main": 307270,
+    "sum": 393815,
+    "percentage": 0.7802394525348196
+  },
+  "konrad_orcid-for-wikidata": {
+    "name": "konrad_orcid-for-wikidata",
+    "main": 34537,
+    "sum": 34537,
+    "percentage": 1.0
+  },
+  "aMLLibrary_aMLLibrary": {
+    "name": "aMLLibrary_aMLLibrary",
+    "main": 335416,
+    "sum": 339943,
+    "percentage": 0.9866830615720871
+  },
+  "noduslabs_infranodus": {
+    "name": "noduslabs_infranodus",
+    "main": 3114927,
+    "sum": 3899962,
+    "percentage": 0.7987070130426912
+  },
+  "FraunhoferISST_diva": {
+    "name": "FraunhoferISST_diva",
+    "main": 647198,
+    "sum": 1218655,
+    "percentage": 0.5310756530765475
+  },
+  "thinkpractice_DeepSolaris": {
+    "name": "thinkpractice_DeepSolaris",
+    "main": 37078116,
+    "sum": 37281175,
+    "percentage": 0.9945533100820991
+  },
+  "suiji_Arborist": {
+    "name": "suiji_Arborist",
+    "main": 647478,
+    "sum": 777750,
+    "percentage": 0.8325014464802314
+  },
+  "WinVector_vtreat": {
+    "name": "WinVector_vtreat",
+    "main": 737783,
+    "sum": 1149667,
+    "percentage": 0.6417362592820356
+  },
+  "cpsievert_LDAvis": {
+    "name": "cpsievert_LDAvis",
+    "main": 58553,
+    "sum": 83645,
+    "percentage": 0.7000179329308387
+  },
+  "alteryx_compose": {
+    "name": "alteryx_compose",
+    "main": 101703,
+    "sum": 102991,
+    "percentage": 0.9874940528784069
+  },
+  "sxpyggy_actuarialdatascience": {
+    "name": "sxpyggy_actuarialdatascience",
+    "main": 85669138,
+    "sum": 110246608,
+    "percentage": 0.7770682432243177
+  },
+  "sitoryu_uncertaintyquantification.jl": {
+    "name": "sitoryu_uncertaintyquantification.jl",
+    "main": 258234,
+    "sum": 259706,
+    "percentage": 0.9943320523977113
+  },
+  "hyperfoil_repo": {
+    "name": "hyperfoil_repo",
+    "main": 1639918,
+    "sum": 2715443,
+    "percentage": 0.6039228221693477
+  },
+  "xhochy_fletcher": {
+    "name": "xhochy_fletcher",
+    "main": 318465,
+    "sum": 321129,
+    "percentage": 0.9917042683781284
+  },
+  "arcus_education_modules": {
+    "name": "arcus_education_modules",
+    "main": 1034074,
+    "sum": 1707597,
+    "percentage": 0.605572626328109
+  },
+  "chrjlong_timecorr": {
+    "name": "chrjlong_timecorr",
+    "main": 267234,
+    "sum": 350507,
+    "percentage": 0.7624212925847416
+  },
+  "marketing-automation-systems_andromeda": {
+    "name": "marketing-automation-systems_andromeda",
+    "main": 297924,
+    "sum": 310450,
+    "percentage": 0.9596521178933806
+  },
+  "snakemake_snakemake": {
+    "name": "snakemake_snakemake",
+    "main": 1775651,
+    "sum": 1904683,
+    "percentage": 0.9322553936796831
+  },
+  "Starofall_RTX": {
+    "name": "Starofall_RTX",
+    "main": 43066,
+    "sum": 49318,
+    "percentage": 0.8732308690538951
+  },
+  "Ed-Fi-Exchange-OSS_API-to-AMT-Data-Lake": {
+    "name": "Ed-Fi-Exchange-OSS_API-to-AMT-Data-Lake",
+    "main": 479342,
+    "sum": 479342,
+    "percentage": 1.0
+  },
+  "easystats_datawizard": {
+    "name": "easystats_datawizard",
+    "main": 1046051,
+    "sum": 1055786,
+    "percentage": 0.9907793814276756
+  },
+  "SantanderMetGroup_VALUE": {
+    "name": "SantanderMetGroup_VALUE",
+    "main": 179104,
+    "sum": 192548,
+    "percentage": 0.9301784490101169
+  },
+  "usgs_neic-glass3": {
+    "name": "usgs_neic-glass3",
+    "main": 2367860,
+    "sum": 3268259,
+    "percentage": 0.7245019443073514
+  },
+  "OpenGeoscience_geonotebook": {
+    "name": "OpenGeoscience_geonotebook",
+    "main": 463211,
+    "sum": 681165,
+    "percentage": 0.6800275997739167
+  },
+  "chegejames_wb-dashboard": {
+    "name": "chegejames_wb-dashboard",
+    "main": 309611,
+    "sum": 311884,
+    "percentage": 0.9927120339613446
+  },
+  "aistairc_mf-cesium": {
+    "name": "aistairc_mf-cesium",
+    "main": 1537202,
+    "sum": 1656006,
+    "percentage": 0.9282587140384757
+  },
+  "IGNF_myria3d": {
+    "name": "IGNF_myria3d",
+    "main": 127769,
+    "sum": 128833,
+    "percentage": 0.9917412464197838
+  },
+  "fasikaw_gsflow-grass": {
+    "name": "fasikaw_gsflow-grass",
+    "main": 446299,
+    "sum": 473039,
+    "percentage": 0.9434718913239711
+  },
+  "SBCV_Blender-Addon-Photogrammetry-Importer": {
+    "name": "SBCV_Blender-Addon-Photogrammetry-Importer",
+    "main": 406799,
+    "sum": 409320,
+    "percentage": 0.9938410045929835
+  },
+  "pvermees_IsoplotR": {
+    "name": "pvermees_IsoplotR",
+    "main": 807628,
+    "sum": 807850,
+    "percentage": 0.999725196509253
+  },
+  "andrewmaclachlan_CASA0005repo": {
+    "name": "andrewmaclachlan_CASA0005repo",
+    "main": 6907127,
+    "sum": 6943118,
+    "percentage": 0.9948163058729522
+  },
+  "hkfrei_digital-forest-monitoring": {
+    "name": "hkfrei_digital-forest-monitoring",
+    "main": 225432,
+    "sum": 604402,
+    "percentage": 0.3729835440650428
+  },
+  "ssec_sift": {
+    "name": "ssec_sift",
+    "main": 1255716,
+    "sum": 1378030,
+    "percentage": 0.9112399584914697
+  },
+  "setsmdeveloper_SETSM": {
+    "name": "setsmdeveloper_SETSM",
+    "main": 1252134,
+    "sum": 1278235,
+    "percentage": 0.9795804370870771
+  },
+  "glwagner_ColumnModelOptimizationProject": {
+    "name": "glwagner_ColumnModelOptimizationProject",
+    "main": 246782,
+    "sum": 246904,
+    "percentage": 0.9995058808281762
+  },
+  "eurostat_searoute": {
+    "name": "eurostat_searoute",
+    "main": 196162,
+    "sum": 361437,
+    "percentage": 0.5427280549584022
+  },
+  "hgpeterson_nuPGCM": {
+    "name": "hgpeterson_nuPGCM",
+    "main": 211435,
+    "sum": 255534,
+    "percentage": 0.8274241392534849
+  },
+  "dbuscombe-usgs_PyHum": {
+    "name": "dbuscombe-usgs_PyHum",
+    "main": 566085,
+    "sum": 691408,
+    "percentage": 0.8187423344826789
+  },
+  "hancht_orca": {
+    "name": "hancht_orca",
+    "main": 137403,
+    "sum": 137814,
+    "percentage": 0.9970177195350255
+  },
+  "rizac_stream2segment": {
+    "name": "rizac_stream2segment",
+    "main": 1601135,
+    "sum": 1704182,
+    "percentage": 0.9395328667947438
+  },
+  "CNR-ISMAR_tools4msp": {
+    "name": "CNR-ISMAR_tools4msp",
+    "main": 415975,
+    "sum": 482769,
+    "percentage": 0.8616439746545449
+  },
+  "edzer_sp": {
+    "name": "edzer_sp",
+    "main": 272867,
+    "sum": 336698,
+    "percentage": 0.8104206143190634
+  },
+  "mapaction_mapaction-toolbox": {
+    "name": "mapaction_mapaction-toolbox",
+    "main": 411158,
+    "sum": 428124,
+    "percentage": 0.9603712942979137
+  },
+  "teusH_MySense": {
+    "name": "teusH_MySense",
+    "main": 12468083,
+    "sum": 15732719,
+    "percentage": 0.7924938467406683
+  },
+  "trichter_qopen": {
+    "name": "trichter_qopen",
+    "main": 199651,
+    "sum": 199651,
+    "percentage": 1.0
+  },
+  "jjrom_resto": {
+    "name": "jjrom_resto",
+    "main": 1022006,
+    "sum": 1051870,
+    "percentage": 0.9716086588646886
+  },
+  "IFL-CAMP_iiwa_stack": {
+    "name": "IFL-CAMP_iiwa_stack",
+    "main": 229945,
+    "sum": 401341,
+    "percentage": 0.5729417129074776
+  },
+  "leggedrobotics_xpp": {
+    "name": "leggedrobotics_xpp",
+    "main": 137923,
+    "sum": 145881,
+    "percentage": 0.9454486876289578
+  },
+  "robo-marc_robo-marc.github.io": {
+    "name": "robo-marc_robo-marc.github.io",
+    "main": 297772,
+    "sum": 357483,
+    "percentage": 0.8329682810091669
+  },
+  "Azure_iot-edge-opc-publisher": {
+    "name": "Azure_iot-edge-opc-publisher",
+    "main": 12154110,
+    "sum": 12427374,
+    "percentage": 0.9780111228647339
+  },
+  "StanfordVL_robosuite": {
+    "name": "StanfordVL_robosuite",
+    "main": 1758353,
+    "sum": 1758905,
+    "percentage": 0.9996861683831703
+  },
+  "lehaifeng_T-GCN": {
+    "name": "lehaifeng_T-GCN",
+    "main": 12485361,
+    "sum": 12710862,
+    "percentage": 0.9822591890306102
+  },
+  "peterrum_adaflo": {
+    "name": "peterrum_adaflo",
+    "main": 820288,
+    "sum": 834419,
+    "percentage": 0.9830648630963581
+  },
+  "YosysHQ_apicula": {
+    "name": "YosysHQ_apicula",
+    "main": 922814,
+    "sum": 1907273,
+    "percentage": 0.48383949230131185
+  },
+  "labs4capella_python4capella": {
+    "name": "labs4capella_python4capella",
+    "main": 2023338,
+    "sum": 2234965,
+    "percentage": 0.9053108214222594
+  },
+  "RWTH-EBC_TEASER": {
+    "name": "RWTH-EBC_TEASER",
+    "main": 1798930,
+    "sum": 1798930,
+    "percentage": 1.0
+  },
+  "pmsharkkor_fret": {
+    "name": "pmsharkkor_fret",
+    "main": 1415678,
+    "sum": 1671997,
+    "percentage": 0.8466988876176214
+  },
+  "desdelgado_rheoqcm": {
+    "name": "desdelgado_rheoqcm",
+    "main": 3135649,
+    "sum": 3135922,
+    "percentage": 0.999912944263282
+  },
+  "rte-antares-rpackage_antaresRead": {
+    "name": "rte-antares-rpackage_antaresRead",
+    "main": 639271,
+    "sum": 639271,
+    "percentage": 1.0
+  },
+  "groussea_sand6py": {
+    "name": "groussea_sand6py",
+    "main": 1593027,
+    "sum": 2577623,
+    "percentage": 0.6180217200110334
+  },
+  "cuihantao_andes": {
+    "name": "cuihantao_andes",
+    "main": 1594765,
+    "sum": 1621370,
+    "percentage": 0.9835910372092737
+  },
+  "OSUKED_Power-Station-Dictionary": {
+    "name": "OSUKED_Power-Station-Dictionary",
+    "main": 14751421,
+    "sum": 14837230,
+    "percentage": 0.9942166428639309
+  },
+  "FZJ-IEK3-VSA_FINE": {
+    "name": "FZJ-IEK3-VSA_FINE",
+    "main": 1573346,
+    "sum": 1573734,
+    "percentage": 0.9997534526165158
+  },
+  "vincentcasseau_hyStrath": {
+    "name": "vincentcasseau_hyStrath",
+    "main": 70693121,
+    "sum": 78216393,
+    "percentage": 0.9038146389593803
+  },
+  "pypose_pypose": {
+    "name": "pypose_pypose",
+    "main": 669607,
+    "sum": 669607,
+    "percentage": 1.0
+  },
+  "Livox-SDK_livox_mapping": {
+    "name": "Livox-SDK_livox_mapping",
+    "main": 102541,
+    "sum": 104133,
+    "percentage": 0.9847118588727877
+  },
+  "CircuitMess_CircuitMess-Ringo": {
+    "name": "CircuitMess_CircuitMess-Ringo",
+    "main": 2035184,
+    "sum": 3274027,
+    "percentage": 0.6216149103229753
+  },
+  "nasa_Plot3D_utilities": {
+    "name": "nasa_Plot3D_utilities",
+    "main": 1646676,
+    "sum": 2375548,
+    "percentage": 0.6931773216116871
+  },
+  "cledantec_Cycle-Atlanta-SLaB": {
+    "name": "cledantec_Cycle-Atlanta-SLaB",
+    "main": 2425660,
+    "sum": 2908432,
+    "percentage": 0.8340095281581278
+  },
+  "cv-ip_dataset-api": {
+    "name": "cv-ip_dataset-api",
+    "main": 192217,
+    "sum": 373656,
+    "percentage": 0.5144223563919755
+  },
+  "laristra_flecsale": {
+    "name": "laristra_flecsale",
+    "main": 197552,
+    "sum": 249311,
+    "percentage": 0.7923918318886852
+  },
+  "edoyango_GraSPH": {
+    "name": "edoyango_GraSPH",
+    "main": 110831,
+    "sum": 133726,
+    "percentage": 0.8287917084187069
+  },
+  "darioizzo_heyoka.py": {
+    "name": "darioizzo_heyoka.py",
+    "main": 4541941,
+    "sum": 5170414,
+    "percentage": 0.8784482248423434
+  },
+  "AMReX-Codes_AMReX-Hydro": {
+    "name": "AMReX-Codes_AMReX-Hydro",
+    "main": 929961,
+    "sum": 963510,
+    "percentage": 0.9651804340380484
+  },
+  "anitaNeutrino_icemc": {
+    "name": "anitaNeutrino_icemc",
+    "main": 1716260,
+    "sum": 2018211,
+    "percentage": 0.8503868029655968
+  },
+  "WONDER-project_Orange3-WONDER": {
+    "name": "WONDER-project_Orange3-WONDER",
+    "main": 698001,
+    "sum": 698001,
+    "percentage": 1.0
+  },
+  "darmis007_hoomd-tf": {
+    "name": "darmis007_hoomd-tf",
+    "main": 180109,
+    "sum": 281807,
+    "percentage": 0.63912181031699
+  },
+  "ragnarstroberg_imsrg": {
+    "name": "ragnarstroberg_imsrg",
+    "main": 3670248,
+    "sum": 3711337,
+    "percentage": 0.9889287876579249
+  },
+  "kondratyevd_hmumu-coffea": {
+    "name": "kondratyevd_hmumu-coffea",
+    "main": 450620,
+    "sum": 475278,
+    "percentage": 0.9481187852162314
+  },
+  "Open-Catalyst-Project_ocp": {
+    "name": "Open-Catalyst-Project_ocp",
+    "main": 3152345,
+    "sum": 3312443,
+    "percentage": 0.9516676966214965
+  },
+  "easyScience_easyDiffractionLib": {
+    "name": "easyScience_easyDiffractionLib",
+    "main": 23512914,
+    "sum": 24000998,
+    "percentage": 0.9796640123048217
+  },
+  "n-claes_legolas": {
+    "name": "n-claes_legolas",
+    "main": 651484,
+    "sum": 1164407,
+    "percentage": 0.5594985258590853
+  },
+  "anharmonic_d3q": {
+    "name": "anharmonic_d3q",
+    "main": 1805511,
+    "sum": 2108045,
+    "percentage": 0.8564859858304733
+  },
+  "jonathanHuwP_CrystalGrowthTracker": {
+    "name": "jonathanHuwP_CrystalGrowthTracker",
+    "main": 379992,
+    "sum": 383643,
+    "percentage": 0.9904833399801378
+  },
+  "ricktu288_ray-optics": {
+    "name": "ricktu288_ray-optics",
+    "main": 1342352,
+    "sum": 1680634,
+    "percentage": 0.7987176268003623
+  },
+  "AngelFP_Wake-T": {
+    "name": "AngelFP_Wake-T",
+    "main": 587992,
+    "sum": 587992,
+    "percentage": 1.0
+  },
+  "ntuhep_bprimeKit": {
+    "name": "ntuhep_bprimeKit",
+    "main": 670640,
+    "sum": 733013,
+    "percentage": 0.914908739681288
+  },
+  "jstrube_LCIO.jl": {
+    "name": "jstrube_LCIO.jl",
+    "main": 20742,
+    "sum": 20742,
+    "percentage": 1.0
+  },
+  "joselado_dmrgpy": {
+    "name": "joselado_dmrgpy",
+    "main": 1958019,
+    "sum": 2747138,
+    "percentage": 0.7127486860871205
+  },
+  "N3PDF_pineappl": {
+    "name": "N3PDF_pineappl",
+    "main": 1205569,
+    "sum": 1429745,
+    "percentage": 0.8432056065941829
+  },
+  "LLNL_pyranda": {
+    "name": "LLNL_pyranda",
+    "main": 518091,
+    "sum": 792961,
+    "percentage": 0.653362523503678
+  },
+  "cherab_core": {
+    "name": "cherab_core",
+    "main": 1882261,
+    "sum": 2806760,
+    "percentage": 0.6706170103607006
+  },
+  "mppmu_secdec": {
+    "name": "mppmu_secdec",
+    "main": 2996880,
+    "sum": 5841150,
+    "percentage": 0.513063352250841
+  },
+  "VRGroupRWTH_insite": {
+    "name": "VRGroupRWTH_insite",
+    "main": 377877,
+    "sum": 718925,
+    "percentage": 0.5256139374760928
+  },
+  "BNUCNL_FreeROI": {
+    "name": "BNUCNL_FreeROI",
+    "main": 848185,
+    "sum": 848487,
+    "percentage": 0.9996440723311023
+  },
+  "sanjayankur31_geppetto-osb": {
+    "name": "sanjayankur31_geppetto-osb",
+    "main": 74268,
+    "sum": 77463,
+    "percentage": 0.9587545021494133
+  },
+  "glatard_paper-big-data-engines": {
+    "name": "glatard_paper-big-data-engines",
+    "main": 1176700,
+    "sum": 1952026,
+    "percentage": 0.6028095937246738
+  },
+  "juaml_junifer": {
+    "name": "juaml_junifer",
+    "main": 1460236,
+    "sum": 1470830,
+    "percentage": 0.9927972641297771
+  },
+  "HelmchenLabSoftware_Cascade": {
+    "name": "HelmchenLabSoftware_Cascade",
+    "main": 1075356,
+    "sum": 1182343,
+    "percentage": 0.9095127217736309
+  },
+  "wanderine_BROCCOLI": {
+    "name": "wanderine_BROCCOLI",
+    "main": 6778132,
+    "sum": 10055299,
+    "percentage": 0.6740855741833236
+  },
+  "neuromat_nes": {
+    "name": "neuromat_nes",
+    "main": 3677335,
+    "sum": 5545463,
+    "percentage": 0.6631249726127467
+  },
+  "seung-lab_cloud-volume": {
+    "name": "seung-lab_cloud-volume",
+    "main": 902514,
+    "sum": 902514,
+    "percentage": 1.0
+  },
+  "NeuroDataDesign_lemur": {
+    "name": "NeuroDataDesign_lemur",
+    "main": 1758023,
+    "sum": 1788346,
+    "percentage": 0.9830441089140468
+  },
+  "ClandininLab_visprotocol": {
+    "name": "ClandininLab_visprotocol",
+    "main": 879438,
+    "sum": 881247,
+    "percentage": 0.99794722705439
+  },
+  "BlueBrain_CoreNeuron": {
+    "name": "BlueBrain_CoreNeuron",
+    "main": 995698,
+    "sum": 1143749,
+    "percentage": 0.870556389557499
+  },
+  "lytai1_Matthew_Thesis": {
+    "name": "lytai1_Matthew_Thesis",
+    "main": 341173,
+    "sum": 393019,
+    "percentage": 0.8680827135583776
+  },
+  "chozillla_ironclust": {
+    "name": "chozillla_ironclust",
+    "main": 5094313,
+    "sum": 8601502,
+    "percentage": 0.5922585381018338
+  },
+  "bbuchsbaum_neuroca": {
+    "name": "bbuchsbaum_neuroca",
+    "main": 238152,
+    "sum": 241042,
+    "percentage": 0.9880103882310967
+  },
+  "pyrates-neuroscience_PyRates": {
+    "name": "pyrates-neuroscience_PyRates",
+    "main": 447258,
+    "sum": 447258,
+    "percentage": 1.0
+  },
+  "scilus_tractoflow": {
+    "name": "scilus_tractoflow",
+    "main": 73651,
+    "sum": 73651,
+    "percentage": 1.0
+  },
+  "MouseLand_rastermap": {
+    "name": "MouseLand_rastermap",
+    "main": 453219,
+    "sum": 621468,
+    "percentage": 0.7292716600050204
+  },
+  "wiheto_teneto": {
+    "name": "wiheto_teneto",
+    "main": 378801,
+    "sum": 379364,
+    "percentage": 0.9985159372001561
+  },
+  "cvnlab_analyzePRF": {
+    "name": "cvnlab_analyzePRF",
+    "main": 187322,
+    "sum": 187322,
+    "percentage": 1.0
+  },
+  "igm-team_meaRtools": {
+    "name": "igm-team_meaRtools",
+    "main": 320915,
+    "sum": 649001,
+    "percentage": 0.4944753551997609
+  },
+  "CRAFT-THU_BSim": {
+    "name": "CRAFT-THU_BSim",
+    "main": 257881,
+    "sum": 587091,
+    "percentage": 0.4392521772604247
+  },
+  "MLD3_brain_age_prediction": {
+    "name": "MLD3_brain_age_prediction",
+    "main": 273368,
+    "sum": 273368,
+    "percentage": 1.0
+  },
+  "petersenpeter_CellExplorer": {
+    "name": "petersenpeter_CellExplorer",
+    "main": 4530004,
+    "sum": 7105678,
+    "percentage": 0.6375188968596663
+  },
+  "stan-dev_projpred": {
+    "name": "stan-dev_projpred",
+    "main": 1257434,
+    "sum": 1284403,
+    "percentage": 0.9790026961942631
+  },
+  "donlnz_nonconformist": {
+    "name": "donlnz_nonconformist",
+    "main": 63671,
+    "sum": 63671,
+    "percentage": 1.0
+  },
+  "bsaul_inferference": {
+    "name": "bsaul_inferference",
+    "main": 272133,
+    "sum": 367549,
+    "percentage": 0.7403992392851021
+  },
+  "stephenslab_mr.mash.alpha": {
+    "name": "stephenslab_mr.mash.alpha",
+    "main": 225297,
+    "sum": 297514,
+    "percentage": 0.7572652043265191
+  },
+  "paul-buerkner_brms": {
+    "name": "paul-buerkner_brms",
+    "main": 1952568,
+    "sum": 2213651,
+    "percentage": 0.8820577408091881
+  },
+  "uhasan1_reins": {
+    "name": "uhasan1_reins",
+    "main": 317230,
+    "sum": 378728,
+    "percentage": 0.8376196109080923
+  },
+  "joramsoch_statproofbook.github.io": {
+    "name": "joramsoch_statproofbook.github.io",
+    "main": 21697,
+    "sum": 37992,
+    "percentage": 0.5710939145083176
+  },
+  "mbaudin47_otbenchmark": {
+    "name": "mbaudin47_otbenchmark",
+    "main": 372434,
+    "sum": 373143,
+    "percentage": 0.9980999241577626
+  },
+  "ModelOriented_factorMerger": {
+    "name": "ModelOriented_factorMerger",
+    "main": 106646,
+    "sum": 106646,
+    "percentage": 1.0
+  },
+  "BouchardLab_PyUoI": {
+    "name": "BouchardLab_PyUoI",
+    "main": 293978,
+    "sum": 418306,
+    "percentage": 0.7027821738153409
+  },
+  "irenecrsn_gmat": {
+    "name": "irenecrsn_gmat",
+    "main": 27805,
+    "sum": 40533,
+    "percentage": 0.6859842597389781
+  },
+  "stan-dev_loo": {
+    "name": "stan-dev_loo",
+    "main": 466226,
+    "sum": 466226,
+    "percentage": 1.0
+  },
+  "mleprovost_TransportBasedInference.jl": {
+    "name": "mleprovost_TransportBasedInference.jl",
+    "main": 12760837,
+    "sum": 13568033,
+    "percentage": 0.9405075149802481
+  },
+  "PYFTS_pyFTS": {
+    "name": "PYFTS_pyFTS",
+    "main": 707148,
+    "sum": 708567,
+    "percentage": 0.9979973665157987
+  },
+  "775371_beta2_out": {
+    "name": "775371_beta2_out",
+    "main": 352327,
+    "sum": 520313,
+    "percentage": 0.6771443342757149
+  },
+  "mtewes_tenbilac": {
+    "name": "mtewes_tenbilac",
+    "main": 143478,
+    "sum": 143478,
+    "percentage": 1.0
+  },
+  "bertcarnell_SOAs": {
+    "name": "bertcarnell_SOAs",
+    "main": 267631,
+    "sum": 267631,
+    "percentage": 1.0
+  },
+  "willtebbutt_Stheno.jl": {
+    "name": "willtebbutt_Stheno.jl",
+    "main": 87126,
+    "sum": 87126,
+    "percentage": 1.0
+  },
+  "bhmm_bhmm": {
+    "name": "bhmm_bhmm",
+    "main": 382797,
+    "sum": 401418,
+    "percentage": 0.9536119456526613
+  },
+  "droodman_WildBootTests.jl": {
+    "name": "droodman_WildBootTests.jl",
+    "main": 259124,
+    "sum": 259124,
+    "percentage": 1.0
+  },
+  "aldro61_mmit": {
+    "name": "aldro61_mmit",
+    "main": 93117,
+    "sum": 174610,
+    "percentage": 0.5332856079262356
+  },
+  "cmollica_bayesmallows": {
+    "name": "cmollica_bayesmallows",
+    "main": 217108,
+    "sum": 305924,
+    "percentage": 0.7096795282488462
+  },
+  "fcampelo_pbapply": {
+    "name": "fcampelo_pbapply",
+    "main": 32280,
+    "sum": 32280,
+    "percentage": 1.0
+  },
+  "AlejandroSantorum_scikit-rmt": {
+    "name": "AlejandroSantorum_scikit-rmt",
+    "main": 388777,
+    "sum": 392685,
+    "percentage": 0.9900480028521589
+  },
+  "qiboteam_qibotf": {
+    "name": "qiboteam_qibotf",
+    "main": 65984,
+    "sum": 109620,
+    "percentage": 0.6019339536580915
+  },
+  "SoftwareQuTech_SimulaQron": {
+    "name": "SoftwareQuTech_SimulaQron",
+    "main": 406083,
+    "sum": 409415,
+    "percentage": 0.9918615585652699
+  },
+  "vishal-ph_openqaoa": {
+    "name": "vishal-ph_openqaoa",
+    "main": 728533,
+    "sum": 728533,
+    "percentage": 1.0
+  },
+  "qir-alliance_qcor": {
+    "name": "qir-alliance_qcor",
+    "main": 3145791,
+    "sum": 3882699,
+    "percentage": 0.8102072810691738
+  },
+  "Qiskit_qiskit-jku-provider": {
+    "name": "Qiskit_qiskit-jku-provider",
+    "main": 220237,
+    "sum": 297224,
+    "percentage": 0.7409798670363094
+  },
+  "sfc-aqua_quisp": {
+    "name": "sfc-aqua_quisp",
+    "main": 812579,
+    "sum": 1243521,
+    "percentage": 0.6534501628842617
+  },
+  "BBN-Q_libaps2": {
+    "name": "BBN-Q_libaps2",
+    "main": 349985,
+    "sum": 433342,
+    "percentage": 0.8076415394769028
+  },
+  "frosati1_c3": {
+    "name": "frosati1_c3",
+    "main": 589639,
+    "sum": 589639,
+    "percentage": 1.0
+  },
+  "USCqserver_QTBase.jl": {
+    "name": "USCqserver_QTBase.jl",
+    "main": 213887,
+    "sum": 213887,
+    "percentage": 1.0
+  },
+  "qulacs_qulacs": {
+    "name": "qulacs_qulacs",
+    "main": 1964007,
+    "sum": 2461990,
+    "percentage": 0.797731509876157
+  },
+  "Tomev_BoSS": {
+    "name": "Tomev_BoSS",
+    "main": 270571,
+    "sum": 270571,
+    "percentage": 1.0
+  },
+  "qutech_qupulse": {
+    "name": "qutech_qupulse",
+    "main": 1659374,
+    "sum": 1660209,
+    "percentage": 0.9994970512748697
+  },
+  "peteshadbolt_abp": {
+    "name": "peteshadbolt_abp",
+    "main": 99833,
+    "sum": 100011,
+    "percentage": 0.9982201957784643
+  },
+  "CQCL_tierkreis": {
+    "name": "CQCL_tierkreis",
+    "main": 550491,
+    "sum": 678191,
+    "percentage": 0.8117049621714237
+  },
+  "00mjk_filter_functions": {
+    "name": "00mjk_filter_functions",
+    "main": 515190,
+    "sum": 515190,
+    "percentage": 1.0
+  },
+  "tmog123_Quantum_Assisted": {
+    "name": "tmog123_Quantum_Assisted",
+    "main": 339890,
+    "sum": 558858,
+    "percentage": 0.6081866950101815
+  },
+  "cksystemsgroup_monster": {
+    "name": "cksystemsgroup_monster",
+    "main": 495478,
+    "sum": 497031,
+    "percentage": 0.9968754464007276
+  },
+  "marvel-nccr_quantum-mobile": {
+    "name": "marvel-nccr_quantum-mobile",
+    "main": 13110,
+    "sum": 15996,
+    "percentage": 0.8195798949737434
+  },
+  "rakytap_sequential-quantum-gate-decomposer": {
+    "name": "rakytap_sequential-quantum-gate-decomposer",
+    "main": 29851452,
+    "sum": 33725404,
+    "percentage": 0.8851325250247558
+  },
+  "WolfLink_qsearch": {
+    "name": "WolfLink_qsearch",
+    "main": 266414,
+    "sum": 364160,
+    "percentage": 0.7315850175746924
+  },
+  "unitaryfund_mitiq": {
+    "name": "unitaryfund_mitiq",
+    "main": 1198349,
+    "sum": 1199992,
+    "percentage": 0.9986308242054946
+  },
+  "sequence-toolbox_SeQUeNCe": {
+    "name": "sequence-toolbox_SeQUeNCe",
+    "main": 6288728,
+    "sum": 7532516,
+    "percentage": 0.8348774831676428
+  },
+  "JanLahmann_RasQberry": {
+    "name": "JanLahmann_RasQberry",
+    "main": 74746,
+    "sum": 138207,
+    "percentage": 0.5408264414971745
+  },
+  "QE-Lab_dqcsim": {
+    "name": "QE-Lab_dqcsim",
+    "main": 638089,
+    "sum": 1495977,
+    "percentage": 0.42653663792959384
+  },
+  "vert-x3_vertx-lang-kotlin": {
+    "name": "vert-x3_vertx-lang-kotlin",
+    "main": 123260,
+    "sum": 138069,
+    "percentage": 0.8927420347797116
+  },
+  "lemonlabsuk_scala-uri": {
+    "name": "lemonlabsuk_scala-uri",
+    "main": 519655,
+    "sum": 520314,
+    "percentage": 0.9987334571047483
+  },
+  "khalima_ResearchDataServiceChannel": {
+    "name": "khalima_ResearchDataServiceChannel",
+    "main": 372250,
+    "sum": 632119,
+    "percentage": 0.5888922813584151
+  },
+  "curvefi_curve-factory": {
+    "name": "curvefi_curve-factory",
+    "main": 1115724,
+    "sum": 1121680,
+    "percentage": 0.9946901076955995
+  },
+  "rubyroidlabs_bsuir-courses": {
+    "name": "rubyroidlabs_bsuir-courses",
+    "main": 2657110,
+    "sum": 3104523,
+    "percentage": 0.8558834964340738
+  },
+  "dxgraphs_aqua-subgraph": {
+    "name": "dxgraphs_aqua-subgraph",
+    "main": 101197,
+    "sum": 103640,
+    "percentage": 0.9764280200694713
+  },
+  "ayushaggar_ayushaggar.github.io": {
+    "name": "ayushaggar_ayushaggar.github.io",
+    "main": 325998,
+    "sum": 1013984,
+    "percentage": 0.3215021144317859
+  },
+  "cweijan_vscode-mysql": {
+    "name": "cweijan_vscode-mysql",
+    "main": 618932,
+    "sum": 1178824,
+    "percentage": 0.5250419061708957
+  },
+  "pokt-foundation_portal-api": {
+    "name": "pokt-foundation_portal-api",
+    "main": 462290,
+    "sum": 469624,
+    "percentage": 0.9843832512818765
+  },
+  "Aragronsam_Aragronsam.github.io": {
+    "name": "Aragronsam_Aragronsam.github.io",
+    "main": 21711,
+    "sum": 33063,
+    "percentage": 0.656655475909627
+  },
+  "radical-cybertools_midas": {
+    "name": "radical-cybertools_midas",
+    "main": 653177,
+    "sum": 925047,
+    "percentage": 0.7061014197116471
+  },
+  "ekov1_oop-2019-20": {
+    "name": "ekov1_oop-2019-20",
+    "main": 1681898,
+    "sum": 3333500,
+    "percentage": 0.5045441727913604
+  },
+  "shiincs_fast-plate": {
+    "name": "shiincs_fast-plate",
+    "main": 114876,
+    "sum": 175398,
+    "percentage": 0.6549447542161256
+  },
+  "NethServer_nethserver-httpd-admin": {
+    "name": "NethServer_nethserver-httpd-admin",
+    "main": 28535,
+    "sum": 55237,
+    "percentage": 0.5165921393269004
+  },
+  "grahamgower_demesdraw": {
+    "name": "grahamgower_demesdraw",
+    "main": 119095,
+    "sum": 119095,
+    "percentage": 1.0
+  },
+  "bennycui99_Cellwar.Game": {
+    "name": "bennycui99_Cellwar.Game",
+    "main": 216033,
+    "sum": 294291,
+    "percentage": 0.7340795335229415
+  },
+  "atomicrobot_Carbon-Android": {
+    "name": "atomicrobot_Carbon-Android",
+    "main": 281173,
+    "sum": 297703,
+    "percentage": 0.9444748625307773
+  },
+  "rich0_trustedqsl-tqsl": {
+    "name": "rich0_trustedqsl-tqsl",
+    "main": 4487009,
+    "sum": 6251317,
+    "percentage": 0.7177701914652544
+  },
+  "Simon-Cooper_TwinCat-Motion-ADS": {
+    "name": "Simon-Cooper_TwinCat-Motion-ADS",
+    "main": 383465,
+    "sum": 383465,
+    "percentage": 1.0
+  },
+  "Evertt_ecd": {
+    "name": "Evertt_ecd",
+    "main": 9465040,
+    "sum": 9669597,
+    "percentage": 0.978845343813191
+  },
+  "JeanHerbaut_Arthrose_BikeTest": {
+    "name": "JeanHerbaut_Arthrose_BikeTest",
+    "main": 207786,
+    "sum": 339216,
+    "percentage": 0.6125477571812651
+  },
+  "julianmendez_jcel": {
+    "name": "julianmendez_jcel",
+    "main": 1303628,
+    "sum": 1304218,
+    "percentage": 0.9995476216399406
+  },
+  "tonivade_purefun": {
+    "name": "tonivade_purefun",
+    "main": 1227481,
+    "sum": 1227481,
+    "percentage": 1.0
+  },
+  "Groupers_Grouping": {
+    "name": "Groupers_Grouping",
+    "main": 378357,
+    "sum": 531655,
+    "percentage": 0.7116588765270712
+  },
+  "ankprd_eth-sri.github.io": {
+    "name": "ankprd_eth-sri.github.io",
+    "main": 873142,
+    "sum": 898412,
+    "percentage": 0.9718725929751606
+  },
+  "piesync_billbo": {
+    "name": "piesync_billbo",
+    "main": 141905,
+    "sum": 150731,
+    "percentage": 0.9414453562969793
+  },
+  "pgfmc_plugins": {
+    "name": "pgfmc_plugins",
+    "main": 444623,
+    "sum": 448738,
+    "percentage": 0.9908298383466522
+  },
+  "jasonpmoss_Fomo-Fix": {
+    "name": "jasonpmoss_Fomo-Fix",
+    "main": 163395,
+    "sum": 163395,
+    "percentage": 1.0
+  },
+  "vapourismo_knx-go": {
+    "name": "vapourismo_knx-go",
+    "main": 363434,
+    "sum": 364084,
+    "percentage": 0.9982146977071226
+  },
+  "Grupo01PDA_ProjetoIntegrador": {
+    "name": "Grupo01PDA_ProjetoIntegrador",
+    "main": 54008,
+    "sum": 143138,
+    "percentage": 0.3773142002822451
+  },
+  "TwiN_aws-eks-asg-rolling-update-handler": {
+    "name": "TwiN_aws-eks-asg-rolling-update-handler",
+    "main": 128028,
+    "sum": 128546,
+    "percentage": 0.9959703141287943
+  },
+  "shapecode_cron-bundle": {
+    "name": "shapecode_cron-bundle",
+    "main": 63976,
+    "sum": 63976,
+    "percentage": 1.0
+  },
+  "bnw_simpleboardgamesimulator": {
+    "name": "bnw_simpleboardgamesimulator",
+    "main": 157749,
+    "sum": 157749,
+    "percentage": 1.0
+  },
+  "wellingtonalves_unb_front": {
+    "name": "wellingtonalves_unb_front",
+    "main": 294395,
+    "sum": 393753,
+    "percentage": 0.7476641447811191
+  },
+  "MacKentoch_easyFormGenerator": {
+    "name": "MacKentoch_easyFormGenerator",
+    "main": 486774,
+    "sum": 693271,
+    "percentage": 0.7021410097927073
+  },
+  "skanehira_docui": {
+    "name": "skanehira_docui",
+    "main": 82373,
+    "sum": 83312,
+    "percentage": 0.9887291146533512
+  },
+  "clubcapra_capra_web_ui": {
+    "name": "clubcapra_capra_web_ui",
+    "main": 204241,
+    "sum": 208142,
+    "percentage": 0.981257987335569
+  },
+  "freeotp_freeotp-ios": {
+    "name": "freeotp_freeotp-ios",
+    "main": 242246,
+    "sum": 242526,
+    "percentage": 0.9988454846078358
+  },
+  "OpenMandrivaAssociation_distro-theme": {
+    "name": "OpenMandrivaAssociation_distro-theme",
+    "main": 7478,
+    "sum": 7478,
+    "percentage": 1.0
+  },
+  "lishuwei115_CosmechanicsDev": {
+    "name": "lishuwei115_CosmechanicsDev",
+    "main": 2422920,
+    "sum": 3281232,
+    "percentage": 0.7384177650345968
+  },
+  "smartcontractkit_integrations-framework": {
+    "name": "smartcontractkit_integrations-framework",
+    "main": 5138915,
+    "sum": 6009644,
+    "percentage": 0.8551113843016325
+  },
+  "ros-industrial-consortium_tesseract": {
+    "name": "ros-industrial-consortium_tesseract",
+    "main": 6718625,
+    "sum": 6913625,
+    "percentage": 0.9717948254352817
+  },
+  "chillzhuang_Saber": {
+    "name": "chillzhuang_Saber",
+    "main": 341994,
+    "sum": 475526,
+    "percentage": 0.7191909590642783
+  },
+  "sieunlee97_leesieun": {
+    "name": "sieunlee97_leesieun",
+    "main": 12419594,
+    "sum": 16884922,
+    "percentage": 0.7355434629783898
+  },
+  "Nobody28_IPTV-List-Updater": {
+    "name": "Nobody28_IPTV-List-Updater",
+    "main": 40256,
+    "sum": 53481,
+    "percentage": 0.7527159178025841
+  },
+  "STIXProject_schemas": {
+    "name": "STIXProject_schemas",
+    "main": 4639,
+    "sum": 4639,
+    "percentage": 1.0
+  },
+  "silx-kit_fabio": {
+    "name": "silx-kit_fabio",
+    "main": 1341601,
+    "sum": 1501205,
+    "percentage": 0.8936827415309702
+  },
+  "wubaiqing_zaobao": {
+    "name": "wubaiqing_zaobao",
+    "main": 1368,
+    "sum": 1779,
+    "percentage": 0.7689713322091062
+  },
+  "c5k6_python-qa": {
+    "name": "c5k6_python-qa",
+    "main": 2174,
+    "sum": 2216,
+    "percentage": 0.9810469314079422
+  },
+  "oVirt_ovirt-openshift-extensions": {
+    "name": "oVirt_ovirt-openshift-extensions",
+    "main": 86428,
+    "sum": 101651,
+    "percentage": 0.8502424963846887
+  },
+  "BrotherLogic_recordsorganiser": {
+    "name": "BrotherLogic_recordsorganiser",
+    "main": 109057,
+    "sum": 110591,
+    "percentage": 0.9861290701775008
+  },
+  "AutoLoadNextPost_Auto-Load-Next-Post": {
+    "name": "AutoLoadNextPost_Auto-Load-Next-Post",
+    "main": 270935,
+    "sum": 373926,
+    "percentage": 0.7245684975102026
+  },
+  "vue-stripe_vue-stripe": {
+    "name": "vue-stripe_vue-stripe",
+    "main": 518001,
+    "sum": 967394,
+    "percentage": 0.5354602157962526
+  },
+  "cscart_docs": {
+    "name": "cscart_docs",
+    "main": 670044,
+    "sum": 1234788,
+    "percentage": 0.5426388983372045
+  },
+  "armanist_quantum-php-core": {
+    "name": "armanist_quantum-php-core",
+    "main": 1460511,
+    "sum": 1739945,
+    "percentage": 0.8394006707108558
+  },
+  "brooklyncentral_advanced-networking": {
+    "name": "brooklyncentral_advanced-networking",
+    "main": 512375,
+    "sum": 520022,
+    "percentage": 0.9852948529100692
+  },
+  "BurdaMagazinOrg_thunder-project": {
+    "name": "BurdaMagazinOrg_thunder-project",
+    "main": 4246,
+    "sum": 4508,
+    "percentage": 0.9418811002661934
+  },
+  "geogazetteer_gazetteer-Service": {
+    "name": "geogazetteer_gazetteer-Service",
+    "main": 866743,
+    "sum": 1098653,
+    "percentage": 0.7889142431686802
+  },
+  "QUIQQER_template-businesspro": {
+    "name": "QUIQQER_template-businesspro",
+    "main": 51163,
+    "sum": 98558,
+    "percentage": 0.5191156476389537
+  },
+  "nm-cmd_qt_eventdispatcher_libevent": {
+    "name": "nm-cmd_qt_eventdispatcher_libevent",
+    "main": 51615,
+    "sum": 57947,
+    "percentage": 0.8907277339637945
+  },
+  "NightwalkerLots_UAC-Public": {
+    "name": "NightwalkerLots_UAC-Public",
+    "main": 705184,
+    "sum": 1486108,
+    "percentage": 0.4745173298306718
+  },
+  "phetsims_molecule-polarity": {
+    "name": "phetsims_molecule-polarity",
+    "main": 2098492,
+    "sum": 2106336,
+    "percentage": 0.9962759977515458
+  },
+  "Sofy-U_SWEN670": {
+    "name": "Sofy-U_SWEN670",
+    "main": 265574,
+    "sum": 418120,
+    "percentage": 0.6351621544054339
+  },
+  "cns-iu_map4sci": {
+    "name": "cns-iu_map4sci",
+    "main": 187449,
+    "sum": 445684,
+    "percentage": 0.42058723220936806
+  },
+  "opensim-org_opensim-core": {
+    "name": "opensim-org_opensim-core",
+    "main": 14299126,
+    "sum": 16437795,
+    "percentage": 0.8698931943122542
+  },
+  "prevuelta_rune": {
+    "name": "prevuelta_rune",
+    "main": 127256,
+    "sum": 139731,
+    "percentage": 0.9107213145257673
+  },
+  "compstak_KafkaStreams4s": {
+    "name": "compstak_KafkaStreams4s",
+    "main": 75697,
+    "sum": 75697,
+    "percentage": 1.0
+  },
+  "libp2p_js-libp2p-spdy": {
+    "name": "libp2p_js-libp2p-spdy",
+    "main": 20602,
+    "sum": 20602,
+    "percentage": 1.0
+  },
+  "JetBrains_bunches": {
+    "name": "JetBrains_bunches",
+    "main": 242127,
+    "sum": 243533,
+    "percentage": 0.9942266551145019
+  },
+  "Clef-0_FMM-Mods": {
+    "name": "Clef-0_FMM-Mods",
+    "main": 429235,
+    "sum": 578189,
+    "percentage": 0.7423783572499649
+  },
+  "Endemic-NFT_endemic-subgraph": {
+    "name": "Endemic-NFT_endemic-subgraph",
+    "main": 81993,
+    "sum": 81993,
+    "percentage": 1.0
+  },
+  "darinel_traitify-js": {
+    "name": "darinel_traitify-js",
+    "main": 342619,
+    "sum": 514153,
+    "percentage": 0.666375573029818
+  },
+  "alumniime_alumni-ime": {
+    "name": "alumniime_alumni-ime",
+    "main": 1584717,
+    "sum": 3163399,
+    "percentage": 0.5009538790396026
+  },
+  "mmelqonyan_Stepanavan": {
+    "name": "mmelqonyan_Stepanavan",
+    "main": 262846,
+    "sum": 692500,
+    "percentage": 0.3795610108303249
+  },
+  "molinerozadkiel_silverSea": {
+    "name": "molinerozadkiel_silverSea",
+    "main": 278450,
+    "sum": 591199,
+    "percentage": 0.47099200100135485
+  },
+  "niklasf_mapc": {
+    "name": "niklasf_mapc",
+    "main": 413579,
+    "sum": 444078,
+    "percentage": 0.931320623854368
+  },
+  "italia_report-vaccini-anti-covid-19": {
+    "name": "italia_report-vaccini-anti-covid-19",
+    "main": 154141,
+    "sum": 162539,
+    "percentage": 0.9483324002239463
+  },
+  "HearthSim_SabberStone": {
+    "name": "HearthSim_SabberStone",
+    "main": 10157515,
+    "sum": 10162572,
+    "percentage": 0.9995023897493666
+  },
+  "CatalysmsServerManager_frontend": {
+    "name": "CatalysmsServerManager_frontend",
+    "main": 257473,
+    "sum": 293550,
+    "percentage": 0.8771010049395332
+  },
+  "raster-foundry_raster-foundry-python-client": {
+    "name": "raster-foundry_raster-foundry-python-client",
+    "main": 51419,
+    "sum": 51881,
+    "percentage": 0.9910950058788381
+  },
+  "hiredman_clojurebot": {
+    "name": "hiredman_clojurebot",
+    "main": 123703,
+    "sum": 124730,
+    "percentage": 0.9917662150244528
+  },
+  "gruppe-adler_slotlist-backend": {
+    "name": "gruppe-adler_slotlist-backend",
+    "main": 834523,
+    "sum": 842203,
+    "percentage": 0.9908810583671632
+  },
+  "ruby_typeprof": {
+    "name": "ruby_typeprof",
+    "main": 479873,
+    "sum": 479873,
+    "percentage": 1.0
+  },
+  "markthomas93_gratuity": {
+    "name": "markthomas93_gratuity",
+    "main": 299491,
+    "sum": 384180,
+    "percentage": 0.77955906085689
+  },
+  "transloadit_go-sdk": {
+    "name": "transloadit_go-sdk",
+    "main": 54911,
+    "sum": 60928,
+    "percentage": 0.9012440913865546
+  },
+  "jameshartt_Astro": {
+    "name": "jameshartt_Astro",
+    "main": 83244,
+    "sum": 88605,
+    "percentage": 0.9394955137971898
+  },
+  "mokemokechicken_reversi-alpha-zero": {
+    "name": "mokemokechicken_reversi-alpha-zero",
+    "main": 138277,
+    "sum": 150099,
+    "percentage": 0.9212386491582223
+  },
+  "emacs-berlin_emacs-berlin.org": {
+    "name": "emacs-berlin_emacs-berlin.org",
+    "main": 81323,
+    "sum": 85528,
+    "percentage": 0.9508348143298101
+  },
+  "SoftwareEngineeringDaily_SEDaily-Android": {
+    "name": "SoftwareEngineeringDaily_SEDaily-Android",
+    "main": 214909,
+    "sum": 236437,
+    "percentage": 0.9089482610589713
+  },
+  "Automattic_vip-go-ci": {
+    "name": "Automattic_vip-go-ci",
+    "main": 1455271,
+    "sum": 1486350,
+    "percentage": 0.9790903892084637
+  },
+  "kurahaupo_splootcode": {
+    "name": "kurahaupo_splootcode",
+    "main": 539868,
+    "sum": 651146,
+    "percentage": 0.8291043790486312
+  },
+  "cloudscripting_docs": {
+    "name": "cloudscripting_docs",
+    "main": 46054,
+    "sum": 125736,
+    "percentage": 0.36627537061780235
+  },
+  "TomTranter_pybamm_pnm": {
+    "name": "TomTranter_pybamm_pnm",
+    "main": 183978,
+    "sum": 183978,
+    "percentage": 1.0
+  },
+  "atthecodeface_bbc_cdl": {
+    "name": "atthecodeface_bbc_cdl",
+    "main": 675978,
+    "sum": 1247023,
+    "percentage": 0.5420734020142371
+  },
+  "fizruk_http-api-data": {
+    "name": "fizruk_http-api-data",
+    "main": 83438,
+    "sum": 83438,
+    "percentage": 1.0
+  },
+  "fj-cq_leetcode": {
+    "name": "fj-cq_leetcode",
+    "main": 696065,
+    "sum": 696340,
+    "percentage": 0.9996050779791481
+  },
+  "dumidu1998_thoga.lk": {
+    "name": "dumidu1998_thoga.lk",
+    "main": 1520076,
+    "sum": 2369903,
+    "percentage": 0.641408530222545
+  },
+  "jandyx_universe": {
+    "name": "jandyx_universe",
+    "main": 297100,
+    "sum": 529096,
+    "percentage": 0.5615238066437849
+  },
+  "OpenSentry_idp": {
+    "name": "OpenSentry_idp",
+    "main": 299727,
+    "sum": 304632,
+    "percentage": 0.9838986055306074
+  },
+  "instedd_nuntium": {
+    "name": "instedd_nuntium",
+    "main": 1204451,
+    "sum": 1350143,
+    "percentage": 0.8920914303151593
+  },
+  "jjingtang_calc": {
+    "name": "jjingtang_calc",
+    "main": 22556,
+    "sum": 22659,
+    "percentage": 0.9954543448519352
+  },
+  "baomidou_dynamic-datasource-spring-boot-starter": {
+    "name": "baomidou_dynamic-datasource-spring-boot-starter",
+    "main": 454426,
+    "sum": 454426,
+    "percentage": 1.0
+  },
+  "wellcometrust_corporate-components": {
+    "name": "wellcometrust_corporate-components",
+    "main": 31501,
+    "sum": 68731,
+    "percentage": 0.45832302745486025
+  },
+  "magicianx_single-bridge": {
+    "name": "magicianx_single-bridge",
+    "main": 408264,
+    "sum": 408264,
+    "percentage": 1.0
+  },
+  "blkerby_MapRandomizer": {
+    "name": "blkerby_MapRandomizer",
+    "main": 1475589,
+    "sum": 4007039,
+    "percentage": 0.3682492234290707
+  },
+  "DSM-Portfolist_Portfolist-Front": {
+    "name": "DSM-Portfolist_Portfolist-Front",
+    "main": 324109,
+    "sum": 328332,
+    "percentage": 0.9871380188345943
+  },
+  "Club-INTech_TechTheTachyon-HighLevel": {
+    "name": "Club-INTech_TechTheTachyon-HighLevel",
+    "main": 873908,
+    "sum": 880737,
+    "percentage": 0.9922462664790965
+  },
+  "rustwasm_twiggy": {
+    "name": "rustwasm_twiggy",
+    "main": 197227,
+    "sum": 254317,
+    "percentage": 0.7755163830966865
+  },
+  "prescottprue_react-redux-firebase": {
+    "name": "prescottprue_react-redux-firebase",
+    "main": 387572,
+    "sum": 387631,
+    "percentage": 0.9998477933911375
+  },
+  "OpenUpSA_wazimap": {
+    "name": "OpenUpSA_wazimap",
+    "main": 357809,
+    "sum": 1096327,
+    "percentage": 0.32637069049653983
+  },
+  "Luk3M_Boorunaut": {
+    "name": "Luk3M_Boorunaut",
+    "main": 197374,
+    "sum": 505002,
+    "percentage": 0.3908380560869066
+  },
+  "moolen_harbor-sync": {
+    "name": "moolen_harbor-sync",
+    "main": 157153,
+    "sum": 192764,
+    "percentage": 0.8152611483472018
+  },
+  "GeneralMills_pytrends": {
+    "name": "GeneralMills_pytrends",
+    "main": 54947,
+    "sum": 54947,
+    "percentage": 1.0
+  },
+  "votd-se_shipshape": {
+    "name": "votd-se_shipshape",
+    "main": 219880,
+    "sum": 494665,
+    "percentage": 0.44450284535999113
+  },
+  "derrickoswald_CIMApplication": {
+    "name": "derrickoswald_CIMApplication",
+    "main": 14814871,
+    "sum": 17090940,
+    "percentage": 0.8668259908466123
+  },
+  "vladfrangu_highlight": {
+    "name": "vladfrangu_highlight",
+    "main": 193686,
+    "sum": 201885,
+    "percentage": 0.95938777026525
+  },
+  "ngs-doo_dsl-json": {
+    "name": "ngs-doo_dsl-json",
+    "main": 3508898,
+    "sum": 3619932,
+    "percentage": 0.9693270481323959
+  },
+  "j4yyxzyy_apikeyjayy": {
+    "name": "j4yyxzyy_apikeyjayy",
+    "main": 306487,
+    "sum": 500593,
+    "percentage": 0.6122478740214106
+  },
+  "madeindjs_api_on_rails": {
+    "name": "madeindjs_api_on_rails",
+    "main": 3943,
+    "sum": 3943,
+    "percentage": 1.0
+  },
+  "TenkenNoSoujiro_guildadvisor-data": {
+    "name": "TenkenNoSoujiro_guildadvisor-data",
+    "main": 30922,
+    "sum": 54841,
+    "percentage": 0.5638482157509892
+  },
+  "tyongguang_machine-learning": {
+    "name": "tyongguang_machine-learning",
+    "main": 996197,
+    "sum": 1593967,
+    "percentage": 0.6249796890399864
+  },
+  "gavioto_winc": {
+    "name": "gavioto_winc",
+    "main": 491239,
+    "sum": 498792,
+    "percentage": 0.9848574155158863
+  },
+  "tlaplus_tlapm": {
+    "name": "tlaplus_tlapm",
+    "main": 2882651,
+    "sum": 4862224,
+    "percentage": 0.592866762205937
+  },
+  "prefeiturasp_SME-Imoveis-BackEnd": {
+    "name": "prefeiturasp_SME-Imoveis-BackEnd",
+    "main": 310300,
+    "sum": 443365,
+    "percentage": 0.6998748209714344
+  },
+  "vitalii-dmytruk_ConfLab": {
+    "name": "vitalii-dmytruk_ConfLab",
+    "main": 84748,
+    "sum": 179806,
+    "percentage": 0.47133021145011844
+  },
+  "naver_nbase-arc": {
+    "name": "naver_nbase-arc",
+    "main": 6591806,
+    "sum": 13769916,
+    "percentage": 0.4787106907551215
+  },
+  "doctoolchain_drawio-intellij-plugin": {
+    "name": "doctoolchain_drawio-intellij-plugin",
+    "main": 118584,
+    "sum": 139470,
+    "percentage": 0.8502473650247365
+  },
+  "danielsaidi_KeyboardKit": {
+    "name": "danielsaidi_KeyboardKit",
+    "main": 1011,
+    "sum": 1011,
+    "percentage": 1.0
+  },
+  "beda-software_drf-writable-nested": {
+    "name": "beda-software_drf-writable-nested",
+    "main": 93961,
+    "sum": 93961,
+    "percentage": 1.0
+  },
+  "kddeisz_humidifier": {
+    "name": "kddeisz_humidifier",
+    "main": 94581,
+    "sum": 95783,
+    "percentage": 0.9874508002463903
+  },
+  "FGRibreau_ui-predicate": {
+    "name": "FGRibreau_ui-predicate",
+    "main": 184055,
+    "sum": 234147,
+    "percentage": 0.78606601835599
+  },
+  "TheRealCodeKraft_codekraft-react-frontend": {
+    "name": "TheRealCodeKraft_codekraft-react-frontend",
+    "main": 652820,
+    "sum": 807242,
+    "percentage": 0.8087042051825847
+  },
+  "an3ll_spring-boot-kotlin-and-java-example": {
+    "name": "an3ll_spring-boot-kotlin-and-java-example",
+    "main": 2552,
+    "sum": 3490,
+    "percentage": 0.7312320916905444
+  },
+  "WheatonCS_Lexos": {
+    "name": "WheatonCS_Lexos",
+    "main": 855795,
+    "sum": 1314423,
+    "percentage": 0.6510803599754417
+  },
+  "iqis_javascript-for-r": {
+    "name": "iqis_javascript-for-r",
+    "main": 10239637,
+    "sum": 11535001,
+    "percentage": 0.8877014401645912
+  },
+  "justdjango_dream_blog": {
+    "name": "justdjango_dream_blog",
+    "main": 316509,
+    "sum": 378589,
+    "percentage": 0.8360227053612228
+  },
+  "oneconference-inet_conference_update": {
+    "name": "oneconference-inet_conference_update",
+    "main": 3718038,
+    "sum": 4504458,
+    "percentage": 0.8254129575633739
+  },
+  "knarfS_smuview": {
+    "name": "knarfS_smuview",
+    "main": 1275719,
+    "sum": 1393125,
+    "percentage": 0.9157247196052041
+  },
+  "NHSDigital_electronic-prescription-service-api": {
+    "name": "NHSDigital_electronic-prescription-service-api",
+    "main": 2150187,
+    "sum": 2411596,
+    "percentage": 0.8916033199590645
+  },
+  "douyu_juno": {
+    "name": "douyu_juno",
+    "main": 17356364,
+    "sum": 19014860,
+    "percentage": 0.9127789528821143
+  },
+  "datalad_datalad.org": {
+    "name": "datalad_datalad.org",
+    "main": 70860,
+    "sum": 121727,
+    "percentage": 0.5821222900424721
+  },
+  "richardatval_www.yesproject.org": {
+    "name": "richardatval_www.yesproject.org",
+    "main": 77706,
+    "sum": 139231,
+    "percentage": 0.558108467223535
+  },
+  "avisionh_blog": {
+    "name": "avisionh_blog",
+    "main": 11535571,
+    "sum": 11697834,
+    "percentage": 0.9861287995709291
+  },
+  "minio_minio": {
+    "name": "minio_minio",
+    "main": 8785399,
+    "sum": 8877933,
+    "percentage": 0.989577078358217
+  },
+  "torproject_lego": {
+    "name": "torproject_lego",
+    "main": 322828,
+    "sum": 740942,
+    "percentage": 0.43569942046745896
+  },
+  "kumahq_kuma": {
+    "name": "kumahq_kuma",
+    "main": 11612306,
+    "sum": 11773051,
+    "percentage": 0.9863463600047261
+  },
+  "habeebgit_skale.py": {
+    "name": "habeebgit_skale.py",
+    "main": 285628,
+    "sum": 288331,
+    "percentage": 0.9906253576618539
+  },
+  "matkicail_3kleingroup": {
+    "name": "matkicail_3kleingroup",
+    "main": 150810,
+    "sum": 160059,
+    "percentage": 0.9422150581972898
+  },
+  "NebulousLabs_sia.tech": {
+    "name": "NebulousLabs_sia.tech",
+    "main": 240938,
+    "sum": 392551,
+    "percentage": 0.6137750254107109
+  },
+  "oriondevelopment_mcms": {
+    "name": "oriondevelopment_mcms",
+    "main": 667475,
+    "sum": 668516,
+    "percentage": 0.9984428196183787
+  },
+  "fusionbox_django-widgy": {
+    "name": "fusionbox_django-widgy",
+    "main": 606024,
+    "sum": 1215237,
+    "percentage": 0.4986879102594802
+  },
+  "msokk_electron-render-service": {
+    "name": "msokk_electron-render-service",
+    "main": 252395,
+    "sum": 279617,
+    "percentage": 0.902645404249384
+  },
+  "KonradBaniowski_AdExpressFacebookAPI": {
+    "name": "KonradBaniowski_AdExpressFacebookAPI",
+    "main": 399619,
+    "sum": 707100,
+    "percentage": 0.5651520294159242
+  },
+  "blue-yonder_tsfresh": {
+    "name": "blue-yonder_tsfresh",
+    "main": 1994372,
+    "sum": 2610607,
+    "percentage": 0.7639495335759078
+  },
+  "rodrigo-zamora_Libgloss": {
+    "name": "rodrigo-zamora_Libgloss",
+    "main": 318856,
+    "sum": 345850,
+    "percentage": 0.9219488217435304
+  },
+  "kantimam_json-formvue": {
+    "name": "kantimam_json-formvue",
+    "main": 2544366,
+    "sum": 2763766,
+    "percentage": 0.9206155658619435
+  },
+  "CE-KMITL-Project-2021-Group-36_Rental-App": {
+    "name": "CE-KMITL-Project-2021-Group-36_Rental-App",
+    "main": 729712,
+    "sum": 737132,
+    "percentage": 0.9899339602676318
+  },
+  "auto-mat_klub": {
+    "name": "auto-mat_klub",
+    "main": 1951739,
+    "sum": 2009859,
+    "percentage": 0.9710825485767907
+  },
+  "DemocracyLab_CivicTechExchange": {
+    "name": "DemocracyLab_CivicTechExchange",
+    "main": 883754,
+    "sum": 1561258,
+    "percentage": 0.5660525038142319
+  },
+  "storyforj_fervor": {
+    "name": "storyforj_fervor",
+    "main": 108957,
+    "sum": 110062,
+    "percentage": 0.9899602042485145
+  },
+  "rohan1358_new-sekilas-aja-mobile": {
+    "name": "rohan1358_new-sekilas-aja-mobile",
+    "main": 754721,
+    "sum": 770639,
+    "percentage": 0.979344414180959
+  },
+  "preston_sms-easy": {
+    "name": "preston_sms-easy",
+    "main": 7610,
+    "sum": 7610,
+    "percentage": 1.0
+  },
+  "mathause_regionmask": {
+    "name": "mathause_regionmask",
+    "main": 246814,
+    "sum": 247889,
+    "percentage": 0.9956633815941812
+  },
+  "saroeunsaing_laravel8": {
+    "name": "saroeunsaing_laravel8",
+    "main": 139106,
+    "sum": 291668,
+    "percentage": 0.4769326768791914
+  },
+  "jenkins-x_jx-helpers": {
+    "name": "jenkins-x_jx-helpers",
+    "main": 636428,
+    "sum": 656279,
+    "percentage": 0.9697521938078165
+  },
+  "jeremyckahn_stylie": {
+    "name": "jeremyckahn_stylie",
+    "main": 338422,
+    "sum": 365093,
+    "percentage": 0.9269473805304402
+  },
+  "caoloss_-serverless-consolepy": {
+    "name": "caoloss_-serverless-consolepy",
+    "main": 398395,
+    "sum": 457049,
+    "percentage": 0.8716680268417609
+  },
+  "alexmooney_foundryacks": {
+    "name": "alexmooney_foundryacks",
+    "main": 229878,
+    "sum": 426512,
+    "percentage": 0.5389719398281877
+  },
+  "gizmore_gdo6": {
+    "name": "gizmore_gdo6",
+    "main": 1064836,
+    "sum": 1111526,
+    "percentage": 0.9579946847847014
+  },
+  "tpeschel_fhir": {
+    "name": "tpeschel_fhir",
+    "main": 338651,
+    "sum": 338651,
+    "percentage": 1.0
+  },
+  "crong-devops_action-create-branch": {
+    "name": "crong-devops_action-create-branch",
+    "main": 4162,
+    "sum": 4397,
+    "percentage": 0.9465544689561064
+  },
+  "fission-suite_auth-ui": {
+    "name": "fission-suite_auth-ui",
+    "main": 113695,
+    "sum": 147319,
+    "percentage": 0.7717606011444552
+  },
+  "lanvard_lanvard": {
+    "name": "lanvard_lanvard",
+    "main": 17515,
+    "sum": 17857,
+    "percentage": 0.9808478467827743
+  },
+  "digi-serve_ab_runtime": {
+    "name": "digi-serve_ab_runtime",
+    "main": 301615,
+    "sum": 374957,
+    "percentage": 0.8043989044077055
+  },
+  "tamb_substate": {
+    "name": "tamb_substate",
+    "main": 244956,
+    "sum": 368969,
+    "percentage": 0.6638931725971559
+  },
+  "bluehalo_ngx-leaflet-tutorial-ngcli": {
+    "name": "bluehalo_ngx-leaflet-tutorial-ngcli",
+    "main": 10034,
+    "sum": 12523,
+    "percentage": 0.8012457078974686
+  },
+  "aldryn_aldryn-faq": {
+    "name": "aldryn_aldryn-faq",
+    "main": 152516,
+    "sum": 194024,
+    "percentage": 0.7860677029645817
+  },
+  "tomyun_repo2docker-action": {
+    "name": "tomyun_repo2docker-action",
+    "main": 8104,
+    "sum": 12963,
+    "percentage": 0.6251639281030625
+  },
+  "Seeed-Studio_Wio_Link_Android_App": {
+    "name": "Seeed-Studio_Wio_Link_Android_App",
+    "main": 710872,
+    "sum": 713336,
+    "percentage": 0.9965458073053932
+  },
+  "wildbookorg_ibeis_curvrank": {
+    "name": "wildbookorg_ibeis_curvrank",
+    "main": 398642,
+    "sum": 404366,
+    "percentage": 0.9858445072038697
+  },
+  "pgdavidApodis_PHPStormSettings": {
+    "name": "pgdavidApodis_PHPStormSettings",
+    "main": 323,
+    "sum": 323,
+    "percentage": 1.0
+  },
+  "dreamland-mud_dreamland_web": {
+    "name": "dreamland-mud_dreamland_web",
+    "main": 1703250,
+    "sum": 1975353,
+    "percentage": 0.8622509495771136
+  },
+  "oreo-defi_initialtwitteroffering": {
+    "name": "oreo-defi_initialtwitteroffering",
+    "main": 50336,
+    "sum": 76134,
+    "percentage": 0.6611500774949431
+  },
+  "zc_zrs": {
+    "name": "zc_zrs",
+    "main": 127989,
+    "sum": 127989,
+    "percentage": 1.0
+  },
+  "neherlab_webcaldes": {
+    "name": "neherlab_webcaldes",
+    "main": 1063964,
+    "sum": 2361022,
+    "percentage": 0.45063705463142656
+  },
+  "go-reform_reform": {
+    "name": "go-reform_reform",
+    "main": 176660,
+    "sum": 186900,
+    "percentage": 0.945211342964152
+  },
+  "engcomm_dsswithpython": {
+    "name": "engcomm_dsswithpython",
+    "main": 32592019,
+    "sum": 32594882,
+    "percentage": 0.9999121641244169
+  },
+  "rycecrispy_Profile": {
+    "name": "rycecrispy_Profile",
+    "main": 3200710,
+    "sum": 3258990,
+    "percentage": 0.9821171589971126
+  },
+  "Luciano94_ProjectOni": {
+    "name": "Luciano94_ProjectOni",
+    "main": 2102528,
+    "sum": 2204404,
+    "percentage": 0.9537852408179263
+  },
+  "bytecraftoy_timesheets-frontend": {
+    "name": "bytecraftoy_timesheets-frontend",
+    "main": 284816,
+    "sum": 287315,
+    "percentage": 0.9913022292605677
+  },
+  "JohannesFischer_baby-stats": {
+    "name": "JohannesFischer_baby-stats",
+    "main": 9443,
+    "sum": 9642,
+    "percentage": 0.9793611283965982
+  },
+  "tran-antoine_quiz": {
+    "name": "tran-antoine_quiz",
+    "main": 293264,
+    "sum": 296375,
+    "percentage": 0.989503163222269
+  },
+  "hnguyenq85_Storage-Management-System": {
+    "name": "hnguyenq85_Storage-Management-System",
+    "main": 715396,
+    "sum": 904108,
+    "percentage": 0.7912727240550907
+  },
+  "timgreen_timgreenhomeconfig": {
+    "name": "timgreen_timgreenhomeconfig",
+    "main": 114453,
+    "sum": 184284,
+    "percentage": 0.6210685680797031
+  },
+  "musevarg_remar-android-app": {
+    "name": "musevarg_remar-android-app",
+    "main": 203529,
+    "sum": 203529,
+    "percentage": 1.0
+  },
+  "AnshulKiyawat_LNMIIT-Social": {
+    "name": "AnshulKiyawat_LNMIIT-Social",
+    "main": 172869,
+    "sum": 197357,
+    "percentage": 0.8759202865872505
+  },
+  "Wolox_wolmo-authentication-ios": {
+    "name": "Wolox_wolmo-authentication-ios",
+    "main": 275537,
+    "sum": 302886,
+    "percentage": 0.9097053016646527
+  },
+  "Magenic_Badge-Application": {
+    "name": "Magenic_Badge-Application",
+    "main": 1427792,
+    "sum": 2731958,
+    "percentage": 0.5226258968842127
+  },
+  "ridecr_Ride.CR": {
+    "name": "ridecr_Ride.CR",
+    "main": 1130731,
+    "sum": 1201237,
+    "percentage": 0.9413055042427098
+  },
+  "roburio_caldav": {
+    "name": "roburio_caldav",
+    "main": 355724,
+    "sum": 359686,
+    "percentage": 0.9889848367742976
+  },
+  "namuyan_bc4py": {
+    "name": "namuyan_bc4py",
+    "main": 354737,
+    "sum": 354737,
+    "percentage": 1.0
+  },
+  "u-root_NiChrome": {
+    "name": "u-root_NiChrome",
+    "main": 379229,
+    "sum": 653608,
+    "percentage": 0.580208626577398
+  },
+  "velythyl_mimosa": {
+    "name": "velythyl_mimosa",
+    "main": 11393299,
+    "sum": 13919844,
+    "percentage": 0.8184932963329187
+  },
+  "textmate_perl.tmbundle": {
+    "name": "textmate_perl.tmbundle",
+    "main": 22867,
+    "sum": 24926,
+    "percentage": 0.917395490652331
+  },
+  "wodo_WebTool3": {
+    "name": "wodo_WebTool3",
+    "main": 972788,
+    "sum": 1716381,
+    "percentage": 0.5667669357794103
+  },
+  "vstinner_misc": {
+    "name": "vstinner_misc",
+    "main": 111826,
+    "sum": 134225,
+    "percentage": 0.8331234866828087
+  },
+  "juacas_block_quest_classification": {
+    "name": "juacas_block_quest_classification",
+    "main": 43850,
+    "sum": 44413,
+    "percentage": 0.9873235313984644
+  },
+  "kabanero-io_kabanero-pipelines": {
+    "name": "kabanero-io_kabanero-pipelines",
+    "main": 1424405,
+    "sum": 1425759,
+    "percentage": 0.9990503303854298
+  },
+  "jlesage_docker-mkvtoolnix": {
+    "name": "jlesage_docker-mkvtoolnix",
+    "main": 8887,
+    "sum": 12833,
+    "percentage": 0.6925114938050339
+  },
+  "BibliothecaDAO_realms-react": {
+    "name": "BibliothecaDAO_realms-react",
+    "main": 2361621,
+    "sum": 4365730,
+    "percentage": 0.5409452714666275
+  },
+  "TingfengGu_cocoyaxi": {
+    "name": "TingfengGu_cocoyaxi",
+    "main": 1379307,
+    "sum": 1500775,
+    "percentage": 0.9190631507054688
+  },
+  "Shabang-Systems_Condution": {
+    "name": "Shabang-Systems_Condution",
+    "main": 945565,
+    "sum": 1566450,
+    "percentage": 0.6036356091799929
+  },
+  "sloik_CoJezdzi": {
+    "name": "sloik_CoJezdzi",
+    "main": 7839,
+    "sum": 8373,
+    "percentage": 0.9362235757792906
+  },
+  "jdRouterP_laughing-rotary-phone": {
+    "name": "jdRouterP_laughing-rotary-phone",
+    "main": 2762904,
+    "sum": 2768559,
+    "percentage": 0.9979574211710858
+  },
+  "defeatedcrow_HeatAndClimateMod": {
+    "name": "defeatedcrow_HeatAndClimateMod",
+    "main": 4883828,
+    "sum": 4883868,
+    "percentage": 0.9999918097704524
+  },
+  "webpack_webpack-dev-middleware": {
+    "name": "webpack_webpack-dev-middleware",
+    "main": 349434,
+    "sum": 349434,
+    "percentage": 1.0
+  },
+  "harrykouevi_anzandrew-angular-domain": {
+    "name": "harrykouevi_anzandrew-angular-domain",
+    "main": 622392,
+    "sum": 666205,
+    "percentage": 0.934234957708213
+  },
+  "isolin_RenderViews": {
+    "name": "isolin_RenderViews",
+    "main": 48396,
+    "sum": 48853,
+    "percentage": 0.9906454056045688
+  },
+  "JulesRn_rails-comptoir": {
+    "name": "JulesRn_rails-comptoir",
+    "main": 126564,
+    "sum": 217468,
+    "percentage": 0.581989074254603
+  },
+  "Teleopti_Stardust": {
+    "name": "Teleopti_Stardust",
+    "main": 567929,
+    "sum": 578561,
+    "percentage": 0.9816233724706643
+  },
+  "ImmoweltHH_eslint-config-immowelt-react": {
+    "name": "ImmoweltHH_eslint-config-immowelt-react",
+    "main": 729,
+    "sum": 729,
+    "percentage": 1.0
+  },
+  "muchtaragung_coaching": {
+    "name": "muchtaragung_coaching",
+    "main": 2160495,
+    "sum": 2644820,
+    "percentage": 0.8168778971725864
+  },
+  "ecomfe_san-cli": {
+    "name": "ecomfe_san-cli",
+    "main": 830421,
+    "sum": 900784,
+    "percentage": 0.9218869340485621
+  },
+  "spiral_roadrunner": {
+    "name": "spiral_roadrunner",
+    "main": 97150,
+    "sum": 112413,
+    "percentage": 0.8642238886961472
+  },
+  "bullteam_zeus-admin": {
+    "name": "bullteam_zeus-admin",
+    "main": 335870,
+    "sum": 781953,
+    "percentage": 0.4295270943394296
+  },
+  "donaheth000_hse-schedule-app": {
+    "name": "donaheth000_hse-schedule-app",
+    "main": 253404,
+    "sum": 279436,
+    "percentage": 0.906840922429465
+  },
+  "miott_yang": {
+    "name": "miott_yang",
+    "main": 530968,
+    "sum": 540985,
+    "percentage": 0.9814837749660342
+  },
+  "SapphireDb_SapphireDb": {
+    "name": "SapphireDb_SapphireDb",
+    "main": 346611,
+    "sum": 346875,
+    "percentage": 0.9992389189189189
+  },
+  "gabiru1_Trybe-futebol-clube": {
+    "name": "gabiru1_Trybe-futebol-clube",
+    "main": 163564,
+    "sum": 198772,
+    "percentage": 0.822872436761717
+  },
+  "Elskom_newsmake": {
+    "name": "Elskom_newsmake",
+    "main": 47340,
+    "sum": 47341,
+    "percentage": 0.9999788766608225
+  },
+  "forkdelta_tokenbase": {
+    "name": "forkdelta_tokenbase",
+    "main": 37005,
+    "sum": 38936,
+    "percentage": 0.9504057941236902
+  },
+  "sdvdxl_iotos-soft-gateway": {
+    "name": "sdvdxl_iotos-soft-gateway",
+    "main": 265522,
+    "sum": 266319,
+    "percentage": 0.9970073483303857
+  },
+  "finbox-in_documentation": {
+    "name": "finbox-in_documentation",
+    "main": 0,
+    "sum": 0,
+    "percentage": 0
+  },
+  "camel-extra_camel-extra": {
+    "name": "camel-extra_camel-extra",
+    "main": 659369,
+    "sum": 660360,
+    "percentage": 0.998499303410261
+  },
+  "WildGums_Blorc.Tye": {
+    "name": "WildGums_Blorc.Tye",
+    "main": 373810,
+    "sum": 385208,
+    "percentage": 0.9704107910531453
+  },
+  "bd-j_forcepho": {
+    "name": "bd-j_forcepho",
+    "main": 585831,
+    "sum": 644422,
+    "percentage": 0.909079764502143
+  },
+  "nano-wallet-company_nano-wallet-ios": {
+    "name": "nano-wallet-company_nano-wallet-ios",
+    "main": 281753,
+    "sum": 292424,
+    "percentage": 0.9635084671572784
+  },
+  "CanopyTax_cpr-multiselect": {
+    "name": "CanopyTax_cpr-multiselect",
+    "main": 17624,
+    "sum": 24566,
+    "percentage": 0.7174143124643817
+  },
+  "subgraph_oz": {
+    "name": "subgraph_oz",
+    "main": 346940,
+    "sum": 350334,
+    "percentage": 0.9903121021653623
+  },
+  "ddopik_PhLog": {
+    "name": "ddopik_PhLog",
+    "main": 1031504,
+    "sum": 1040430,
+    "percentage": 0.9914208548388647
+  },
+  "CICM_CicmWrapper": {
+    "name": "CICM_CicmWrapper",
+    "main": 289403,
+    "sum": 293524,
+    "percentage": 0.9859602621932108
+  },
+  "valeth_wanikani-breeze-dark": {
+    "name": "valeth_wanikani-breeze-dark",
+    "main": 73791,
+    "sum": 79232,
+    "percentage": 0.9313282512116317
+  },
+  "antvis_FEngine": {
+    "name": "antvis_FEngine",
+    "main": 371817,
+    "sum": 394126,
+    "percentage": 0.9433962742879181
+  },
+  "liuggio_fastest": {
+    "name": "liuggio_fastest",
+    "main": 112583,
+    "sum": 115077,
+    "percentage": 0.9783275545938807
+  },
+  "CulturalMe_meteor-slingshot": {
+    "name": "CulturalMe_meteor-slingshot",
+    "main": 33360,
+    "sum": 33360,
+    "percentage": 1.0
+  },
+  "DerekStride_tree-sitter-sql": {
+    "name": "DerekStride_tree-sitter-sql",
+    "main": 103289,
+    "sum": 120427,
+    "percentage": 0.8576897207436871
+  },
+  "openprescription_openprescription": {
+    "name": "openprescription_openprescription",
+    "main": 261920,
+    "sum": 281631,
+    "percentage": 0.9300112558631685
+  },
+  "GSS-Cogs_family-trade": {
+    "name": "GSS-Cogs_family-trade",
+    "main": 600696,
+    "sum": 638983,
+    "percentage": 0.9400813480170834
+  },
+  "xebia-france_click-count": {
+    "name": "xebia-france_click-count",
+    "main": 3905,
+    "sum": 4462,
+    "percentage": 0.8751680860600628
+  },
+  "apertium_apertium-recursive": {
+    "name": "apertium_apertium-recursive",
+    "main": 289316,
+    "sum": 365567,
+    "percentage": 0.7914171683986793
+  },
+  "ifigon_MealMatchup": {
+    "name": "ifigon_MealMatchup",
+    "main": 473559,
+    "sum": 531524,
+    "percentage": 0.8909456581452578
+  },
+  "workshops-de_reactjs.de": {
+    "name": "workshops-de_reactjs.de",
+    "main": 529672,
+    "sum": 786293,
+    "percentage": 0.6736318395305567
+  },
+  "Yefry-yeff_PROFAC": {
+    "name": "Yefry-yeff_PROFAC",
+    "main": 5819538,
+    "sum": 15051417,
+    "percentage": 0.3866438621692562
+  },
+  "open-eid_MOPP-Android": {
+    "name": "open-eid_MOPP-Android",
+    "main": 1686021,
+    "sum": 1692152,
+    "percentage": 0.996376803029515
+  },
+  "EmicoEcommerce_Magento2TweakwiseExport": {
+    "name": "EmicoEcommerce_Magento2TweakwiseExport",
+    "main": 368991,
+    "sum": 368991,
+    "percentage": 1.0
+  },
+  "gwsystems_aWsm": {
+    "name": "gwsystems_aWsm",
+    "main": 15866672,
+    "sum": 23275717,
+    "percentage": 0.6816834901369526
+  },
+  "mika76_mamesaver": {
+    "name": "mika76_mamesaver",
+    "main": 300876,
+    "sum": 300876,
+    "percentage": 1.0
+  },
+  "balena-io-modules_jellyschema": {
+    "name": "balena-io-modules_jellyschema",
+    "main": 109779,
+    "sum": 120469,
+    "percentage": 0.9112634785712507
+  },
+  "muenzpraeger_create-lwc-app": {
+    "name": "muenzpraeger_create-lwc-app",
+    "main": 92147,
+    "sum": 119551,
+    "percentage": 0.7707756522321018
+  },
+  "4lejandrito_react-guitar": {
+    "name": "4lejandrito_react-guitar",
+    "main": 78933,
+    "sum": 80103,
+    "percentage": 0.9853938054754504
+  },
+  "BonusCloud_BonusCloud-Node": {
+    "name": "BonusCloud_BonusCloud-Node",
+    "main": 666942,
+    "sum": 797051,
+    "percentage": 0.8367620139740117
+  },
+  "ALMaclaine_Reference": {
+    "name": "ALMaclaine_Reference",
+    "main": 2514,
+    "sum": 2734,
+    "percentage": 0.9195318215069496
+  },
+  "eight20_helm-charts": {
+    "name": "eight20_helm-charts",
+    "main": 69284,
+    "sum": 100314,
+    "percentage": 0.690671292142672
+  },
+  "brieremarie_mariebriere.fr": {
+    "name": "brieremarie_mariebriere.fr",
+    "main": 47166,
+    "sum": 51502,
+    "percentage": 0.9158090947924352
+  },
+  "dmcg_minutest": {
+    "name": "dmcg_minutest",
+    "main": 272747,
+    "sum": 272976,
+    "percentage": 0.999161098411582
+  },
+  "w3c_epub-tests": {
+    "name": "w3c_epub-tests",
+    "main": 1740085,
+    "sum": 1856011,
+    "percentage": 0.9375402408714173
+  },
+  "ak15199_rop": {
+    "name": "ak15199_rop",
+    "main": 209370,
+    "sum": 214266,
+    "percentage": 0.9771498977905967
+  },
+  "mjavurek_user-docs": {
+    "name": "mjavurek_user-docs",
+    "main": 5106,
+    "sum": 6524,
+    "percentage": 0.7826486817903127
+  },
+  "MUTUAL-DE-SERVICIOS-AL-POLICIA_PVA-NSIAF": {
+    "name": "MUTUAL-DE-SERVICIOS-AL-POLICIA_PVA-NSIAF",
+    "main": 459346,
+    "sum": 863736,
+    "percentage": 0.5318129613678253
+  },
+  "heech1013_AFDA_SPACE": {
+    "name": "heech1013_AFDA_SPACE",
+    "main": 286357,
+    "sum": 334832,
+    "percentage": 0.8552259043341138
+  },
+  "aws-greengrass_aws-greengrass-testing": {
+    "name": "aws-greengrass_aws-greengrass-testing",
+    "main": 262343,
+    "sum": 285291,
+    "percentage": 0.9195628323361059
+  },
+  "copyit_whatsapp-web-incognito": {
+    "name": "copyit_whatsapp-web-incognito",
+    "main": 1843188,
+    "sum": 1852652,
+    "percentage": 0.9948916472170705
+  },
+  "hoprnet_hopr-devrel": {
+    "name": "hoprnet_hopr-devrel",
+    "main": 89765108,
+    "sum": 90148609,
+    "percentage": 0.9957459021913472
+  },
+  "4917EDSS_2019repo": {
+    "name": "4917EDSS_2019repo",
+    "main": 801491,
+    "sum": 804396,
+    "percentage": 0.9963885946722758
+  },
+  "leelab_picto-public": {
+    "name": "leelab_picto-public",
+    "main": 4280964,
+    "sum": 4684476,
+    "percentage": 0.9138618705699421
+  },
+  "kartoza_ford3": {
+    "name": "kartoza_ford3",
+    "main": 478585,
+    "sum": 751616,
+    "percentage": 0.6367413679325613
+  },
+  "Blazored_LocalStorage": {
+    "name": "Blazored_LocalStorage",
+    "main": 114549,
+    "sum": 115001,
+    "percentage": 0.9960695993947879
+  },
+  "KeithDHedger_KKEdit": {
+    "name": "KeithDHedger_KKEdit",
+    "main": 531728,
+    "sum": 699286,
+    "percentage": 0.7603870233352306
+  },
+  "AlexTim314_transportation": {
+    "name": "AlexTim314_transportation",
+    "main": 619820,
+    "sum": 1269469,
+    "percentage": 0.4882513869972406
+  },
+  "PacktWorkshops_The-Reinforcement-Learning-Workshop": {
+    "name": "PacktWorkshops_The-Reinforcement-Learning-Workshop",
+    "main": 6214489,
+    "sum": 6280273,
+    "percentage": 0.9895252961137199
+  },
+  "jjlee_amphetype": {
+    "name": "jjlee_amphetype",
+    "main": 84098,
+    "sum": 85541,
+    "percentage": 0.9831308962953438
+  },
+  "frictionlessdata_goodtables.io": {
+    "name": "frictionlessdata_goodtables.io",
+    "main": 328784,
+    "sum": 477337,
+    "percentage": 0.6887880051200724
+  },
+  "clarin-eric_VLO-mapping": {
+    "name": "clarin-eric_VLO-mapping",
+    "main": 4343,
+    "sum": 8556,
+    "percentage": 0.5075970079476391
+  },
+  "NovelService_NovelWorkerNode": {
+    "name": "NovelService_NovelWorkerNode",
+    "main": 13934,
+    "sum": 16788,
+    "percentage": 0.8299976173457231
+  },
+  "roddone_YeelightAPI": {
+    "name": "roddone_YeelightAPI",
+    "main": 212718,
+    "sum": 212718,
+    "percentage": 1.0
+  },
+  "rajaii_logicExercises": {
+    "name": "rajaii_logicExercises",
+    "main": 464934,
+    "sum": 483115,
+    "percentage": 0.9623671382590067
+  },
+  "zhengxiuyue_kb": {
+    "name": "zhengxiuyue_kb",
+    "main": 252157,
+    "sum": 252157,
+    "percentage": 1.0
+  },
+  "samuel-ping_personal-website": {
+    "name": "samuel-ping_personal-website",
+    "main": 40055,
+    "sum": 58029,
+    "percentage": 0.6902583191163039
+  },
+  "navikt_k9-dokument": {
+    "name": "navikt_k9-dokument",
+    "main": 108148,
+    "sum": 108193,
+    "percentage": 0.9995840766038468
+  },
+  "devingsun_spring-petclinic": {
+    "name": "devingsun_spring-petclinic",
+    "main": 97377,
+    "sum": 122088,
+    "percentage": 0.7975968154118341
+  },
+  "qileDai_quantizations": {
+    "name": "qileDai_quantizations",
+    "main": 210219,
+    "sum": 457284,
+    "percentage": 0.45971212638097986
+  },
+  "ncbi_robotframework-pageobjects": {
+    "name": "ncbi_robotframework-pageobjects",
+    "main": 165783,
+    "sum": 179889,
+    "percentage": 0.9215849774027317
+  },
+  "hpgem_nanomesh": {
+    "name": "hpgem_nanomesh",
+    "main": 51239575,
+    "sum": 51461918,
+    "percentage": 0.9956794653475605
+  },
+  "motoharu-gosuto_psvcmd56": {
+    "name": "motoharu-gosuto_psvcmd56",
+    "main": 958454,
+    "sum": 1043658,
+    "percentage": 0.9183602291172013
+  },
+  "emilva_vulcan-agent": {
+    "name": "emilva_vulcan-agent",
+    "main": 149197,
+    "sum": 149197,
+    "percentage": 1.0
+  },
+  "haskellweekly_haskellweekly.github.io": {
+    "name": "haskellweekly_haskellweekly.github.io",
+    "main": 72647,
+    "sum": 97738,
+    "percentage": 0.7432830628823999
+  },
+  "nielshintzen_vmstools": {
+    "name": "nielshintzen_vmstools",
+    "main": 555359,
+    "sum": 555359,
+    "percentage": 1.0
+  },
+  "moves-rwth_prophesy": {
+    "name": "moves-rwth_prophesy",
+    "main": 433271,
+    "sum": 445978,
+    "percentage": 0.9715075631533394
+  },
+  "daangamesdg_modmail-bot": {
+    "name": "daangamesdg_modmail-bot",
+    "main": 40605,
+    "sum": 40642,
+    "percentage": 0.9990896117317061
+  },
+  "tykwon97_CodingTest": {
+    "name": "tykwon97_CodingTest",
+    "main": 8965,
+    "sum": 8965,
+    "percentage": 1.0
+  },
+  "simeonhristov_softuni-courses": {
+    "name": "simeonhristov_softuni-courses",
+    "main": 1767868,
+    "sum": 2170121,
+    "percentage": 0.8146402896428356
+  },
+  "zanachka_arche": {
+    "name": "zanachka_arche",
+    "main": 194610,
+    "sum": 201139,
+    "percentage": 0.9675398604944839
+  },
+  "nTgc_til": {
+    "name": "nTgc_til",
+    "main": 431922,
+    "sum": 938369,
+    "percentage": 0.46029014172463073
+  },
+  "zjq383688496work_ry_create_s": {
+    "name": "zjq383688496work_ry_create_s",
+    "main": 1246808,
+    "sum": 1484565,
+    "percentage": 0.8398473626954697
+  },
+  "giantswarm_standup": {
+    "name": "giantswarm_standup",
+    "main": 95565,
+    "sum": 103051,
+    "percentage": 0.9273563575317076
+  },
+  "vshn_website": {
+    "name": "vshn_website",
+    "main": 226902,
+    "sum": 379647,
+    "percentage": 0.5976657263194494
+  },
+  "elim_dotfiles": {
+    "name": "elim_dotfiles",
+    "main": 94927,
+    "sum": 184925,
+    "percentage": 0.5133270244693795
+  },
+  "acm309_PutongOJ-FE": {
+    "name": "acm309_PutongOJ-FE",
+    "main": 133054,
+    "sum": 185603,
+    "percentage": 0.7168741884560056
+  },
+  "hpfem_agros2d": {
+    "name": "hpfem_agros2d",
+    "main": 2622091,
+    "sum": 5272010,
+    "percentage": 0.4973607789059581
+  },
+  "scrossuk_locic": {
+    "name": "scrossuk_locic",
+    "main": 3294783,
+    "sum": 3376159,
+    "percentage": 0.9758968697860497
+  },
+  "exasol_hadoop-etl-udfs": {
+    "name": "exasol_hadoop-etl-udfs",
+    "main": 315721,
+    "sum": 321922,
+    "percentage": 0.9807375699703655
+  },
+  "Automattic_mydb-client": {
+    "name": "Automattic_mydb-client",
+    "main": 20662,
+    "sum": 20801,
+    "percentage": 0.9933176289601462
+  },
+  "rubocop-hq_rubocop-rspec": {
+    "name": "rubocop-hq_rubocop-rspec",
+    "main": 977687,
+    "sum": 977687,
+    "percentage": 1.0
+  },
+  "rccm_maia_cloudmask_threshold_development": {
+    "name": "rccm_maia_cloudmask_threshold_development",
+    "main": 263297,
+    "sum": 279565,
+    "percentage": 0.9418095970525638
+  },
+  "aoi-bot_Aoi": {
+    "name": "aoi-bot_Aoi",
+    "main": 395129,
+    "sum": 625035,
+    "percentage": 0.6321709984240883
+  },
+  "tanepiper_node-bitly": {
+    "name": "tanepiper_node-bitly",
+    "main": 24707,
+    "sum": 26678,
+    "percentage": 0.9261188994677262
+  },
+  "oltulu_mx-packageinstaller": {
+    "name": "oltulu_mx-packageinstaller",
+    "main": 142781,
+    "sum": 150912,
+    "percentage": 0.9461209181509754
+  },
+  "abd-elrazek_cp": {
+    "name": "abd-elrazek_cp",
+    "main": 6514565,
+    "sum": 7296749,
+    "percentage": 0.8928037678149543
+  },
+  "estagio-guto_mands-frontend": {
+    "name": "estagio-guto_mands-frontend",
+    "main": 913264,
+    "sum": 1022189,
+    "percentage": 0.8934394715654346
+  },
+  "maeight_maki-frontend": {
+    "name": "maeight_maki-frontend",
+    "main": 5593361,
+    "sum": 5597297,
+    "percentage": 0.9992968034392314
+  },
+  "kas-tle_powder": {
+    "name": "kas-tle_powder",
+    "main": 253081,
+    "sum": 253081,
+    "percentage": 1.0
+  },
+  "doducthao_gans-2.0": {
+    "name": "doducthao_gans-2.0",
+    "main": 108869,
+    "sum": 117193,
+    "percentage": 0.9289718669203793
+  },
+  "pento_testpress": {
+    "name": "pento_testpress",
+    "main": 68162,
+    "sum": 76646,
+    "percentage": 0.8893092920700363
+  },
+  "Cardiogram_onsite-interview-project": {
+    "name": "Cardiogram_onsite-interview-project",
+    "main": 34463,
+    "sum": 45720,
+    "percentage": 0.7537839020122484
+  },
+  "cs50_video50": {
+    "name": "cs50_video50",
+    "main": 64076,
+    "sum": 98539,
+    "percentage": 0.6502603030272278
+  },
+  "unempl_java-01": {
+    "name": "unempl_java-01",
+    "main": 27329,
+    "sum": 27329,
+    "percentage": 1.0
+  },
+  "Ramesh-R05_cci-now-site": {
+    "name": "Ramesh-R05_cci-now-site",
+    "main": 1549417,
+    "sum": 1804480,
+    "percentage": 0.8586501374357155
+  },
+  "near_corgis": {
+    "name": "near_corgis",
+    "main": 420594,
+    "sum": 522722,
+    "percentage": 0.8046227248900946
+  },
+  "peipacut_Yasai": {
+    "name": "peipacut_Yasai",
+    "main": 107905,
+    "sum": 108666,
+    "percentage": 0.9929968895514696
+  },
+  "csvalpha_amber-api": {
+    "name": "csvalpha_amber-api",
+    "main": 651304,
+    "sum": 685798,
+    "percentage": 0.9497023904998265
+  },
+  "decorado_demo": {
+    "name": "decorado_demo",
+    "main": 1449340,
+    "sum": 1719064,
+    "percentage": 0.8430983372346812
+  },
+  "sml-nj_pages": {
+    "name": "sml-nj_pages",
+    "main": 380381,
+    "sum": 662230,
+    "percentage": 0.5743940926868308
+  },
+  "pingcap_pingcap.github.io": {
+    "name": "pingcap_pingcap.github.io",
+    "main": 17427,
+    "sum": 37356,
+    "percentage": 0.4665114037905557
+  },
+  "zuopf769_notebook": {
+    "name": "zuopf769_notebook",
+    "main": 2314057,
+    "sum": 2953963,
+    "percentage": 0.7833737253987271
+  },
+  "shumail92_iris": {
+    "name": "shumail92_iris",
+    "main": 1195968,
+    "sum": 1208827,
+    "percentage": 0.9893624149692223
+  },
+  "SunSpecOrangeButton_pyoblib": {
+    "name": "SunSpecOrangeButton_pyoblib",
+    "main": 421315,
+    "sum": 435433,
+    "percentage": 0.9675771014139948
+  },
+  "matrix-io_matrixio-kernel-modules": {
+    "name": "matrix-io_matrixio-kernel-modules",
+    "main": 75188,
+    "sum": 77354,
+    "percentage": 0.9719988623729865
+  },
+  "sequal32_yourcontrol": {
+    "name": "sequal32_yourcontrol",
+    "main": 300755,
+    "sum": 366958,
+    "percentage": 0.8195897078139732
+  },
+  "xenomarz_Autoquads": {
+    "name": "xenomarz_Autoquads",
+    "main": 408043,
+    "sum": 709785,
+    "percentage": 0.574882534852103
+  },
+  "tgen_jetstream": {
+    "name": "tgen_jetstream",
+    "main": 247610,
+    "sum": 260936,
+    "percentage": 0.9489300058251832
+  },
+  "SEEDtk_RASTtk": {
+    "name": "SEEDtk_RASTtk",
+    "main": 1435654,
+    "sum": 1462262,
+    "percentage": 0.9818035345239089
+  },
+  "wdrz_gamma": {
+    "name": "wdrz_gamma",
+    "main": 83769,
+    "sum": 86513,
+    "percentage": 0.9682822234808641
+  },
+  "i-lateral_silverstripe-googlemaps": {
+    "name": "i-lateral_silverstripe-googlemaps",
+    "main": 31358,
+    "sum": 44514,
+    "percentage": 0.7044525317877521
+  },
+  "zhangxinghao_pmsis_api": {
+    "name": "zhangxinghao_pmsis_api",
+    "main": 213700,
+    "sum": 266578,
+    "percentage": 0.8016415458139832
+  },
+  "DevLyon_mixter": {
+    "name": "DevLyon_mixter",
+    "main": 55033,
+    "sum": 80283,
+    "percentage": 0.6854875876586575
+  },
+  "noi-techpark_odh-docs": {
+    "name": "noi-techpark_odh-docs",
+    "main": 8374,
+    "sum": 29748,
+    "percentage": 0.28149791582627404
+  },
+  "itdoge_wechat-core": {
+    "name": "itdoge_wechat-core",
+    "main": 171124,
+    "sum": 171124,
+    "percentage": 1.0
+  },
+  "djailla_quantiphy": {
+    "name": "djailla_quantiphy",
+    "main": 275122,
+    "sum": 275560,
+    "percentage": 0.9984105095079112
+  },
+  "artemv_ruby-starter-kit": {
+    "name": "artemv_ruby-starter-kit",
+    "main": 8472,
+    "sum": 9161,
+    "percentage": 0.9247898701015173
+  },
+  "dart-lang_dart-services": {
+    "name": "dart-lang_dart-services",
+    "main": 450628,
+    "sum": 460656,
+    "percentage": 0.9782310444236046
+  },
+  "mia3_crossmedia_fourallportal": {
+    "name": "mia3_crossmedia_fourallportal",
+    "main": 342928,
+    "sum": 367004,
+    "percentage": 0.9343985351658293
+  },
+  "MassBank_MassBank-data": {
+    "name": "MassBank_MassBank-data",
+    "main": 7402,
+    "sum": 12576,
+    "percentage": 0.5885814249363868
+  },
+  "jalammar_ecco": {
+    "name": "jalammar_ecco",
+    "main": 1370414,
+    "sum": 1561897,
+    "percentage": 0.8774035675848023
+  },
+  "pharmacome_conib": {
+    "name": "pharmacome_conib",
+    "main": 2633005,
+    "sum": 2634813,
+    "percentage": 0.9993138032945792
+  },
+  "sld-columbia_esp": {
+    "name": "sld-columbia_esp",
+    "main": 13313215,
+    "sum": 23504430,
+    "percentage": 0.5664130123555432
+  },
+  "compwiztobe_opustools": {
+    "name": "compwiztobe_opustools",
+    "main": 242910,
+    "sum": 242910,
+    "percentage": 1.0
+  },
+  "cimbert_datatoolbox": {
+    "name": "cimbert_datatoolbox",
+    "main": 9914099,
+    "sum": 17204923,
+    "percentage": 0.5762361737974648
+  },
+  "sineshydro_sineshydro": {
+    "name": "sineshydro_sineshydro",
+    "main": 303398,
+    "sum": 320710,
+    "percentage": 0.9460197686383337
+  },
+  "dcoeurjo_ICTV": {
+    "name": "dcoeurjo_ICTV",
+    "main": 4538432,
+    "sum": 6279157,
+    "percentage": 0.7227772772682702
+  },
+  "dpiparo_vdt": {
+    "name": "dpiparo_vdt",
+    "main": 203478,
+    "sum": 279344,
+    "percentage": 0.7284137121255513
+  },
+  "open-atmos_PyPartMC": {
+    "name": "open-atmos_PyPartMC",
+    "main": 175727,
+    "sum": 508007,
+    "percentage": 0.3459145247998551
+  },
+  "weinbergerlab_InterventionEvaluatR": {
+    "name": "weinbergerlab_InterventionEvaluatR",
+    "main": 428554,
+    "sum": 583376,
+    "percentage": 0.734610268506075
+  },
+  "fbeutel_gdshelpers": {
+    "name": "fbeutel_gdshelpers",
+    "main": 886007,
+    "sum": 886007,
+    "percentage": 1.0
+  },
+  "paulscherrerinstitute_slic": {
+    "name": "paulscherrerinstitute_slic",
+    "main": 517178,
+    "sum": 517255,
+    "percentage": 0.9998511372533857
+  },
+  "gsutanto_dmp": {
+    "name": "gsutanto_dmp",
+    "main": 2005953,
+    "sum": 5751417,
+    "percentage": 0.3487754409043893
+  },
+  "numbbo_coco": {
+    "name": "numbbo_coco",
+    "main": 3035850,
+    "sum": 5610447,
+    "percentage": 0.5411066177080008
+  },
+  "ndeutschmann_zunis": {
+    "name": "ndeutschmann_zunis",
+    "main": 9033605,
+    "sum": 9378639,
+    "percentage": 0.9632106534860762
+  },
+  "msiplab_SaivDr": {
+    "name": "msiplab_SaivDr",
+    "main": 10204282,
+    "sum": 11171597,
+    "percentage": 0.9134130062156736
+  },
+  "EranOfek_AstroPack": {
+    "name": "EranOfek_AstroPack",
+    "main": 12928360,
+    "sum": 25797407,
+    "percentage": 0.5011495922826662
+  },
+  "amishc_must": {
+    "name": "amishc_must",
+    "main": 8922345,
+    "sum": 15592134,
+    "percentage": 0.5722337301616315
+  },
+  "monocongo_climate_indices": {
+    "name": "monocongo_climate_indices",
+    "main": 1004742,
+    "sum": 1078869,
+    "percentage": 0.931291936277713
+  },
+  "ccsb-scripps_AutoDock-GPU": {
+    "name": "ccsb-scripps_AutoDock-GPU",
+    "main": 1192153,
+    "sum": 2179274,
+    "percentage": 0.547041354139039
+  },
+  "mozack_abra2": {
+    "name": "mozack_abra2",
+    "main": 520270,
+    "sum": 728093,
+    "percentage": 0.714565309651377
+  },
+  "AuthorCarpentry_orcid-profile": {
+    "name": "AuthorCarpentry_orcid-profile",
+    "main": 40839,
+    "sum": 47328,
+    "percentage": 0.8628930020283976
+  },
+  "muhanzhang_pytorch_DGCNN": {
+    "name": "muhanzhang_pytorch_DGCNN",
+    "main": 30465,
+    "sum": 51595,
+    "percentage": 0.5904641922666926
+  },
+  "wino6687_SWEpy": {
+    "name": "wino6687_SWEpy",
+    "main": 92574,
+    "sum": 94196,
+    "percentage": 0.9827805851628519
+  },
+  "thermohub_thermofun": {
+    "name": "thermohub_thermofun",
+    "main": 1111138,
+    "sum": 1574645,
+    "percentage": 0.7056434942479098
+  },
+  "wgslsmith_wgslsmith": {
+    "name": "wgslsmith_wgslsmith",
+    "main": 386979,
+    "sum": 422470,
+    "percentage": 0.9159916680474354
+  },
+  "sccn_BCILAB": {
+    "name": "sccn_BCILAB",
+    "main": 8826589,
+    "sum": 12344552,
+    "percentage": 0.7150189816527971
+  },
+  "yuzhenpeng_ragout": {
+    "name": "yuzhenpeng_ragout",
+    "main": 261548,
+    "sum": 338419,
+    "percentage": 0.772852588063909
+  },
+  "zaneveld_GCMP_Global_Disease": {
+    "name": "zaneveld_GCMP_Global_Disease",
+    "main": 10352399,
+    "sum": 12987032,
+    "percentage": 0.7971335559964741
+  },
+  "sweirich_corespec": {
+    "name": "sweirich_corespec",
+    "main": 2299079,
+    "sum": 2477411,
+    "percentage": 0.9280167884941174
+  },
+  "Rbbt-Workflows_HTS": {
+    "name": "Rbbt-Workflows_HTS",
+    "main": 324741,
+    "sum": 334248,
+    "percentage": 0.971557047461765
+  },
+  "bluescarni_obake": {
+    "name": "bluescarni_obake",
+    "main": 2260597,
+    "sum": 2358726,
+    "percentage": 0.9583974569322592
+  },
+  "r-gorajski_mvt-project": {
+    "name": "r-gorajski_mvt-project",
+    "main": 268602,
+    "sum": 272295,
+    "percentage": 0.9864375034429571
+  },
+  "analogdevicesinc_aditof_sdk": {
+    "name": "analogdevicesinc_aditof_sdk",
+    "main": 1788024,
+    "sum": 2495824,
+    "percentage": 0.7164062850585619
+  },
+  "stardist_stardist": {
+    "name": "stardist_stardist",
+    "main": 361512,
+    "sum": 500156,
+    "percentage": 0.7227984868720959
+  },
+  "umple_umple": {
+    "name": "umple_umple",
+    "main": 41080211,
+    "sum": 50947017,
+    "percentage": 0.8063320174368599
+  },
+  "Zeju1997_data_halucination_teaching": {
+    "name": "Zeju1997_data_halucination_teaching",
+    "main": 1059128,
+    "sum": 1059128,
+    "percentage": 1.0
+  },
+  "JuliaSmoothOptimizers_QRMumps.jl": {
+    "name": "JuliaSmoothOptimizers_QRMumps.jl",
+    "main": 131342,
+    "sum": 131342,
+    "percentage": 1.0
+  },
+  "nasa-jpl-memex_GeoParser": {
+    "name": "nasa-jpl-memex_GeoParser",
+    "main": 1294049,
+    "sum": 2094887,
+    "percentage": 0.617717805304057
+  },
+  "payoto_rsvs3d": {
+    "name": "payoto_rsvs3d",
+    "main": 1300106,
+    "sum": 1925447,
+    "percentage": 0.6752229482296838
+  },
+  "rzellem_EXOTIC": {
+    "name": "rzellem_EXOTIC",
+    "main": 698706,
+    "sum": 708807,
+    "percentage": 0.985749294236654
+  },
+  "higlass_higlass-server": {
+    "name": "higlass_higlass-server",
+    "main": 275326,
+    "sum": 335800,
+    "percentage": 0.8199106611078023
+  },
+  "stuart-lab_signac": {
+    "name": "stuart-lab_signac",
+    "main": 530231,
+    "sum": 551321,
+    "percentage": 0.9617464235898868
+  },
+  "Newmu_dcgan_code": {
+    "name": "Newmu_dcgan_code",
+    "main": 52806,
+    "sum": 52806,
+    "percentage": 1.0
+  },
+  "Rothamsted_knetmaps.js": {
+    "name": "Rothamsted_knetmaps.js",
+    "main": 2083033,
+    "sum": 2116607,
+    "percentage": 0.9841378205779344
+  },
+  "warmspringwinds_tf-image-segmentation": {
+    "name": "warmspringwinds_tf-image-segmentation",
+    "main": 105611,
+    "sum": 196287,
+    "percentage": 0.5380437828282056
+  },
+  "choderalab_ensembler": {
+    "name": "choderalab_ensembler",
+    "main": 423207,
+    "sum": 430360,
+    "percentage": 0.9833790315085045
+  },
+  "PASTAQ-MS_PASTAQ": {
+    "name": "PASTAQ-MS_PASTAQ",
+    "main": 728973,
+    "sum": 867018,
+    "percentage": 0.8407818522798834
+  },
+  "rhilker_ReadXplorer": {
+    "name": "rhilker_ReadXplorer",
+    "main": 6032539,
+    "sum": 6194253,
+    "percentage": 0.9738928971742032
+  },
+  "fetchai_colearn": {
+    "name": "fetchai_colearn",
+    "main": 352436,
+    "sum": 353947,
+    "percentage": 0.9957309992739026
+  },
+  "ptiede_ROSE.jl": {
+    "name": "ptiede_ROSE.jl",
+    "main": 307419,
+    "sum": 314159,
+    "percentage": 0.9785458955497057
+  },
+  "traviskemper_streamm": {
+    "name": "traviskemper_streamm",
+    "main": 1169915,
+    "sum": 1194393,
+    "percentage": 0.979505908021899
+  },
+  "jackwasey_icd": {
+    "name": "jackwasey_icd",
+    "main": 960447,
+    "sum": 1269533,
+    "percentage": 0.7565356709908289
+  },
+  "vhive-serverless_vSwarm-u": {
+    "name": "vhive-serverless_vSwarm-u",
+    "main": 172642,
+    "sum": 335891,
+    "percentage": 0.5139822144683841
+  },
+  "biocompute-objects_BCO_Specification": {
+    "name": "biocompute-objects_BCO_Specification",
+    "main": 15988,
+    "sum": 29145,
+    "percentage": 0.5485675072911306
+  },
+  "gwf-uwaterloo_Cuizinart": {
+    "name": "gwf-uwaterloo_Cuizinart",
+    "main": 83047,
+    "sum": 143975,
+    "percentage": 0.576815419343636
+  },
+  "p13i_ospray-module-pkd": {
+    "name": "p13i_ospray-module-pkd",
+    "main": 104067,
+    "sum": 111533,
+    "percentage": 0.9330601705324881
+  },
+  "charlottegiseleweil_ipbes": {
+    "name": "charlottegiseleweil_ipbes",
+    "main": 301661,
+    "sum": 677418,
+    "percentage": 0.44530998585806697
+  },
+  "scottbmortensen_sasap-training": {
+    "name": "scottbmortensen_sasap-training",
+    "main": 36584,
+    "sum": 90985,
+    "percentage": 0.4020882563059845
+  },
+  "apple_llvm-project-v5-split": {
+    "name": "apple_llvm-project-v5-split",
+    "main": 5616521,
+    "sum": 5862358,
+    "percentage": 0.9580651676339111
+  },
+  "hbc_bcbioRNASeq": {
+    "name": "hbc_bcbioRNASeq",
+    "main": 187484,
+    "sum": 187539,
+    "percentage": 0.9997067276673118
+  },
+  "mkocabas_VIBE": {
+    "name": "mkocabas_VIBE",
+    "main": 314637,
+    "sum": 316241,
+    "percentage": 0.9949279188972967
+  },
+  "evilnose_wx-test": {
+    "name": "evilnose_wx-test",
+    "main": 1043837,
+    "sum": 1043837,
+    "percentage": 1.0
+  },
+  "anskarl_LoMRF": {
+    "name": "anskarl_LoMRF",
+    "main": 1555544,
+    "sum": 1560600,
+    "percentage": 0.9967602204280405
+  },
+  "LooseLab_readfish": {
+    "name": "LooseLab_readfish",
+    "main": 258581,
+    "sum": 258581,
+    "percentage": 1.0
+  },
+  "allenai_document-qa": {
+    "name": "allenai_document-qa",
+    "main": 647596,
+    "sum": 664191,
+    "percentage": 0.9750147171521445
+  },
+  "aiqm_torchani": {
+    "name": "aiqm_torchani",
+    "main": 3268536,
+    "sum": 3416012,
+    "percentage": 0.9568280205104666
+  },
+  "google-research_planet": {
+    "name": "google-research_planet",
+    "main": 251609,
+    "sum": 251609,
+    "percentage": 1.0
+  },
+  "Thierry-Dumont_BenchmarksPythonJuliaAndCo": {
+    "name": "Thierry-Dumont_BenchmarksPythonJuliaAndCo",
+    "main": 133745,
+    "sum": 325188,
+    "percentage": 0.4112851642742045
+  },
+  "BIO6032_2019_replication_LipstichEtAl_1996": {
+    "name": "BIO6032_2019_replication_LipstichEtAl_1996",
+    "main": 94592,
+    "sum": 198258,
+    "percentage": 0.4771156775514733
+  },
+  "YuLab-SMU_MicrobiotaProcess": {
+    "name": "YuLab-SMU_MicrobiotaProcess",
+    "main": 730836,
+    "sum": 749108,
+    "percentage": 0.9756083234994153
+  },
+  "ArnaudDroitLab_RJMCMCNucleosomes": {
+    "name": "ArnaudDroitLab_RJMCMCNucleosomes",
+    "main": 161286,
+    "sum": 248572,
+    "percentage": 0.6488502325282011
+  },
+  "anxie_video_prediction-1": {
+    "name": "anxie_video_prediction-1",
+    "main": 419237,
+    "sum": 432703,
+    "percentage": 0.9688793468036968
+  },
+  "SimNPH_SimNPH": {
+    "name": "SimNPH_SimNPH",
+    "main": 375640,
+    "sum": 375640,
+    "percentage": 1.0
+  },
+  "werner-duvaud_muzero-general": {
+    "name": "werner-duvaud_muzero-general",
+    "main": 252225,
+    "sum": 252225,
+    "percentage": 1.0
+  },
+  "siqad_siqad": {
+    "name": "siqad_siqad",
+    "main": 757277,
+    "sum": 1437446,
+    "percentage": 0.5268211814565555
+  },
+  "MolSSI_covid": {
+    "name": "MolSSI_covid",
+    "main": 131702,
+    "sum": 158704,
+    "percentage": 0.8298593608226635
+  },
+  "symoro_symoro": {
+    "name": "symoro_symoro",
+    "main": 521941,
+    "sum": 522038,
+    "percentage": 0.9998141897716258
+  },
+  "OpenPIV_openpiv-python": {
+    "name": "OpenPIV_openpiv-python",
+    "main": 10001722,
+    "sum": 10490565,
+    "percentage": 0.9534016518652714
+  },
+  "NHDaly_jupyter-binder": {
+    "name": "NHDaly_jupyter-binder",
+    "main": 4529578,
+    "sum": 4899162,
+    "percentage": 0.924561792404497
+  },
+  "d-suvorov_EFSM-tools": {
+    "name": "d-suvorov_EFSM-tools",
+    "main": 3430934,
+    "sum": 6530878,
+    "percentage": 0.5253403906794768
+  },
+  "DanielKotik_Optical-beams-MEEP": {
+    "name": "DanielKotik_Optical-beams-MEEP",
+    "main": 73949,
+    "sum": 128400,
+    "percentage": 0.5759267912772585
+  },
+  "NHERI-SimCenter_smelt": {
+    "name": "NHERI-SimCenter_smelt",
+    "main": 353602,
+    "sum": 369876,
+    "percentage": 0.9560014707631747
+  },
+  "hackingmaterials_automatminer": {
+    "name": "hackingmaterials_automatminer",
+    "main": 295282,
+    "sum": 296656,
+    "percentage": 0.9953683727954263
+  },
+  "WGLab_mutformer": {
+    "name": "WGLab_mutformer",
+    "main": 10339025,
+    "sum": 10642627,
+    "percentage": 0.9714730207118976
+  },
+  "meoke_pangtree": {
+    "name": "meoke_pangtree",
+    "main": 325981,
+    "sum": 328870,
+    "percentage": 0.991215373855931
+  },
+  "cpmech_gosl": {
+    "name": "cpmech_gosl",
+    "main": 1676706,
+    "sum": 2103433,
+    "percentage": 0.7971283135711953
+  },
+  "cheind_pytorch-blender": {
+    "name": "cheind_pytorch-blender",
+    "main": 115481,
+    "sum": 115936,
+    "percentage": 0.9960754209218879
+  },
+  "tud-hri_joan": {
+    "name": "tud-hri_joan",
+    "main": 491139,
+    "sum": 514530,
+    "percentage": 0.954539093930383
+  },
+  "neo-x_promp": {
+    "name": "neo-x_promp",
+    "main": 351110,
+    "sum": 351110,
+    "percentage": 1.0
+  },
+  "deepdrive_deepdrive-2d": {
+    "name": "deepdrive_deepdrive-2d",
+    "main": 377502,
+    "sum": 379330,
+    "percentage": 0.995180976985738
+  },
+  "nextstrain_augur": {
+    "name": "nextstrain_augur",
+    "main": 1173646,
+    "sum": 1549878,
+    "percentage": 0.7572505706900802
+  },
+  "fossabot_mendelmd": {
+    "name": "fossabot_mendelmd",
+    "main": 2215721,
+    "sum": 4206650,
+    "percentage": 0.5267186478551816
+  },
+  "jmacglashan_burlap": {
+    "name": "jmacglashan_burlap",
+    "main": 2085549,
+    "sum": 2085549,
+    "percentage": 1.0
+  },
+  "paperai_pdfanno": {
+    "name": "paperai_pdfanno",
+    "main": 778903,
+    "sum": 865491,
+    "percentage": 0.8999550544141995
+  },
+  "auerlab_vcfio": {
+    "name": "auerlab_vcfio",
+    "main": 595818,
+    "sum": 611002,
+    "percentage": 0.975149017515491
+  },
+  "linjianma_planc": {
+    "name": "linjianma_planc",
+    "main": 449341,
+    "sum": 484893,
+    "percentage": 0.9266807316253276
+  },
+  "hzi-braunschweig_serohub": {
+    "name": "hzi-braunschweig_serohub",
+    "main": 37206,
+    "sum": 43708,
+    "percentage": 0.8512400475885421
+  },
+  "github_CodeSearchNet": {
+    "name": "github_CodeSearchNet",
+    "main": 368173,
+    "sum": 665653,
+    "percentage": 0.5531004892939715
+  },
+  "connectomicslab_connectomemapper3": {
+    "name": "connectomicslab_connectomemapper3",
+    "main": 7444819,
+    "sum": 9130262,
+    "percentage": 0.8154003685764987
+  },
+  "superdev7_python-robotic": {
+    "name": "superdev7_python-robotic",
+    "main": 3266548,
+    "sum": 4099074,
+    "percentage": 0.7968990069464469
+  },
+  "facebookresearch_pplbench": {
+    "name": "facebookresearch_pplbench",
+    "main": 189613,
+    "sum": 225582,
+    "percentage": 0.8405502212055926
+  },
+  "cthoyt_gilda": {
+    "name": "cthoyt_gilda",
+    "main": 303377,
+    "sum": 428870,
+    "percentage": 0.7073868538251684
+  },
+  "CRMTH_RITHM": {
+    "name": "CRMTH_RITHM",
+    "main": 133098,
+    "sum": 138450,
+    "percentage": 0.9613434452871072
+  },
+  "facebook_Ax": {
+    "name": "facebook_Ax",
+    "main": 8355079,
+    "sum": 8788244,
+    "percentage": 0.9507108587335535
+  },
+  "shirtsgroup_cg_openmm": {
+    "name": "shirtsgroup_cg_openmm",
+    "main": 1135541,
+    "sum": 1136840,
+    "percentage": 0.9988573589951093
+  },
+  "bismex_mmd-gan": {
+    "name": "bismex_mmd-gan",
+    "main": 456430,
+    "sum": 469586,
+    "percentage": 0.9719838325674104
+  },
+  "ClimateMind_climatemind-frontend": {
+    "name": "ClimateMind_climatemind-frontend",
+    "main": 329265,
+    "sum": 333119,
+    "percentage": 0.988430560850627
+  },
+  "rogersce_cnpy": {
+    "name": "rogersce_cnpy",
+    "main": 24346,
+    "sum": 26256,
+    "percentage": 0.9272547227300426
+  },
+  "johnlees_PopPUNK": {
+    "name": "johnlees_PopPUNK",
+    "main": 605720,
+    "sum": 637975,
+    "percentage": 0.9494415925388926
+  },
+  "FragIt_fragit-main": {
+    "name": "FragIt_fragit-main",
+    "main": 204483,
+    "sum": 204866,
+    "percentage": 0.9981304852928256
+  },
+  "guilbaults_TrailblazingTurtle": {
+    "name": "guilbaults_TrailblazingTurtle",
+    "main": 554693,
+    "sum": 710136,
+    "percentage": 0.7811081257674586
+  },
+  "ITISFoundation_osparc-iseg": {
+    "name": "ITISFoundation_osparc-iseg",
+    "main": 2868710,
+    "sum": 2930481,
+    "percentage": 0.9789212078153723
+  },
+  "open-gamma-ray-astro_gamma-astro-data-formats": {
+    "name": "open-gamma-ray-astro_gamma-astro-data-formats",
+    "main": 32217,
+    "sum": 46896,
+    "percentage": 0.6869882292732856
+  },
+  "GLEON_LakeMetabolizer": {
+    "name": "GLEON_LakeMetabolizer",
+    "main": 160939,
+    "sum": 165897,
+    "percentage": 0.970113986389145
+  }
+}

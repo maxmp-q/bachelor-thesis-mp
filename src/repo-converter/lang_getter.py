@@ -1,7 +1,5 @@
-import csv
 import json
 import requests
-import random
 from constants import GITHUB_ACCESS_KEY
 
 
@@ -28,25 +26,47 @@ def get_lang(_name, _lang):
 
 
 if __name__ == "__main__":
-    with open('../data/lang/all_langs_git.json', 'r') as git_file:
-        git = json.load(git_file)
+    langDict = {}
 
-    with open('dataset/dataset.csv', mode='r') as file:
-        csvFile = list(csv.reader(file))
+    with open('analyzed_data.json', mode='r') as file:
+        data = json.load(file)
 
-    header, rows = csvFile[0], csvFile[1:]
-    random_rows = random.sample(rows, 500)
+    for point in data.values():
+        name = point['name']
+        print(name)
+        author, repo = name.split('_', 1)
+        _GITURL = f"https://api.github.com/repos/{author}/{repo}/languages"
+        _headers = {"Authorization": f"token {GITHUB_ACCESS_KEY}"}
 
-    for lines in random_rows:
-        result = lines[0].split(';')
-        name = result[0]
-        lang_for_csv = result[13]
+        response = requests.get(_GITURL, headers=_headers).json()
 
-        git.append(get_lang(name, lang_for_csv))
+        _main = 0
+        _sum = 0
+        try:
+            for lang in response.values():
+                _sum += lang
+                if _main <= lang:
+                    _main = lang
+
+            _percentage = 0
+
+            if _sum != 0:
+                _percentage = _main / _sum
+
+            langDict[name] = {
+                "name" : name,
+                "main" : _main,
+                "sum" : _sum,
+                "percentage" : _percentage
+            }
+        except:
+            print("kaka am dampfen!!")
+
+        print(f"{langDict.__len__()} von {data.values().__len__()}")
 
 
-    with open("lang/all_langs_git.json", mode="w", encoding="utf-8") as f:
-        json.dump(list(set(git)), f, indent=2)
+    with open("lang/langsForConc.json", mode="w", encoding="utf-8") as f:
+        json.dump(langDict, f, indent=2)
 
-    print(set(git))
+    print(langDict)
     print("Habe fertig!")
