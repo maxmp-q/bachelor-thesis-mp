@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnDestroy, signal} from '@angular/core';
-import { ScoredData} from '../../../shared/interface/data-point';
+import {LanguageDto, ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper, getAverage} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
@@ -17,6 +17,7 @@ import {generateBucketLineConfig} from '../../utilities/utility';
 })
 export class CommonCharts implements AfterViewInit, OnDestroy{
   dataPoints = signal<Record<string, ScoredData>>(DataHelper.getScoredData());
+  languages = signal<Record<string, LanguageDto>>(DataHelper.getLanguages());
 
   allNonReactivePlots = signal<Chart[]>([]);
 
@@ -24,6 +25,7 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
     this.createScoringLine();
     this.createAverageScoring();
     this.createScoringBoxplot();
+    this.createLangPie();
   }
 
   /**
@@ -133,6 +135,66 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
 
 
     const canvas = document.getElementById('ScoringBoxplot') as HTMLCanvasElement;
+    if (canvas) {
+      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    }
+  }
+
+  /**
+   * Creates a pie chart where the language percentage is shown!
+   * @private
+   */
+  private createLangPie(): void {
+    const languages = this.languages();
+
+    const bucketSize = 0.1;
+    const buckets: Record<number, number> = {};
+
+    Object.values(languages).forEach(lang => {
+      const bucket = Math.floor(lang.percentage / bucketSize) * bucketSize;
+
+      buckets[bucket] ??= 0;
+      buckets[bucket]++;
+    })
+
+    const sortedKeys = Object.keys(buckets)
+      .map(Number)
+      .sort((a, b) => a - b);
+
+    const dataValues = sortedKeys.map(k => buckets[k]);
+
+    const backgroundColors = sortedKeys.map((_, i) =>
+      `hsl(${(i * 40) % 360}, 70%, 60%)`
+    );
+
+    const config: ChartConfiguration = {
+        type: 'pie' as ChartType,
+        data: {
+          labels: sortedKeys,
+          datasets: [
+            {
+              label: '',
+              data: dataValues,
+              backgroundColor: backgroundColors,
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {position: 'top'},
+            title: {
+              display: true,
+              text: 'Language Percentage Distribution'
+            }
+          }
+        }
+      };
+
+
+    const canvas = document.getElementById('LanguagePie') as HTMLCanvasElement;
     if (canvas) {
       this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
     }

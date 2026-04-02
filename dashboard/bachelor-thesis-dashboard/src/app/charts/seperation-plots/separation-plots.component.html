@@ -1,0 +1,53 @@
+<section class="chart-wrapper">
+  <canvas class="chart" id="BusinessVsResearchInMethodLength"></canvas>
+
+  <canvas class="chart" id="MethodLengthByLang"></canvas>
+  <section class="increase-button-wrapper">
+    <span>Min Count of Lang </span>
+    <input [(ngModel)]="MethodByLangMin" type="number"/>
+  </section>
+
+
+  <canvas class="chart" id="MethodLengthByValueSci"></canvas>
+  <canvas class="chart" id="MethodLengthByValueNonSci"></canvas>
+
+  <app-field-bar-plot
+    [key]="scope()"
+    [sub_key]="MethodByFieldValue()"
+  />
+  <span> Select red, yellow, green here</span>
+  <select [(ngModel)]="MethodByFieldValue">
+    @for(item of MethodByFieldOptions(); track item){
+      <option [ngValue]="item">
+        {{ item }}
+      </option>
+    }
+  </select>
+
+  <app-scatter-plot
+    [key1]="scope()"
+    sub_key1="red"
+    [max_key1]="10000"
+    [changeValue_key1]="500"
+
+    key2="LOC"
+    [max_key2]="200000"
+    [changeValue_key2]="20000"
+
+    selectOption="lang"
+  />
+
+  @for(key of MethodByFieldOptions(); track key){
+    <canvas class="chart" [id]="'MethodLOC'+key"></canvas>
+  }
+
+  @for(key of MethodByFieldOptions(); track key){
+    <canvas class="chart" [id]="'Methodfiles'+key"></canvas>
+  }
+
+  @for(key of MethodByFieldOptions(); track key){
+    <canvas class="chart" [id]="'Methodauthors'+key"></canvas>
+  }
+
+
+</section>

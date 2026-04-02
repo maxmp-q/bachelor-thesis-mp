@@ -36,3 +36,10 @@ export interface Separation{
     yellow: number;
     green: number;
 }
+
+export interface LanguageDto {
+  name: string;
+  main: number;
+  sum: number;
+  percentage: number;
+}

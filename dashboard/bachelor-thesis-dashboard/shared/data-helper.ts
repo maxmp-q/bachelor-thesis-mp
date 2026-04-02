@@ -1,5 +1,6 @@
-import {AnalyzedData, ScoredData, Separation} from './interface/data-point';
+import {AnalyzedData, LanguageDto, ScoredData, Separation} from './interface/data-point';
 import analyzedData from '../../../src/data/analyzed_data.json';
+import languages from '../../../src/data/lang/langsForConc.json';
 
 
 export const getAverage = (arr: number[]): number => arr.reduce((a, b) => a + b, 0) / arr.length;
@@ -19,9 +20,14 @@ export const getMedian = (array: number[]): number => {
 
 export class DataHelper{
     private static data_points: Record<string, AnalyzedData> = analyzedData;
+    private static languages: Record<string, LanguageDto> = languages;
 
     static get getData(): Record<string, AnalyzedData>  {
         return this.data_points;
+    }
+
+    static getLanguages(): Record<string, LanguageDto>{
+      return this.languages;
     }
 
     static getValue<
