@@ -10,13 +10,6 @@
 
   <canvas class="chart" id="FindingsBarSciNonSci"></canvas>
   <label>
-    Should count or count red be displayed? (current: {{barCount() ? 'count' : 'count red'}})
-    <input
-      type="checkbox"
-      [(ngModel)]="barCount"
-    />
-  </label>
-  <label>
     Should count/count red be displayed by average or median? (current: {{barMedian() ? 'median' : 'average'}})
     <input
       type="checkbox"
@@ -47,6 +40,8 @@
   <app-field-bar-plot
     key="findings_count"
   />
+
+  <canvas class="chart" id="FindingsLangBar"></canvas>
 
   <canvas class="chart" id="FindingsLineLOC"></canvas>
   <canvas class="chart" id="FindingsLinefiles"></canvas>

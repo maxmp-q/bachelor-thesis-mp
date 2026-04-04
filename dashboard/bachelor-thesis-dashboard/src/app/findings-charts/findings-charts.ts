@@ -3,7 +3,7 @@ import {ScoredData} from '../../../shared/interface/data-point';
 import {DataHelper, getAverage, getMedian} from '../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
-import {generateBucketLineConfig, updateChart} from '../../utilities/utility';
+import {generateBucketLineConfig, generateLangBarConfig, updateChart} from '../../utilities/utility';
 import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
 
 export const findings = [
@@ -121,15 +121,18 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     return config;
   });
 
-  barCount = signal<boolean>(true);
   barMedian = signal<boolean>(false);
   BarChart= signal<Chart | null>(null);
   BarConfig = computed(() => {
     const dataPoints = this.dataPoints();
-    const barCount = this.barCount();
     const barMedian = this.barMedian();
 
-    const data: SciFields<Record<string, number[]>> = {
+    const count: SciFields<Record<string, number[]>> = {
+      isSci: {},
+      nonSci: {}
+    };
+
+    const countRed: SciFields<Record<string, number[]>> = {
       isSci: {},
       nonSci: {}
     };
@@ -138,29 +141,32 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
       const scope = dataPoint.field === "nonSci" ? 'nonSci' : 'isSci';
 
       dataPoint.findings_details.forEach(finding => {
-        data[scope] ??= {};
+        count[scope] ??= {};
+        countRed[scope] ??= {};
 
-        const record = data[scope];
+        const record = count[scope];
+        const recordRed = countRed[scope];
+
         record[finding.categoryName] ??= [];
-        record[finding.categoryName].push(barCount ? finding.count : finding.countRed);
+        record[finding.categoryName].push(finding.count);
+
+        recordRed[finding.categoryName] ??= [];
+        recordRed[finding.categoryName].push(finding.countRed);
       })
     });
 
-    const labels = Object.keys(data.nonSci!).map(key => key);
+    const labels = Object.keys(count.nonSci!).map(key => key);
 
-    const isSciData = Object.values(data.isSci!)
-      .map(arr =>
-        barMedian ?
-          Math.floor(getMedian(arr)) :
-          Math.floor(getAverage(arr))
-      );
+    const getData = (arr: number[][]): number[] => {
+      return arr.map(a => barMedian ?
+        Math.floor(getMedian(a)) :
+        Math.floor(getAverage(a)))
+    }
 
-    const nonSciData = Object.values(data.nonSci!)
-      .map(arr =>
-        barMedian ?
-          Math.floor(getMedian(arr)) :
-          Math.floor(getAverage(arr))
-      );
+    const isSciData = getData(Object.values(count.isSci!));
+    const nonSciData = getData(Object.values(count.nonSci!));
+    const isSciDataRed = getData(Object.values(countRed.isSci!));
+    const nonSciDataRed = getData(Object.values(countRed.nonSci!));
 
     const config: ChartConfiguration = {
       type: 'bar' as ChartType,
@@ -170,16 +176,34 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
           {
             label: 'Research Average',
             data: isSciData,
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: barCount ? 'rgba(54, 162, 235, 1)' :  'rgba(300, 0, 0, 1)',
-            borderWidth: 1
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255, 99, 132, 0.4)',
+            borderWidth: 1,
+            stack: 'A'
+          },
+          {
+            label: 'Research Average Red',
+            data: isSciDataRed,
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
+            borderColor: 'rgba(255, 99, 132, 0.8)',
+            borderWidth: 1,
+            stack: 'A'
           },
           {
             label: 'Business Average',
             data: nonSciData,
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: barCount ? 'rgba(255, 99, 132, 0.8)':  'rgba(300, 0, 0, 1)',
-            borderWidth: 1
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor:  'rgba(54, 162, 235, 0.6)',
+            borderWidth: 1,
+            stack: 'B'
+          },
+          {
+            label: 'Business Average Red',
+            data: nonSciDataRed,
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
+            borderColor: 'rgba(255, 99, 132, 0.8)',
+            borderWidth: 1,
+            stack: 'B'
           }
         ]
       },
@@ -187,15 +211,17 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
         responsive: true,
         scales: {
           x: {
+            stacked: true,
             title: {
               display: true,
               text: 'Category'
             }
           },
           y: {
+            stacked: true,
             title: {
               display: true,
-              text: `Findings ${barCount ? 'count' : 'count red'}`
+              text: `Findings stacked count and count red`
             }
           }
         },
@@ -373,6 +399,7 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     this.createFindingsPerLOC();
     this.createFindingsInLine();
     this.createFindingsBucketLine();
+    this.createFindingsLangBar();
   }
 
   private createFindingsWordCloud(): void{
@@ -386,6 +413,14 @@ export class FindingsCharts implements AfterViewInit, OnDestroy  {
     const canvas = document.getElementById('FindingsBarSciNonSci') as HTMLCanvasElement;
     if (canvas) {
       this.BarChart.set(new Chart(canvas, this.BarConfig()));
+    }
+  }
+
+  private createFindingsLangBar(): void{
+    const config = generateLangBarConfig(0, 'findings_count');
+    const canvas = document.getElementById('FindingsLangBar') as HTMLCanvasElement;
+    if (canvas) {
+      this.allNonReactivePlots.update(arr => [...arr, new Chart(canvas, config)]);
     }
   }
 

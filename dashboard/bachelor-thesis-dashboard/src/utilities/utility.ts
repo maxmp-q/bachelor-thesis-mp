@@ -1,6 +1,6 @@
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScoredData, Separation} from '../../shared/interface/data-point';
-import {DataHelper} from '../../shared/data-helper';
+import {DataHelper, getAverage} from '../../shared/data-helper';
 
 export const updateChart = (chart: Chart | null, config: ChartConfiguration) => {
   if (!chart) return;
@@ -139,13 +139,13 @@ export const generateLangBarConfig = (
 ) => {
   const dataPoints = DataHelper.getScoredData();
 
-  const cloneCoverages: Record<string, SciFields<ValueMap<number>>> = {};
+  const cloneCoverages: Record<string, SciFields<number[]>> = {};
 
   Object.values(dataPoints).forEach(entry => {
     cloneCoverages[entry.lang] ??= {};
 
     const bucket = entry.field === 'nonSci' ? 'nonSci' : 'isSci';
-    const current = cloneCoverages[entry.lang][bucket];
+    const current = cloneCoverages[entry.lang];
 
     type Entry = typeof entry;
     type Key = typeof key;
@@ -153,10 +153,8 @@ export const generateLangBarConfig = (
 
     const realSubKey = subkey as SubKey | undefined;
 
-    cloneCoverages[entry.lang][bucket] = {
-      value: (current?.value ?? 0) + Number(DataHelper.getValue(entry, key, realSubKey)),
-      count: (current?.count ?? 0) + 1
-    };
+    current[bucket] ??= [];
+    current[bucket].push(Number(DataHelper.getValue(entry, key, realSubKey)))
   });
 
   const labels: string[] = [];
@@ -164,18 +162,13 @@ export const generateLangBarConfig = (
   const nonSciData: number[] = [];
 
   Object.entries(cloneCoverages).forEach(([lang, entry]) => {
-    const isSciAvg = entry.isSci
-      ? entry.isSci.value / entry.isSci.count
-      : 0;
+    const isSciAvg = entry.isSci ? getAverage(entry.isSci) : 0;
+    const nonSciAvg = entry.nonSci ? getAverage(entry.nonSci) : 0;
 
-    const nonSciAvg = entry.nonSci
-      ? entry.nonSci.value / entry.nonSci.count
-      : 0;
-
-    const totalCount = (entry.isSci?.count ?? 0) + (entry.nonSci?.count ?? 0);
+    const totalCount = (entry.isSci?.length ?? 0) + (entry.nonSci?.length ?? 0);
     if(totalCount >= min){
       labels.push(
-        `${lang} (isSci: ${entry.isSci?.count ?? 0}, nonSci: ${entry.nonSci?.count ?? 0})`
+        `${lang} (isSci: ${entry.isSci?.length ?? 0}, nonSci: ${entry.nonSci?.length ?? 0})`
       );
 
       isSciData.push(isSciAvg);
@@ -210,7 +203,7 @@ export const generateLangBarConfig = (
         legend: { position: 'top' },
         title: {
           display: true,
-          text: 'Business vs Research in Clone Coverage'
+          text: `Business vs Research in ${key}`
         }
       }
     }
