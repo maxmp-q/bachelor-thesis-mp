@@ -203,7 +203,7 @@ export const generateLangBarConfig = (
         legend: { position: 'top' },
         title: {
           display: true,
-          text: `Business vs Research in ${key}`
+          text: `Business vs Research in ${key} ${subkey ?? ''}`
         }
       }
     }

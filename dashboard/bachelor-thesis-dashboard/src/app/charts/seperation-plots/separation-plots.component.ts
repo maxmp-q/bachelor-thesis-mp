@@ -2,7 +2,7 @@ import {AfterViewInit, Component, computed, effect, input, OnDestroy, signal} fr
 import {AnalyzedData, ScoredData, Separation} from '../../../../shared/interface/data-point';
 import {combineSeparations, DataHelper, getAverage} from '../../../../shared/data-helper';
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
-import {generateBucketLineConfig, updateChart} from '../../../utilities/utility';
+import {generateBucketLineConfig, generateLangBarConfig, updateChart} from '../../../utilities/utility';
 import {FieldBarPlot} from '../field-bar-plot/field-bar-plot';
 import {FormsModule} from '@angular/forms';
 import {ScatterPlot} from '../scatter-plot/scatter-plot';
@@ -174,6 +174,7 @@ export class SeparationPlots implements OnDestroy, AfterViewInit{
       this.createMethodBucket('files', option, {max:1499, size: 100});
     });
 
+    this.createLangBar();
   }
 
   /**
@@ -351,6 +352,20 @@ export class SeparationPlots implements OnDestroy, AfterViewInit{
       this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
     }
   }
+
+  /**
+   * Create a bar chart according to generateLangBarConfig for red with a min of 10!
+   * @private
+   */
+  private createLangBar(){
+    const config = generateLangBarConfig(10, this.scope(), 'red');
+    const canvas = document.getElementById('SimpleLangBar') as HTMLCanvasElement;
+    if (canvas) {
+      this.allNonReactivePlots.update(value => [...value, new Chart(canvas, config)]);
+    }
+  }
+
+
   ngOnDestroy(): void {
     const nonReactivCharts = this.allNonReactivePlots();
     nonReactivCharts.forEach(chart => chart.destroy());
