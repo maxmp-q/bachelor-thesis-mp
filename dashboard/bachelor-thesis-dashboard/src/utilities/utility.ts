@@ -47,18 +47,17 @@ export const generateBucketLineConfig = (
   });
 
   const bucketSize = bucketOptions.size;
-  const buckets: Record<number, SciFields<ValueMap<number>>> = {};
+  const buckets: Record<number, SciFields<number[]>> = {};
 
   const bucketMapper = (entry: ValueMap<number>, sci: boolean) => {
     const bucket = Math.floor(entry.count / bucketSize) * bucketSize;
     if(bucket > bucketOptions.max) return;
 
-    if (!buckets[bucket]) buckets[bucket] = { isSci: {value: 0, count: 0}, nonSci: {value: 0, count: 0}};
+    if (!buckets[bucket]) buckets[bucket] = { isSci: [], nonSci: []};
 
     const bucketMap =  buckets[bucket][sci ? "isSci" : "nonSci"];
     if(bucketMap){
-      bucketMap.value += entry.value;
-      bucketMap.count += 1;
+      bucketMap.push(entry.value);
     }
   }
 
@@ -73,10 +72,10 @@ export const generateBucketLineConfig = (
   Object.entries(buckets)
     .sort((a, b) => Number(a[0]) - Number(b[0]))
     .forEach(([bucketStart, entry]) => {
-      const sciAvg = entry.isSci ? entry.isSci.value / entry.isSci.count : 0;
-      const nonSciAvg = entry.nonSci ? entry.nonSci.value / entry.nonSci.count : 0;
+      const sciAvg = entry.isSci ? getAverage(entry.isSci) : 0;
+      const nonSciAvg = entry.nonSci ? getAverage(entry.nonSci) : 0;
 
-      labels.add(`${bucketStart}-${Number(bucketStart) + bucketSize} Sci:${(entry.isSci?.count ?? 0)}, nonSci:${(entry.nonSci?.count ?? 0)}`);
+      labels.add(`${bucketStart}-${Number(bucketStart) + bucketSize} Sci:${(entry.isSci?.length ?? 0)}, nonSci:${(entry.nonSci?.length ?? 0)}`);
       sciAverages.push(sciAvg);
       nonSciAverages.push(nonSciAvg);
     });
