@@ -4,6 +4,8 @@ This is the official repo for my bachelor thesis.
 
 *Is the Quality of Code in Business Software really better than in Research Software?*
 
+---
+
 ## Dashboard
 
 In this small angular app you can find different charts where the analyzed data is displayed.
@@ -14,8 +16,10 @@ To Start this app Node.js is required.
 
 The app is deployed in GitHub Pages: https://maxmp-q.github.io/bachelor-thesis-mp/
 
+---
+
 ## Src
-### converter.py
+### data.py
 
 In the directory '/src' you can find the converter.py. This utility creates a data.json 
 file with an array of data-points. It reads the dataset.csv to get the name, the language 
@@ -143,9 +147,26 @@ Here is an example entry of the analyzed_data.json:
 
 Here you can find the interface for the data-points and the analyzed data.
 
+---
+
 ## Automation
 
 Here we use Cypress to create all the needed projects in Teamscale.
 We use the data.json to iterate all the given data-points and create 
 the needed projects with the git connector.
 
+
+---
+
+## 📄 License
+
+
+MIT License
+
+
+---
+
+## 👤 Author
+
+maxmp-q
+GitHub: https://github.com/maxmp-q

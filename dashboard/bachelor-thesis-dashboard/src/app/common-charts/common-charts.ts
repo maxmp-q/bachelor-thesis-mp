@@ -163,9 +163,20 @@ export class CommonCharts implements AfterViewInit, OnDestroy{
 
     const dataValues = sortedKeys.map(k => buckets[k]);
 
-    const backgroundColors = sortedKeys.map((_, i) =>
-      `hsl(${(i * 40) % 360}, 70%, 60%)`
-    );
+    const backgroundColors = [
+      "#ff0000",
+      "#ff3300",
+      "#ff4d00",
+
+      "#ffcc00",
+      "#ffdd00",
+      "#ffee00",
+
+      "#66cc33",
+      "#55bb33",
+      "#44aa33",
+      "#339933"
+    ];
 
     const config: ChartConfiguration = {
         type: 'pie' as ChartType,

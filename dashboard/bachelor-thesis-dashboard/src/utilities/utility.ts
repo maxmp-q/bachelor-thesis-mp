@@ -1,6 +1,6 @@
 import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {ScoredData, Separation} from '../../shared/interface/data-point';
-import {DataHelper, getAverage} from '../../shared/data-helper';
+import {DataHelper, getAverage, getMedian} from '../../shared/data-helper';
 
 export const updateChart = (chart: Chart | null, config: ChartConfiguration) => {
   if (!chart) return;
@@ -174,6 +174,8 @@ export const generateLangBarConfig = (
       nonSciData.push(nonSciAvg);
     }
   });
+
+  // console.log(labels, "sci", isSciData, "nonSci", nonSciData)
 
   const config: ChartConfiguration = {
     type: 'bar' as ChartType,

@@ -5,6 +5,7 @@ import {Chart, ChartConfiguration, ChartType} from 'chart.js';
 import {FormsModule} from '@angular/forms';
 import {generateBucketLineConfig, generateLangBarConfig, updateChart} from '../../utilities/utility';
 import {FieldBarPlot} from '../charts/field-bar-plot/field-bar-plot';
+import {ScatterPlot} from '../charts/scatter-plot/scatter-plot';
 
 export const findings = [
   "Comprehensibility",
@@ -23,7 +24,8 @@ export type Findings = (typeof findings)[number];
   selector: 'app-findings-charts',
   imports: [
     FormsModule,
-    FieldBarPlot
+    FieldBarPlot,
+    ScatterPlot
   ],
   templateUrl: './findings-charts.html',
   styleUrl: './findings-charts.scss',
